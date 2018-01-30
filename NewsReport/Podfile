@@ -24,4 +24,5 @@ pod 'SDWebImage'
 pod 'SDWebImage/GIF'
 pod 'MJExtension'
 pod 'MJRefresh'
+pod 'YYCache'
 end

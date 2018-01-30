@@ -15,6 +15,5 @@
  */
 @interface NRChatBaseEventImpl : NSObject<ChatBaseEvent>
 
-@property (nonatomic, copy) ObserverCompletion loginOkForLaunchObserver;
 
 @end

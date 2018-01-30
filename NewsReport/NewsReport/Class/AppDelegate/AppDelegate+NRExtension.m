@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate+NRExtension.h"
-
+#import "NRLoginViewController.h"
 @implementation AppDelegate (NRExtension)
 
 
@@ -16,7 +16,7 @@
  */
 -(void)switchRootController{
     
-    
+    self.window.rootViewController   = [[NRLoginViewController alloc] init];
 }
 
 /*!

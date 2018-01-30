@@ -10,6 +10,8 @@
 
 #import "NRFilesManager.h"
 #import "NRCommonDefines.h"
-
+#import "NRColorDefines.h"
+#import "NRFontDefines.h"
+#import "NR_HOST_APIS.h"
 
 #endif

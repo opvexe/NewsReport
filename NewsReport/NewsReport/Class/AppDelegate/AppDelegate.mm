@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "AppDelegate+NRExtension.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,16 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc]init];
+    
+    self.window.frame = [UIScreen mainScreen].bounds;
+    
+    [self switchRootController];
+    
+    [self.window makeKeyAndVisible];
+    
+    [self registrationThirdLib];
+    
     return YES;
 }
 

@@ -28,6 +28,23 @@
 		D01D08A42020067C00288240 /* NRChatBaseEventImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = D01D08A32020067C00288240 /* NRChatBaseEventImpl.m */; };
 		D01D08A72020087800288240 /* NRMessageQoSEventImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = D01D08A62020087800288240 /* NRMessageQoSEventImpl.m */; };
 		D01D08AA20200A8300288240 /* NRConst.m in Sources */ = {isa = PBXBuildFile; fileRef = D01D08A920200A8300288240 /* NRConst.m */; };
+		D01D08AE202013C200288240 /* NRLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D01D08AD202013C200288240 /* NRLoginViewController.m */; };
+		D01D08B22020148400288240 /* CPMessageEventButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D01D08B02020148400288240 /* CPMessageEventButton.m */; };
+		D01D08B72020152900288240 /* UIImage+NRExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D01D08B62020152900288240 /* UIImage+NRExtension.m */; };
+		D01D08BB2020172900288240 /* UIView+NRExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D01D08BA2020172900288240 /* UIView+NRExtension.m */; };
+		D01D08BE2020178000288240 /* NSString+LSWMEXtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D01D08BD2020178000288240 /* NSString+LSWMEXtension.m */; };
+		D01D08C620201BB000288240 /* NRNetworkHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D01D08C020201BB000288240 /* NRNetworkHelper.m */; };
+		D01D08C820201BB000288240 /* NRNetworkCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D01D08C520201BB000288240 /* NRNetworkCache.m */; };
+		D01D08CB20201CAA00288240 /* WMLSSessionManger.m in Sources */ = {isa = PBXBuildFile; fileRef = D01D08CA20201CA900288240 /* WMLSSessionManger.m */; };
+		D01D08CE20201CC500288240 /* NRBusinessNetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = D01D08CD20201CC500288240 /* NRBusinessNetworkTool.m */; };
+		D01D08D32020226D00288240 /* NRIMUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D01D08D22020226D00288240 /* NRIMUserModel.m */; };
+		D01D08D7202040B300288240 /* NRBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D01D08D6202040B300288240 /* NRBaseViewController.m */; };
+		D01D08DB2020427800288240 /* NRRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D01D08DA2020427800288240 /* NRRootViewController.m */; };
+		D01D08DE202042FB00288240 /* NRTabBarControllerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = D01D08DD202042FB00288240 /* NRTabBarControllerConfig.m */; };
+		D01D08E4202043AB00288240 /* NRMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D01D08E3202043AB00288240 /* NRMessageViewController.m */; };
+		D01D08E7202043BA00288240 /* NRFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D01D08E6202043BA00288240 /* NRFriendViewController.m */; };
+		D01D08EA202043CC00288240 /* NRPortraitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D01D08E9202043CC00288240 /* NRPortraitViewController.m */; };
+		D01D08ED2020451200288240 /* NRBaseNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D01D08EC2020451200288240 /* NRBaseNavigationViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +131,43 @@
 		D01D08A62020087800288240 /* NRMessageQoSEventImpl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRMessageQoSEventImpl.m; sourceTree = "<group>"; };
 		D01D08A820200A8300288240 /* NRConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRConst.h; sourceTree = "<group>"; };
 		D01D08A920200A8300288240 /* NRConst.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRConst.m; sourceTree = "<group>"; };
+		D01D08AC202013C200288240 /* NRLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRLoginViewController.h; sourceTree = "<group>"; };
+		D01D08AD202013C200288240 /* NRLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRLoginViewController.m; sourceTree = "<group>"; };
+		D01D08B02020148400288240 /* CPMessageEventButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPMessageEventButton.m; sourceTree = "<group>"; };
+		D01D08B12020148400288240 /* CPMessageEventButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPMessageEventButton.h; sourceTree = "<group>"; };
+		D01D08B3202014D600288240 /* NRColorDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRColorDefines.h; sourceTree = "<group>"; };
+		D01D08B52020152900288240 /* UIImage+NRExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+NRExtension.h"; sourceTree = "<group>"; };
+		D01D08B62020152900288240 /* UIImage+NRExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+NRExtension.m"; sourceTree = "<group>"; };
+		D01D08B82020164100288240 /* NRFontDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRFontDefines.h; sourceTree = "<group>"; };
+		D01D08B92020172900288240 /* UIView+NRExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+NRExtension.h"; sourceTree = "<group>"; };
+		D01D08BA2020172900288240 /* UIView+NRExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+NRExtension.m"; sourceTree = "<group>"; };
+		D01D08BC2020178000288240 /* NSString+LSWMEXtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+LSWMEXtension.h"; sourceTree = "<group>"; };
+		D01D08BD2020178000288240 /* NSString+LSWMEXtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+LSWMEXtension.m"; sourceTree = "<group>"; };
+		D01D08C020201BB000288240 /* NRNetworkHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NRNetworkHelper.m; sourceTree = "<group>"; };
+		D01D08C220201BB000288240 /* NRNetworkHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NRNetworkHelper.h; sourceTree = "<group>"; };
+		D01D08C320201BB000288240 /* NRNetworkCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NRNetworkCache.h; sourceTree = "<group>"; };
+		D01D08C520201BB000288240 /* NRNetworkCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NRNetworkCache.m; sourceTree = "<group>"; };
+		D01D08C920201CA900288240 /* WMLSSessionManger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMLSSessionManger.h; sourceTree = "<group>"; };
+		D01D08CA20201CA900288240 /* WMLSSessionManger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMLSSessionManger.m; sourceTree = "<group>"; };
+		D01D08CC20201CC500288240 /* NRBusinessNetworkTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRBusinessNetworkTool.h; sourceTree = "<group>"; };
+		D01D08CD20201CC500288240 /* NRBusinessNetworkTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRBusinessNetworkTool.m; sourceTree = "<group>"; };
+		D01D08CF20201E0400288240 /* NR_HOST_APIS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NR_HOST_APIS.h; sourceTree = "<group>"; };
+		D01D08D12020226D00288240 /* NRIMUserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRIMUserModel.h; sourceTree = "<group>"; };
+		D01D08D22020226D00288240 /* NRIMUserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRIMUserModel.m; sourceTree = "<group>"; };
+		D01D08D5202040B300288240 /* NRBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRBaseViewController.h; sourceTree = "<group>"; };
+		D01D08D6202040B300288240 /* NRBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRBaseViewController.m; sourceTree = "<group>"; };
+		D01D08D92020427800288240 /* NRRootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRRootViewController.h; sourceTree = "<group>"; };
+		D01D08DA2020427800288240 /* NRRootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRRootViewController.m; sourceTree = "<group>"; };
+		D01D08DC202042FB00288240 /* NRTabBarControllerConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRTabBarControllerConfig.h; sourceTree = "<group>"; };
+		D01D08DD202042FB00288240 /* NRTabBarControllerConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRTabBarControllerConfig.m; sourceTree = "<group>"; };
+		D01D08E2202043AB00288240 /* NRMessageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRMessageViewController.h; sourceTree = "<group>"; };
+		D01D08E3202043AB00288240 /* NRMessageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRMessageViewController.m; sourceTree = "<group>"; };
+		D01D08E5202043BA00288240 /* NRFriendViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRFriendViewController.h; sourceTree = "<group>"; };
+		D01D08E6202043BA00288240 /* NRFriendViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRFriendViewController.m; sourceTree = "<group>"; };
+		D01D08E8202043CC00288240 /* NRPortraitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRPortraitViewController.h; sourceTree = "<group>"; };
+		D01D08E9202043CC00288240 /* NRPortraitViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRPortraitViewController.m; sourceTree = "<group>"; };
+		D01D08EB2020451200288240 /* NRBaseNavigationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRBaseNavigationViewController.h; sourceTree = "<group>"; };
+		D01D08EC2020451200288240 /* NRBaseNavigationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRBaseNavigationViewController.m; sourceTree = "<group>"; };
 		D34BE6E7BA5DCC2482DC2652 /* Pods-NewsReport.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsReport.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NewsReport/Pods-NewsReport.debug.xcconfig"; sourceTree = "<group>"; };
 		D3B91CD0F52385A630140016 /* Pods-NewsReportTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsReportTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NewsReportTests/Pods-NewsReportTests.release.xcconfig"; sourceTree = "<group>"; };
 		F8FD1C749FAD46CC25535AC9 /* libPods-NewsReportTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NewsReportTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -239,6 +293,10 @@
 		D01D0865201FF94B00288240 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				D01D08E12020439B00288240 /* portrait */,
+				D01D08E02020437500288240 /* friend */,
+				D01D08DF2020435B00288240 /* message */,
+				D01D08AB202013B500288240 /* login */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -246,6 +304,9 @@
 		D01D0866201FF95400288240 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				D01D08D82020424900288240 /* RootViewController */,
+				D01D08D4202040A200288240 /* BaseController */,
+				D01D08D02020225800288240 /* BaseModel */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -253,6 +314,8 @@
 		D01D0867201FF96100288240 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				D01D08BF20201AF900288240 /* NetworkTools */,
+				D01D08B42020150F00288240 /* Catagory */,
 				D01D089A201FFEFF00288240 /* View */,
 				D01D0896201FFBD500288240 /* Definition */,
 			);
@@ -335,6 +398,9 @@
 			children = (
 				D01D0897201FFBF400288240 /* NRFilesManager.h */,
 				D01D0899201FFC1D00288240 /* NRCommonDefines.h */,
+				D01D08B3202014D600288240 /* NRColorDefines.h */,
+				D01D08B82020164100288240 /* NRFontDefines.h */,
+				D01D08CF20201E0400288240 /* NR_HOST_APIS.h */,
 			);
 			path = Definition;
 			sourceTree = "<group>";
@@ -342,6 +408,7 @@
 		D01D089A201FFEFF00288240 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D01D08AF2020146200288240 /* TimeButton */,
 				D01D089B201FFF0900288240 /* IMClientManager */,
 			);
 			path = View;
@@ -362,6 +429,110 @@
 				D01D08A62020087800288240 /* NRMessageQoSEventImpl.m */,
 			);
 			path = IMClientManager;
+			sourceTree = "<group>";
+		};
+		D01D08AB202013B500288240 /* login */ = {
+			isa = PBXGroup;
+			children = (
+				D01D08AC202013C200288240 /* NRLoginViewController.h */,
+				D01D08AD202013C200288240 /* NRLoginViewController.m */,
+			);
+			path = login;
+			sourceTree = "<group>";
+		};
+		D01D08AF2020146200288240 /* TimeButton */ = {
+			isa = PBXGroup;
+			children = (
+				D01D08B12020148400288240 /* CPMessageEventButton.h */,
+				D01D08B02020148400288240 /* CPMessageEventButton.m */,
+			);
+			path = TimeButton;
+			sourceTree = "<group>";
+		};
+		D01D08B42020150F00288240 /* Catagory */ = {
+			isa = PBXGroup;
+			children = (
+				D01D08BC2020178000288240 /* NSString+LSWMEXtension.h */,
+				D01D08BD2020178000288240 /* NSString+LSWMEXtension.m */,
+				D01D08B52020152900288240 /* UIImage+NRExtension.h */,
+				D01D08B62020152900288240 /* UIImage+NRExtension.m */,
+				D01D08B92020172900288240 /* UIView+NRExtension.h */,
+				D01D08BA2020172900288240 /* UIView+NRExtension.m */,
+			);
+			path = Catagory;
+			sourceTree = "<group>";
+		};
+		D01D08BF20201AF900288240 /* NetworkTools */ = {
+			isa = PBXGroup;
+			children = (
+				D01D08C320201BB000288240 /* NRNetworkCache.h */,
+				D01D08C520201BB000288240 /* NRNetworkCache.m */,
+				D01D08C220201BB000288240 /* NRNetworkHelper.h */,
+				D01D08C020201BB000288240 /* NRNetworkHelper.m */,
+				D01D08C920201CA900288240 /* WMLSSessionManger.h */,
+				D01D08CA20201CA900288240 /* WMLSSessionManger.m */,
+				D01D08CC20201CC500288240 /* NRBusinessNetworkTool.h */,
+				D01D08CD20201CC500288240 /* NRBusinessNetworkTool.m */,
+			);
+			path = NetworkTools;
+			sourceTree = "<group>";
+		};
+		D01D08D02020225800288240 /* BaseModel */ = {
+			isa = PBXGroup;
+			children = (
+				D01D08D12020226D00288240 /* NRIMUserModel.h */,
+				D01D08D22020226D00288240 /* NRIMUserModel.m */,
+			);
+			path = BaseModel;
+			sourceTree = "<group>";
+		};
+		D01D08D4202040A200288240 /* BaseController */ = {
+			isa = PBXGroup;
+			children = (
+				D01D08D5202040B300288240 /* NRBaseViewController.h */,
+				D01D08D6202040B300288240 /* NRBaseViewController.m */,
+				D01D08EB2020451200288240 /* NRBaseNavigationViewController.h */,
+				D01D08EC2020451200288240 /* NRBaseNavigationViewController.m */,
+			);
+			path = BaseController;
+			sourceTree = "<group>";
+		};
+		D01D08D82020424900288240 /* RootViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D01D08D92020427800288240 /* NRRootViewController.h */,
+				D01D08DA2020427800288240 /* NRRootViewController.m */,
+				D01D08DC202042FB00288240 /* NRTabBarControllerConfig.h */,
+				D01D08DD202042FB00288240 /* NRTabBarControllerConfig.m */,
+			);
+			path = RootViewController;
+			sourceTree = "<group>";
+		};
+		D01D08DF2020435B00288240 /* message */ = {
+			isa = PBXGroup;
+			children = (
+				D01D08E2202043AB00288240 /* NRMessageViewController.h */,
+				D01D08E3202043AB00288240 /* NRMessageViewController.m */,
+			);
+			path = message;
+			sourceTree = "<group>";
+		};
+		D01D08E02020437500288240 /* friend */ = {
+			isa = PBXGroup;
+			children = (
+				D01D08E5202043BA00288240 /* NRFriendViewController.h */,
+				D01D08E6202043BA00288240 /* NRFriendViewController.m */,
+			);
+			path = friend;
+			sourceTree = "<group>";
+		};
+		D01D08E12020439B00288240 /* portrait */ = {
+			isa = PBXGroup;
+			children = (
+				D01D08E8202043CC00288240 /* NRPortraitViewController.h */,
+				D01D08E9202043CC00288240 /* NRPortraitViewController.m */,
+			);
+			path = portrait;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -660,13 +831,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				D01D0841201FF8AE00288240 /* main.m in Sources */,
+				D01D08E7202043BA00288240 /* NRFriendViewController.m in Sources */,
+				D01D08D7202040B300288240 /* NRBaseViewController.m in Sources */,
+				D01D08B22020148400288240 /* CPMessageEventButton.m in Sources */,
 				D01D08A72020087800288240 /* NRMessageQoSEventImpl.m in Sources */,
+				D01D08E4202043AB00288240 /* NRMessageViewController.m in Sources */,
+				D01D08DB2020427800288240 /* NRRootViewController.m in Sources */,
 				D01D086C201FFA5500288240 /* AppDelegate+NRExtension.m in Sources */,
 				D01D08AA20200A8300288240 /* NRConst.m in Sources */,
+				D01D08EA202043CC00288240 /* NRPortraitViewController.m in Sources */,
+				D01D08DE202042FB00288240 /* NRTabBarControllerConfig.m in Sources */,
+				D01D08C620201BB000288240 /* NRNetworkHelper.m in Sources */,
+				D01D08ED2020451200288240 /* NRBaseNavigationViewController.m in Sources */,
+				D01D08CE20201CC500288240 /* NRBusinessNetworkTool.m in Sources */,
+				D01D08BE2020178000288240 /* NSString+LSWMEXtension.m in Sources */,
 				D01D089E201FFF1A00288240 /* NRIMClientManager.m in Sources */,
 				D01D08A42020067C00288240 /* NRChatBaseEventImpl.m in Sources */,
+				D01D08D32020226D00288240 /* NRIMUserModel.m in Sources */,
 				D01D08A12020050600288240 /* NRChatTransDataEventImpl.m in Sources */,
+				D01D08BB2020172900288240 /* UIView+NRExtension.m in Sources */,
+				D01D08AE202013C200288240 /* NRLoginViewController.m in Sources */,
 				D01D0833201FF8AD00288240 /* AppDelegate.mm in Sources */,
+				D01D08C820201BB000288240 /* NRNetworkCache.m in Sources */,
+				D01D08B72020152900288240 /* UIImage+NRExtension.m in Sources */,
+				D01D08CB20201CAA00288240 /* WMLSSessionManger.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

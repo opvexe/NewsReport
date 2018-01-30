@@ -12,5 +12,11 @@
 
 #endif /* NRConst_h */
 
-extern NSString * const NRIMMessageConfigurationNoticeKey;
+/* 消息接收通知 */
+extern NSString * const NRIMMessageConfigurationNotificationCenterKey;
 
+/* 用户登录通知 */
+extern NSString * const NRIMMessageLoginStatusConfigurationNotificationCenterKey;
+
+/* 连接状态通知 */
+extern NSString * const NRIMMessageLinkStatusConfigurationNotificationCenterKey;
