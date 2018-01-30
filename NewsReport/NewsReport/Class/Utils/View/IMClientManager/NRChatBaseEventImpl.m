@@ -22,7 +22,6 @@
     }else{
         NSLog(@"IM服务器登录/连接失败，错误代码：%d", dwErrorCode);
     }
-    
     [NRNotificationCenter postNotificationName:NRIMMessageLoginStatusConfigurationNotificationCenterKey object:nil userInfo:@{@"key":[NSNumber numberWithInt:dwErrorCode]}];
 }
 
@@ -30,7 +29,7 @@
  * 与服务端的通信断开的回调事件通知。
  */
 - (void) onLinkCloseMessage:(int)dwErrorCode{
-    NSLog(@"IM服务器的网络连接出错关闭了，error：%d", dwErrorCode);
+    NSLog(@"与IM服务器的连接已断开, 自动登陆/重连将启动!，error：%d", dwErrorCode);
     [NRNotificationCenter postNotificationName:NRIMMessageLinkStatusConfigurationNotificationCenterKey object:nil userInfo:@{@"key":[NSNumber numberWithInt:dwErrorCode]}];
 }
 

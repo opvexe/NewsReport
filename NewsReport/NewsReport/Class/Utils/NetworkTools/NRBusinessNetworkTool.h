@@ -18,7 +18,7 @@
  @param successfull successfull description
  @param failure failure description
  */
-+(void)PostLoginWithUserPassword:(NSString *)password username:(NSString *)username CompleteSuccessfull:(void (^)(id responseObject))successfull  failure:(void (^)(NSError *error))failure;
++(void)PostLoginWithUserPassword:(NSString *)password username:(NSString *)username CompleteSuccessfull:(void (^)(id responseObject))successfull  failure:(void (^)(id error))failure;
 
 
 @end

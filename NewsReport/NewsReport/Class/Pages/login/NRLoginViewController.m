@@ -85,11 +85,11 @@
  */
 -(void)loginAction:(UIButton *)sender{
     WS(weakSelf)
-    [NRBusinessNetworkTool PostLoginWithUserPassword:convertToString(_passwordTF.text) username:convertToString(_passwordTF.text) CompleteSuccessfull:^(id responseObject) {
+    [NRBusinessNetworkTool PostLoginWithUserPassword:@"web" username:@"user45" CompleteSuccessfull:^(id responseObject) {
         NRIMUserModel *user = [NRIMUserModel mj_objectWithKeyValues:responseObject];
         [weakSelf loginImpl:user.userId withToken:user.password];
-    } failure:^(NSError *error) {
-        
+    } failure:^(id error) {
+        NSLog(@"error:%@",error);
     }];
 }
 
@@ -106,7 +106,7 @@
 }
 
 /*!
- * 登录状态
+ * 登录状态通知
  */
 - (void)loginStatus:(NSNotification *)notification{
   NSNumber *code = notification.userInfo[@"key"];

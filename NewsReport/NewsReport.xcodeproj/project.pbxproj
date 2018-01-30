@@ -131,7 +131,7 @@
 		D01D08A32020067C00288240 /* NRChatBaseEventImpl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRChatBaseEventImpl.m; sourceTree = "<group>"; };
 		D01D08A52020087800288240 /* NRMessageQoSEventImpl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRMessageQoSEventImpl.h; sourceTree = "<group>"; };
 		D01D08A62020087800288240 /* NRMessageQoSEventImpl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRMessageQoSEventImpl.m; sourceTree = "<group>"; };
-		D01D08A820200A8300288240 /* NRConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRConst.h; sourceTree = "<group>"; };
+		D01D08A820200A8300288240 /* NRConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRConst.h; sourceTree = "<group>"; wrapsLines = 0; };
 		D01D08A920200A8300288240 /* NRConst.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRConst.m; sourceTree = "<group>"; };
 		D01D08AC202013C200288240 /* NRLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRLoginViewController.h; sourceTree = "<group>"; };
 		D01D08AD202013C200288240 /* NRLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRLoginViewController.m; sourceTree = "<group>"; };

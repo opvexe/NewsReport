@@ -13,7 +13,7 @@
 #endif /* NRConst_h */
 
 /* 消息接收通知 */
-extern NSString * const NRIMMessageConfigurationNotificationCenterKey;
+extern NSString * const NRIMMessageReceiveConfigurationNotificationCenterKey;
 
 /* 用户登录通知 */
 extern NSString * const NRIMMessageLoginStatusConfigurationNotificationCenterKey;

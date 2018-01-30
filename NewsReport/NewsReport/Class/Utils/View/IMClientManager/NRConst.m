@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 /* 消息接收通知 */
-NSString * const NRIMMessageConfigurationNotificationCenterKey = @"com.newsReport.NRIMMessageConfigurationNotificationCenterKey";
+NSString * const NRIMMessageReceiveConfigurationNotificationCenterKey = @"com.newsReport.NRIMMessageReceiveConfigurationNotificationCenterKey";
 
 /* 用户登录通知 */
 NSString * const NRIMMessageLoginStatusConfigurationNotificationCenterKey =@"com.newsReport.NRIMMessageLoginStatusConfigurationNotificationCenterKey";

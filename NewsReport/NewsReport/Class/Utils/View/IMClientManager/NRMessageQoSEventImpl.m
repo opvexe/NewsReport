@@ -26,7 +26,9 @@
 - (void) messagesBeReceived:(NSString *)theFingerPrint{
     if(theFingerPrint != nil){
         NSLog(@"收到对方已收到消息事件的通知，fp=%@", theFingerPrint);
+        [NRNotificationCenter postNotificationName:NRIMMessageReceiveConfigurationNotificationCenterKey object:nil userInfo:@{@"key":theFingerPrint}];
     }
 }
 
 @end
+

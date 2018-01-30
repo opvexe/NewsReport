@@ -11,16 +11,18 @@
 
 @implementation NRBusinessNetworkTool
 
-+(void)PostLoginWithUserPassword:(NSString *)password username:(NSString *)username CompleteSuccessfull:(void (^)(id responseObject))successfull  failure:(void (^)(NSError *error))failure{
++(void)PostLoginWithUserPassword:(NSString *)password username:(NSString *)username CompleteSuccessfull:(void (^)(id responseObject))successfull  failure:(void (^)(id error))failure{
     
     NSMutableDictionary *parameters = [NSMutableDictionary dictionaryWithCapacity:0];
-    [parameters setValue:convertToString(password) forKey:@"password"];
     [parameters setValue:convertToString(username) forKey:@"name"];
-    
+    [parameters setValue:convertToString(password) forKey:@"password"];
+
     [NRNetworkHelper POST:PostLoginAuthenticationURL parameters:parameters success:^(id responseObject) {
         if (responseObject) {
-            if ([responseObject[@"code"] intValue]==0) {
+            if ([responseObject[@"code"] intValue]==0&&!is_null(responseObject[@"result"])) {
                 successfull?successfull(responseObject[@"result"]):nil;
+            }else{
+                failure?failure(responseObject[@"result"]):nil;
             }
         }
     } failure:^(NSError *error) {
@@ -30,3 +32,4 @@
 }
 
 @end
+
