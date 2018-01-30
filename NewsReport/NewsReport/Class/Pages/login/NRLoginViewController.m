@@ -87,9 +87,9 @@
     WS(weakSelf)
     [NRBusinessNetworkTool PostLoginWithUserPassword:@"web" username:@"user45" CompleteSuccessfull:^(id responseObject) {
         NRIMUserModel *user = [NRIMUserModel mj_objectWithKeyValues:responseObject];
-        
-        [[NRUserTools defaultCenter]updateUserID:convertToString([NSString stringWithFormat:@"%ld",user.userId])];
-        [weakSelf loginImpl:convertToString([NSString stringWithFormat:@"%ld",user.userId]) withToken:@"web"];
+        WSSTRONG(strongSelf)
+        [[NRUserTools defaultCenter]updateUserID:([NSString stringWithFormat:@"%ld",user.userId])];
+        [strongSelf loginImpl:[[NRUserTools defaultCenter]getUserID] withToken:@"web"];
         
     } failure:^(id error) {
         NSLog(@"error:%@",error);

@@ -12,7 +12,6 @@
 
 /* MobileIMSDK是否已被初始化. true表示已初化完成，否则未初始化. */
 @property (nonatomic) BOOL _init;
-
 @property (strong, nonatomic) NRChatBaseEventImpl *baseEventListener;
 @property (strong, nonatomic) NRChatTransDataEventImpl *transDataListener;
 @property (strong, nonatomic) NRMessageQoSEventImpl *messageQoSListener;

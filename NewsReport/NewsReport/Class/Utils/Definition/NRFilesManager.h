@@ -51,8 +51,8 @@
  Chat库
  */
 #import "ClientCoreSDK.h"
-#import "NRIMClientManager.h"
 #import "ConfigEntity.h"
+#import "NRIMClientManager.h"
 #import "LocalUDPDataSender.h"
 
 #endif /* NRFilesManager_h */

@@ -30,4 +30,5 @@
     
      [[NRIMClientManager sharedInstance] initMobileIMSDK];
 }
+
 @end
