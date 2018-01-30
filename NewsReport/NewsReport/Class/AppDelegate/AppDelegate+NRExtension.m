@@ -8,6 +8,8 @@
 
 #import "AppDelegate+NRExtension.h"
 #import "NRLoginViewController.h"
+#import "NRTabBarControllerConfig.h"
+
 @implementation AppDelegate (NRExtension)
 
 
@@ -16,7 +18,9 @@
  */
 -(void)switchRootController{
     
-    self.window.rootViewController   = [[NRLoginViewController alloc] init];
+        NRTabBarControllerConfig  *tabBarControllerConfig = [NRTabBarControllerConfig new];
+        self.window .rootViewController = tabBarControllerConfig.tabBarController;
+//    self.window.rootViewController   = [[NRLoginViewController alloc] init];
 }
 
 /*!

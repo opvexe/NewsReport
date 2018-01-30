@@ -99,7 +99,7 @@
     [tabBar setTitleTextAttributes:selectedAttrs forState:UIControlStateSelected];
     [[UITabBar appearance] setBackgroundImage:[UIImage imageWithColor:[UIColor whiteColor]]];
     [[UITabBar appearance] setShadowImage:[UIImage imageNamed:@"tapbar_top_line"]];
-    [[UITabBar appearance] setShadowImage:[[UIImage alloc] init]];
+//    [[UITabBar appearance] setShadowImage:[[UIImage alloc] init]];
 }
 - (void)updateTabBarCustomizationWhenTabBarItemWidthDidUpdate {
     void (^deviceOrientationDidChangeBlock)(NSNotification *) = ^(NSNotification *notification) {

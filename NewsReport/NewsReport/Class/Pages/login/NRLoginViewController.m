@@ -32,14 +32,13 @@
 @implementation NRLoginViewController
 
 -(void)dealloc{
-    NSLog(@"dealloc%s",__func__);
     [NRNotificationCenter removeObserver:self];
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
-    self.title =@"登陆";
+    self.navigationItem.title = @"登陆";
     [self setupUI];
     [self configViews];
     [self  eventHandling];

@@ -27,7 +27,7 @@
 #import "UIView+NRExtension.h"
 #import "NSString+LSWMEXtension.h"
 #import "NRBusinessNetworkTool.h"
-
+#import "UIView+Toast.h"
 /*!
  Base类
  */
