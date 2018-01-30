@@ -16,8 +16,23 @@
     NSMutableDictionary *parameters = [NSMutableDictionary dictionaryWithCapacity:0];
     [parameters setValue:convertToString(username) forKey:@"name"];
     [parameters setValue:convertToString(password) forKey:@"password"];
-
-    [NRNetworkHelper POST:PostLoginAuthenticationURL parameters:parameters success:^(id responseObject) {
+    
+    //    [NRNetworkHelper POST:PostLoginAuthenticationURL parameters:parameters success:^(id responseObject) {
+    //        if (responseObject) {
+    //            if ([responseObject[@"code"] intValue]==0&&!is_null(responseObject[@"result"])) {
+    //                successfull?successfull(responseObject[@"result"]):nil;
+    //            }else{
+    //                failure?failure(responseObject[@"result"]):nil;
+    //            }
+    //        }
+    //    } failure:^(NSError *error) {
+    //        failure?failure(error):nil;
+    //    }];
+    
+    AFHTTPSessionManager *session = [AFHTTPSessionManager manager];
+    [session POST:PostLoginAuthenticationURL parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if (responseObject) {
             if ([responseObject[@"code"] intValue]==0&&!is_null(responseObject[@"result"])) {
                 successfull?successfull(responseObject[@"result"]):nil;
@@ -25,10 +40,9 @@
                 failure?failure(responseObject[@"result"]):nil;
             }
         }
-    } failure:^(NSError *error) {
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         failure?failure(error):nil;
     }];
-    
 }
 
 @end

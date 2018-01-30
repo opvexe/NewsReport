@@ -28,6 +28,8 @@
 #import "NSString+LSWMEXtension.h"
 #import "NRBusinessNetworkTool.h"
 #import "UIView+Toast.h"
+#import "NRUserTools.h"
+
 /*!
  Base类
  */

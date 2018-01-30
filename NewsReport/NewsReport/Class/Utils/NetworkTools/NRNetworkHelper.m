@@ -15,6 +15,7 @@
 #import <AVFoundation/AVAsset.h>
 #import <AVFoundation/AVAssetExportSession.h>
 #import <AVFoundation/AVMediaFormat.h>
+#import <CommonCrypto/CommonDigest.h>
 #import "WMLSSessionManger.h"
 #define CP_ERROR [NSError errorWithDomain:@"com.Networking.ErrorDomain" code:-999 userInfo:@{ NSLocalizedDescriptionKey:@"网络出现错误，请检查网络连接"}]
 static NetworkReachabilityStatus _status;
@@ -27,7 +28,7 @@ static CPNetworkRequestType  _requestType  = CPNetworkRequestTypeJSON;
 
 static BOOL _shouldAutoEncode = NO;
 
-static BOOL _isEnableInterfaceDebug = NO;
+static BOOL _isEnableInterfaceDebug = YES;
 
 static NSDictionary *_httpHeaders = nil;
 
@@ -911,6 +912,7 @@ typedef NS_ENUM(NSUInteger,HTTPMethodType ) {
         }
 
     }
+    
     return url.length==0?queries:url;
 }
 + (void)successResponse:(id)responseData complete:(CPNetworkRequestSuccess)success {
@@ -974,7 +976,8 @@ typedef NS_ENUM(NSUInteger,HTTPMethodType ) {
     //开启动画
     [AFNetworkActivityIndicatorManager sharedManager].enabled =[self isNetworkConnect];
 
-    WMLSSessionManger *manager =  [WMLSSessionManger manager];
+//    WMLSSessionManger *manager =  [WMLSSessionManger manager];
+       AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
 
     //设置https单向认证
 //     [manager setSecurityPolicy:[self customSecurityPolicy]];
@@ -1037,8 +1040,9 @@ typedef NS_ENUM(NSUInteger,HTTPMethodType ) {
     [manager.requestSerializer setTimeoutInterval:HttpTimeOut];
     [manager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithArray:@[@"application/json", @"text/json", @"text/javascript",@"text/html", @"text/plain",@"application/atom+xml",@"application/xml",@"text/xml", @"image/*"]];
+    
     // 设置允许同时最大并发数量，过大容易出问题
-    manager.operationQueue.maxConcurrentOperationCount = 2;
+    manager.operationQueue.maxConcurrentOperationCount = 3;
 
     return manager;
 

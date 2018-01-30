@@ -41,7 +41,7 @@
     self.navigationItem.title = @"登陆";
     [self setupUI];
     [self configViews];
-    [self  eventHandling];
+    [self eventHandling];
     [NRNotificationCenter addObserver:self selector:@selector(loginStatus:) name:NRIMMessageLoginStatusConfigurationNotificationCenterKey object:nil];
 }
 
@@ -87,7 +87,10 @@
     WS(weakSelf)
     [NRBusinessNetworkTool PostLoginWithUserPassword:@"web" username:@"user45" CompleteSuccessfull:^(id responseObject) {
         NRIMUserModel *user = [NRIMUserModel mj_objectWithKeyValues:responseObject];
-        [weakSelf loginImpl:user.userId withToken:user.password];
+        
+        [[NRUserTools defaultCenter]updateUserID:convertToString([NSString stringWithFormat:@"%ld",user.userId])];
+        [weakSelf loginImpl:convertToString([NSString stringWithFormat:@"%ld",user.userId]) withToken:@"web"];
+        
     } failure:^(id error) {
         NSLog(@"error:%@",error);
     }];
@@ -109,7 +112,7 @@
  * 登录状态通知
  */
 - (void)loginStatus:(NSNotification *)notification{
-  NSNumber *code = notification.userInfo[@"key"];
+    NSNumber *code = notification.userInfo[@"key"];
     if ([code intValue] == COMMON_CODE_OK) {
         NSLog(@"登录成功");
         [self switchRootController];
@@ -145,7 +148,7 @@
  * 点击新闻编辑
  */
 -(void)tap:(UITapGestureRecognizer *)tap{
-      NSLog(@"用户协议");
+    NSLog(@"用户协议");
 }
 
 /*!

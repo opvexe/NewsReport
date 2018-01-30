@@ -16,21 +16,43 @@
 /*!
  用户ID
  */
-@property(nonatomic, strong) NSString *userId;
+@property(nonatomic, assign) NSInteger userId;
 
 /*!
  用户名称
  */
-@property(nonatomic, strong) NSString *name;
+@property(nonatomic, copy) NSString *nickName;
+
+/*!
+ 用户手机号
+ */
+@property (nonatomic,copy) NSString *tel;
 
 /*!
  用户头像的URL
  */
-@property(nonatomic, strong) NSString *portraitUri;
+@property(nonatomic, copy) NSString *userIcon;
 
 /*!
- 用户密码
+ 用户Token
  */
-@property(nonatomic,copy)NSString *password;
+@property (nonatomic,copy) NSString *token;
+
+/*!
+ 登录用户名
+ */
+@property (nonatomic,copy) NSString *userName;
+
+/*!
+ * 视频ID
+ */
+@property (nonatomic,assign) NSInteger mediaId;
+
+/*!
+ * 部门
+ */
+@property (nonatomic,assign) NSInteger depId;
+
+
 
 @end
