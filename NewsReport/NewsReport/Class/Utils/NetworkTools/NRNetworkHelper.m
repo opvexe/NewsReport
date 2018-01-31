@@ -24,7 +24,7 @@ static BOOL _isNetwork;
 
 static CPNetworkResponseType _responseType = CPNetworkResponseTypeJSON;
 
-static CPNetworkRequestType  _requestType  = CPNetworkRequestTypeJSON;
+static CPNetworkRequestType  _requestType  = CPNetworkRequestTypePlainText;
 
 static BOOL _shouldAutoEncode = NO;
 
@@ -976,8 +976,8 @@ typedef NS_ENUM(NSUInteger,HTTPMethodType ) {
     //开启动画
     [AFNetworkActivityIndicatorManager sharedManager].enabled =[self isNetworkConnect];
 
-//    WMLSSessionManger *manager =  [WMLSSessionManger manager];
-       AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    WMLSSessionManger *manager =  [WMLSSessionManger manager];
+ 
 
     //设置https单向认证
 //     [manager setSecurityPolicy:[self customSecurityPolicy]];
@@ -993,8 +993,7 @@ typedef NS_ENUM(NSUInteger,HTTPMethodType ) {
         }
         case CPNetworkRequestTypeJSON:
         {
-            manager.requestSerializer = [AFJSONRequestSerializer serializer];
-
+              manager.requestSerializer = [AFJSONRequestSerializer serializer];
             break;
         }
 
@@ -1005,7 +1004,7 @@ typedef NS_ENUM(NSUInteger,HTTPMethodType ) {
     switch (_responseType) {
         case CPNetworkResponseTypeJSON:
         {
-            manager.responseSerializer = [AFJSONResponseSerializer serializer];
+              manager.responseSerializer = [AFJSONResponseSerializer serializer];
 
             break;
         }
