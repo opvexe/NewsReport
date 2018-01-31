@@ -26,4 +26,5 @@ pod 'SDWebImage/GIF'
 pod 'MJExtension'
 pod 'MJRefresh'
 pod 'YYCache'
+pod 'FMDB'
 end

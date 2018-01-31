@@ -7,6 +7,7 @@
 //
 
 #import "NRConversationListViewController.h"
+#import "NRChatViewController.h"
 #import "NRConversationListCell.h"
 #import "NRConversationListModel.h"
 #import "NRIMElem.h"
@@ -123,6 +124,15 @@
     NRConversationListModel *model = self.messageDataSocure[indexPath.row];
     [cell InitDataWithModel:model];
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    NRConversationListModel *model = self.messageDataSocure[indexPath.row];
+    NRChatViewController *chat = [[ NRChatViewController alloc]init];
+    chat.targetId = model.name;
+    chat.userName = model.name;
+    [self.navigationController pushViewController:chat animated:YES];
 }
 
 /*!

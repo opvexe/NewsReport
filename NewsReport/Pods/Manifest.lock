@@ -16,6 +16,9 @@ PODS:
     - AFNetworking/NSURLSession
   - CYLTabBarController (1.17.6)
   - FLAnimatedImage (1.0.12)
+  - FMDB (2.7.2):
+    - FMDB/standard (= 2.7.2)
+  - FMDB/standard (2.7.2)
   - Masonry (1.1.0)
   - MJExtension (3.0.13)
   - MJRefresh (3.1.15.3)
@@ -33,6 +36,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking
   - CYLTabBarController
+  - FMDB
   - Masonry
   - MJExtension
   - MJRefresh
@@ -46,6 +50,7 @@ SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   CYLTabBarController: c374643dea6dadece8bdff9c70f7387f8ffd7d08
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
+  FMDB: 6198a90e7b6900cfc046e6bc0ef6ebb7be9236aa
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
   MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
@@ -54,6 +59,6 @@ SPEC CHECKSUMS:
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
   ZLPhotoBrowser: 2125e7b7ea328c959a5ead1204c83b3bb0f0bf5a
 
-PODFILE CHECKSUM: b77a025f7659d8f49803e5a31402c4ed0a33d054
+PODFILE CHECKSUM: 2c21aaf2fbc44028d127942965c2b15613f151e8
 
 COCOAPODS: 1.4.0.beta.2

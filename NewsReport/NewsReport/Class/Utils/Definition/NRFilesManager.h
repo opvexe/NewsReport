@@ -50,6 +50,7 @@
 #import <MJRefresh.h>
 #import <MJExtension.h>
 #import <YYCache.h>
+#import <FMDB.h>
 /*!
  Chat库
  */

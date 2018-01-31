@@ -9,6 +9,7 @@
 #ifndef Chat_h
 #define Chat_h
 
+
 /**
  *  消息发送状态,自己发送的消息时有
  */
