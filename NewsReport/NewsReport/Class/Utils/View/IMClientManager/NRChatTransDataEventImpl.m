@@ -45,8 +45,13 @@
     NSString *type    = convertToString([NSString stringWithFormat:@"%d",elem]);
     NRIMElem *message = [[NRIMElem alloc]init];
     message.from    = convertToString(sender);
-    message.timestamp = convertToString(fingerPrintOfProtocal);             ///uid + 时间戳
-    
+    message.messageId = convertToString(fingerPrintOfProtocal);             ///uid + 时间戳 （消息标识）
+    message.timestamp = [convertToString(fingerPrintOfProtocal) componentsSeparatedByString:@"+"].lastObject;
+    if ([message.from isEqualToString:[[NRUserTools defaultCenter]getUserID]]) {    
+        message.isSender = YES;
+    }else{
+         message.isSender = NO;
+    }
     if ([type hasPrefix:@"1"]) {    ///单聊
         message.messageChatType = MessageChatSingle;
         switch (elem) {

@@ -7,6 +7,8 @@
 //
 
 #import "NRIMClientManager.h"
+#import "ClientCoreSDK.h"
+#import "ConfigEntity.h"
 
 @interface NRIMClientManager ()
 
