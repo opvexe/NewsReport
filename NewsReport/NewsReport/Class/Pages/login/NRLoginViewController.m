@@ -31,9 +31,6 @@
 
 @implementation NRLoginViewController
 
--(void)dealloc{
-    [NRNotificationCenter removeObserver:self];
-}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -42,7 +39,6 @@
     [self setupUI];
     [self configViews];
     [self eventHandling];
-    [NRNotificationCenter addObserver:self selector:@selector(loginStatus:) name:NRIMMessageLoginStatusConfigurationNotificationCenterKey object:nil];
 }
 
 -(void)eventHandling{
@@ -90,7 +86,6 @@
         WSSTRONG(strongSelf)
         [[NRUserTools defaultCenter]updateUserID:([NSString stringWithFormat:@"%ld",user.userId])];
         [strongSelf loginImpl:[[NRUserTools defaultCenter]getUserID] withToken:@"web"];
-        
     } failure:^(id error) {
         NSLog(@"error:%@",error);
     }];
@@ -105,19 +100,6 @@
         NSLog(@"登陆请求已发出");
     }else{
         NSLog(@"登陆请求发送失败，错误码：%d", code);
-    }
-}
-
-/*!
- * 登录状态通知
- */
-- (void)loginStatus:(NSNotification *)notification{
-    NSNumber *code = notification.userInfo[@"key"];
-    if ([code intValue] == COMMON_CODE_OK) {
-        NSLog(@"登录成功");
-        [self switchRootController];
-    }else{
-        NSLog(@"登录失败");
     }
 }
 
@@ -160,28 +142,28 @@
 
 -(void)configViews{
     
-    [self.CloseBt setBackgroundImage:[UIImage imageNamed:@"NewClose"] forState:UIControlStateNormal];
-    [self.CloseBt setBackgroundImage:[UIImage imageNamed:@"NewClose"] forState:UIControlStateHighlighted];
-    [self.CloseBt setBackgroundImage:[UIImage imageNamed:@"NewClose"] forState:UIControlStateDisabled];
-    [self.CloseBt setBackgroundImage:[UIImage imageNamed:@"NewClose"] forState:UIControlStateSelected];
+    [self.CloseBt setBackgroundImage:[UIImage imageNamed:@"close_Icon"] forState:UIControlStateNormal];
+    [self.CloseBt setBackgroundImage:[UIImage imageNamed:@"close_Icon"] forState:UIControlStateHighlighted];
+    [self.CloseBt setBackgroundImage:[UIImage imageNamed:@"close_Icon"] forState:UIControlStateDisabled];
+    [self.CloseBt setBackgroundImage:[UIImage imageNamed:@"close_Icon"] forState:UIControlStateSelected];
     self.CloseBt.showsTouchWhenHighlighted = NO;
     
-    [self.weboBT setBackgroundImage:[UIImage imageNamed:@"Newweibo"] forState:UIControlStateNormal];
-    [self.weboBT setBackgroundImage:[UIImage imageNamed:@"Newweibo"] forState:UIControlStateHighlighted];
-    [self.weboBT setBackgroundImage:[UIImage imageNamed:@"Newweibo"] forState:UIControlStateDisabled];
-    [self.weboBT setBackgroundImage:[UIImage imageNamed:@"Newweibo"] forState:UIControlStateSelected];
+    [self.weboBT setBackgroundImage:[UIImage imageNamed:@"weibo_icon"] forState:UIControlStateNormal];
+    [self.weboBT setBackgroundImage:[UIImage imageNamed:@"weibo_icon"] forState:UIControlStateHighlighted];
+    [self.weboBT setBackgroundImage:[UIImage imageNamed:@"weibo_icon"] forState:UIControlStateDisabled];
+    [self.weboBT setBackgroundImage:[UIImage imageNamed:@"weibo_icon"] forState:UIControlStateSelected];
     self.weboBT.showsTouchWhenHighlighted = NO;
     
-    [self.QQBT setBackgroundImage:[UIImage imageNamed:@"Newqq"] forState:UIControlStateNormal];
-    [self.QQBT setBackgroundImage:[UIImage imageNamed:@"Newqq"] forState:UIControlStateHighlighted];
-    [self.QQBT setBackgroundImage:[UIImage imageNamed:@"Newqq"] forState:UIControlStateDisabled];
-    [self.QQBT setBackgroundImage:[UIImage imageNamed:@"Newqq"] forState:UIControlStateSelected];
+    [self.QQBT setBackgroundImage:[UIImage imageNamed:@"qq_icon"] forState:UIControlStateNormal];
+    [self.QQBT setBackgroundImage:[UIImage imageNamed:@"qq_icon"] forState:UIControlStateHighlighted];
+    [self.QQBT setBackgroundImage:[UIImage imageNamed:@"qq_icon"] forState:UIControlStateDisabled];
+    [self.QQBT setBackgroundImage:[UIImage imageNamed:@"qq_icon"] forState:UIControlStateSelected];
     self.QQBT.showsTouchWhenHighlighted = NO;
     
-    [self.weiBT setBackgroundImage:[UIImage imageNamed:@"Newweixin"] forState:UIControlStateNormal];
-    [self.weiBT setBackgroundImage:[UIImage imageNamed:@"Newweixin"] forState:UIControlStateHighlighted];
-    [self.weiBT setBackgroundImage:[UIImage imageNamed:@"Newweixin"] forState:UIControlStateDisabled];
-    [self.weiBT setBackgroundImage:[UIImage imageNamed:@"Newweixin"] forState:UIControlStateSelected];
+    [self.weiBT setBackgroundImage:[UIImage imageNamed:@"weixin_icon"] forState:UIControlStateNormal];
+    [self.weiBT setBackgroundImage:[UIImage imageNamed:@"weixin_icon"] forState:UIControlStateHighlighted];
+    [self.weiBT setBackgroundImage:[UIImage imageNamed:@"weixin_icon"] forState:UIControlStateDisabled];
+    [self.weiBT setBackgroundImage:[UIImage imageNamed:@"weixin_icon"] forState:UIControlStateSelected];
     self.weiBT.showsTouchWhenHighlighted = NO;
     self.phoneTF.font  = FontHelFont(16);
     self.phoneTF.clearButtonMode = UITextFieldViewModeWhileEditing;
@@ -226,6 +208,8 @@
     [self.loginBT setTitleColor:UIColorFromRGB(0xff758c) forState:UIControlStateHighlighted];
     self.loginBT.showsTouchWhenHighlighted=NO;
     self.TitleLabel.text  =@"新闻编辑";
+    self.TitleLabel.font = FontHelFont(15);
+    self.TitleLabel.textColor = UIColorFromRGB(0xff758c);
     [self.phoneTF becomeFirstResponder];
     [self.passwordBT setImage:[UIImage imageNamed:@"password"] forState:UIControlStateNormal];
     [self.passwordBT setImage:[UIImage imageNamed:@"password"] forState:UIControlStateHighlighted];
@@ -356,7 +340,6 @@
         make.left.mas_equalTo(self.passwordLineView.mas_left);
     }];
 }
-
 
 @end
 

@@ -53,6 +53,14 @@
  */
 @property (nonatomic,assign) NSInteger depId;
 
+/*!
+ * 精度
+ */
+@property (nonatomic,assign) float latitude;
 
+/*!
+ * 维度
+ */
+@property (nonatomic,assign) float longitude;
 
 @end

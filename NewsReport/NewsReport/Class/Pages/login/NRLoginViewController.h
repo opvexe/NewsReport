@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+/*!
+ * 登录类
+ */
 @interface NRLoginViewController : NRBaseViewController
 
 @end

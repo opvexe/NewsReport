@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NRFriendViewController : UIViewController
+@interface NRFriendViewController : NRBaseViewController
 
 @end

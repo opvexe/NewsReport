@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NRPortraitViewController : UIViewController
+@interface NRPortraitViewController : NRBaseViewController
 
 @end

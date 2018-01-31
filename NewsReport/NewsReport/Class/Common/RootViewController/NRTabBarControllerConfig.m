@@ -7,7 +7,7 @@
 //
 
 #import "NRTabBarControllerConfig.h"
-#import "NRMessageViewController.h"
+#import "NRConversationListViewController.h"
 #import "NRFriendViewController.h"
 #import "NRPortraitViewController.h"
 #import "NRRootViewController.h"
@@ -39,9 +39,9 @@
     return _tabBarController;
 }
 - (NSArray *)viewControllers {
-    NRMessageViewController *messageViewController = [[NRMessageViewController alloc] init];
-    UIViewController *messageNavigationController = [[NRBaseNavigationViewController alloc]
-                                                     initWithRootViewController:messageViewController];
+    NRConversationListViewController *conversationViewController = [[NRConversationListViewController alloc] init];
+    UIViewController *conversationNavigationController = [[NRBaseNavigationViewController alloc]
+                                                     initWithRootViewController:conversationViewController];
     
     NRFriendViewController *friendViewController = [[NRFriendViewController alloc] init];
     UIViewController *friendNavigationController = [[NRBaseNavigationViewController alloc]
@@ -54,7 +54,7 @@
     
     
     NSArray *viewControllers = @[
-                                 messageNavigationController,
+                                 conversationNavigationController,
                                  friendNavigationController,
                                  portraitNavigationController
                                  ];
@@ -62,7 +62,7 @@
 }
 - (NSArray *)tabBarItemsAttributesForController {
     
-    NSDictionary *messageTabBarItemsAttributes = @{
+    NSDictionary *conversationTabBarItemsAttributes = @{
                                                    CYLTabBarItemTitle : @"消息",
                                                    CYLTabBarItemImage : @"Message_Icon_Normal",
                                                    CYLTabBarItemSelectedImage : @"Message_Icon_Selected",
@@ -80,7 +80,7 @@
     
     
     NSArray *tabBarItemsAttributes = @[
-                                       messageTabBarItemsAttributes,
+                                       conversationTabBarItemsAttributes,
                                        friendTabBarItemsAttributes,
                                        portraitTabBarItemsAttributes
                                        ];

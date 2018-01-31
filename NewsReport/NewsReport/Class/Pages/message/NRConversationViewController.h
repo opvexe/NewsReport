@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NRMessageViewController : UIViewController
+/*!
+ * 会话类
+ */
+@interface NRConversationViewController : NRBaseViewController
 
 @end

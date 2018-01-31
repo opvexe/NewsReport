@@ -26,7 +26,7 @@
 }
 
 /*!
- * 与服务端的通信断开的回调事件通知。
+ * 与服务端的通信断开的回调事件通知(该消息只有在客户端连接服务器成功之后网络异常中断之时触发)
  */
 - (void) onLinkCloseMessage:(int)dwErrorCode{
     NSLog(@"与IM服务器的连接已断开, 自动登陆/重连将启动!，error：%d", dwErrorCode);

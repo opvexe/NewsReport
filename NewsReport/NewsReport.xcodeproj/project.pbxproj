@@ -41,13 +41,14 @@
 		D01D08D7202040B300288240 /* NRBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D01D08D6202040B300288240 /* NRBaseViewController.m */; };
 		D01D08DB2020427800288240 /* NRRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D01D08DA2020427800288240 /* NRRootViewController.m */; };
 		D01D08DE202042FB00288240 /* NRTabBarControllerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = D01D08DD202042FB00288240 /* NRTabBarControllerConfig.m */; };
-		D01D08E4202043AB00288240 /* NRMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D01D08E3202043AB00288240 /* NRMessageViewController.m */; };
+		D01D08E4202043AB00288240 /* NRConversationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D01D08E3202043AB00288240 /* NRConversationViewController.m */; };
 		D01D08E7202043BA00288240 /* NRFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D01D08E6202043BA00288240 /* NRFriendViewController.m */; };
 		D01D08EA202043CC00288240 /* NRPortraitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D01D08E9202043CC00288240 /* NRPortraitViewController.m */; };
 		D01D08ED2020451200288240 /* NRBaseNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D01D08EC2020451200288240 /* NRBaseNavigationViewController.m */; };
 		D01D08F220204A7600288240 /* NRBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D01D08F120204A7600288240 /* NRBarButtonItem.m */; };
 		D01D08F520204B7B00288240 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = D01D08F420204B7B00288240 /* UIView+Toast.m */; };
 		D01D08FC20206D1E00288240 /* NRUserTools.m in Sources */ = {isa = PBXBuildFile; fileRef = D01D08FB20206D1E00288240 /* NRUserTools.m */; };
+		D02DD997202148210035066D /* NRConversationListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D02DD996202148210035066D /* NRConversationListViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -163,8 +164,8 @@
 		D01D08DA2020427800288240 /* NRRootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRRootViewController.m; sourceTree = "<group>"; };
 		D01D08DC202042FB00288240 /* NRTabBarControllerConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRTabBarControllerConfig.h; sourceTree = "<group>"; };
 		D01D08DD202042FB00288240 /* NRTabBarControllerConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRTabBarControllerConfig.m; sourceTree = "<group>"; };
-		D01D08E2202043AB00288240 /* NRMessageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRMessageViewController.h; sourceTree = "<group>"; };
-		D01D08E3202043AB00288240 /* NRMessageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRMessageViewController.m; sourceTree = "<group>"; };
+		D01D08E2202043AB00288240 /* NRConversationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRConversationViewController.h; sourceTree = "<group>"; };
+		D01D08E3202043AB00288240 /* NRConversationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRConversationViewController.m; sourceTree = "<group>"; };
 		D01D08E5202043BA00288240 /* NRFriendViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRFriendViewController.h; sourceTree = "<group>"; };
 		D01D08E6202043BA00288240 /* NRFriendViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRFriendViewController.m; sourceTree = "<group>"; };
 		D01D08E8202043CC00288240 /* NRPortraitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRPortraitViewController.h; sourceTree = "<group>"; };
@@ -178,6 +179,8 @@
 		D01D08F420204B7B00288240 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
 		D01D08FA20206D1E00288240 /* NRUserTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRUserTools.h; sourceTree = "<group>"; };
 		D01D08FB20206D1E00288240 /* NRUserTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRUserTools.m; sourceTree = "<group>"; };
+		D02DD995202148210035066D /* NRConversationListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRConversationListViewController.h; sourceTree = "<group>"; };
+		D02DD996202148210035066D /* NRConversationListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRConversationListViewController.m; sourceTree = "<group>"; };
 		D34BE6E7BA5DCC2482DC2652 /* Pods-NewsReport.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsReport.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NewsReport/Pods-NewsReport.debug.xcconfig"; sourceTree = "<group>"; };
 		D3B91CD0F52385A630140016 /* Pods-NewsReportTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsReportTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NewsReportTests/Pods-NewsReportTests.release.xcconfig"; sourceTree = "<group>"; };
 		F8FD1C749FAD46CC25535AC9 /* libPods-NewsReportTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NewsReportTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -526,8 +529,10 @@
 		D01D08DF2020435B00288240 /* message */ = {
 			isa = PBXGroup;
 			children = (
-				D01D08E2202043AB00288240 /* NRMessageViewController.h */,
-				D01D08E3202043AB00288240 /* NRMessageViewController.m */,
+				D02DD995202148210035066D /* NRConversationListViewController.h */,
+				D02DD996202148210035066D /* NRConversationListViewController.m */,
+				D01D08E2202043AB00288240 /* NRConversationViewController.h */,
+				D01D08E3202043AB00288240 /* NRConversationViewController.m */,
 			);
 			path = message;
 			sourceTree = "<group>";
@@ -869,7 +874,8 @@
 				D01D08D7202040B300288240 /* NRBaseViewController.m in Sources */,
 				D01D08B22020148400288240 /* CPMessageEventButton.m in Sources */,
 				D01D08A72020087800288240 /* NRMessageQoSEventImpl.m in Sources */,
-				D01D08E4202043AB00288240 /* NRMessageViewController.m in Sources */,
+				D02DD997202148210035066D /* NRConversationListViewController.m in Sources */,
+				D01D08E4202043AB00288240 /* NRConversationViewController.m in Sources */,
 				D01D08F220204A7600288240 /* NRBarButtonItem.m in Sources */,
 				D01D08DB2020427800288240 /* NRRootViewController.m in Sources */,
 				D01D086C201FFA5500288240 /* AppDelegate+NRExtension.m in Sources */,

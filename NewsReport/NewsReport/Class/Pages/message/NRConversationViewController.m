@@ -6,13 +6,13 @@
 //  Copyright © 2018年 Facebook. All rights reserved.
 //
 
-#import "NRMessageViewController.h"
+#import "NRConversationViewController.h"
 
-@interface NRMessageViewController ()
+@interface NRConversationViewController ()
 
 @end
 
-@implementation NRMessageViewController
+@implementation NRConversationViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

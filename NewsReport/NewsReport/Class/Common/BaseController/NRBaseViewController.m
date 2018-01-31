@@ -17,6 +17,12 @@
 
 @implementation NRBaseViewController
 
+-(void)viewDidLoad{
+    [super viewDidLoad];
+    [NRNotificationCenter addObserver:self selector:@selector(loginStatus:) name:NRIMMessageLoginStatusConfigurationNotificationCenterKey object:nil];
+    [NRNotificationCenter addObserver:self selector:@selector(linkStatus:) name:NRIMMessageLinkStatusConfigurationNotificationCenterKey object:nil];
+}
+
 - (void)dismissKeyBoard{
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closeTextField)];
     [self.view addGestureRecognizer:tap];
@@ -153,11 +159,40 @@
 - (void)HYSSetupViewModel{
     
 }
+/*!
+ * 登录状态通知
+ */
+- (void)loginStatus:(NSNotification *)notification{
+    NSNumber *code = notification.userInfo[@"key"];
+    if ([code intValue] == COMMON_CODE_OK) {
+        NSLog(@"登录成功");
+        [self switchRootController];
+    }else{
+        NSLog(@"登录失败");
+    }
+}
+
+/**
+ *  IM登录成功后异常连接失败通知（客户端连接服务器成功之后网络异常中断之时触发）
+ */
+- (void)linkStatus:(NSNotification *)notification{
+     NSNumber *code = notification.userInfo[@"key"];
+     NSLog(@"与IM服务器的连接已断开, 自动登陆/重连将启动!，error：%d", [code intValue]);
+}
 
 
+/**
+ *  跳转到主控制器
+ */
 -(void)switchRootController{
     NRTabBarControllerConfig  *tabBarControllerConfig = [NRTabBarControllerConfig new];
     [UIApplication sharedApplication].delegate.window.rootViewController = tabBarControllerConfig.tabBarController;
+}
+
+#pragma mark < dealloc >
+-(void)dealloc{
+    NSLog(@"%s",__func__);
+    [NRNotificationCenter removeObserver:self];
 }
 
 @end
