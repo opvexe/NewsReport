@@ -10,7 +10,7 @@
 #define NR_HOST_APIS_h
 
 /*!
- * API
+ * API接口
  */
 #define HOST_API_URL    @"http://124.205.145.238:9001"
 

@@ -17,6 +17,7 @@ target 'NewsReport' do
     # Pods for testing
   end
 pod 'CYLTabBarController'
+pod 'TTTAttributedLabel'
 pod 'ZLPhotoBrowser'
 pod 'AFNetworking'
 pod 'Masonry'

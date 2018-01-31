@@ -19,7 +19,7 @@
  宏文件
  */
 #import "NRConst.h"
-
+#import "Chat.h"
 /*!
  自定义类
  */
@@ -34,6 +34,8 @@
  Base类
  */
 #import "NRBaseViewController.h"
+#import "NRBaseTableViewCell.h"
+#import "NRBaseModel.h"
 
 /*!
  三方库
@@ -42,6 +44,7 @@
 #import <UIImageView+WebCache.h>
 #import <FLAnimatedImageView+WebCache.h>
 #import <CYLTabBarController/CYLTabBarController.h>
+#import <TTTAttributedLabel.h>
 #import <AFNetworking.h>
 #import <Masonry.h>
 #import <MJRefresh.h>

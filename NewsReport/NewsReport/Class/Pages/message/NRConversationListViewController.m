@@ -7,9 +7,12 @@
 //
 
 #import "NRConversationListViewController.h"
+#import "NRConversationListCell.h"
+#import "NRIMElem.h"
 
-@interface NRConversationListViewController ()
-
+@interface NRConversationListViewController ()<UITableViewDataSource,UITableViewDelegate>
+@property (nonatomic, strong) UITableView    *messageTableView;
+@property (nonatomic,strong ) NSMutableArray *messageDataSocure;
 @end
 
 @implementation NRConversationListViewController
@@ -19,9 +22,169 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationItem.title = @"消息";
+    [self updateViewConstraintsView];
+    [self receiveMessageNotification];
+    [self reloadDataSoucre];
+    
+}
+
+/*!
+ * 刷新数据
+ */
+-(void)reloadDataSoucre{
+    
+    
+    
+    
+}
+
+/*!
+ * 消息通知
+ */
+-(void)receiveMessageNotification{
+    [NRNotificationCenter addObserver:self selector:@selector(receiveMessage:) name:NRIMMessageReceiveConfigurationNotificationCenterKey object:nil];
+}
+
+/*!
+ * 获取新消息
+ */
+
+-(void)receiveMessage:(NSNotification *)notification{
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+       __block NSString *signature = @"" ;
+        
+        NRIMElem *message = notification.userInfo[@"key"];
+        Class MessageElem = [message class];
+        if (MessageElem == [NRIMTextElem class]) {
+            NRIMTextElem *text = (NRIMTextElem *)message;
+            signature = text.text;
+        }else if (MessageElem == [NRIMImageElem class]){
+            signature =@"[图片]";
+        }else if (MessageElem == [NRIMSoundElem class]){
+            signature =@"[语音]";
+        }else if (MessageElem == [NRIMFileElem class]){
+            signature =@"[文件]";
+        }else{
+            signature =@"[未知消息]";
+        }
+        
+    });
+}
+
+#pragma mark < ios 11 适配>
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    
+    return 0.001;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    
+    return 0.01;
+}
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    
+    return nil;
+}
+-(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+    
+    return nil;
+}
+
+#pragma mark < UITableViewDelegate >
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
+    if ([cell respondsToSelector:@selector(setSeparatorInset:)]) {
+        [cell setSeparatorInset:UIEdgeInsetsZero];
+    }
+    if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
+        [cell setLayoutMargins:UIEdgeInsetsZero];
+    }
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 10;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return  Number(60.0);
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    NRConversationListCell *cell = [NRConversationListCell CellWithTableView:tableView];
+    
+    return cell;
+}
+
+/*!
+ * 编辑
+ */
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+- (BOOL)tableView: (UITableView *)tableView shouldIndentWhileEditingRowAtIndexPath:(NSIndexPath *)indexPath {
+    return NO;
+}
+
+- (NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    UITableViewRowAction *deleteRowAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive
+                                                                               title:@"删除" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
+                                                                                   
+                                                                               }];
+    deleteRowAction.backgroundColor  = [UIColor redColor] ;
+    
+    return @[deleteRowAction];
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+}
+
+/*!
+ * 懒加载
+ */
+-(UITableView *)messageTableView{
+    if (!_messageTableView) {
+        _messageTableView                                = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
+        _messageTableView.showsVerticalScrollIndicator   = NO;
+        _messageTableView.showsHorizontalScrollIndicator = NO;
+        _messageTableView.delegate                       = self;
+        _messageTableView.dataSource                     = self;
+        _messageTableView.tableFooterView                = [UIView new];
+        _messageTableView.separatorStyle                 = UITableViewCellSeparatorStyleSingleLine;
+        _messageTableView.backgroundColor               = UIColorFromRGB(0xffffff);
+        [self.view addSubview:_messageTableView];
+    }
+    return _messageTableView;
+}
+
+-(NSMutableArray *)messageDataSocure{
+    if (!_messageDataSocure) {
+        _messageDataSocure = [NSMutableArray arrayWithCapacity:0];
+    }
+    return _messageDataSocure;
 }
 
 
+/*!
+ * 布局
+ */
+-(void)updateViewConstraintsView{
+    [self.messageTableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        if (iOS11) {
+            make.edges.mas_equalTo(self.view.mas_safeAreaLayoutGuide);
+        }else{
+            make.edges.mas_equalTo(self.view);
+        }
+    }];
+}
 
+/*!
+ * dealloc
+ */
+-(void)dealloc{
+    [NRNotificationCenter removeObserver:self];
+}
 @end
 

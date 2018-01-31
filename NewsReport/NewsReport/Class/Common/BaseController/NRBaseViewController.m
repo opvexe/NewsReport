@@ -163,21 +163,27 @@
  * 登录状态通知
  */
 - (void)loginStatus:(NSNotification *)notification{
-    NSNumber *code = notification.userInfo[@"key"];
-    if ([code intValue] == COMMON_CODE_OK) {
-        NSLog(@"登录成功");
-        [self switchRootController];
-    }else{
-        NSLog(@"登录失败");
-    }
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSNumber *code = notification.userInfo[@"key"];
+        if ([code intValue] == COMMON_CODE_OK) {
+            NSLog(@"登录成功");
+            [self switchRootController];
+        }else{
+            NSLog(@"登录失败");
+        }
+    });
 }
 
 /**
  *  IM登录成功后异常连接失败通知（客户端连接服务器成功之后网络异常中断之时触发）
  */
 - (void)linkStatus:(NSNotification *)notification{
-     NSNumber *code = notification.userInfo[@"key"];
-     NSLog(@"与IM服务器的连接已断开, 自动登陆/重连将启动!，error：%d", [code intValue]);
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSNumber *code = notification.userInfo[@"key"];
+        NSLog(@"与IM服务器的连接已断开, 自动登陆/重连将启动!，error：%d", [code intValue]);
+        
+    });
 }
 
 

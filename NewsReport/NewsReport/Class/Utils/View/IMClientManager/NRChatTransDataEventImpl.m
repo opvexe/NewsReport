@@ -7,6 +7,7 @@
 //
 
 #import "NRChatTransDataEventImpl.h"
+#import "NRIMElem.h"
 #import "ErrorCode.h"
 
 @implementation NRChatTransDataEventImpl
@@ -15,8 +16,9 @@
  * 收到消息回调
  */
 - (void) onTransBuffer:(NSString *)fingerPrintOfProtocal withUserId:(NSString *)dwUserid andContent:(NSString *)dataContent andTypeu:(int)typeu{
-    NSLog(@"[%d]收到来自用户%@的消息:%@", typeu, dwUserid, dataContent);
-    
+    NSLog(@"消息类型:[%d]|发送方:%@||消息体:%@||uid+时间戳:%@", typeu, dwUserid, dataContent,fingerPrintOfProtocal);
+    NRIMElem *message = [self NRIMMessageBobyType:typeu messageContent:dataContent messageSender:dwUserid messageTime:fingerPrintOfProtocal];
+    [NRNotificationCenter postNotificationName:NRIMMessageReceiveConfigurationNotificationCenterKey object:nil userInfo:@{@"key":message}];
 }
 
 
@@ -32,6 +34,89 @@
         NSLog(@"%@",content);
     }
     
+}
+
+/*!
+ * 包装消息体
+ */
+
+-(NRIMElem *)NRIMMessageBobyType:(int)elem messageContent:(NSString *)content messageSender:(NSString *)sender messageTime:(NSString *)fingerPrintOfProtocal{
+    
+    NSString *type    = convertToString([NSString stringWithFormat:@"%d",elem]);
+    NRIMElem *message = [[NRIMElem alloc]init];
+    message.sender    = convertToString(sender);
+    message.timestamp = convertToString(fingerPrintOfProtocal);             ///uid + 时间戳
+    
+    if ([type hasPrefix:@"1"]) {    ///单聊
+        message.messageChatType = MessageChatSingle;
+        switch (elem) {
+            case 11:
+            {
+                message.messageType  = MessageTypeText;
+                NRIMTextElem *textElem  = (NRIMTextElem *)message;
+                textElem.text = convertToString(content);
+            }
+                break;
+            case 12:
+            {
+                message.messageType  = MessageTypeImage;
+            }
+                break;
+            case 13:
+            {
+                message.messageType  = MessageTypeVoice;
+            }
+                break;
+            case 14:
+            {
+                message.messageType  = MessageTypeVideo;
+            }
+                break;
+                
+            default:
+            {
+                message.messageType  = MessageTypeUnknow;
+            }
+                break;
+        }
+    }else if ([type hasPrefix:@"2"]){           ///群聊
+        message.messageChatType = MessageChatGroup;
+        switch (elem) {
+            case 11:
+            {
+                message.messageType  = MessageTypeText;
+                NRIMTextElem *textElem  = (NRIMTextElem *)message;
+                textElem.text = convertToString(content);
+            }
+                break;
+            case 12:
+            {
+                message.messageType  = MessageTypeImage;
+            }
+                break;
+            case 13:
+            {
+                message.messageType  = MessageTypeVoice;
+            }
+                break;
+            case 14:
+            {
+                message.messageType  = MessageTypeVideo;
+            }
+                break;
+                
+            default:
+            {
+                message.messageType  = MessageTypeUnknow;
+            }
+                break;
+        }
+    }else{
+        
+        NSLog(@"未知消息");
+    }
+    
+    return message;
 }
 
 

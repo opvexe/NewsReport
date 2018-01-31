@@ -20,3 +20,9 @@ extern NSString * const NRIMMessageLoginStatusConfigurationNotificationCenterKey
 
 /* 连接状态通知 */
 extern NSString * const NRIMMessageLinkStatusConfigurationNotificationCenterKey;
+
+
+
+
+
+

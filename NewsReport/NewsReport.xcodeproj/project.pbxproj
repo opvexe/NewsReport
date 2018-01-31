@@ -49,6 +49,10 @@
 		D01D08F520204B7B00288240 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = D01D08F420204B7B00288240 /* UIView+Toast.m */; };
 		D01D08FC20206D1E00288240 /* NRUserTools.m in Sources */ = {isa = PBXBuildFile; fileRef = D01D08FB20206D1E00288240 /* NRUserTools.m */; };
 		D02DD997202148210035066D /* NRConversationListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D02DD996202148210035066D /* NRConversationListViewController.m */; };
+		D02DD99C202154B50035066D /* NRConversationListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D02DD99B202154B50035066D /* NRConversationListCell.m */; };
+		D02DD9A0202155F20035066D /* NRBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D02DD99F202155F20035066D /* NRBaseTableViewCell.m */; };
+		D02DD9A4202156350035066D /* NRBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D02DD9A3202156350035066D /* NRBaseModel.m */; };
+		D02DD9AB20218B120035066D /* NRIMElem.m in Sources */ = {isa = PBXBuildFile; fileRef = D02DD9AA20218B120035066D /* NRIMElem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -181,6 +185,16 @@
 		D01D08FB20206D1E00288240 /* NRUserTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRUserTools.m; sourceTree = "<group>"; };
 		D02DD995202148210035066D /* NRConversationListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRConversationListViewController.h; sourceTree = "<group>"; };
 		D02DD996202148210035066D /* NRConversationListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRConversationListViewController.m; sourceTree = "<group>"; };
+		D02DD99A202154B50035066D /* NRConversationListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRConversationListCell.h; sourceTree = "<group>"; };
+		D02DD99B202154B50035066D /* NRConversationListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRConversationListCell.m; sourceTree = "<group>"; };
+		D02DD99E202155F20035066D /* NRBaseTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRBaseTableViewCell.h; sourceTree = "<group>"; };
+		D02DD99F202155F20035066D /* NRBaseTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRBaseTableViewCell.m; sourceTree = "<group>"; };
+		D02DD9A1202156190035066D /* NRBaseTableViewCellProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRBaseTableViewCellProtocol.h; sourceTree = "<group>"; };
+		D02DD9A2202156350035066D /* NRBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRBaseModel.h; sourceTree = "<group>"; };
+		D02DD9A3202156350035066D /* NRBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRBaseModel.m; sourceTree = "<group>"; };
+		D02DD9A820216C7A0035066D /* Chat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Chat.h; sourceTree = "<group>"; };
+		D02DD9A920218B120035066D /* NRIMElem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRIMElem.h; sourceTree = "<group>"; };
+		D02DD9AA20218B120035066D /* NRIMElem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRIMElem.m; sourceTree = "<group>"; };
 		D34BE6E7BA5DCC2482DC2652 /* Pods-NewsReport.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsReport.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NewsReport/Pods-NewsReport.debug.xcconfig"; sourceTree = "<group>"; };
 		D3B91CD0F52385A630140016 /* Pods-NewsReportTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsReportTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NewsReportTests/Pods-NewsReportTests.release.xcconfig"; sourceTree = "<group>"; };
 		F8FD1C749FAD46CC25535AC9 /* libPods-NewsReportTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NewsReportTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -317,6 +331,7 @@
 		D01D0866201FF95400288240 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				D02DD99D202155E60035066D /* BaseTableView */,
 				D01D08D82020424900288240 /* RootViewController */,
 				D01D08D4202040A200288240 /* BaseController */,
 				D01D08D02020225800288240 /* BaseModel */,
@@ -414,6 +429,7 @@
 				D01D08B3202014D600288240 /* NRColorDefines.h */,
 				D01D08B82020164100288240 /* NRFontDefines.h */,
 				D01D08CF20201E0400288240 /* NR_HOST_APIS.h */,
+				D02DD9A820216C7A0035066D /* Chat.h */,
 			);
 			path = Definition;
 			sourceTree = "<group>";
@@ -499,6 +515,10 @@
 			children = (
 				D01D08D12020226D00288240 /* NRIMUserModel.h */,
 				D01D08D22020226D00288240 /* NRIMUserModel.m */,
+				D02DD9A2202156350035066D /* NRBaseModel.h */,
+				D02DD9A3202156350035066D /* NRBaseModel.m */,
+				D02DD9A920218B120035066D /* NRIMElem.h */,
+				D02DD9AA20218B120035066D /* NRIMElem.m */,
 			);
 			path = BaseModel;
 			sourceTree = "<group>";
@@ -529,6 +549,7 @@
 		D01D08DF2020435B00288240 /* message */ = {
 			isa = PBXGroup;
 			children = (
+				D02DD999202154980035066D /* View */,
 				D02DD995202148210035066D /* NRConversationListViewController.h */,
 				D02DD996202148210035066D /* NRConversationListViewController.m */,
 				D01D08E2202043AB00288240 /* NRConversationViewController.h */,
@@ -571,6 +592,25 @@
 				D01D08FB20206D1E00288240 /* NRUserTools.m */,
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		D02DD999202154980035066D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D02DD99A202154B50035066D /* NRConversationListCell.h */,
+				D02DD99B202154B50035066D /* NRConversationListCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D02DD99D202155E60035066D /* BaseTableView */ = {
+			isa = PBXGroup;
+			children = (
+				D02DD99E202155F20035066D /* NRBaseTableViewCell.h */,
+				D02DD99F202155F20035066D /* NRBaseTableViewCell.m */,
+				D02DD9A1202156190035066D /* NRBaseTableViewCellProtocol.h */,
+			);
+			path = BaseTableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -871,7 +911,9 @@
 				D01D08F520204B7B00288240 /* UIView+Toast.m in Sources */,
 				D01D0841201FF8AE00288240 /* main.m in Sources */,
 				D01D08E7202043BA00288240 /* NRFriendViewController.m in Sources */,
+				D02DD9A0202155F20035066D /* NRBaseTableViewCell.m in Sources */,
 				D01D08D7202040B300288240 /* NRBaseViewController.m in Sources */,
+				D02DD99C202154B50035066D /* NRConversationListCell.m in Sources */,
 				D01D08B22020148400288240 /* CPMessageEventButton.m in Sources */,
 				D01D08A72020087800288240 /* NRMessageQoSEventImpl.m in Sources */,
 				D02DD997202148210035066D /* NRConversationListViewController.m in Sources */,
@@ -882,10 +924,12 @@
 				D01D08AA20200A8300288240 /* NRConst.m in Sources */,
 				D01D08EA202043CC00288240 /* NRPortraitViewController.m in Sources */,
 				D01D08DE202042FB00288240 /* NRTabBarControllerConfig.m in Sources */,
+				D02DD9AB20218B120035066D /* NRIMElem.m in Sources */,
 				D01D08C620201BB000288240 /* NRNetworkHelper.m in Sources */,
 				D01D08ED2020451200288240 /* NRBaseNavigationViewController.m in Sources */,
 				D01D08CE20201CC500288240 /* NRBusinessNetworkTool.m in Sources */,
 				D01D08FC20206D1E00288240 /* NRUserTools.m in Sources */,
+				D02DD9A4202156350035066D /* NRBaseModel.m in Sources */,
 				D01D08BE2020178000288240 /* NSString+LSWMEXtension.m in Sources */,
 				D01D089E201FFF1A00288240 /* NRIMClientManager.m in Sources */,
 				D01D08A42020067C00288240 /* NRChatBaseEventImpl.m in Sources */,
