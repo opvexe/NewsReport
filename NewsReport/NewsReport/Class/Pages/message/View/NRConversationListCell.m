@@ -7,6 +7,7 @@
 //
 
 #import "NRConversationListCell.h"
+#import "NRConversationListModel.h"
 
 @interface NRConversationListCell ()
 @property(nonatomic,strong)FLAnimatedImageView *headPortraitImageView;
@@ -85,9 +86,12 @@
     }];
 }
 
--(void)InitDataWithModel:(NRBaseModel *)model{
-    
-   
+-(void)InitDataWithModel:(NRConversationListModel *)model{
+    [self.headPortraitImageView sd_setImageWithURL:[NSURL URLWithString:model.portraitUrl] placeholderImage:NRImageNamed(@"icon_avatar")];
+    self.portraitLabel.text = model.name;
+    self.messageLabel.text  = model.signature;
+    self.timestampLabel.text = model.time;
 }
 
 @end
+

@@ -8,6 +8,7 @@
 
 #import "NRConversationListViewController.h"
 #import "NRConversationListCell.h"
+#import "NRConversationListModel.h"
 #import "NRIMElem.h"
 
 @interface NRConversationListViewController ()<UITableViewDataSource,UITableViewDelegate>
@@ -29,7 +30,7 @@
 }
 
 /*!
- * 刷新数据
+ * 获取本地数据
  */
 -(void)reloadDataSoucre{
     
@@ -51,11 +52,14 @@
 
 -(void)receiveMessage:(NSNotification *)notification{
     
+    NRIMElem *message = notification.userInfo[@"key"];
+    NRConversationListModel *model = [[NRConversationListModel alloc]init];
+    
+    Class MessageElem = [message class];
+    
     dispatch_async(dispatch_get_main_queue(), ^{
-       __block NSString *signature = @"" ;
+        __block NSString *signature = @"" ;
         
-        NRIMElem *message = notification.userInfo[@"key"];
-        Class MessageElem = [message class];
         if (MessageElem == [NRIMTextElem class]) {
             NRIMTextElem *text = (NRIMTextElem *)message;
             signature = text.text;
@@ -69,6 +73,11 @@
             signature =@"[未知消息]";
         }
         
+        model.signature = convertToString(signature);
+        model.time = message.timestamp;
+        model.name = message.sender;
+        [self.messageDataSocure addObject:model];
+        [self.messageTableView reloadData];
     });
 }
 
@@ -102,7 +111,7 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 10;
+    return self.messageDataSocure.count;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -110,9 +119,9 @@
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
     NRConversationListCell *cell = [NRConversationListCell CellWithTableView:tableView];
-    
+    NRConversationListModel *model = self.messageDataSocure[indexPath.row];
+    [cell InitDataWithModel:model];
     return cell;
 }
 

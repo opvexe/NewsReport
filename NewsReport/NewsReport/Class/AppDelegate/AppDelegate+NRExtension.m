@@ -27,7 +27,6 @@
  *  初始化第三方
  */
 -(void)registrationThirdLib{
-    
      [[NRIMClientManager sharedInstance] initMobileIMSDK];
 }
 
