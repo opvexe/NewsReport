@@ -7,7 +7,39 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NRIMElem.h"
 
-@interface NRChatMessageContentView : UIControl
+@protocol NRChatMessageContentViewDelegate <NSObject>
+
+@optional
+/*!
+ * 点击消息
+ */
+- (void)clickMessageContentViewWithMessageModel:(NRIMElem *)messageModel;
+
+/*!
+ * 长按消息
+ */
+- (void)longPressMessageContentViewWithMessageModel:(NRIMElem *)messageModel;
 
 @end
+@interface NRChatMessageContentView : UIControl<NRChatMessageContentViewDelegate>
+/*!
+ * 代理
+ */
+@property (nonatomic,weak) id <NRChatMessageContentViewDelegate> delegate;
+
+/*!
+ * 背景泡泡
+ */
+@property (nonatomic,strong) UIImageView * bgImgView;
+
+/*!
+ * 消息模型
+ */
+@property (nonatomic, strong) NRIMElem *messageModel;
+
+#pragma mark < 私有方法 >
+- (void)refreshData:(NRIMElem *)messageModel;
+@end
+

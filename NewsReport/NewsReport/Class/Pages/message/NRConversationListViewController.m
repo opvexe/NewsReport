@@ -76,7 +76,7 @@
         
         model.signature = convertToString(signature);
         model.time = message.timestamp;
-        model.name = message.sender;
+        model.name = message.from;
         [self.messageDataSocure addObject:model];
         [self.messageTableView reloadData];
     });

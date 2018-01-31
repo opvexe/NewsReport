@@ -10,24 +10,25 @@
 
 @interface NRIMElem : NSObject
 
-/**
- *  获取发送方
- *
- *  @return 发送方标识
+/*!
+ *  消息的唯一标识符
  */
-@property (nonatomic,copy) NSString *sender;
+@property (nonatomic, copy) NSString *messageId;
+
+/*!
+ *  发送方
+ */
+@property (nonatomic, copy) NSString *from;
 
 /**
  *  是否发送方
  *
  *  @return TRUE 表示是发送消息    FALSE 表示是接收消息
  */
-@property (nonatomic,assign) BOOL isSelf;
+@property (nonatomic) BOOL isSender;
 
 /**
  *  当前消息的时间戳
- *
- *  @return 时间戳
  */
 @property(nonatomic,copy)NSString *timestamp;
 
@@ -40,6 +41,12 @@
  *  消息聊天类型(单聊，群聊)
  */
 @property (nonatomic,assign) MessageChat messageChatType;
+
+/*!
+ *  消息状态
+ */
+@property (nonatomic) MessageSendState status;
+
 
 @end
 

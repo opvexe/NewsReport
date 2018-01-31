@@ -44,7 +44,7 @@
     
     NSString *type    = convertToString([NSString stringWithFormat:@"%d",elem]);
     NRIMElem *message = [[NRIMElem alloc]init];
-    message.sender    = convertToString(sender);
+    message.from    = convertToString(sender);
     message.timestamp = convertToString(fingerPrintOfProtocal);             ///uid + 时间戳
     
     if ([type hasPrefix:@"1"]) {    ///单聊

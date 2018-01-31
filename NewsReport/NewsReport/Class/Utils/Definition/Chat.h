@@ -36,6 +36,8 @@ typedef NS_ENUM(NSUInteger, MessageType)
     MessageTypeLocation,   /**< 地理位置消息 */
     MessageTypeVoiceCall,  /**< 音频呼叫 */
     MessageTypeVideoCall,  /**< 视频呼叫 */
+    MessageTypeShare,      /*分享类型*/
+    MessageTypeRedMoney    /*红包类型*/
 };
 
 
