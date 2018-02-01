@@ -14,6 +14,7 @@
 		D013607E2022FD9C003AFEEE /* NRFMDataManger.m in Sources */ = {isa = PBXBuildFile; fileRef = D013607D2022FD9C003AFEEE /* NRFMDataManger.m */; };
 		D01360812022FEB5003AFEEE /* NRNewsReportTools.m in Sources */ = {isa = PBXBuildFile; fileRef = D01360802022FEB5003AFEEE /* NRNewsReportTools.m */; };
 		D013608420230107003AFEEE /* NRUserInfoDB.m in Sources */ = {isa = PBXBuildFile; fileRef = D013608320230107003AFEEE /* NRUserInfoDB.m */; };
+		D0136087202318B6003AFEEE /* AgoraSignalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0136086202318B6003AFEEE /* AgoraSignalKit.framework */; };
 		D01D0833201FF8AD00288240 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = D01D0832201FF8AD00288240 /* AppDelegate.mm */; };
 		D01D083B201FF8AE00288240 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D01D083A201FF8AE00288240 /* Assets.xcassets */; };
 		D01D083E201FF8AE00288240 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D01D083C201FF8AE00288240 /* LaunchScreen.storyboard */; };
@@ -185,6 +186,7 @@
 		D01360802022FEB5003AFEEE /* NRNewsReportTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRNewsReportTools.m; sourceTree = "<group>"; };
 		D013608220230107003AFEEE /* NRUserInfoDB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRUserInfoDB.h; sourceTree = "<group>"; };
 		D013608320230107003AFEEE /* NRUserInfoDB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRUserInfoDB.m; sourceTree = "<group>"; };
+		D0136086202318B6003AFEEE /* AgoraSignalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AgoraSignalKit.framework; sourceTree = "<group>"; };
 		D01D082E201FF8AD00288240 /* NewsReport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsReport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D01D0831201FF8AD00288240 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D01D0832201FF8AD00288240 /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
@@ -467,6 +469,7 @@
 				D01D088E201FFB0100288240 /* Foundation.framework in Frameworks */,
 				D01D088C201FFAF700288240 /* SystemConfiguration.framework in Frameworks */,
 				D01D0889201FFAC600288240 /* libMobileIMSDK4iX_common.a in Frameworks */,
+				D0136087202318B6003AFEEE /* AgoraSignalKit.framework in Frameworks */,
 				1237E8C9629380C01E7391B5 /* libPods-NewsReport.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -501,6 +504,14 @@
 				09B30BBDEC557E30959F3CE3 /* Pods-NewsReportUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		D0136085202318B6003AFEEE /* Signa */ = {
+			isa = PBXGroup;
+			children = (
+				D0136086202318B6003AFEEE /* AgoraSignalKit.framework */,
+			);
+			path = Signa;
 			sourceTree = "<group>";
 		};
 		D01D0825201FF8AD00288240 = {
@@ -568,6 +579,7 @@
 		D01D0864201FF93F00288240 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				D0136085202318B6003AFEEE /* Signa */,
 				D01D086D201FFAC600288240 /* MobileIMSDK4iLib */,
 			);
 			path = Vendor;
@@ -1205,10 +1217,10 @@
 			children = (
 				D02DD9B62021B6320035066D /* NRChatMessageContentView.h */,
 				D02DD9B72021B6320035066D /* NRChatMessageContentView.m */,
-				D02965062022B3850060409F /* NRImageMessageContentView.h */,
-				D02965072022B3850060409F /* NRImageMessageContentView.m */,
 				D02964F72022B31C0060409F /* NRTextMessageContentView.h */,
 				D02964F82022B31C0060409F /* NRTextMessageContentView.m */,
+				D02965062022B3850060409F /* NRImageMessageContentView.h */,
+				D02965072022B3850060409F /* NRImageMessageContentView.m */,
 				D02965032022B3740060409F /* NRVoiceMessageContentView.h */,
 				D02965042022B3740060409F /* NRVoiceMessageContentView.m */,
 				D02964FA2022B3440060409F /* NRFileMessageContentView.h */,
@@ -1805,6 +1817,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/NewsReport/Class/Vendor/Signa",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/NewsReport/Class/Resources/NewsReportPrefixHeader.pch";
 				INFOPLIST_FILE = NewsReport/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1827,6 +1843,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/NewsReport/Class/Vendor/Signa",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/NewsReport/Class/Resources/NewsReportPrefixHeader.pch";
 				INFOPLIST_FILE = NewsReport/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

@@ -18,23 +18,23 @@ NSString * const NRIMMessageLoginStatusConfigurationNotificationCenterKey =@"com
 NSString * const NRIMMessageLinkStatusConfigurationNotificationCenterKey = @"com.newsReport.NRIMMessageLinkStatusConfigurationNotificationCenterKey";
 
 /*  接收方 */
-NSString *const NRMessageCellIdentifierRecvText = @"NRMessageCellRecvText";
+NSString *const NRMessageCellIdentifierRecvText     = @"NRMessageCellRecvText";
 NSString *const NRMessageCellIdentifierRecvLocation = @"NRMessageCellRecvLocation";
-NSString *const NRMessageCellIdentifierRecvVoice = @"NRMessageCellRecvVoice";
-NSString *const NRMessageCellIdentifierRecvVideo = @"NRMessageCellRecvVideo";
-NSString *const NRMessageCellIdentifierRecvImage = @"NRMessageCellRecvImage";
-NSString *const NRMessageCellIdentifierRecvFile = @"NRMessageCellRecvFile";
-NSString *const NRMessageCellIdentifierRecvShare = @"NRMessageCellRecvShare";
+NSString *const NRMessageCellIdentifierRecvVoice    = @"NRMessageCellRecvVoice";
+NSString *const NRMessageCellIdentifierRecvVideo    = @"NRMessageCellRecvVideo";
+NSString *const NRMessageCellIdentifierRecvImage    = @"NRMessageCellRecvImage";
+NSString *const NRMessageCellIdentifierRecvFile     = @"NRMessageCellRecvFile";
+NSString *const NRMessageCellIdentifierRecvShare    = @"NRMessageCellRecvShare";
 NSString *const NRMessageCellIdentifierRecvRedMoney = @"NRMessageCellRecvRedMoney";
 
 /*  发送方 */
-NSString *const NRMessageCellIdentifierSendText = @"NRMessageCellSendText";
+NSString *const NRMessageCellIdentifierSendText     = @"NRMessageCellSendText";
 NSString *const NRMessageCellIdentifierSendLocation = @"NRMessageCellSendLocation";
-NSString *const NRMessageCellIdentifierSendVoice = @"NRMessageCellSendVoice";
-NSString *const NRMessageCellIdentifierSendVideo = @"NRMessageCellSendVideo";
-NSString *const NRMessageCellIdentifierSendImage = @"NRMessageCellSendImage";
-NSString *const NRMessageCellIdentifierSendFile = @"NRMessageCellSendFile";
-NSString *const NRMessageCellIdentifierSendShare = @"NRMessageCellRecvShare";
+NSString *const NRMessageCellIdentifierSendVoice    = @"NRMessageCellSendVoice";
+NSString *const NRMessageCellIdentifierSendVideo    = @"NRMessageCellSendVideo";
+NSString *const NRMessageCellIdentifierSendImage    = @"NRMessageCellSendImage";
+NSString *const NRMessageCellIdentifierSendFile     = @"NRMessageCellSendFile";
+NSString *const NRMessageCellIdentifierSendShare    = @"NRMessageCellRecvShare";
 NSString *const NRMessageCellIdentifierSendRedMoney = @"NRMessageCellRecvRedMoney";
 
 

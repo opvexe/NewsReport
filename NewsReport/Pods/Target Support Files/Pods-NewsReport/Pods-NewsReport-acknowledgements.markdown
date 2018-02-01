@@ -24,6 +24,11 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
+## AgoraRtcEngine_iOS
+
+Copyright 2017 agora.io. All rights reserved.
+
+
 ## CYLTabBarController
 
 Copyright (c) 2015 CYLTabBarController(https://github.com/ChenYilong/CYLTabBarController), L.L.C. All rights reserved.

@@ -21,16 +21,16 @@
 #import "NRChatMessageCell.h"
 
 @interface NRChatViewController ()<UITableViewDelegate,UITableViewDataSource,ChatKeyBoardDelegate,ChatKeyBoardDataSource,WXDeviceManagerProximitySensorDelegate>
-@property(nonatomic,strong)UITableView *chatTableView;
-@property(strong, nonatomic)NSMutableArray *morePanelItems;
-@property(nonatomic,strong)NSMutableArray *chats;
-@property(nonatomic, strong)ChatKeyBoard *chatKeyBoard;
-@property(nonatomic,strong)WXRecordView *recordView;
-@property (nonatomic, strong) NSMutableArray<UIImage *> *lastSelectPhotos;
-@property (nonatomic, strong) NSMutableArray<PHAsset *> *lastSelectAssets;
-@property (nonatomic, strong) NSMutableArray *lastSelectProcessedDatas;
-@property (nonatomic, assign) BOOL isOriginal;
-@property(nonatomic,assign)BOOL isEditor;
+@property(nonatomic,strong) UITableView *chatTableView;
+@property(nonatomic,strong) NSMutableArray *morePanelItems;
+@property(nonatomic,strong) NSMutableArray *chats;
+@property(nonatomic,strong) ChatKeyBoard *chatKeyBoard;
+@property(nonatomic,strong) WXRecordView *recordView;
+@property(nonatomic,strong) NSMutableArray<UIImage *> *lastSelectPhotos;
+@property(nonatomic,strong) NSMutableArray<PHAsset *> *lastSelectAssets;
+@property(nonatomic,strong) NSMutableArray *lastSelectProcessedDatas;
+@property(nonatomic,assign) BOOL isOriginal;
+@property(nonatomic,assign) BOOL isEditor;
 @end
 
 @implementation NRChatViewController

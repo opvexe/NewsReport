@@ -70,17 +70,6 @@ extern NSString * const NRIMMessageLoginStatusConfigurationNotificationCenterKey
 /* 连接状态通知 */
 extern NSString * const NRIMMessageLinkStatusConfigurationNotificationCenterKey;
 
-
-
-
-
-
-
-
-
-
-
-
 /*  接收方 */
 extern NSString *const NRMessageCellIdentifierRecvText;
 extern NSString *const NRMessageCellIdentifierRecvLocation;

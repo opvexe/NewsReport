@@ -18,13 +18,14 @@ target 'NewsReport' do
   end
 pod 'CYLTabBarController'
 pod 'TTTAttributedLabel'
+pod 'AgoraRtcEngine_iOS'
 pod 'ZLPhotoBrowser'
-pod 'AFNetworking'
-pod 'Masonry'
-pod 'SDWebImage'
 pod 'SDWebImage/GIF'
+pod 'AFNetworking'
 pod 'MJExtension'
+pod 'SDWebImage'
 pod 'MJRefresh'
+pod 'Masonry'
 pod 'YYCache'
 pod 'FMDB'
 end

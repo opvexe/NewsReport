@@ -13,7 +13,18 @@
  系统库
  */
 #import <Foundation/Foundation.h>
+#import <AVFoundation/AVFoundation.h>
+#import <Photos/Photos.h>
 #import <UIKit/UIKit.h>
+
+/*!
+ 声望
+ */
+#import <CallKit/CallKit.h>
+#import <CoreTelephony/CTCall.h>
+#import <CoreTelephony/CTCallCenter.h>
+#import <AgoraRtcEngineKit/AgoraRtcEngineKit.h>         ///AgoraRtcEngineKit 包含音频视频完整包
+#import <AgoraSignalKit/AgoraSignalKit.h>              ///AgoraAPI信令
 
 /*!
  宏文件
