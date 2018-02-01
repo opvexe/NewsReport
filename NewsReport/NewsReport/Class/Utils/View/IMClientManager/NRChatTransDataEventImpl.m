@@ -43,23 +43,17 @@
 -(NRIMElem *)NRIMMessageBobyType:(int)elem messageContent:(NSString *)content messageSender:(NSString *)sender messageTime:(NSString *)fingerPrintOfProtocal{
     
     NSString *type    = convertToString([NSString stringWithFormat:@"%d",elem]);
-    NRIMElem *message = [[NRIMElem alloc]init];
-    message.from    = convertToString(sender);
-    message.messageId = convertToString(fingerPrintOfProtocal);             ///uid + 时间戳 （消息标识）
-    message.timestamp = [convertToString(fingerPrintOfProtocal) componentsSeparatedByString:@"+"].lastObject;
-    if ([message.from isEqualToString:[[NRUserTools defaultCenter]getUserID]]) {    
-        message.isSender = YES;
-    }else{
-         message.isSender = NO;
-    }
+    NRIMElem *message ;
+    
     if ([type hasPrefix:@"1"]) {    ///单聊
         message.messageChatType = MessageChatSingle;
         switch (elem) {
             case 11:
             {
-                message.messageType  = MessageTypeText;
-                NRIMTextElem *textElem  = (NRIMTextElem *)message;
+                NRIMTextElem *textElem = [[NRIMTextElem alloc]init];
+                textElem.messageType  = MessageTypeText;
                 textElem.text = convertToString(content);
+                message = textElem;
             }
                 break;
             case 12:
@@ -89,9 +83,10 @@
         switch (elem) {
             case 11:
             {
-                message.messageType  = MessageTypeText;
-                NRIMTextElem *textElem  = (NRIMTextElem *)message;
+                NRIMTextElem *textElem = [[NRIMTextElem alloc]init];
+                textElem.messageType  = MessageTypeText;
                 textElem.text = convertToString(content);
+                message = textElem;
             }
                 break;
             case 12:
@@ -119,6 +114,15 @@
     }else{
         
         NSLog(@"未知消息");
+    }
+    
+    message.from    = convertToString(sender);
+    message.messageId = convertToString(fingerPrintOfProtocal);             ///uid + 时间戳 （消息标识）
+    message.timestamp = [convertToString(fingerPrintOfProtocal) componentsSeparatedByString:@"+"].lastObject;
+    if ([message.from isEqualToString:[[NRUserTools defaultCenter]getUserID]]) {
+        message.isSender = YES;
+    }else{
+        message.isSender = NO;
     }
     
     return message;

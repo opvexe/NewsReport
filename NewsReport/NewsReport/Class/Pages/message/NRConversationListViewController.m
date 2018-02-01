@@ -54,8 +54,6 @@
 -(void)receiveMessage:(NSNotification *)notification{
     
     NRIMElem *message = notification.userInfo[@"key"];
-    NRConversationListModel *model = [[NRConversationListModel alloc]init];
-    
     Class MessageElem = [message class];
     
     dispatch_async(dispatch_get_main_queue(), ^{
@@ -74,6 +72,7 @@
             signature =@"[未知消息]";
         }
         
+        NRConversationListModel *model = [[NRConversationListModel alloc]init];
         model.signature = convertToString(signature);
         model.time = message.timestamp;
         model.name = message.from;
@@ -191,11 +190,11 @@
  */
 -(void)updateViewConstraintsView{
     [self.messageTableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        if (iOS11) {
-            make.edges.mas_equalTo(self.view.mas_safeAreaLayoutGuide);
-        }else{
+//        if (iOS11) {
+//            make.edges.mas_equalTo(self.view.mas_safeAreaLayoutGuide);
+//        }else{
             make.edges.mas_equalTo(self.view);
-        }
+//        }
     }];
 }
 
