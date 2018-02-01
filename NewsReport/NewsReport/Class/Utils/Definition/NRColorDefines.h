@@ -20,14 +20,17 @@
 #define UIColorFromRGBA(rgbValue,a) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:a]
 
 #define   TABARHIGHTLIGHTCOLOR  UIColorFromRGB(0xFF758C)
-
+//主色调
 #define   Maser_Color  UIColorFromRGB(0xFF758C)
-//
+
 #define   TABARNORMALCOLOR  UIColorFromRGB(0x646464)
 
 #define  SubheadTitleColor  UIColorFromRGB(0x909090)
 
 #define MainTitle_Color  UIColorFromRGB(0X323232)
+
+
+
 //消息
 #define MESSAGE_NICKNAME_Color UIColorFromRGB(0X323232)
 

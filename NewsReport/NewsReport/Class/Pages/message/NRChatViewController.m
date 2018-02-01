@@ -40,6 +40,7 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationItem.title =  [NSString stringWithFormat:@"与%@聊天",_userName];
+    [self addPopBackBarButtonItem];
     [self updateViewConstraintsView];
     [self receiveMessageNotification];
     [self reloadDataSoucre];
@@ -447,7 +448,7 @@
 }
 
 /*!
- * 更新布局
+ * 布局
  */
 -(void)updateViewConstraintsView{
     

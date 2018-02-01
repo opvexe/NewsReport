@@ -30,7 +30,7 @@
 #import "NRBusinessNetworkTool.h"
 #import "UIView+Toast.h"
 #import "NRUserTools.h"
-
+#import "NRBarButtonItem.h"
 /*!
  Base类
  */

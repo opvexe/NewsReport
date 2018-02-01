@@ -8,7 +8,6 @@
 
 #import "NRBaseViewController.h"
 #import "NRTabBarControllerConfig.h"
-#import "NRBarButtonItem.h"
 #import "AppDelegate.h"
 
 @interface NRBaseViewController ()<UIGestureRecognizerDelegate>
