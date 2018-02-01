@@ -82,11 +82,11 @@ extern NSString * const NRIMMessageLinkStatusConfigurationNotificationCenterKey;
 
 
 /*  接收方 */
-extern NSString *const DJHMessageCellIdentifierRecvText;
-extern NSString *const DJHMessageCellIdentifierRecvLocation;
-extern NSString *const DJHMessageCellIdentifierRecvVoice;
-extern NSString *const DJHMessageCellIdentifierRecvVideo;
-extern NSString *const DJHMessageCellIdentifierRecvImage;
+extern NSString *const NRMessageCellIdentifierRecvText;
+extern NSString *const NRMessageCellIdentifierRecvLocation;
+extern NSString *const NRMessageCellIdentifierRecvVoice;
+extern NSString *const NRMessageCellIdentifierRecvVideo;
+extern NSString *const NRMessageCellIdentifierRecvImage;
 extern NSString *const DJHMessageCellIdentifierRecvFile;
 extern NSString *const DJHMessageCellIdentifierRecvShare;
 extern NSString *const DJHMessageCellIdentifierRecvRedMoney;

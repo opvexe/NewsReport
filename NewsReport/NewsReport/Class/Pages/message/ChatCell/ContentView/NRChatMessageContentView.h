@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "NRIMElem.h"
 
 @protocol NRChatMessageContentViewDelegate <NSObject>
 

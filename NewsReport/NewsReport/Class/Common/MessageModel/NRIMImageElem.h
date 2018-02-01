@@ -13,6 +13,8 @@
  */
 @interface NRIMImageElem : NRIMElem
 
+@property (nonatomic,assign) CGSize thumbnailImageSize;
+
 - (instancetype)initWithMessage:(NRIMElem *)message;
 
 @end

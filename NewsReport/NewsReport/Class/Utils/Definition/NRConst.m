@@ -18,11 +18,11 @@ NSString * const NRIMMessageLoginStatusConfigurationNotificationCenterKey =@"com
 NSString * const NRIMMessageLinkStatusConfigurationNotificationCenterKey = @"com.newsReport.NRIMMessageLinkStatusConfigurationNotificationCenterKey";
 
 /*  接收方*/
-NSString *const DJHMessageCellIdentifierRecvText = @"DJHMessageCellRecvText";
-NSString *const DJHMessageCellIdentifierRecvLocation = @"DJHMessageCellRecvLocation";
-NSString *const DJHMessageCellIdentifierRecvVoice = @"DJHMessageCellRecvVoice";
-NSString *const DJHMessageCellIdentifierRecvVideo = @"DJHMessageCellRecvVideo";
-NSString *const DJHMessageCellIdentifierRecvImage = @"DJHMessageCellRecvImage";
+NSString *const NRMessageCellIdentifierRecvText = @"DJHMessageCellRecvText";
+NSString *const NRMessageCellIdentifierRecvLocation = @"DJHMessageCellRecvLocation";
+NSString *const NRMessageCellIdentifierRecvVoice = @"DJHMessageCellRecvVoice";
+NSString *const NRMessageCellIdentifierRecvVideo = @"DJHMessageCellRecvVideo";
+NSString *const NRMessageCellIdentifierRecvImage = @"DJHMessageCellRecvImage";
 NSString *const DJHMessageCellIdentifierRecvFile = @"DJHMessageCellRecvFile";
 NSString *const DJHMessageCellIdentifierRecvShare = @"DJHMessageCellRecvShare";
 NSString *const DJHMessageCellIdentifierRecvRedMoney = @"DJHMessageCellRecvRedMoney";

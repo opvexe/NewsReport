@@ -53,30 +53,29 @@
 
 -(void)receiveMessage:(NSNotification *)notification{
     
+    __block NSString *signature = @"" ;
     NRIMElem *message = (NRIMElem *)notification.object;
     Class MessageElem = [message class];
     
-        __block NSString *signature = @"" ;
-        
-        if (MessageElem == [NRIMTextElem class]) {
-            NRIMTextElem *text = (NRIMTextElem *)message;
-            signature = text.text;
-        }else if (MessageElem == [NRIMImageElem class]){
-            signature =@"[图片]";
-        }else if (MessageElem == [NRIMSoundElem class]){
-            signature =@"[语音]";
-        }else if (MessageElem == [NRIMFileElem class]){
-            signature =@"[文件]";
-        }else{
-            signature =@"[未知消息]";
-        }
-        
-        NRConversationListModel *model = [[NRConversationListModel alloc]init];
-        model.signature = convertToString(signature);
-        model.time = message.timestamp;
-        model.name = message.from;
-        [self.messageDataSocure addObject:model];
-        [self.messageTableView reloadData];
+    if (MessageElem == [NRIMTextElem class]) {
+        NRIMTextElem *text = (NRIMTextElem *)message;
+        signature = text.text;
+    }else if (MessageElem == [NRIMImageElem class]){
+        signature =@"[图片]";
+    }else if (MessageElem == [NRIMSoundElem class]){
+        signature =@"[语音]";
+    }else if (MessageElem == [NRIMFileElem class]){
+        signature =@"[文件]";
+    }else{
+        signature =@"[未知消息]";
+    }
+    
+    NRConversationListModel *model = [[NRConversationListModel alloc]init];
+    model.signature = convertToString(signature);
+    model.time = message.timestamp;
+    model.name = message.from;
+    [self.messageDataSocure addObject:model];
+    [self.messageTableView reloadData];
     
 }
 
@@ -189,11 +188,11 @@
  */
 -(void)updateViewConstraintsView{
     [self.messageTableView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        if (iOS11) {
-//            make.edges.mas_equalTo(self.view.mas_safeAreaLayoutGuide);
-//        }else{
-            make.edges.mas_equalTo(self.view);
-//        }
+        //        if (iOS11) {
+        //            make.edges.mas_equalTo(self.view.mas_safeAreaLayoutGuide);
+        //        }else{
+        make.edges.mas_equalTo(self.view);
+        //        }
     }];
 }
 

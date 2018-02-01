@@ -10,4 +10,15 @@
 
 @implementation NRIMTextElem
 
+- (instancetype)initWithMessage:(NRIMTextElem *)message{
+    self = [super init];
+    if (self) {
+   
+        
+        
+    }
+    return self;
+    
+}
+
 @end

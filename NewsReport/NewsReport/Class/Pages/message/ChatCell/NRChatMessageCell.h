@@ -8,7 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "NRChatMessageContentView.h"
-#import "NRIMElem.h"
+#import "NRTextMessageContentView.h"
+#import "NRImageMessageContentView.h"
+#import "NRFileMessageContentView.h"
+#import "NRVoiceMessageContentView.h"
+#import "NRVideoMessageContentView.h"
+#import "NRShareMessageContentView.h"
+#import "NRLocationMessageContentView.h"
+#import "NRRedMoneyMessageContentView.h"
+
 
 @protocol NRChatMessageCellDelegate <NSObject>
 @optional
@@ -26,7 +34,7 @@
  */
 - (void)longPressCellMessageContentViewWithMessageModel:(NRIMElem *)messageModel;
 /*!
- *
+ * 撤回消息
  */
 - (void)reSendCellWithMessageModel:(NRIMElem *)messageModel;
 @end

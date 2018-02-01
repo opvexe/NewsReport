@@ -36,7 +36,7 @@
 /*!
  *  是否已读
  */
-@property (nonatomic,assign) BOOL isRead;
+@property (nonatomic,assign) BOOL isMessageRead;
 /**
  *  当前消息的时间戳
  */
@@ -55,7 +55,7 @@
 /*!
  *  消息状态
  */
-@property (nonatomic,assign) MessageSendState status;
+@property (nonatomic,assign) MessageSendState  messageStatus;
 /**
  *  消息拥有者
  */
@@ -66,6 +66,7 @@
 @property (nonatomic,assign) CGFloat cellHeight;
 @property (nonatomic,assign) CGFloat contentHeight;
 @property (nonatomic,assign) CGFloat contentWidth;
+
 @end
 
 
