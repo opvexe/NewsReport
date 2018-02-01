@@ -36,9 +36,17 @@
 
 
 
+/*!
+ * 获取登录用户名
+ */
 - (NSString *)getUserName;
-
+/*!
+ * 获取用户ID
+ */
 - (NSString *)getUserID;
 
+/*!
+ * 获取用户登录密码
+ */
 - (NSString *)getUserPassword;
 @end

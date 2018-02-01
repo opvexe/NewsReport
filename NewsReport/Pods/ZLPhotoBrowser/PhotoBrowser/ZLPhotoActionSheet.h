@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, weak) UIViewController *sender;
 
 /**相册框架配置，默认为 [ZLPhotoConfiguration defaultPhotoConfiguration]*/
-@property (nonatomic, strong, readonly) ZLPhotoConfiguration *configuration;
+@property (nonatomic, strong) ZLPhotoConfiguration *configuration;
 
 /**
  已选择的asset对象数组，用于标记已选择的图片
