@@ -48,6 +48,8 @@
 		D01D08F220204A7600288240 /* NRBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D01D08F120204A7600288240 /* NRBarButtonItem.m */; };
 		D01D08F520204B7B00288240 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = D01D08F420204B7B00288240 /* UIView+Toast.m */; };
 		D01D08FC20206D1E00288240 /* NRUserTools.m in Sources */ = {isa = PBXBuildFile; fileRef = D01D08FB20206D1E00288240 /* NRUserTools.m */; };
+		D02964E520229E340060409F /* NSDate+NRCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = D02964E420229E340060409F /* NSDate+NRCategory.m */; };
+		D02964E820229E700060409F /* NSDateFormatter+NRCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = D02964E720229E700060409F /* NSDateFormatter+NRCategory.m */; };
 		D02DD997202148210035066D /* NRConversationListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D02DD996202148210035066D /* NRConversationListViewController.m */; };
 		D02DD99C202154B50035066D /* NRConversationListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D02DD99B202154B50035066D /* NRConversationListCell.m */; };
 		D02DD9A0202155F20035066D /* NRBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D02DD99F202155F20035066D /* NRBaseTableViewCell.m */; };
@@ -186,6 +188,10 @@
 		D01D08F420204B7B00288240 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
 		D01D08FA20206D1E00288240 /* NRUserTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRUserTools.h; sourceTree = "<group>"; };
 		D01D08FB20206D1E00288240 /* NRUserTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRUserTools.m; sourceTree = "<group>"; };
+		D02964E320229E340060409F /* NSDate+NRCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+NRCategory.h"; sourceTree = "<group>"; };
+		D02964E420229E340060409F /* NSDate+NRCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+NRCategory.m"; sourceTree = "<group>"; };
+		D02964E620229E700060409F /* NSDateFormatter+NRCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+NRCategory.h"; sourceTree = "<group>"; };
+		D02964E720229E700060409F /* NSDateFormatter+NRCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+NRCategory.m"; sourceTree = "<group>"; };
 		D02DD995202148210035066D /* NRConversationListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRConversationListViewController.h; sourceTree = "<group>"; };
 		D02DD996202148210035066D /* NRConversationListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRConversationListViewController.m; sourceTree = "<group>"; };
 		D02DD99A202154B50035066D /* NRConversationListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRConversationListCell.h; sourceTree = "<group>"; };
@@ -501,6 +507,10 @@
 				D01D08B62020152900288240 /* UIImage+NRExtension.m */,
 				D01D08B92020172900288240 /* UIView+NRExtension.h */,
 				D01D08BA2020172900288240 /* UIView+NRExtension.m */,
+				D02964E320229E340060409F /* NSDate+NRCategory.h */,
+				D02964E420229E340060409F /* NSDate+NRCategory.m */,
+				D02964E620229E700060409F /* NSDateFormatter+NRCategory.h */,
+				D02964E720229E700060409F /* NSDateFormatter+NRCategory.m */,
 			);
 			path = Catagory;
 			sourceTree = "<group>";
@@ -958,6 +968,7 @@
 				D01D08F520204B7B00288240 /* UIView+Toast.m in Sources */,
 				D01D0841201FF8AE00288240 /* main.m in Sources */,
 				D01D08E7202043BA00288240 /* NRFriendViewController.m in Sources */,
+				D02964E520229E340060409F /* NSDate+NRCategory.m in Sources */,
 				D02DD9A0202155F20035066D /* NRBaseTableViewCell.m in Sources */,
 				D01D08D7202040B300288240 /* NRBaseViewController.m in Sources */,
 				D02DD99C202154B50035066D /* NRConversationListCell.m in Sources */,
@@ -969,6 +980,7 @@
 				D01D08DB2020427800288240 /* NRRootViewController.m in Sources */,
 				D01D086C201FFA5500288240 /* AppDelegate+NRExtension.m in Sources */,
 				D01D08AA20200A8300288240 /* NRConst.m in Sources */,
+				D02964E820229E700060409F /* NSDateFormatter+NRCategory.m in Sources */,
 				D01D08EA202043CC00288240 /* NRPortraitViewController.m in Sources */,
 				D01D08DE202042FB00288240 /* NRTabBarControllerConfig.m in Sources */,
 				D02DD9AB20218B120035066D /* NRIMElem.m in Sources */,

@@ -26,6 +26,7 @@
 #import "UIImage+NRExtension.h"
 #import "UIView+NRExtension.h"
 #import "NSString+LSWMEXtension.h"
+#import "NSDate+NRCategory.h"
 #import "NRBusinessNetworkTool.h"
 #import "UIView+Toast.h"
 #import "NRUserTools.h"

@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 /*!
- * 用户信息
+ * 当前用户信息
  */
 @interface NRIMUserModel : NSObject<NSCoding>
 

@@ -53,10 +53,9 @@
 
 -(void)receiveMessage:(NSNotification *)notification{
     
-    NRIMElem *message = notification.userInfo[@"key"];
+    NRIMElem *message = (NRIMElem *)notification.object;
     Class MessageElem = [message class];
     
-    dispatch_async(dispatch_get_main_queue(), ^{
         __block NSString *signature = @"" ;
         
         if (MessageElem == [NRIMTextElem class]) {
@@ -78,7 +77,7 @@
         model.name = message.from;
         [self.messageDataSocure addObject:model];
         [self.messageTableView reloadData];
-    });
+    
 }
 
 #pragma mark < ios 11 适配>

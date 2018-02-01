@@ -90,8 +90,9 @@
     [self.headPortraitImageView sd_setImageWithURL:[NSURL URLWithString:model.portraitUrl] placeholderImage:NRImageNamed(@"icon_avatar")];
     self.portraitLabel.text = model.name;
     self.messageLabel.text  = model.signature;
-    self.timestampLabel.text = model.time;
+    self.timestampLabel.text= [[NSDate getNowTimestamp:model.time] formattedDateDescription];
 }
+
 
 @end
 

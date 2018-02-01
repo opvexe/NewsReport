@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "NRIMUserModel.h"
 @interface NRIMElem : NSObject
 
 /*!
@@ -19,6 +19,12 @@
  *  发送方
  */
 @property (nonatomic, copy) NSString *from;
+
+/*!
+ * 消息内容中携带的发送者的用户信息
+ *
+ */
+@property(nonatomic, strong) NRIMUserModel *senderUserInfo;
 
 /**
  *  是否发送方
@@ -48,6 +54,7 @@
 @property (nonatomic) MessageSendState status;
 
 
+- (instancetype)initWithMessage:(NRIMElem *)message;
 @end
 
 
