@@ -31,6 +31,8 @@
 #import "UIView+Toast.h"
 #import "NRUserTools.h"
 #import "NRBarButtonItem.h"
+#import "NRNewsReportTools.h"
+#import "NRUserInfoDB.h"
 /*!
  Base类
  */

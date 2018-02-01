@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "NRIMUserModel.h"
+#import "NRUserInfoModel.h"
 @interface NRIMElem : NSObject
 
 /*!
@@ -24,7 +24,7 @@
  * 消息内容中携带的发送者的用户信息
  *
  */
-@property(nonatomic, strong) NRIMUserModel *senderUserInfo;
+@property(nonatomic, strong) NRUserInfoModel *senderUserInfo;
 
 /**
  *  是否发送方

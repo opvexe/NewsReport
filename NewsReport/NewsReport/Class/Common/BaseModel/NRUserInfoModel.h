@@ -11,7 +11,7 @@
 /*!
  * 当前用户信息
  */
-@interface NRIMUserModel : NSObject<NSCoding>
+@interface NRUserInfoModel : NSObject
 
 /*!
  用户ID

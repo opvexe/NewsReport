@@ -11,6 +11,9 @@
 		98E317FA756712E907CA4652 /* libPods-NewsReportUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1174136F4E721A8C2C94007D /* libPods-NewsReportUITests.a */; };
 		BE772CDE17E2CED3E86693AC /* libPods-NewsReportTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F8FD1C749FAD46CC25535AC9 /* libPods-NewsReportTests.a */; };
 		D013607B2022EA6A003AFEEE /* NRImagePickModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D013607A2022EA6A003AFEEE /* NRImagePickModel.m */; };
+		D013607E2022FD9C003AFEEE /* NRFMDataManger.m in Sources */ = {isa = PBXBuildFile; fileRef = D013607D2022FD9C003AFEEE /* NRFMDataManger.m */; };
+		D01360812022FEB5003AFEEE /* NRNewsReportTools.m in Sources */ = {isa = PBXBuildFile; fileRef = D01360802022FEB5003AFEEE /* NRNewsReportTools.m */; };
+		D013608420230107003AFEEE /* NRUserInfoDB.m in Sources */ = {isa = PBXBuildFile; fileRef = D013608320230107003AFEEE /* NRUserInfoDB.m */; };
 		D01D0833201FF8AD00288240 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = D01D0832201FF8AD00288240 /* AppDelegate.mm */; };
 		D01D083B201FF8AE00288240 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D01D083A201FF8AE00288240 /* Assets.xcassets */; };
 		D01D083E201FF8AE00288240 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D01D083C201FF8AE00288240 /* LaunchScreen.storyboard */; };
@@ -38,7 +41,7 @@
 		D01D08C820201BB000288240 /* NRNetworkCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D01D08C520201BB000288240 /* NRNetworkCache.m */; };
 		D01D08CB20201CAA00288240 /* WMLSSessionManger.m in Sources */ = {isa = PBXBuildFile; fileRef = D01D08CA20201CA900288240 /* WMLSSessionManger.m */; };
 		D01D08CE20201CC500288240 /* NRBusinessNetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = D01D08CD20201CC500288240 /* NRBusinessNetworkTool.m */; };
-		D01D08D32020226D00288240 /* NRIMUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D01D08D22020226D00288240 /* NRIMUserModel.m */; };
+		D01D08D32020226D00288240 /* NRUserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D01D08D22020226D00288240 /* NRUserInfoModel.m */; };
 		D01D08D7202040B300288240 /* NRBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D01D08D6202040B300288240 /* NRBaseViewController.m */; };
 		D01D08DB2020427800288240 /* NRRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D01D08DA2020427800288240 /* NRRootViewController.m */; };
 		D01D08DE202042FB00288240 /* NRTabBarControllerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = D01D08DD202042FB00288240 /* NRTabBarControllerConfig.m */; };
@@ -176,6 +179,12 @@
 		A403FE9BEB41AE0A25D6C96C /* Pods-NewsReportUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsReportUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NewsReportUITests/Pods-NewsReportUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D01360792022EA6A003AFEEE /* NRImagePickModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRImagePickModel.h; sourceTree = "<group>"; };
 		D013607A2022EA6A003AFEEE /* NRImagePickModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRImagePickModel.m; sourceTree = "<group>"; };
+		D013607C2022FD9C003AFEEE /* NRFMDataManger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRFMDataManger.h; sourceTree = "<group>"; };
+		D013607D2022FD9C003AFEEE /* NRFMDataManger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRFMDataManger.m; sourceTree = "<group>"; };
+		D013607F2022FEB5003AFEEE /* NRNewsReportTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRNewsReportTools.h; sourceTree = "<group>"; };
+		D01360802022FEB5003AFEEE /* NRNewsReportTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRNewsReportTools.m; sourceTree = "<group>"; };
+		D013608220230107003AFEEE /* NRUserInfoDB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRUserInfoDB.h; sourceTree = "<group>"; };
+		D013608320230107003AFEEE /* NRUserInfoDB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRUserInfoDB.m; sourceTree = "<group>"; };
 		D01D082E201FF8AD00288240 /* NewsReport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsReport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D01D0831201FF8AD00288240 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D01D0832201FF8AD00288240 /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
@@ -257,8 +266,8 @@
 		D01D08CC20201CC500288240 /* NRBusinessNetworkTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRBusinessNetworkTool.h; sourceTree = "<group>"; };
 		D01D08CD20201CC500288240 /* NRBusinessNetworkTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRBusinessNetworkTool.m; sourceTree = "<group>"; };
 		D01D08CF20201E0400288240 /* NR_HOST_APIS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NR_HOST_APIS.h; sourceTree = "<group>"; };
-		D01D08D12020226D00288240 /* NRIMUserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRIMUserModel.h; sourceTree = "<group>"; };
-		D01D08D22020226D00288240 /* NRIMUserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRIMUserModel.m; sourceTree = "<group>"; };
+		D01D08D12020226D00288240 /* NRUserInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRUserInfoModel.h; sourceTree = "<group>"; };
+		D01D08D22020226D00288240 /* NRUserInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRUserInfoModel.m; sourceTree = "<group>"; };
 		D01D08D5202040B300288240 /* NRBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRBaseViewController.h; sourceTree = "<group>"; };
 		D01D08D6202040B300288240 /* NRBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRBaseViewController.m; sourceTree = "<group>"; };
 		D01D08D92020427800288240 /* NRRootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRRootViewController.h; sourceTree = "<group>"; };
@@ -771,8 +780,8 @@
 		D01D08D02020225800288240 /* BaseModel */ = {
 			isa = PBXGroup;
 			children = (
-				D01D08D12020226D00288240 /* NRIMUserModel.h */,
-				D01D08D22020226D00288240 /* NRIMUserModel.m */,
+				D01D08D12020226D00288240 /* NRUserInfoModel.h */,
+				D01D08D22020226D00288240 /* NRUserInfoModel.m */,
 				D02DD9A2202156350035066D /* NRBaseModel.h */,
 				D02DD9A3202156350035066D /* NRBaseModel.m */,
 			);
@@ -990,6 +999,8 @@
 			children = (
 				D02967602022D1C30060409F /* NRUserTools.h */,
 				D02967612022D1C30060409F /* NRUserTools.m */,
+				D013607F2022FEB5003AFEEE /* NRNewsReportTools.h */,
+				D01360802022FEB5003AFEEE /* NRNewsReportTools.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -1171,6 +1182,10 @@
 		D02DD9B02021B20E0035066D /* Cache */ = {
 			isa = PBXGroup;
 			children = (
+				D013607C2022FD9C003AFEEE /* NRFMDataManger.h */,
+				D013607D2022FD9C003AFEEE /* NRFMDataManger.m */,
+				D013608220230107003AFEEE /* NRUserInfoDB.h */,
+				D013608320230107003AFEEE /* NRUserInfoDB.m */,
 			);
 			path = Cache;
 			sourceTree = "<group>";
@@ -1568,6 +1583,7 @@
 				D02967A12022D2730060409F /* RFTextView.m in Sources */,
 				D02966392022CBAA0060409F /* WXAudioPlayer.m in Sources */,
 				D01D08A72020087800288240 /* NRMessageQoSEventImpl.m in Sources */,
+				D013608420230107003AFEEE /* NRUserInfoDB.m in Sources */,
 				D02DD997202148210035066D /* NRConversationListViewController.m in Sources */,
 				D01D08E4202043AB00288240 /* NRChatViewController.m in Sources */,
 				D02966552022CBAA0060409F /* amrFileCodec.mm in Sources */,
@@ -1579,6 +1595,7 @@
 				D01D08AA20200A8300288240 /* NRConst.m in Sources */,
 				D02964E820229E700060409F /* NSDateFormatter+NRCategory.m in Sources */,
 				D01D08EA202043CC00288240 /* NRPortraitViewController.m in Sources */,
+				D01360812022FEB5003AFEEE /* NRNewsReportTools.m in Sources */,
 				D01D08DE202042FB00288240 /* NRTabBarControllerConfig.m in Sources */,
 				D02966402022CBAA0060409F /* WXRecordView.m in Sources */,
 				D02967982022D2730060409F /* FaceButton.m in Sources */,
@@ -1594,11 +1611,12 @@
 				D01D08BE2020178000288240 /* NSString+LSWMEXtension.m in Sources */,
 				D02DD9B52021B4FF0035066D /* NRChatMessageCell.m in Sources */,
 				D02967932022D2730060409F /* FaceThemeModel.m in Sources */,
+				D013607E2022FD9C003AFEEE /* NRFMDataManger.m in Sources */,
 				D02964FC2022B3440060409F /* NRFileMessageContentView.m in Sources */,
 				D01D089E201FFF1A00288240 /* NRIMClientManager.m in Sources */,
 				D01D08A42020067C00288240 /* NRChatBaseEventImpl.m in Sources */,
 				D02966572022CBAA0060409F /* EMVoiceConverter.mm in Sources */,
-				D01D08D32020226D00288240 /* NRIMUserModel.m in Sources */,
+				D01D08D32020226D00288240 /* NRUserInfoModel.m in Sources */,
 				D02965172022BCBA0060409F /* NRIMVideoElem.m in Sources */,
 				D01D08A12020050600288240 /* NRChatTransDataEventImpl.m in Sources */,
 				D029663D2022CBAA0060409F /* WXDeviceManager+ProximitySensor.m in Sources */,
