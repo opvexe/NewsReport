@@ -10,6 +10,7 @@
 #define NRConst_h
 #import <UIKit/UIKit.h>
 
+
 //头像
 #define HeadImageHeight 40
 #define HeadImageWidth 40

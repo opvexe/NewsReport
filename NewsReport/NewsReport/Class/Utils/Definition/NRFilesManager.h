@@ -60,4 +60,13 @@
 #import "NRIMClientManager.h"
 #import "LocalUDPDataSender.h"
 
+/*!
+ 消息数据基类
+ */
+#import "NRIMElem.h"
+#import "NRIMTextElem.h"
+#import "NRIMImageElem.h"
+#import "NRIMSoundElem.h"
+#import "NRIMFileElem.h"
+
 #endif /* NRFilesManager_h */

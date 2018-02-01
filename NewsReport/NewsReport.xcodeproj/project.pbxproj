@@ -50,6 +50,10 @@
 		D01D08FC20206D1E00288240 /* NRUserTools.m in Sources */ = {isa = PBXBuildFile; fileRef = D01D08FB20206D1E00288240 /* NRUserTools.m */; };
 		D02964E520229E340060409F /* NSDate+NRCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = D02964E420229E340060409F /* NSDate+NRCategory.m */; };
 		D02964E820229E700060409F /* NSDateFormatter+NRCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = D02964E720229E700060409F /* NSDateFormatter+NRCategory.m */; };
+		D02964ED2022AD5E0060409F /* NRIMTextElem.m in Sources */ = {isa = PBXBuildFile; fileRef = D02964EC2022AD5E0060409F /* NRIMTextElem.m */; };
+		D02964F02022AD910060409F /* NRIMImageElem.m in Sources */ = {isa = PBXBuildFile; fileRef = D02964EF2022AD910060409F /* NRIMImageElem.m */; };
+		D02964F32022ADBC0060409F /* NRIMSoundElem.m in Sources */ = {isa = PBXBuildFile; fileRef = D02964F22022ADBC0060409F /* NRIMSoundElem.m */; };
+		D02964F62022ADC80060409F /* NRIMFileElem.m in Sources */ = {isa = PBXBuildFile; fileRef = D02964F52022ADC80060409F /* NRIMFileElem.m */; };
 		D02DD997202148210035066D /* NRConversationListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D02DD996202148210035066D /* NRConversationListViewController.m */; };
 		D02DD99C202154B50035066D /* NRConversationListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D02DD99B202154B50035066D /* NRConversationListCell.m */; };
 		D02DD9A0202155F20035066D /* NRBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D02DD99F202155F20035066D /* NRBaseTableViewCell.m */; };
@@ -192,6 +196,14 @@
 		D02964E420229E340060409F /* NSDate+NRCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+NRCategory.m"; sourceTree = "<group>"; };
 		D02964E620229E700060409F /* NSDateFormatter+NRCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+NRCategory.h"; sourceTree = "<group>"; };
 		D02964E720229E700060409F /* NSDateFormatter+NRCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+NRCategory.m"; sourceTree = "<group>"; };
+		D02964EB2022AD5E0060409F /* NRIMTextElem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRIMTextElem.h; sourceTree = "<group>"; };
+		D02964EC2022AD5E0060409F /* NRIMTextElem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRIMTextElem.m; sourceTree = "<group>"; };
+		D02964EE2022AD910060409F /* NRIMImageElem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRIMImageElem.h; sourceTree = "<group>"; };
+		D02964EF2022AD910060409F /* NRIMImageElem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRIMImageElem.m; sourceTree = "<group>"; };
+		D02964F12022ADBC0060409F /* NRIMSoundElem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRIMSoundElem.h; sourceTree = "<group>"; };
+		D02964F22022ADBC0060409F /* NRIMSoundElem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRIMSoundElem.m; sourceTree = "<group>"; };
+		D02964F42022ADC80060409F /* NRIMFileElem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRIMFileElem.h; sourceTree = "<group>"; };
+		D02964F52022ADC80060409F /* NRIMFileElem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRIMFileElem.m; sourceTree = "<group>"; };
 		D02DD995202148210035066D /* NRConversationListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRConversationListViewController.h; sourceTree = "<group>"; };
 		D02DD996202148210035066D /* NRConversationListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRConversationListViewController.m; sourceTree = "<group>"; };
 		D02DD99A202154B50035066D /* NRConversationListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRConversationListCell.h; sourceTree = "<group>"; };
@@ -346,6 +358,7 @@
 		D01D0866201FF95400288240 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				D02964EA2022AD380060409F /* MessageModel */,
 				D02DD99D202155E60035066D /* BaseTableView */,
 				D01D08D82020424900288240 /* RootViewController */,
 				D01D08D4202040A200288240 /* BaseController */,
@@ -537,8 +550,6 @@
 				D01D08D22020226D00288240 /* NRIMUserModel.m */,
 				D02DD9A2202156350035066D /* NRBaseModel.h */,
 				D02DD9A3202156350035066D /* NRBaseModel.m */,
-				D02DD9A920218B120035066D /* NRIMElem.h */,
-				D02DD9AA20218B120035066D /* NRIMElem.m */,
 			);
 			path = BaseModel;
 			sourceTree = "<group>";
@@ -614,6 +625,23 @@
 				D01D08FB20206D1E00288240 /* NRUserTools.m */,
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		D02964EA2022AD380060409F /* MessageModel */ = {
+			isa = PBXGroup;
+			children = (
+				D02DD9A920218B120035066D /* NRIMElem.h */,
+				D02DD9AA20218B120035066D /* NRIMElem.m */,
+				D02964EB2022AD5E0060409F /* NRIMTextElem.h */,
+				D02964EC2022AD5E0060409F /* NRIMTextElem.m */,
+				D02964EE2022AD910060409F /* NRIMImageElem.h */,
+				D02964EF2022AD910060409F /* NRIMImageElem.m */,
+				D02964F12022ADBC0060409F /* NRIMSoundElem.h */,
+				D02964F22022ADBC0060409F /* NRIMSoundElem.m */,
+				D02964F42022ADC80060409F /* NRIMFileElem.h */,
+				D02964F52022ADC80060409F /* NRIMFileElem.m */,
+			);
+			path = MessageModel;
 			sourceTree = "<group>";
 		};
 		D02DD999202154980035066D /* View */ = {
@@ -977,6 +1005,7 @@
 				D02DD997202148210035066D /* NRConversationListViewController.m in Sources */,
 				D01D08E4202043AB00288240 /* NRChatViewController.m in Sources */,
 				D01D08F220204A7600288240 /* NRBarButtonItem.m in Sources */,
+				D02964F62022ADC80060409F /* NRIMFileElem.m in Sources */,
 				D01D08DB2020427800288240 /* NRRootViewController.m in Sources */,
 				D01D086C201FFA5500288240 /* AppDelegate+NRExtension.m in Sources */,
 				D01D08AA20200A8300288240 /* NRConst.m in Sources */,
@@ -989,6 +1018,7 @@
 				D01D08CE20201CC500288240 /* NRBusinessNetworkTool.m in Sources */,
 				D01D08FC20206D1E00288240 /* NRUserTools.m in Sources */,
 				D02DD9A4202156350035066D /* NRBaseModel.m in Sources */,
+				D02964F32022ADBC0060409F /* NRIMSoundElem.m in Sources */,
 				D01D08BE2020178000288240 /* NSString+LSWMEXtension.m in Sources */,
 				D02DD9B52021B4FF0035066D /* NRChatMessageCell.m in Sources */,
 				D01D089E201FFF1A00288240 /* NRIMClientManager.m in Sources */,
@@ -997,11 +1027,13 @@
 				D01D08A12020050600288240 /* NRChatTransDataEventImpl.m in Sources */,
 				D01D08BB2020172900288240 /* UIView+NRExtension.m in Sources */,
 				D01D08AE202013C200288240 /* NRLoginViewController.m in Sources */,
+				D02964ED2022AD5E0060409F /* NRIMTextElem.m in Sources */,
 				D01D0833201FF8AD00288240 /* AppDelegate.mm in Sources */,
 				D01D08C820201BB000288240 /* NRNetworkCache.m in Sources */,
 				D02DD9B82021B6320035066D /* NRChatMessageContentView.m in Sources */,
 				D01D08B72020152900288240 /* UIImage+NRExtension.m in Sources */,
 				D02DD9AF2021AAE90035066D /* NRConversationListModel.m in Sources */,
+				D02964F02022AD910060409F /* NRIMImageElem.m in Sources */,
 				D01D08CB20201CAA00288240 /* WMLSSessionManger.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

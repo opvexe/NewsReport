@@ -120,9 +120,9 @@
     message.messageId = convertToString(fingerPrintOfProtocal);             ///uid + 时间戳 （消息标识）
     message.timestamp = [convertToString(fingerPrintOfProtocal) componentsSeparatedByString:@"+"].lastObject;
     if ([message.from isEqualToString:[[NRUserTools defaultCenter]getUserID]]) {
-        message.isSender = YES;
+        message.direction = MessageOwnerSelf;
     }else{
-        message.isSender = NO;
+        message.direction = MessageOwnerOther;
     }
     
     return message;
