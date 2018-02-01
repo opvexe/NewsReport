@@ -10,4 +10,8 @@
 
 @interface NRVoiceMessageContentView : NRChatMessageContentView
 
+@property (nonatomic,strong) UILabel *durationLabel;//语音时长
+@property (nonatomic,strong) UIImageView *voiceImageView;
+@property (nonatomic,strong) UIView *redView;
+
 @end

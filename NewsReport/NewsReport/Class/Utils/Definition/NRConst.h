@@ -87,19 +87,19 @@ extern NSString *const NRMessageCellIdentifierRecvLocation;
 extern NSString *const NRMessageCellIdentifierRecvVoice;
 extern NSString *const NRMessageCellIdentifierRecvVideo;
 extern NSString *const NRMessageCellIdentifierRecvImage;
-extern NSString *const DJHMessageCellIdentifierRecvFile;
-extern NSString *const DJHMessageCellIdentifierRecvShare;
-extern NSString *const DJHMessageCellIdentifierRecvRedMoney;
+extern NSString *const NRMessageCellIdentifierRecvFile;
+extern NSString *const NRMessageCellIdentifierRecvShare;
+extern NSString *const NRMessageCellIdentifierRecvRedMoney;
 
 /*  发送方 */
-extern NSString *const DJHMessageCellIdentifierSendText;
-extern NSString *const DJHMessageCellIdentifierSendLocation;
-extern NSString *const DJHMessageCellIdentifierSendVoice;
-extern NSString *const DJHMessageCellIdentifierSendVideo;
-extern NSString *const DJHMessageCellIdentifierSendImage;
-extern NSString *const DJHMessageCellIdentifierSendFile;
-extern NSString *const DJHMessageCellIdentifierSendShare;
-extern NSString *const DJHMessageCellIdentifierSendRedMoney;
+extern NSString *const NRMessageCellIdentifierSendText;
+extern NSString *const NRMessageCellIdentifierSendLocation;
+extern NSString *const NRMessageCellIdentifierSendVoice;
+extern NSString *const NRMessageCellIdentifierSendVideo;
+extern NSString *const NRMessageCellIdentifierSendImage;
+extern NSString *const NRMessageCellIdentifierSendFile;
+extern NSString *const NRMessageCellIdentifierSendShare;
+extern NSString *const NRMessageCellIdentifierSendRedMoney;
 
 
 

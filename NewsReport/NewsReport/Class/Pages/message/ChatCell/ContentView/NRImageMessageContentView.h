@@ -7,7 +7,10 @@
 //
 
 #import "NRChatMessageContentView.h"
-
+#import "NRProgressView.h"
 @interface NRImageMessageContentView : NRChatMessageContentView
 
+@property (strong, nonatomic) UIImageView *imageView;
+
+@property (strong, nonatomic) NRProgressView *progressView;
 @end

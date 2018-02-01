@@ -37,6 +37,11 @@
  *  是否已读
  */
 @property (nonatomic,assign) BOOL isMessageRead;
+
+//多媒体消息：是否正在播放
+@property (nonatomic,assign) BOOL isMediaPlaying;
+//多媒体消息：是否播放过
+@property (nonatomic,assign) BOOL isMediaPlayed;
 /**
  *  当前消息的时间戳
  */

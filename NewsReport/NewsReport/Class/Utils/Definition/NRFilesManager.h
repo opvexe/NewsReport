@@ -68,5 +68,7 @@
 #import "NRIMImageElem.h"
 #import "NRIMSoundElem.h"
 #import "NRIMFileElem.h"
+#import "NRIMVideoElem.h"
+#import "NRIMLocationElem.h"
 
 #endif /* NRFilesManager_h */

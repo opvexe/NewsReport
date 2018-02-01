@@ -62,6 +62,51 @@
 		D02965082022B3850060409F /* NRImageMessageContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = D02965072022B3850060409F /* NRImageMessageContentView.m */; };
 		D029650E2022B3BC0060409F /* NRShareMessageContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = D029650D2022B3BC0060409F /* NRShareMessageContentView.m */; };
 		D02965112022B3C90060409F /* NRRedMoneyMessageContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = D02965102022B3C90060409F /* NRRedMoneyMessageContentView.m */; };
+		D02965142022BC220060409F /* NRIMLocationElem.m in Sources */ = {isa = PBXBuildFile; fileRef = D02965132022BC220060409F /* NRIMLocationElem.m */; };
+		D02965172022BCBA0060409F /* NRIMVideoElem.m in Sources */ = {isa = PBXBuildFile; fileRef = D02965162022BCBA0060409F /* NRIMVideoElem.m */; };
+		D029651B2022BD820060409F /* NRProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = D029651A2022BD820060409F /* NRProgressView.m */; };
+		D02965632022C0B90060409F /* NSString+Emoji.m in Sources */ = {isa = PBXBuildFile; fileRef = D029651F2022C0B90060409F /* NSString+Emoji.m */; };
+		D02965642022C0B90060409F /* ChatKeyBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = D02965212022C0B90060409F /* ChatKeyBoard.m */; };
+		D02965652022C0B90060409F /* FaceSourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D02965242022C0B90060409F /* FaceSourceManager.m */; };
+		D02965662022C0B90060409F /* ChatToolBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D02965272022C0B90060409F /* ChatToolBarItem.m */; };
+		D02965672022C0B90060409F /* FaceThemeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D02965292022C0B90060409F /* FaceThemeModel.m */; };
+		D02965682022C0B90060409F /* MoreItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D029652B2022C0B90060409F /* MoreItem.m */; };
+		D02965692022C0B90060409F /* emotion.plist in Resources */ = {isa = PBXBuildFile; fileRef = D029652D2022C0B90060409F /* emotion.plist */; };
+		D029656A2022C0B90060409F /* face.plist in Resources */ = {isa = PBXBuildFile; fileRef = D029652E2022C0B90060409F /* face.plist */; };
+		D029656B2022C0B90060409F /* systemEmoji.plist in Resources */ = {isa = PBXBuildFile; fileRef = D029652F2022C0B90060409F /* systemEmoji.plist */; };
+		D029656C2022C0B90060409F /* chatBar_colorMore_audioCall@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D02965322022C0B90060409F /* chatBar_colorMore_audioCall@2x.png */; };
+		D029656D2022C0B90060409F /* chatBar_colorMore_camera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D02965332022C0B90060409F /* chatBar_colorMore_camera@2x.png */; };
+		D029656E2022C0B90060409F /* chatBar_colorMore_location@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D02965342022C0B90060409F /* chatBar_colorMore_location@2x.png */; };
+		D029656F2022C0B90060409F /* chatBar_colorMore_photo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D02965352022C0B90060409F /* chatBar_colorMore_photo@2x.png */; };
+		D02965702022C0B90060409F /* chatBar_colorMore_video@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D02965362022C0B90060409F /* chatBar_colorMore_video@2x.png */; };
+		D02965712022C0B90060409F /* chatBar_colorMore_videoCall@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D02965372022C0B90060409F /* chatBar_colorMore_videoCall@2x.png */; };
+		D02965722022C0B90060409F /* Delete_ios7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D02965392022C0B90060409F /* Delete_ios7@2x.png */; };
+		D02965732022C0B90060409F /* Delete_ios7@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D029653A2022C0B90060409F /* Delete_ios7@3x.png */; };
+		D02965742022C0B90060409F /* EmotionAdd@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D029653B2022C0B90060409F /* EmotionAdd@2x.png */; };
+		D02965752022C0B90060409F /* EmotionsEmojiHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D029653C2022C0B90060409F /* EmotionsEmojiHL@2x.png */; };
+		D02965762022C0B90060409F /* face@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D029653D2022C0B90060409F /* face@2x.png */; };
+		D02965772022C0B90060409F /* face_HL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D029653E2022C0B90060409F /* face_HL@2x.png */; };
+		D02965782022C0B90060409F /* input-bar-flat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D029653F2022C0B90060409F /* input-bar-flat@2x.png */; };
+		D02965792022C0B90060409F /* input-bar-flat@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D02965402022C0B90060409F /* input-bar-flat@3x.png */; };
+		D029657A2022C0B90060409F /* keyboard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D02965412022C0B90060409F /* keyboard@2x.png */; };
+		D029657B2022C0B90060409F /* keyboard_HL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D02965422022C0B90060409F /* keyboard_HL@2x.png */; };
+		D029657C2022C0B90060409F /* more_ios@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D02965432022C0B90060409F /* more_ios@2x.png */; };
+		D029657D2022C0B90060409F /* more_ios_HL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D02965442022C0B90060409F /* more_ios_HL@2x.png */; };
+		D029657E2022C0B90060409F /* switchDown@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D02965452022C0B90060409F /* switchDown@2x.png */; };
+		D029657F2022C0B90060409F /* switchUp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D02965462022C0B90060409F /* switchUp@2x.png */; };
+		D02965802022C0B90060409F /* voice@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D02965472022C0B90060409F /* voice@2x.png */; };
+		D02965812022C0B90060409F /* voice_HL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D02965482022C0B90060409F /* voice_HL@2x.png */; };
+		D02965822022C0B90060409F /* EaseRecordView.m in Sources */ = {isa = PBXBuildFile; fileRef = D029654B2022C0B90060409F /* EaseRecordView.m */; };
+		D02965832022C0B90060409F /* FaceButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D029654E2022C0B90060409F /* FaceButton.m */; };
+		D02965842022C0B90060409F /* FacePageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D02965502022C0B90060409F /* FacePageView.m */; };
+		D02965852022C0B90060409F /* FacePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = D02965522022C0B90060409F /* FacePanel.m */; };
+		D02965862022C0B90060409F /* FaceThemeView.m in Sources */ = {isa = PBXBuildFile; fileRef = D02965542022C0B90060409F /* FaceThemeView.m */; };
+		D02965872022C0B90060409F /* PanelBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = D02965562022C0B90060409F /* PanelBottomView.m */; };
+		D02965882022C0B90060409F /* MorePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = D02965592022C0B90060409F /* MorePanel.m */; };
+		D02965892022C0B90060409F /* ChatToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D029655C2022C0B90060409F /* ChatToolBar.m */; };
+		D029658A2022C0B90060409F /* OfficialAccountToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = D029655E2022C0B90060409F /* OfficialAccountToolbar.m */; };
+		D029658B2022C0B90060409F /* RFRecordButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D02965602022C0B90060409F /* RFRecordButton.m */; };
+		D029658C2022C0B90060409F /* RFTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = D02965622022C0B90060409F /* RFTextView.m */; };
 		D02DD997202148210035066D /* NRConversationListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D02DD996202148210035066D /* NRConversationListViewController.m */; };
 		D02DD99C202154B50035066D /* NRConversationListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D02DD99B202154B50035066D /* NRConversationListCell.m */; };
 		D02DD9A0202155F20035066D /* NRBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D02DD99F202155F20035066D /* NRBaseTableViewCell.m */; };
@@ -228,6 +273,72 @@
 		D029650D2022B3BC0060409F /* NRShareMessageContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRShareMessageContentView.m; sourceTree = "<group>"; };
 		D029650F2022B3C90060409F /* NRRedMoneyMessageContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRRedMoneyMessageContentView.h; sourceTree = "<group>"; };
 		D02965102022B3C90060409F /* NRRedMoneyMessageContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRRedMoneyMessageContentView.m; sourceTree = "<group>"; };
+		D02965122022BC220060409F /* NRIMLocationElem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRIMLocationElem.h; sourceTree = "<group>"; };
+		D02965132022BC220060409F /* NRIMLocationElem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRIMLocationElem.m; sourceTree = "<group>"; };
+		D02965152022BCBA0060409F /* NRIMVideoElem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRIMVideoElem.h; sourceTree = "<group>"; };
+		D02965162022BCBA0060409F /* NRIMVideoElem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRIMVideoElem.m; sourceTree = "<group>"; };
+		D02965192022BD820060409F /* NRProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRProgressView.h; sourceTree = "<group>"; };
+		D029651A2022BD820060409F /* NRProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRProgressView.m; sourceTree = "<group>"; };
+		D029651E2022C0B90060409F /* NSString+Emoji.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Emoji.h"; sourceTree = "<group>"; };
+		D029651F2022C0B90060409F /* NSString+Emoji.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Emoji.m"; sourceTree = "<group>"; };
+		D02965202022C0B90060409F /* ChatKeyBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatKeyBoard.h; sourceTree = "<group>"; };
+		D02965212022C0B90060409F /* ChatKeyBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatKeyBoard.m; sourceTree = "<group>"; };
+		D02965222022C0B90060409F /* ChatKeyBoardMacroDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatKeyBoardMacroDefine.h; sourceTree = "<group>"; };
+		D02965232022C0B90060409F /* FaceSourceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceSourceManager.h; sourceTree = "<group>"; };
+		D02965242022C0B90060409F /* FaceSourceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceSourceManager.m; sourceTree = "<group>"; };
+		D02965262022C0B90060409F /* ChatToolBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatToolBarItem.h; sourceTree = "<group>"; };
+		D02965272022C0B90060409F /* ChatToolBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatToolBarItem.m; sourceTree = "<group>"; };
+		D02965282022C0B90060409F /* FaceThemeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceThemeModel.h; sourceTree = "<group>"; };
+		D02965292022C0B90060409F /* FaceThemeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceThemeModel.m; sourceTree = "<group>"; };
+		D029652A2022C0B90060409F /* MoreItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreItem.h; sourceTree = "<group>"; };
+		D029652B2022C0B90060409F /* MoreItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreItem.m; sourceTree = "<group>"; };
+		D029652D2022C0B90060409F /* emotion.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = emotion.plist; sourceTree = "<group>"; };
+		D029652E2022C0B90060409F /* face.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = face.plist; sourceTree = "<group>"; };
+		D029652F2022C0B90060409F /* systemEmoji.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = systemEmoji.plist; sourceTree = "<group>"; };
+		D02965322022C0B90060409F /* chatBar_colorMore_audioCall@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chatBar_colorMore_audioCall@2x.png"; sourceTree = "<group>"; };
+		D02965332022C0B90060409F /* chatBar_colorMore_camera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chatBar_colorMore_camera@2x.png"; sourceTree = "<group>"; };
+		D02965342022C0B90060409F /* chatBar_colorMore_location@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chatBar_colorMore_location@2x.png"; sourceTree = "<group>"; };
+		D02965352022C0B90060409F /* chatBar_colorMore_photo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chatBar_colorMore_photo@2x.png"; sourceTree = "<group>"; };
+		D02965362022C0B90060409F /* chatBar_colorMore_video@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chatBar_colorMore_video@2x.png"; sourceTree = "<group>"; };
+		D02965372022C0B90060409F /* chatBar_colorMore_videoCall@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chatBar_colorMore_videoCall@2x.png"; sourceTree = "<group>"; };
+		D02965392022C0B90060409F /* Delete_ios7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Delete_ios7@2x.png"; sourceTree = "<group>"; };
+		D029653A2022C0B90060409F /* Delete_ios7@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Delete_ios7@3x.png"; sourceTree = "<group>"; };
+		D029653B2022C0B90060409F /* EmotionAdd@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "EmotionAdd@2x.png"; sourceTree = "<group>"; };
+		D029653C2022C0B90060409F /* EmotionsEmojiHL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "EmotionsEmojiHL@2x.png"; sourceTree = "<group>"; };
+		D029653D2022C0B90060409F /* face@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "face@2x.png"; sourceTree = "<group>"; };
+		D029653E2022C0B90060409F /* face_HL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "face_HL@2x.png"; sourceTree = "<group>"; };
+		D029653F2022C0B90060409F /* input-bar-flat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "input-bar-flat@2x.png"; sourceTree = "<group>"; };
+		D02965402022C0B90060409F /* input-bar-flat@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "input-bar-flat@3x.png"; sourceTree = "<group>"; };
+		D02965412022C0B90060409F /* keyboard@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "keyboard@2x.png"; sourceTree = "<group>"; };
+		D02965422022C0B90060409F /* keyboard_HL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "keyboard_HL@2x.png"; sourceTree = "<group>"; };
+		D02965432022C0B90060409F /* more_ios@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "more_ios@2x.png"; sourceTree = "<group>"; };
+		D02965442022C0B90060409F /* more_ios_HL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "more_ios_HL@2x.png"; sourceTree = "<group>"; };
+		D02965452022C0B90060409F /* switchDown@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "switchDown@2x.png"; sourceTree = "<group>"; };
+		D02965462022C0B90060409F /* switchUp@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "switchUp@2x.png"; sourceTree = "<group>"; };
+		D02965472022C0B90060409F /* voice@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "voice@2x.png"; sourceTree = "<group>"; };
+		D02965482022C0B90060409F /* voice_HL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "voice_HL@2x.png"; sourceTree = "<group>"; };
+		D029654A2022C0B90060409F /* EaseRecordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EaseRecordView.h; sourceTree = "<group>"; };
+		D029654B2022C0B90060409F /* EaseRecordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EaseRecordView.m; sourceTree = "<group>"; };
+		D029654D2022C0B90060409F /* FaceButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceButton.h; sourceTree = "<group>"; };
+		D029654E2022C0B90060409F /* FaceButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceButton.m; sourceTree = "<group>"; };
+		D029654F2022C0B90060409F /* FacePageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacePageView.h; sourceTree = "<group>"; };
+		D02965502022C0B90060409F /* FacePageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacePageView.m; sourceTree = "<group>"; };
+		D02965512022C0B90060409F /* FacePanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacePanel.h; sourceTree = "<group>"; };
+		D02965522022C0B90060409F /* FacePanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacePanel.m; sourceTree = "<group>"; };
+		D02965532022C0B90060409F /* FaceThemeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceThemeView.h; sourceTree = "<group>"; };
+		D02965542022C0B90060409F /* FaceThemeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceThemeView.m; sourceTree = "<group>"; };
+		D02965552022C0B90060409F /* PanelBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanelBottomView.h; sourceTree = "<group>"; };
+		D02965562022C0B90060409F /* PanelBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanelBottomView.m; sourceTree = "<group>"; };
+		D02965582022C0B90060409F /* MorePanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MorePanel.h; sourceTree = "<group>"; };
+		D02965592022C0B90060409F /* MorePanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MorePanel.m; sourceTree = "<group>"; };
+		D029655B2022C0B90060409F /* ChatToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatToolBar.h; sourceTree = "<group>"; };
+		D029655C2022C0B90060409F /* ChatToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatToolBar.m; sourceTree = "<group>"; };
+		D029655D2022C0B90060409F /* OfficialAccountToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OfficialAccountToolbar.h; sourceTree = "<group>"; };
+		D029655E2022C0B90060409F /* OfficialAccountToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OfficialAccountToolbar.m; sourceTree = "<group>"; };
+		D029655F2022C0B90060409F /* RFRecordButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFRecordButton.h; sourceTree = "<group>"; };
+		D02965602022C0B90060409F /* RFRecordButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFRecordButton.m; sourceTree = "<group>"; };
+		D02965612022C0B90060409F /* RFTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFTextView.h; sourceTree = "<group>"; };
+		D02965622022C0B90060409F /* RFTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFTextView.m; sourceTree = "<group>"; };
 		D02DD995202148210035066D /* NRConversationListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRConversationListViewController.h; sourceTree = "<group>"; };
 		D02DD996202148210035066D /* NRConversationListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRConversationListViewController.m; sourceTree = "<group>"; };
 		D02DD99A202154B50035066D /* NRConversationListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRConversationListCell.h; sourceTree = "<group>"; };
@@ -492,6 +603,8 @@
 		D01D089A201FFEFF00288240 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D029651C2022C0B80060409F /* KeyBoard */,
+				D02965182022BD6B0060409F /* ProgressView */,
 				D01D08F920206D0500288240 /* Tools */,
 				D01D08EF20204A6800288240 /* NRBarButtonItem */,
 				D01D08AF2020146200288240 /* TimeButton */,
@@ -664,8 +777,168 @@
 				D02964F22022ADBC0060409F /* NRIMSoundElem.m */,
 				D02964F42022ADC80060409F /* NRIMFileElem.h */,
 				D02964F52022ADC80060409F /* NRIMFileElem.m */,
+				D02965152022BCBA0060409F /* NRIMVideoElem.h */,
+				D02965162022BCBA0060409F /* NRIMVideoElem.m */,
+				D02965122022BC220060409F /* NRIMLocationElem.h */,
+				D02965132022BC220060409F /* NRIMLocationElem.m */,
 			);
 			path = MessageModel;
+			sourceTree = "<group>";
+		};
+		D02965182022BD6B0060409F /* ProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				D02965192022BD820060409F /* NRProgressView.h */,
+				D029651A2022BD820060409F /* NRProgressView.m */,
+			);
+			path = ProgressView;
+			sourceTree = "<group>";
+		};
+		D029651C2022C0B80060409F /* KeyBoard */ = {
+			isa = PBXGroup;
+			children = (
+				D029651D2022C0B90060409F /* Cagegory */,
+				D02965202022C0B90060409F /* ChatKeyBoard.h */,
+				D02965212022C0B90060409F /* ChatKeyBoard.m */,
+				D02965222022C0B90060409F /* ChatKeyBoardMacroDefine.h */,
+				D02965232022C0B90060409F /* FaceSourceManager.h */,
+				D02965242022C0B90060409F /* FaceSourceManager.m */,
+				D02965252022C0B90060409F /* Models */,
+				D029652C2022C0B90060409F /* plist */,
+				D02965302022C0B90060409F /* Resource */,
+				D02965492022C0B90060409F /* Views */,
+			);
+			path = KeyBoard;
+			sourceTree = "<group>";
+		};
+		D029651D2022C0B90060409F /* Cagegory */ = {
+			isa = PBXGroup;
+			children = (
+				D029651E2022C0B90060409F /* NSString+Emoji.h */,
+				D029651F2022C0B90060409F /* NSString+Emoji.m */,
+			);
+			path = Cagegory;
+			sourceTree = "<group>";
+		};
+		D02965252022C0B90060409F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D02965262022C0B90060409F /* ChatToolBarItem.h */,
+				D02965272022C0B90060409F /* ChatToolBarItem.m */,
+				D02965282022C0B90060409F /* FaceThemeModel.h */,
+				D02965292022C0B90060409F /* FaceThemeModel.m */,
+				D029652A2022C0B90060409F /* MoreItem.h */,
+				D029652B2022C0B90060409F /* MoreItem.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D029652C2022C0B90060409F /* plist */ = {
+			isa = PBXGroup;
+			children = (
+				D029652D2022C0B90060409F /* emotion.plist */,
+				D029652E2022C0B90060409F /* face.plist */,
+				D029652F2022C0B90060409F /* systemEmoji.plist */,
+			);
+			path = plist;
+			sourceTree = "<group>";
+		};
+		D02965302022C0B90060409F /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				D02965312022C0B90060409F /* More */,
+				D02965382022C0B90060409F /* ToolBar */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		D02965312022C0B90060409F /* More */ = {
+			isa = PBXGroup;
+			children = (
+				D02965322022C0B90060409F /* chatBar_colorMore_audioCall@2x.png */,
+				D02965332022C0B90060409F /* chatBar_colorMore_camera@2x.png */,
+				D02965342022C0B90060409F /* chatBar_colorMore_location@2x.png */,
+				D02965352022C0B90060409F /* chatBar_colorMore_photo@2x.png */,
+				D02965362022C0B90060409F /* chatBar_colorMore_video@2x.png */,
+				D02965372022C0B90060409F /* chatBar_colorMore_videoCall@2x.png */,
+			);
+			path = More;
+			sourceTree = "<group>";
+		};
+		D02965382022C0B90060409F /* ToolBar */ = {
+			isa = PBXGroup;
+			children = (
+				D02965392022C0B90060409F /* Delete_ios7@2x.png */,
+				D029653A2022C0B90060409F /* Delete_ios7@3x.png */,
+				D029653B2022C0B90060409F /* EmotionAdd@2x.png */,
+				D029653C2022C0B90060409F /* EmotionsEmojiHL@2x.png */,
+				D029653D2022C0B90060409F /* face@2x.png */,
+				D029653E2022C0B90060409F /* face_HL@2x.png */,
+				D029653F2022C0B90060409F /* input-bar-flat@2x.png */,
+				D02965402022C0B90060409F /* input-bar-flat@3x.png */,
+				D02965412022C0B90060409F /* keyboard@2x.png */,
+				D02965422022C0B90060409F /* keyboard_HL@2x.png */,
+				D02965432022C0B90060409F /* more_ios@2x.png */,
+				D02965442022C0B90060409F /* more_ios_HL@2x.png */,
+				D02965452022C0B90060409F /* switchDown@2x.png */,
+				D02965462022C0B90060409F /* switchUp@2x.png */,
+				D02965472022C0B90060409F /* voice@2x.png */,
+				D02965482022C0B90060409F /* voice_HL@2x.png */,
+			);
+			path = ToolBar;
+			sourceTree = "<group>";
+		};
+		D02965492022C0B90060409F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D029654A2022C0B90060409F /* EaseRecordView.h */,
+				D029654B2022C0B90060409F /* EaseRecordView.m */,
+				D029654C2022C0B90060409F /* FacePanel */,
+				D02965572022C0B90060409F /* MorePanel */,
+				D029655A2022C0B90060409F /* ToolBarPanel */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D029654C2022C0B90060409F /* FacePanel */ = {
+			isa = PBXGroup;
+			children = (
+				D029654D2022C0B90060409F /* FaceButton.h */,
+				D029654E2022C0B90060409F /* FaceButton.m */,
+				D029654F2022C0B90060409F /* FacePageView.h */,
+				D02965502022C0B90060409F /* FacePageView.m */,
+				D02965512022C0B90060409F /* FacePanel.h */,
+				D02965522022C0B90060409F /* FacePanel.m */,
+				D02965532022C0B90060409F /* FaceThemeView.h */,
+				D02965542022C0B90060409F /* FaceThemeView.m */,
+				D02965552022C0B90060409F /* PanelBottomView.h */,
+				D02965562022C0B90060409F /* PanelBottomView.m */,
+			);
+			path = FacePanel;
+			sourceTree = "<group>";
+		};
+		D02965572022C0B90060409F /* MorePanel */ = {
+			isa = PBXGroup;
+			children = (
+				D02965582022C0B90060409F /* MorePanel.h */,
+				D02965592022C0B90060409F /* MorePanel.m */,
+			);
+			path = MorePanel;
+			sourceTree = "<group>";
+		};
+		D029655A2022C0B90060409F /* ToolBarPanel */ = {
+			isa = PBXGroup;
+			children = (
+				D029655B2022C0B90060409F /* ChatToolBar.h */,
+				D029655C2022C0B90060409F /* ChatToolBar.m */,
+				D029655D2022C0B90060409F /* OfficialAccountToolbar.h */,
+				D029655E2022C0B90060409F /* OfficialAccountToolbar.m */,
+				D029655F2022C0B90060409F /* RFRecordButton.h */,
+				D02965602022C0B90060409F /* RFRecordButton.m */,
+				D02965612022C0B90060409F /* RFTextView.h */,
+				D02965622022C0B90060409F /* RFTextView.m */,
+			);
+			path = ToolBarPanel;
 			sourceTree = "<group>";
 		};
 		D02DD999202154980035066D /* View */ = {
@@ -718,18 +991,18 @@
 			children = (
 				D02DD9B62021B6320035066D /* NRChatMessageContentView.h */,
 				D02DD9B72021B6320035066D /* NRChatMessageContentView.m */,
+				D02965062022B3850060409F /* NRImageMessageContentView.h */,
+				D02965072022B3850060409F /* NRImageMessageContentView.m */,
 				D02964F72022B31C0060409F /* NRTextMessageContentView.h */,
 				D02964F82022B31C0060409F /* NRTextMessageContentView.m */,
+				D02965032022B3740060409F /* NRVoiceMessageContentView.h */,
+				D02965042022B3740060409F /* NRVoiceMessageContentView.m */,
 				D02964FA2022B3440060409F /* NRFileMessageContentView.h */,
 				D02964FB2022B3440060409F /* NRFileMessageContentView.m */,
 				D02964FD2022B3550060409F /* NRLocationMessageContentView.h */,
 				D02964FE2022B3550060409F /* NRLocationMessageContentView.m */,
 				D02965002022B3630060409F /* NRVideoMessageContentView.h */,
 				D02965012022B3630060409F /* NRVideoMessageContentView.m */,
-				D02965032022B3740060409F /* NRVoiceMessageContentView.h */,
-				D02965042022B3740060409F /* NRVoiceMessageContentView.m */,
-				D02965062022B3850060409F /* NRImageMessageContentView.h */,
-				D02965072022B3850060409F /* NRImageMessageContentView.m */,
 				D029650C2022B3BC0060409F /* NRShareMessageContentView.h */,
 				D029650D2022B3BC0060409F /* NRShareMessageContentView.m */,
 				D029650F2022B3C90060409F /* NRRedMoneyMessageContentView.h */,
@@ -854,8 +1127,33 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D029657E2022C0B90060409F /* switchDown@2x.png in Resources */,
+				D02965742022C0B90060409F /* EmotionAdd@2x.png in Resources */,
+				D029656D2022C0B90060409F /* chatBar_colorMore_camera@2x.png in Resources */,
+				D029656F2022C0B90060409F /* chatBar_colorMore_photo@2x.png in Resources */,
+				D02965732022C0B90060409F /* Delete_ios7@3x.png in Resources */,
+				D029656B2022C0B90060409F /* systemEmoji.plist in Resources */,
+				D02965722022C0B90060409F /* Delete_ios7@2x.png in Resources */,
+				D029657B2022C0B90060409F /* keyboard_HL@2x.png in Resources */,
+				D02965782022C0B90060409F /* input-bar-flat@2x.png in Resources */,
+				D02965702022C0B90060409F /* chatBar_colorMore_video@2x.png in Resources */,
+				D02965762022C0B90060409F /* face@2x.png in Resources */,
+				D029657A2022C0B90060409F /* keyboard@2x.png in Resources */,
+				D029657C2022C0B90060409F /* more_ios@2x.png in Resources */,
+				D02965802022C0B90060409F /* voice@2x.png in Resources */,
+				D02965772022C0B90060409F /* face_HL@2x.png in Resources */,
+				D02965792022C0B90060409F /* input-bar-flat@3x.png in Resources */,
+				D02965692022C0B90060409F /* emotion.plist in Resources */,
+				D029657D2022C0B90060409F /* more_ios_HL@2x.png in Resources */,
 				D01D083E201FF8AE00288240 /* LaunchScreen.storyboard in Resources */,
+				D02965752022C0B90060409F /* EmotionsEmojiHL@2x.png in Resources */,
+				D029656E2022C0B90060409F /* chatBar_colorMore_location@2x.png in Resources */,
+				D029657F2022C0B90060409F /* switchUp@2x.png in Resources */,
 				D01D083B201FF8AE00288240 /* Assets.xcassets in Resources */,
+				D029656C2022C0B90060409F /* chatBar_colorMore_audioCall@2x.png in Resources */,
+				D029656A2022C0B90060409F /* face.plist in Resources */,
+				D02965812022C0B90060409F /* voice_HL@2x.png in Resources */,
+				D02965712022C0B90060409F /* chatBar_colorMore_videoCall@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1034,12 +1332,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				D01D08F520204B7B00288240 /* UIView+Toast.m in Sources */,
+				D029651B2022BD820060409F /* NRProgressView.m in Sources */,
 				D01D0841201FF8AE00288240 /* main.m in Sources */,
+				D02965142022BC220060409F /* NRIMLocationElem.m in Sources */,
+				D02965672022C0B90060409F /* FaceThemeModel.m in Sources */,
+				D029658C2022C0B90060409F /* RFTextView.m in Sources */,
 				D01D08E7202043BA00288240 /* NRFriendViewController.m in Sources */,
 				D02964E520229E340060409F /* NSDate+NRCategory.m in Sources */,
+				D02965852022C0B90060409F /* FacePanel.m in Sources */,
 				D02DD9A0202155F20035066D /* NRBaseTableViewCell.m in Sources */,
 				D01D08D7202040B300288240 /* NRBaseViewController.m in Sources */,
 				D02DD99C202154B50035066D /* NRConversationListCell.m in Sources */,
+				D02965652022C0B90060409F /* FaceSourceManager.m in Sources */,
 				D01D08B22020148400288240 /* CPMessageEventButton.m in Sources */,
 				D01D08A72020087800288240 /* NRMessageQoSEventImpl.m in Sources */,
 				D02DD997202148210035066D /* NRConversationListViewController.m in Sources */,
@@ -1049,12 +1353,19 @@
 				D01D08DB2020427800288240 /* NRRootViewController.m in Sources */,
 				D01D086C201FFA5500288240 /* AppDelegate+NRExtension.m in Sources */,
 				D02964FF2022B3550060409F /* NRLocationMessageContentView.m in Sources */,
+				D02965682022C0B90060409F /* MoreItem.m in Sources */,
 				D01D08AA20200A8300288240 /* NRConst.m in Sources */,
 				D02964E820229E700060409F /* NSDateFormatter+NRCategory.m in Sources */,
 				D01D08EA202043CC00288240 /* NRPortraitViewController.m in Sources */,
 				D01D08DE202042FB00288240 /* NRTabBarControllerConfig.m in Sources */,
+				D02965662022C0B90060409F /* ChatToolBarItem.m in Sources */,
+				D02965842022C0B90060409F /* FacePageView.m in Sources */,
+				D02965872022C0B90060409F /* PanelBottomView.m in Sources */,
 				D02DD9AB20218B120035066D /* NRIMElem.m in Sources */,
+				D02965892022C0B90060409F /* ChatToolBar.m in Sources */,
+				D02965642022C0B90060409F /* ChatKeyBoard.m in Sources */,
 				D01D08C620201BB000288240 /* NRNetworkHelper.m in Sources */,
+				D029658B2022C0B90060409F /* RFRecordButton.m in Sources */,
 				D01D08ED2020451200288240 /* NRBaseNavigationViewController.m in Sources */,
 				D01D08CE20201CC500288240 /* NRBusinessNetworkTool.m in Sources */,
 				D01D08FC20206D1E00288240 /* NRUserTools.m in Sources */,
@@ -1062,20 +1373,27 @@
 				D02964F32022ADBC0060409F /* NRIMSoundElem.m in Sources */,
 				D01D08BE2020178000288240 /* NSString+LSWMEXtension.m in Sources */,
 				D02DD9B52021B4FF0035066D /* NRChatMessageCell.m in Sources */,
+				D02965832022C0B90060409F /* FaceButton.m in Sources */,
+				D02965862022C0B90060409F /* FaceThemeView.m in Sources */,
+				D02965882022C0B90060409F /* MorePanel.m in Sources */,
 				D02964FC2022B3440060409F /* NRFileMessageContentView.m in Sources */,
 				D01D089E201FFF1A00288240 /* NRIMClientManager.m in Sources */,
 				D01D08A42020067C00288240 /* NRChatBaseEventImpl.m in Sources */,
 				D01D08D32020226D00288240 /* NRIMUserModel.m in Sources */,
+				D02965172022BCBA0060409F /* NRIMVideoElem.m in Sources */,
+				D02965632022C0B90060409F /* NSString+Emoji.m in Sources */,
 				D01D08A12020050600288240 /* NRChatTransDataEventImpl.m in Sources */,
 				D01D08BB2020172900288240 /* UIView+NRExtension.m in Sources */,
 				D01D08AE202013C200288240 /* NRLoginViewController.m in Sources */,
 				D02965082022B3850060409F /* NRImageMessageContentView.m in Sources */,
 				D02964ED2022AD5E0060409F /* NRIMTextElem.m in Sources */,
+				D02965822022C0B90060409F /* EaseRecordView.m in Sources */,
 				D01D0833201FF8AD00288240 /* AppDelegate.mm in Sources */,
 				D02965112022B3C90060409F /* NRRedMoneyMessageContentView.m in Sources */,
 				D01D08C820201BB000288240 /* NRNetworkCache.m in Sources */,
 				D02DD9B82021B6320035066D /* NRChatMessageContentView.m in Sources */,
 				D01D08B72020152900288240 /* UIImage+NRExtension.m in Sources */,
+				D029658A2022C0B90060409F /* OfficialAccountToolbar.m in Sources */,
 				D02DD9AF2021AAE90035066D /* NRConversationListModel.m in Sources */,
 				D02965052022B3740060409F /* NRVoiceMessageContentView.m in Sources */,
 				D02964F02022AD910060409F /* NRIMImageElem.m in Sources */,

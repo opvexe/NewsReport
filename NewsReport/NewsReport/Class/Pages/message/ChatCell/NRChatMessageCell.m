@@ -18,7 +18,7 @@
  
         //头像
         self.headImageView = [[UIImageView alloc] init];
-        self.headImageView.image = [UIImage imageNamed:@"friend_head_default"];
+        self.headImageView.image = NRImageNamed(@"icon_avatar");
         self.headImageView.layer.masksToBounds = YES;
         self.headImageView.layer.cornerRadius = 5;
         self.headImageView.userInteractionEnabled = YES;
@@ -312,28 +312,28 @@
     if (messageModel.isSender) {//发送者
         switch (messageModel.messageType) {
             case MessageTypeText:
-                cellIdentifier = DJHMessageCellIdentifierSendText;
+                cellIdentifier = NRMessageCellIdentifierSendText;
                 break;
             case MessageTypeShare:
-                cellIdentifier = DJHMessageCellIdentifierSendShare;
+                cellIdentifier = NRMessageCellIdentifierSendShare;
                 break;
             case MessageTypeRedMoney:
-                cellIdentifier = DJHMessageCellIdentifierSendRedMoney;
+                cellIdentifier = NRMessageCellIdentifierSendRedMoney;
                 break;
             case MessageTypeImage:
-                cellIdentifier = DJHMessageCellIdentifierSendImage;
+                cellIdentifier = NRMessageCellIdentifierSendImage;
                 break;
             case MessageTypeVideo:
-                cellIdentifier = DJHMessageCellIdentifierSendVideo;
+                cellIdentifier = NRMessageCellIdentifierSendVideo;
                 break;
             case MessageTypeLocation:
-                cellIdentifier = DJHMessageCellIdentifierSendLocation;
+                cellIdentifier = NRMessageCellIdentifierSendLocation;
                 break;
             case MessageTypeVoice:
-                cellIdentifier = DJHMessageCellIdentifierSendVoice;
+                cellIdentifier = NRMessageCellIdentifierSendVoice;
                 break;
             case MessageTypeFile:
-                cellIdentifier = DJHMessageCellIdentifierSendFile;
+                cellIdentifier = NRMessageCellIdentifierSendFile;
                 break;
             default:
                 break;
@@ -345,10 +345,10 @@
                 
                 break;
             case MessageTypeShare:
-                cellIdentifier = DJHMessageCellIdentifierRecvShare;
+                cellIdentifier = NRMessageCellIdentifierRecvShare;
                 break;
             case MessageTypeRedMoney:
-                cellIdentifier = DJHMessageCellIdentifierRecvRedMoney;
+                cellIdentifier = NRMessageCellIdentifierRecvRedMoney;
                 break;
             case MessageTypeImage:
                 cellIdentifier = NRMessageCellIdentifierRecvImage;
@@ -363,7 +363,7 @@
                 cellIdentifier = NRMessageCellIdentifierRecvVoice;
                 break;
             case MessageTypeFile:
-                cellIdentifier = DJHMessageCellIdentifierRecvFile;
+                cellIdentifier = NRMessageCellIdentifierRecvFile;
                 break;
             default:
                 break;

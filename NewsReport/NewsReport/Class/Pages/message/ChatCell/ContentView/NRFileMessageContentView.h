@@ -10,4 +10,17 @@
 
 @interface NRFileMessageContentView : NRChatMessageContentView
 
+
+@property (strong, nonatomic) UIView *bgView;
+
+@property (strong, nonatomic) UIImageView *markImgView;
+
+@property (strong, nonatomic) UILabel *titleLabel;
+
+@property (strong, nonatomic) UILabel *sizeLabel;
+
+@property (strong, nonatomic) UIImageView *progressImgView;
+
+@property (strong, nonatomic) UIButton *cancelBtn;
+
 @end

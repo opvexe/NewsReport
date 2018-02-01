@@ -13,6 +13,19 @@
  */
 @interface NRIMImageElem : NRIMElem
 
+/**
+ *  原图
+ */
+@property (strong, nonatomic) UIImage *image;
+
+/**
+ *  缩略图
+ */
+@property (strong, nonatomic) UIImage *thumbnailImage;
+
+/**
+ *  缩略图尺寸
+ */
 @property (nonatomic,assign) CGSize thumbnailImageSize;
 
 - (instancetype)initWithMessage:(NRIMElem *)message;

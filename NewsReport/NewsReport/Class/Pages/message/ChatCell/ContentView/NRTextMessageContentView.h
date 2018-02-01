@@ -10,4 +10,6 @@
 
 @interface NRTextMessageContentView : NRChatMessageContentView
 
+@property (strong, nonatomic) UILabel *textLabel;
+
 @end
