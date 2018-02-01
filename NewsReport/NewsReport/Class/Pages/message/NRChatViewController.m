@@ -182,16 +182,6 @@
         
         
     }
-    if ([item.itemName isEqualToString:@"分享"]) {
-        
-        
-    }
-    
-    if ([item.itemName isEqualToString:@"发红包"]) {
-        
-        
-    }
-    
     
     if ([item.itemName isEqualToString:@"文件"]) {
         
@@ -284,10 +274,8 @@
     MoreItem *item4 = [MoreItem moreItemWithPicName:@"chatBar_colorMore_location" highLightPicName:nil itemName:@"位置"];
     MoreItem *item5 = [MoreItem moreItemWithPicName:@"chatBar_colorMore_audioCall" highLightPicName:nil itemName:@"语音通话"];
     MoreItem *item6 = [MoreItem moreItemWithPicName:@"chatBar_colorMore_videoCall" highLightPicName:nil itemName:@"视频通话"];
-    MoreItem *item7 = [MoreItem moreItemWithPicName:@"chatBar_colorMore_photo" highLightPicName:nil itemName:@"分享"];
-    MoreItem *item8 = [MoreItem moreItemWithPicName:@"chatBar_colorMore_photo" highLightPicName:nil itemName:@"发红包"];
-    MoreItem *item9 = [MoreItem moreItemWithPicName:@"chatBar_colorMore_photo" highLightPicName:nil itemName:@"文件"];
-    [self.morePanelItems addObjectsFromArray:@[item1, item2, item3, item4, item5, item6, item7, item8, item9]];
+    MoreItem *item7 = [MoreItem moreItemWithPicName:@"chatBar_colorMore_photo" highLightPicName:nil itemName:@"文件"];
+    [self.morePanelItems addObjectsFromArray:@[item1, item2, item3, item4, item5, item6, item7]];
     
     return self.morePanelItems;
 }
