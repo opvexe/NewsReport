@@ -25,40 +25,8 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "NewsReport/Class/Pages/login/NRLoginViewController.m"
-            timestampString = "539168504.678983"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
-            landmarkName = "-loginAction:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "NewsReport/Class/Utils/Cache/NRUserInfoDB.m"
-            timestampString = "539168510.899585"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
-            landmarkName = "-creatTable"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "NewsReport/Class/Utils/Cache/NRUserInfoDB.m"
-            timestampString = "539168529.184823"
+            timestampString = "539169847.621217"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "99"
@@ -74,7 +42,7 @@
                   moduleName = "NewsReport"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/bank/Desktop/News/NewsReport/NewsReport/Class/Utils/Cache/NRUserInfoDB.m"
-                  timestampString = "539168529.190981"
+                  timestampString = "539169847.75912"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "99"
@@ -89,7 +57,7 @@
                   moduleName = "NewsReport"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/bank/Desktop/News/NewsReport/NewsReport/Class/Utils/Cache/NRUserInfoDB.m"
-                  timestampString = "539168529.193315"
+                  timestampString = "539169847.761815"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "99"
@@ -106,7 +74,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NewsReport/Class/Utils/Cache/NRUserInfoDB.m"
-            timestampString = "539168609.352489"
+            timestampString = "539169847.621634"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "103"

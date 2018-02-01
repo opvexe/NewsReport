@@ -85,10 +85,7 @@
         WSSTRONG(strongSelf)
         NRUserInfoModel *userModel = [NRUserInfoModel mj_objectWithKeyValues:responseObject];
         [[NRUserInfoDB shareDB]saveModel:userModel];
-        
-        NSLog(@"%@",   [[NRUserInfoDB shareDB]findWithGid:FormatString(@"%zd",userModel.userId)]);
-     
-        
+
         [[NRUserTools defaultCenter]updateUserID:convertToString(FormatString(@"%zd",userModel.userId))];
         [strongSelf loginImpl:[[NRUserTools defaultCenter]getUserID] withToken:@"web"];
     } failure:^(id error) {

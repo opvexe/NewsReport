@@ -128,10 +128,10 @@ static NRUserInfoDB *_db =nil;
         [arguments addObject:convertToString(FormatString(@"%zd",model.depId))];
         [keys appendString:@"latitude,"];
         [values appendString:@"?,"];
-        [arguments addObject:convertToString(FormatString(@"%zd",model.latitude))];
+        [arguments addObject:convertToString(FormatString(@"%lf",model.latitude))];
         [keys appendString:@"longitude,"];
         [values appendString:@"?,"];
-        [arguments addObject:convertToString(FormatString(@"%zd",model.longitude))];
+        [arguments addObject:convertToString(FormatString(@"%lf",model.longitude))];
         [keys appendString:@")"];
         [values appendString:@")"];
         [query appendFormat:@" %@ VALUES%@",
@@ -155,7 +155,7 @@ static NRUserInfoDB *_db =nil;
     __block BOOL isOk = NO;
     [_dataManger creatDBMange:NO dbBlock:^(FMDatabase *_db) {
         NSMutableString * query = [NSMutableString stringWithFormat:@"DELETE FROM %@ ",TableName];
-        [query appendFormat:@" where gid = '%@'",gid];
+        [query appendFormat:@" where userId = '%@'",gid];
         isOk=[_db executeUpdate:query];
         
     }];
@@ -214,10 +214,10 @@ static NRUserInfoDB *_db =nil;
         [arguments addObject:FormatString(@"%zd",model.depId)];
         
         [query appendString:@"latitude=?,"];
-        [arguments addObject:FormatString(@"%zd",model.latitude)];
+        [arguments addObject:FormatString(@"%lf",model.latitude)];
         
         [query appendString:@"longitude=?,"];
-        [arguments addObject:FormatString(@"%zd",model.longitude)];
+        [arguments addObject:FormatString(@"%lf",model.longitude)];
         
         [query appendString:@")"];
 
@@ -239,7 +239,7 @@ static NRUserInfoDB *_db =nil;
 -(NRUserInfoModel *)findWithGid:(NSString * )gid{
     NSString *query = [NSString stringWithFormat:@"SELECT * FROM  %@",TableName];
     
-    query = [query stringByAppendingFormat:@" where gid = '%@'",gid];
+    query = [query stringByAppendingFormat:@" where userId = '%@'",gid];
     __block NRUserInfoModel *model = nil;
     
     [_dataManger creatDBMange:NO dbBlock:^(FMDatabase *_db) {
@@ -277,7 +277,6 @@ static NRUserInfoDB *_db =nil;
         [rs close];
         
     }];
-    
     
     return [[[array reverseObjectEnumerator] allObjects] mutableCopy];
 }
