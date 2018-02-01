@@ -81,5 +81,7 @@
 
 - (void)refreshData:(NRIMElem *)messageModel;
 
++(id)CellWithChatTableView:(UITableView *)tableview;
+
 @end
 

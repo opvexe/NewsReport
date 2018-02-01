@@ -18,6 +18,7 @@
 #import "WXRecordView.h"
 #import "WXDeviceManager.h"
 #import "WXError.h"
+#import "NRChatMessageCell.h"
 
 @interface NRChatViewController ()<UITableViewDelegate,UITableViewDataSource,ChatKeyBoardDelegate,ChatKeyBoardDataSource,WXDeviceManagerProximitySensorDelegate>
 @property(nonatomic,strong)UITableView *chatTableView;
@@ -42,6 +43,7 @@
     [self updateViewConstraintsView];
     [self receiveMessageNotification];
     [self reloadDataSoucre];
+    [WXDeviceManager sharedInstance].delegate = self;
 }
 
 /*!
@@ -59,9 +61,58 @@
     
 }
 
+/**
+ *  刷新会话列表
+ */
+- (void)reloadAfterReceiveMessage{
+    [self.chatTableView reloadData];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.chats.count - 1 inSection:0];
+    [self.chatTableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:NO];
+}
+
+#pragma mark < ios 11 适配>
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    
+    return 0.001;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    
+    return 0.01;
+}
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    return nil;
+}
+-(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+    return nil;
+}
+
 #pragma mark  < UITableViewDataSource >
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
+    if ([cell respondsToSelector:@selector(setSeparatorInset:)]) {
+        [cell setSeparatorInset:UIEdgeInsetsZero];
+    }
+    if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
+        [cell setLayoutMargins:UIEdgeInsetsZero];
+    }
+}
 
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.chats.count;
+}
 
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    NRIMElem *messageModel = self.chats[indexPath.row];
+    return  [NRChatMessageCell cellHeightWithModel:messageModel];
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    NRChatMessageCell *cell = [NRChatMessageCell CellWithChatTableView:tableView];
+    return cell;
+}
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
+    [self.chatKeyBoard keyboardDown];
+}
 
 #pragma MARK < ChatKeyBoardDelegate >
 
@@ -336,7 +387,6 @@
         _chatKeyBoard.dataSource = self;
         _chatKeyBoard.keyBoardStyle = KeyBoardStyleChat;
         _chatKeyBoard.associateTableView = self.chatTableView;
-        [self.view addSubview:_chatKeyBoard];
     }
     return _chatKeyBoard;
 }
@@ -363,7 +413,6 @@
         _chatTableView.tableFooterView                = [UIView new];
         _chatTableView.separatorStyle                 = UITableViewCellSeparatorStyleSingleLine;
         _chatTableView.backgroundColor               = UIColorFromRGB(0xffffff);
-        [self.view addSubview:_chatTableView];
     }
     return _chatTableView;
 }
@@ -397,9 +446,13 @@
     return _lastSelectAssets;
 }
 
-
+/*!
+ * 更新布局
+ */
 -(void)updateViewConstraintsView{
     
+    [self.view addSubview:self.chatTableView];
+    [self.view addSubview:self.chatKeyBoard];
     [self.chatTableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(self.view);
     }];

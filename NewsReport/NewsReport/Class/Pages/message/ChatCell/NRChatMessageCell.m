@@ -11,10 +11,17 @@
 @implementation NRChatMessageCell
 
 
++(id)CellWithChatTableView:(UITableView *)tableview{
+    NRChatMessageCell *cell = [tableview dequeueReusableCellWithIdentifier:NSStringFromClass([NRChatMessageCell class])];
+    if (!cell) {
+        cell = [[NRChatMessageCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:NSStringFromClass([NRChatMessageCell class])];
+    }
+    return cell;
+}
+
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     if (self = [super initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseIdentifier]) {
         self.selectionStyle = UITableViewCellSelectionStyleNone;
-        self.backgroundColor = [UIColor colorWithRed:239/255.0 green:239/255.0 blue:244/255.0 alpha:1];
  
         //头像
         self.headImageView = [[UIImageView alloc] init];
