@@ -51,13 +51,6 @@
 //文字
 #define TextContentViewMaxWidth 200
 
-//分享
-#define ShareContentViewWidth 230
-#define ShareContentViewHeight 125
-
-//红包
-#define RedMoneyContentViewWidth 220
-#define RedMoneyContentViewHeight 100
 
 #endif /* NRConst_h */
 

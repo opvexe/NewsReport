@@ -620,6 +620,7 @@
 		D01D0868201FF97A00288240 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D0223DC42023F1F200EA9998 /* CallVideo */,
 				D02967A22022D28A0060409F /* keyboard */,
 				D029665A2022CD7E0060409F /* voice */,
 				D01D083C201FF8AE00288240 /* LaunchScreen.storyboard */,
@@ -856,6 +857,13 @@
 				D01D08F120204A7600288240 /* NRBarButtonItem.m */,
 			);
 			path = NRBarButtonItem;
+			sourceTree = "<group>";
+		};
+		D0223DC42023F1F200EA9998 /* CallVideo */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CallVideo;
 			sourceTree = "<group>";
 		};
 		D02964EA2022AD380060409F /* MessageModel */ = {

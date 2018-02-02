@@ -32,9 +32,9 @@
     
     UIImage *image ;
     if (self.messageModel.isSender) {
-            image = [UIImage imageNamed:@"icon_sender_text_node_normal.png"];
+            image = [UIImage imageNamed:@"chat_to_bg_normal_sender"];
     } else {
-            image = [UIImage imageNamed:@"icon_receiver_node_normal.png"];
+            image = [UIImage imageNamed:@"chat_to_bg_normal_recive"];
     }
     self.bgImgView.image = [image stretchableImageWithLeftCapWidth:image.size.width/2 topCapHeight:image.size.height/2];
 }
