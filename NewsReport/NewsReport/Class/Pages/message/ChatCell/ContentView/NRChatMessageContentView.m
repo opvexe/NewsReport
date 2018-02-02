@@ -20,23 +20,34 @@
         [self addGestureRecognizer:longPressGestureRecognizer];
         
         _bgImgView = [[UIImageView alloc] init];
-        _bgImgView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-        [self addSubview:_bgImgView];
+        [self addSubview:self.bgImgView];
     }
     
     return self;
 }
 
 - (void)refreshData:(NRIMElem *)messageModel{
-    self.messageModel = messageModel;
+    _messageModel = messageModel;
     
-    UIImage *image ;
-    if (self.messageModel.isSender) {
-            image = [UIImage imageNamed:@"chat_to_bg_normal_sender"];
+    if (_messageModel.isSender) {
+        [self.bgImgView setImage:[[UIImage imageNamed:@"chat_to_bg_normal_sender"]
+                                                          resizableImageWithCapInsets:UIEdgeInsetsMake(30, 16, 16, 24)
+                                                          resizingMode:UIImageResizingModeStretch]];
+        [self.bgImgView setHighlightedImage:[[UIImage imageNamed:@"chat_to_bg_normal_sender"]
+                                                                     resizableImageWithCapInsets:UIEdgeInsetsMake(30, 16, 16, 24)
+                                                                     resizingMode:UIImageResizingModeStretch]];
     } else {
-            image = [UIImage imageNamed:@"chat_to_bg_normal_recive"];
+        [self.bgImgView setImage:[[UIImage imageNamed:@"chat_to_bg_normal_recive"]
+                                                          resizableImageWithCapInsets:UIEdgeInsetsMake(30, 16, 16, 24)
+                                                          resizingMode:UIImageResizingModeStretch]];
+        
+        [self.bgImgView setHighlightedImage:[[UIImage imageNamed:@"chat_to_bg_normal_recive"]
+                                                                     resizableImageWithCapInsets:UIEdgeInsetsMake(30, 16, 16, 24)
+                                                                     resizingMode:UIImageResizingModeStretch]];
     }
-    self.bgImgView.image = [image stretchableImageWithLeftCapWidth:image.size.width/2 topCapHeight:image.size.height/2];
+     self.bgImgView.layer.mask.contents = (__bridge id _Nullable)(self.bgImgView.image.CGImage);
+    
+    
 }
 
 - (void)layoutSubviews{

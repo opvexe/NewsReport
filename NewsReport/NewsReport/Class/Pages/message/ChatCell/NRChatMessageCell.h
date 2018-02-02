@@ -37,7 +37,7 @@
 - (void)reSendCellWithMessageModel:(NRIMElem *)messageModel;
 @end
 
-@interface NRChatMessageCell : UITableViewCell <NRChatMessageCellDelegate>
+@interface NRChatMessageCell : UITableViewCell <NRChatMessageCellDelegate,NRChatMessageContentViewDelegate>
 
 /*!
  * 代理

@@ -80,6 +80,24 @@
 @property (nonatomic,assign) CGFloat contentHeight;
 @property (nonatomic,assign) CGFloat contentWidth;
 
+
+
+/**
+ *  原图
+ */
+@property (strong, nonatomic) UIImage *image;
+
+/**
+ *  缩略图
+ */
+@property (strong, nonatomic) UIImage *thumbnailImage;
+
+/**
+ *  缩略图尺寸
+ */
+@property (nonatomic,assign) CGSize thumbnailImageSize;
+
+
 @end
 
 

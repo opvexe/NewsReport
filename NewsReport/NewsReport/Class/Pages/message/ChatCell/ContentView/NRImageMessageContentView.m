@@ -45,7 +45,8 @@
 
 - (void)refreshData:(NRIMImageElem *)messageModel{
     [super refreshData:messageModel];
-    UIImage *image = messageModel.thumbnailImage;
-    _imageView.image = image;
+    
+    self.bgImgView.hidden = YES;
+    [self.imageView sd_setImageWithURL:[NSURL URLWithString:messageModel.imageUrl] placeholderImage:NRImageNamed(@"icon_avatar")];
 }
 @end

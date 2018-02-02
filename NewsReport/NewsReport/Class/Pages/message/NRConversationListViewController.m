@@ -36,8 +36,13 @@
 -(void)reloadDataSoucre{
     
     
+    NRConversationListModel *model = [[NRConversationListModel alloc]init];
+    model.signature = @"hello";
+    model.time =@"2200303003030";
+    model.name = @"usernam";
+    [self.messageDataSocure addObject:model];
     
-    
+    [self.messageTableView reloadData];
 }
 
 /*!
@@ -98,16 +103,6 @@
 }
 
 #pragma mark < UITableViewDelegate >
-
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
-    if ([cell respondsToSelector:@selector(setSeparatorInset:)]) {
-        [cell setSeparatorInset:UIEdgeInsetsZero];
-    }
-    if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
-        [cell setLayoutMargins:UIEdgeInsetsZero];
-    }
-}
-
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.messageDataSocure.count;
 }
@@ -170,6 +165,14 @@
         _messageTableView.tableFooterView                = [UIView new];
         _messageTableView.separatorStyle                 = UITableViewCellSeparatorStyleSingleLine;
         _messageTableView.backgroundColor               = UIColorFromRGB(0xffffff);
+        UIEdgeInsets inset = UIEdgeInsetsMake(0, 0, 0, 0);
+        if ([_messageTableView respondsToSelector:@selector(setSeparatorInset:)]) {
+            [_messageTableView setSeparatorInset:inset];
+        }
+
+        if ([_messageTableView respondsToSelector:@selector(setLayoutMargins:)]) {
+            [_messageTableView setLayoutMargins:inset];
+        }
         [self.view addSubview:_messageTableView];
     }
     return _messageTableView;

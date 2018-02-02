@@ -16,7 +16,7 @@
         _textLabel = [[UILabel alloc] initWithFrame:CGRectZero];
         _textLabel.numberOfLines = 0;
         _textLabel.font = [UIFont systemFontOfSize:15];
-        _textLabel.textAlignment = NSTextAlignmentCenter;
+        _textLabel.textAlignment = NSTextAlignmentLeft;
         [self addSubview:_textLabel];
     }
     

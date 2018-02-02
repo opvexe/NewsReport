@@ -20,7 +20,7 @@
 #import "NRChatMessageCell.h"
 #import "NRPhotoLibraryManager.h"
 
-@interface NRChatViewController ()<UITableViewDelegate,UITableViewDataSource,ChatKeyBoardDelegate,ChatKeyBoardDataSource,WXDeviceManagerProximitySensorDelegate>
+@interface NRChatViewController ()<UITableViewDelegate,UITableViewDataSource,ChatKeyBoardDelegate,ChatKeyBoardDataSource,WXDeviceManagerProximitySensorDelegate,NRChatMessageCellDelegate>
 @property(nonatomic,strong) UITableView *chatTableView;
 @property(nonatomic,strong) NSMutableArray *morePanelItems;
 @property(nonatomic,strong) NSMutableArray *chats;
@@ -52,13 +52,29 @@
  */
 -(void)reloadDataSoucre{
     
+    NRIMTextElem *message = [[NRIMTextElem alloc]init];
+    message.text = @"我们需要在用户不允许访问的时候跳转，那么首先我们就要判断一些是否已经开启系统相机权限了";
+    message.messageType = MessageTypeText;
+    message.senderUserInfo.nickName = @"测试";
+    message.isSender = YES;
+    [self.chats addObject:message];
     
+    NRIMImageElem *imageElem = [[NRIMImageElem alloc]init];
+    imageElem.image = [UIImage imageNamed:@"icon_avatar"];
+    imageElem.messageType = MessageTypeImage;
+    imageElem.isSender = NO;
+    
+    [self.chats addObject:imageElem];
+    
+    
+    [self reloadAfterReceiveMessage];
 }
 
 /*!
  * 消息通知
  */
 -(void)receiveMessageNotification{
+    
     
 }
 
@@ -100,11 +116,41 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     NRChatMessageCell *cell = [NRChatMessageCell CellWithChatTableView:tableView];
+    NRIMElem *messageModel = self.chats[indexPath.row];
+    cell.delegate = self;
+    [cell refreshData:messageModel];
     return cell;
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
     [self.chatKeyBoard keyboardDown];
+}
+
+#pragma mark < NRChatMessageCellDelegate >
+
+/*!
+ * 点击消息
+ */
+- (void)clickCellMessageContentViewWithMessageModel:(NRIMElem *)messageModel{
+    
+}
+/*!
+ * 点击头像
+ */
+- (void)clickCellHeadImageWithMessageModel:(NRIMElem *)messageModel{
+    
+}
+/*!
+ * 长按消息
+ */
+- (void)longPressCellMessageContentViewWithMessageModel:(NRIMElem *)messageModel{
+    
+}
+/*!
+ * 撤回消息
+ */
+- (void)reSendCellWithMessageModel:(NRIMElem *)messageModel{
+    
 }
 
 #pragma MARK < ChatKeyBoardDelegate >
@@ -257,7 +303,9 @@
     NSString *fileName = [NSString stringWithFormat:@"%d%d",(int)time,x];
     [[WXDeviceManager sharedInstance] asyncStartRecordingWithFileName:fileName completion:^(NSError *error){
         if (error) {
-            NSLog(@"%@",@"开始录音失败");
+            NSLog(@"开始录音失败");
+        }else{
+            NSLog(@"开始录音成功");
         }
     }];
 }
@@ -277,7 +325,7 @@
     
     [[WXDeviceManager sharedInstance] asyncStopRecordingWithCompletion:^(NSString *recordPath, NSInteger aDuration, NSError *error) {
         if (!error) {
-            
+            NSLog(@"完成录音成功:%@||录音时长:%zd",recordPath,aDuration);
         }else{
             NSLog(@"录音时间太短了");
         }
@@ -429,12 +477,9 @@
 
 - (WXRecordView *)recordView{
     if (!_recordView){
-        _recordView = [[WXRecordView alloc] init];
-        _recordView.layer.cornerRadius = 10;
-        _recordView.clipsToBounds      = YES;
-        _recordView.hidden             = YES;
-        _recordView.backgroundColor    = [[UIColor blackColor] colorWithAlphaComponent:0.4];
-        [self.view addSubview:_recordView];
+        _recordView = [[WXRecordView alloc]initWithFrame:CGRectMake(0, 0, 140, 140)];
+        _recordView.center = self.view.center;
+        _recordView.hidden = YES;
     }
     return _recordView;
 }
@@ -486,15 +531,17 @@
  * 布局
  */
 -(void)updateViewConstraintsView{
+    
     [self.view addSubview:self.chatTableView];
     [self.view addSubview:self.chatKeyBoard];
+    [self.view addSubview:self.recordView];
     
-    [self.recordView mas_makeConstraints:^(MASConstraintMaker *make){
-        make.width.mas_equalTo (@(140));
-        make.height.mas_equalTo (@(140));
-        make.centerX.equalTo(self.view.mas_centerX).with.offset(0);
-        make.centerY.equalTo(self.view.mas_centerY).with.offset(0);
-    }];
+//    [self.recordView mas_makeConstraints:^(MASConstraintMaker *make){
+//        make.width.mas_equalTo (@(140));
+//        make.height.mas_equalTo (@(140));
+//        make.centerX.equalTo(self.view.mas_centerX).with.offset(0);
+//        make.centerY.equalTo(self.view.mas_centerY).with.offset(0);
+//    }];
 }
 @end
 
