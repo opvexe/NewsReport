@@ -74,16 +74,12 @@
  */
 @property (nonatomic,assign) MessageOwner direction;
 
-/** 缓存数据模型对应的cell的高度，只需要计算一次并赋值，以后就无需计算了 **/
-@property (strong, nonatomic) NSIndexPath *indexPath;
-@property (nonatomic,assign) CGFloat cellHeight;
-@property (nonatomic,assign) CGFloat contentHeight;
-@property (nonatomic,assign) CGFloat contentWidth;
+
 
 
 
 /**
- *  原图
+ *  原图(图片，视频封面)
  */
 @property (strong, nonatomic) UIImage *image;
 
@@ -96,6 +92,47 @@
  *  缩略图尺寸
  */
 @property (nonatomic,assign) CGSize thumbnailImageSize;
+
+
+
+
+
+
+/**
+ *  语音长度（秒），发送消息时设置
+ */
+@property(nonatomic,assign) int second;
+
+/**
+ *  语音数据大小
+ */
+@property(nonatomic,assign) int dataSize;
+
+
+
+
+
+
+/**
+ *  文件大小
+ */
+@property(nonatomic,assign) float fileSize;
+
+/**
+ *  文件显示名，发消息时设置
+ */
+@property(nonatomic,strong) NSString * filename;
+
+
+
+
+
+
+/** 缓存数据模型对应的cell的高度，只需要计算一次并赋值，以后就无需计算了 **/
+@property (strong, nonatomic) NSIndexPath *indexPath;
+@property (nonatomic,assign) CGFloat cellHeight;
+@property (nonatomic,assign) CGFloat contentHeight;
+@property (nonatomic,assign) CGFloat contentWidth;
 
 
 @end

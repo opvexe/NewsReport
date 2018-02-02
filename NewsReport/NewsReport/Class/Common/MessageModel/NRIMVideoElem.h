@@ -10,9 +10,12 @@
 
 @interface NRIMVideoElem : NRIMElem
 
-@property (strong, nonatomic) UIImage *image;
 
-@property (strong, nonatomic) UIImage *thumbnailImage;
-
+/**
+ *  视频的路径（设置path时，优先上传文件）
+ */
 @property (strong, nonatomic) NSString *fileURLPath;
+
+- (instancetype)initWithMessage:(NRIMElem *)message;
+
 @end

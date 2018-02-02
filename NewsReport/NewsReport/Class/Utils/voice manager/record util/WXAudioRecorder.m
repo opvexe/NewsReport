@@ -61,10 +61,11 @@ static WXAudioRecorder *audioRecorderUtil = nil;
 {
     if (!_recordSetting) {
         _recordSetting = [[NSDictionary alloc] initWithObjectsAndKeys:
-                          [NSNumber numberWithFloat: 8000.0],AVSampleRateKey, //采样率
+                          [NSNumber numberWithFloat: 11025.0],AVSampleRateKey, //采样率mp3不会失真
                           [NSNumber numberWithInt: kAudioFormatLinearPCM],AVFormatIDKey,
                           [NSNumber numberWithInt:16],AVLinearPCMBitDepthKey,//采样位数 默认 16
-                          [NSNumber numberWithInt: 1], AVNumberOfChannelsKey,//通道的数目
+                          [NSNumber numberWithInt: 2], AVNumberOfChannelsKey,//通道的数目 双声道
+                          @(AVAudioQualityHigh),AVEncoderAudioQualityKey, ///高的质量
                           nil];
     }
     

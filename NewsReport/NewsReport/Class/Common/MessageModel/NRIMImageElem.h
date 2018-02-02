@@ -19,5 +19,4 @@
 @property (nonatomic,copy) NSString *imageUrl;
 
 - (instancetype)initWithMessage:(NRIMElem *)message;
-
 @end

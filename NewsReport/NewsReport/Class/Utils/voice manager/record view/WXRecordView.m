@@ -99,10 +99,11 @@
 // 录音按钮按下
 -(void)recordButtonTouchDown
 {
+    self.hidden = NO;
     // 需要根据声音大小切换recordView动画
     _textLabel.text = _upCancelText;
     _textLabel.backgroundColor = [UIColor clearColor];
-    _timer = [NSTimer scheduledTimerWithTimeInterval:0.05
+    _timer = [NSTimer scheduledTimerWithTimeInterval:0.1
                                               target:self
                                             selector:@selector(setVoiceImage)
                                             userInfo:nil
@@ -112,6 +113,7 @@
 // 手指在录音按钮内部时离开
 -(void)recordButtonTouchUpInside
 {
+    self.hidden = YES;
     [_timer invalidate];
 }
 // 手指在录音按钮外部时离开
@@ -137,7 +139,9 @@
 -(void)setVoiceImage {
     _recordAnimationView.image = [UIImage imageNamed:[_voiceMessageAnimationImages objectAtIndex:0]];
     double voiceSound = 0;
-    voiceSound = [[WXDeviceManager sharedInstance] emPeekRecorderVoiceMeter];
+    voiceSound = [[WXDeviceManager sharedInstance] emPeekRecorderVoiceMeter]*100;
+    
+    NSLog(@"======== %lf",voiceSound);
     int index = voiceSound*[_voiceMessageAnimationImages count];
     if (index >= [_voiceMessageAnimationImages count]) {
         _recordAnimationView.image = [UIImage imageNamed:[_voiceMessageAnimationImages lastObject]];

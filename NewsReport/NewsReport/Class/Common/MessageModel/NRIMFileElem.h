@@ -15,19 +15,10 @@
 @interface NRIMFileElem : NRIMElem
 
 /**
- *  文件大小
- */
-@property(nonatomic,assign) int fileSize;
-
-/**
- *  文件显示名，发消息时设置
- */
-@property(nonatomic,strong) NSString * filename;
-
-/**
  *  文件的路径（设置path时，优先上传文件）
  */
 @property(nonatomic,strong) NSString * path;
+
 
 - (instancetype)initWithMessage:(NRIMElem *)message;
 @end

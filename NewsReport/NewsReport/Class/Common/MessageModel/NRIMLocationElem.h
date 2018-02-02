@@ -10,5 +10,11 @@
 
 @interface NRIMLocationElem : NRIMElem
 
+/**
+ *  定位地址
+ */
 @property (nonatomic,copy) NSString *address;
+
+
+- (instancetype)initWithMessage:(NRIMElem *)message;
 @end
