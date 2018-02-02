@@ -44,6 +44,8 @@
 #import "NRUserInfoDB.h"
 #import "UIView+Toast.h"
 #import "NRUserTools.h"
+#import "NRAlertView.h"
+
 /*!
  Base类
  */

@@ -18,6 +18,8 @@
 #import "WXDeviceManager.h"
 #import "WXError.h"
 #import "NRChatMessageCell.h"
+#import "NRPhotoLibraryManager.h"
+
 @interface NRChatViewController ()<UITableViewDelegate,UITableViewDataSource,ChatKeyBoardDelegate,ChatKeyBoardDataSource,WXDeviceManagerProximitySensorDelegate>
 @property(nonatomic,strong) UITableView *chatTableView;
 @property(nonatomic,strong) NSMutableArray *morePanelItems;
@@ -71,11 +73,11 @@
 
 #pragma mark < ios 11 适配>
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
-
+    
     return 0.001;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-
+    
     return 0.01;
 }
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
@@ -156,18 +158,46 @@
     
     WS(weakSelf)
     if ([item.itemName isEqualToString:@"图片"]) {
-        [self.lastSelectProcessedDatas removeAllObjects];
-        [self showPhotoLibray];
+        [NRPhotoLibraryManager requestALAssetsLibraryAuthorizationWithCompletion:^(Boolean isAuth) {
+            WSSTRONG(strongSelf)
+            if (isAuth) {
+                [strongSelf.lastSelectProcessedDatas removeAllObjects];
+                [strongSelf showPhotoLibray];
+            }else{
+                NSString *tips = @"请在iPhone的“设置-隐私-照片”选项中，允许在线访问你的照片";
+                [[NRAlertView shareInstance]showAlert:nil message:tips  cancelTitle:@"取消" titleArray:@[@"确定"] viewController:self confirm:^(NSInteger buttonTag) {
+                    if (buttonTag != -1) {
+                        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"prefs:root=Privacy&path=PHOTOS"]];
+                    }
+                }];
+            }
+        }];
+        return ;
     }
     
     if ([item.itemName isEqualToString:@"拍照"]) {
-        ZLCustomCamera *camera = [[ZLCustomCamera alloc] init];
-        camera.allowRecordVideo = NO;
-        camera.doneBlock = ^(UIImage *image, NSURL *videoUrl) {
-            
-            
-        };
-        [self presentViewController:camera animated:YES completion:nil];
+        
+        [NRPhotoLibraryManager requestALAssetsCameraAuthorizationWithCompletion:^(Boolean isAuth) {
+            WSSTRONG(strongSelf)
+            if (isAuth) {
+                
+                ZLCustomCamera *camera = [[ZLCustomCamera alloc] init];
+                camera.allowRecordVideo = NO;
+                camera.doneBlock = ^(UIImage *image, NSURL *videoUrl) {
+                    
+                    
+                };
+                [strongSelf presentViewController:camera animated:YES completion:nil];
+            }else{
+                NSString *tips = @"请在iPhone的“设置-隐私-照片”选项中，允许在线访问你的相机";
+                [[NRAlertView shareInstance]showAlert:nil message:tips  cancelTitle:@"取消" titleArray:@[@"确定"] viewController:self confirm:^(NSInteger buttonTag) {
+                    if (buttonTag != -1) {
+                        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"prefs:root=Privacy&path=CAMERA"]];
+                    }
+                }];
+            }
+        }];
+        return ;
     }
     
     if ([item.itemName isEqualToString:@"小视频"]) {
@@ -182,6 +212,7 @@
         };
         [self presentViewController:camera animated:YES completion:nil];
         
+        return ; 
     }
     
     if ([item.itemName isEqualToString:@"位置"]) {
@@ -457,7 +488,7 @@
 -(void)updateViewConstraintsView{
     [self.view addSubview:self.chatTableView];
     [self.view addSubview:self.chatKeyBoard];
-
+    
     [self.recordView mas_makeConstraints:^(MASConstraintMaker *make){
         make.width.mas_equalTo (@(140));
         make.height.mas_equalTo (@(140));
