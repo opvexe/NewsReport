@@ -13,9 +13,7 @@
 #import "NRFileMessageContentView.h"
 #import "NRVoiceMessageContentView.h"
 #import "NRVideoMessageContentView.h"
-#import "NRShareMessageContentView.h"
 #import "NRLocationMessageContentView.h"
-#import "NRRedMoneyMessageContentView.h"
 
 
 @protocol NRChatMessageCellDelegate <NSObject>

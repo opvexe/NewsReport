@@ -110,15 +110,6 @@
         if (messageModel.messageType == MessageTypeText) {
             _bubbleView =  [[NRTextMessageContentView alloc] init];
         }
-        
-        if (messageModel.messageType == MessageTypeShare) {
-            _bubbleView = [[NRShareMessageContentView alloc] init];
-        }
-        
-        if (messageModel.messageType == MessageTypeRedMoney) {
-            _bubbleView =  [[NRRedMoneyMessageContentView alloc] init];
-        }
-        
         if (messageModel.messageType == MessageTypeImage) {
             _bubbleView =  [[NRImageMessageContentView alloc] init];
         }
@@ -227,18 +218,6 @@
             contentHeight += 10 + textSize.height + 20;
         }
             break;
-        case MessageTypeShare:
-        {
-            contentWidth += ShareContentViewWidth;
-            contentHeight += ShareContentViewHeight;
-        }
-            break;
-        case MessageTypeRedMoney:
-        {
-            contentWidth += RedMoneyContentViewWidth;
-            contentHeight += RedMoneyContentViewHeight;
-        }
-            break;
         case MessageTypeImage:
         {
              NRIMImageElem *message = (NRIMImageElem *)messageModel;
@@ -321,12 +300,6 @@
             case MessageTypeText:
                 cellIdentifier = NRMessageCellIdentifierSendText;
                 break;
-            case MessageTypeShare:
-                cellIdentifier = NRMessageCellIdentifierSendShare;
-                break;
-            case MessageTypeRedMoney:
-                cellIdentifier = NRMessageCellIdentifierSendRedMoney;
-                break;
             case MessageTypeImage:
                 cellIdentifier = NRMessageCellIdentifierSendImage;
                 break;
@@ -349,13 +322,6 @@
         switch (messageModel.messageType) {
             case MessageTypeText:
                 cellIdentifier = NRMessageCellIdentifierRecvText;
-                
-                break;
-            case MessageTypeShare:
-                cellIdentifier = NRMessageCellIdentifierRecvShare;
-                break;
-            case MessageTypeRedMoney:
-                cellIdentifier = NRMessageCellIdentifierRecvRedMoney;
                 break;
             case MessageTypeImage:
                 cellIdentifier = NRMessageCellIdentifierRecvImage;

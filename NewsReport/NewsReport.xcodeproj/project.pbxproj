@@ -64,8 +64,6 @@
 		D02965022022B3630060409F /* NRVideoMessageContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = D02965012022B3630060409F /* NRVideoMessageContentView.m */; };
 		D02965052022B3740060409F /* NRVoiceMessageContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = D02965042022B3740060409F /* NRVoiceMessageContentView.m */; };
 		D02965082022B3850060409F /* NRImageMessageContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = D02965072022B3850060409F /* NRImageMessageContentView.m */; };
-		D029650E2022B3BC0060409F /* NRShareMessageContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = D029650D2022B3BC0060409F /* NRShareMessageContentView.m */; };
-		D02965112022B3C90060409F /* NRRedMoneyMessageContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = D02965102022B3C90060409F /* NRRedMoneyMessageContentView.m */; };
 		D02965142022BC220060409F /* NRIMLocationElem.m in Sources */ = {isa = PBXBuildFile; fileRef = D02965132022BC220060409F /* NRIMLocationElem.m */; };
 		D02965172022BCBA0060409F /* NRIMVideoElem.m in Sources */ = {isa = PBXBuildFile; fileRef = D02965162022BCBA0060409F /* NRIMVideoElem.m */; };
 		D029651B2022BD820060409F /* NRProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = D029651A2022BD820060409F /* NRProgressView.m */; };
@@ -313,10 +311,6 @@
 		D02965042022B3740060409F /* NRVoiceMessageContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRVoiceMessageContentView.m; sourceTree = "<group>"; };
 		D02965062022B3850060409F /* NRImageMessageContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRImageMessageContentView.h; sourceTree = "<group>"; };
 		D02965072022B3850060409F /* NRImageMessageContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRImageMessageContentView.m; sourceTree = "<group>"; };
-		D029650C2022B3BC0060409F /* NRShareMessageContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRShareMessageContentView.h; sourceTree = "<group>"; };
-		D029650D2022B3BC0060409F /* NRShareMessageContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRShareMessageContentView.m; sourceTree = "<group>"; };
-		D029650F2022B3C90060409F /* NRRedMoneyMessageContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRRedMoneyMessageContentView.h; sourceTree = "<group>"; };
-		D02965102022B3C90060409F /* NRRedMoneyMessageContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRRedMoneyMessageContentView.m; sourceTree = "<group>"; };
 		D02965122022BC220060409F /* NRIMLocationElem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRIMLocationElem.h; sourceTree = "<group>"; };
 		D02965132022BC220060409F /* NRIMLocationElem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRIMLocationElem.m; sourceTree = "<group>"; };
 		D02965152022BCBA0060409F /* NRIMVideoElem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRIMVideoElem.h; sourceTree = "<group>"; };
@@ -1229,10 +1223,6 @@
 				D02964FE2022B3550060409F /* NRLocationMessageContentView.m */,
 				D02965002022B3630060409F /* NRVideoMessageContentView.h */,
 				D02965012022B3630060409F /* NRVideoMessageContentView.m */,
-				D029650C2022B3BC0060409F /* NRShareMessageContentView.h */,
-				D029650D2022B3BC0060409F /* NRShareMessageContentView.m */,
-				D029650F2022B3C90060409F /* NRRedMoneyMessageContentView.h */,
-				D02965102022B3C90060409F /* NRRedMoneyMessageContentView.m */,
 			);
 			path = ContentView;
 			sourceTree = "<group>";
@@ -1640,7 +1630,6 @@
 				D02965082022B3850060409F /* NRImageMessageContentView.m in Sources */,
 				D02964ED2022AD5E0060409F /* NRIMTextElem.m in Sources */,
 				D01D0833201FF8AD00288240 /* AppDelegate.mm in Sources */,
-				D02965112022B3C90060409F /* NRRedMoneyMessageContentView.m in Sources */,
 				D02967992022D2730060409F /* FacePageView.m in Sources */,
 				D029663C2022CBAA0060409F /* WXDeviceManager+Microphone.m in Sources */,
 				D01D08C820201BB000288240 /* NRNetworkCache.m in Sources */,
@@ -1656,7 +1645,6 @@
 				D029679C2022D2730060409F /* PanelBottomView.m in Sources */,
 				D029679E2022D2730060409F /* ChatToolBar.m in Sources */,
 				D02964F02022AD910060409F /* NRIMImageElem.m in Sources */,
-				D029650E2022B3BC0060409F /* NRShareMessageContentView.m in Sources */,
 				D02964F92022B31C0060409F /* NRTextMessageContentView.m in Sources */,
 				D029663A2022CBAA0060409F /* WXAudioRecorder.m in Sources */,
 				D02965022022B3630060409F /* NRVideoMessageContentView.m in Sources */,

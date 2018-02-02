@@ -24,8 +24,6 @@ NSString *const NRMessageCellIdentifierRecvVoice    = @"NRMessageCellRecvVoice";
 NSString *const NRMessageCellIdentifierRecvVideo    = @"NRMessageCellRecvVideo";
 NSString *const NRMessageCellIdentifierRecvImage    = @"NRMessageCellRecvImage";
 NSString *const NRMessageCellIdentifierRecvFile     = @"NRMessageCellRecvFile";
-NSString *const NRMessageCellIdentifierRecvShare    = @"NRMessageCellRecvShare";
-NSString *const NRMessageCellIdentifierRecvRedMoney = @"NRMessageCellRecvRedMoney";
 
 /*  发送方 */
 NSString *const NRMessageCellIdentifierSendText     = @"NRMessageCellSendText";
@@ -34,7 +32,6 @@ NSString *const NRMessageCellIdentifierSendVoice    = @"NRMessageCellSendVoice";
 NSString *const NRMessageCellIdentifierSendVideo    = @"NRMessageCellSendVideo";
 NSString *const NRMessageCellIdentifierSendImage    = @"NRMessageCellSendImage";
 NSString *const NRMessageCellIdentifierSendFile     = @"NRMessageCellSendFile";
-NSString *const NRMessageCellIdentifierSendShare    = @"NRMessageCellRecvShare";
-NSString *const NRMessageCellIdentifierSendRedMoney = @"NRMessageCellRecvRedMoney";
+
 
 

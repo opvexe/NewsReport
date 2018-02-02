@@ -32,21 +32,9 @@
     
     UIImage *image ;
     if (self.messageModel.isSender) {
-        if (self.messageModel.messageType == MessageTypeShare) {
-            image = [UIImage imageNamed:@"SenderAppNodeBkg.png"];
-        } else if (self.messageModel.messageType == MessageTypeRedMoney) {
-            image = [UIImage imageNamed:@"c2cSenderMsgNodeBG.png"];
-        } else {
             image = [UIImage imageNamed:@"icon_sender_text_node_normal.png"];
-        }
     } else {
-        if (self.messageModel.messageType == MessageTypeShare) {
-            image = [UIImage imageNamed:@"ReceiverAppNodeBkg.png"];
-        } else if (self.messageModel.messageType == MessageTypeRedMoney){
-            image = [UIImage imageNamed:@"c2cReceiverMsgNodeBG.png"];
-        } else {
             image = [UIImage imageNamed:@"icon_receiver_node_normal.png"];
-        }
     }
     self.bgImgView.image = [image stretchableImageWithLeftCapWidth:image.size.width/2 topCapHeight:image.size.height/2];
 }
