@@ -52,6 +52,7 @@
 		D01D08ED2020451200288240 /* NRBaseNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D01D08EC2020451200288240 /* NRBaseNavigationViewController.m */; };
 		D01D08F220204A7600288240 /* NRBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D01D08F120204A7600288240 /* NRBarButtonItem.m */; };
 		D01D08F520204B7B00288240 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = D01D08F420204B7B00288240 /* UIView+Toast.m */; };
+		D0223DC72023FA4800EA9998 /* NSObject+NRSendMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = D0223DC62023FA4800EA9998 /* NSObject+NRSendMessage.m */; };
 		D02964E520229E340060409F /* NSDate+NRCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = D02964E420229E340060409F /* NSDate+NRCategory.m */; };
 		D02964E820229E700060409F /* NSDateFormatter+NRCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = D02964E720229E700060409F /* NSDateFormatter+NRCategory.m */; };
 		D02964ED2022AD5E0060409F /* NRIMTextElem.m in Sources */ = {isa = PBXBuildFile; fileRef = D02964EC2022AD5E0060409F /* NRIMTextElem.m */; };
@@ -287,6 +288,8 @@
 		D01D08F120204A7600288240 /* NRBarButtonItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRBarButtonItem.m; sourceTree = "<group>"; };
 		D01D08F320204B7B00288240 /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
 		D01D08F420204B7B00288240 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
+		D0223DC52023FA4800EA9998 /* NSObject+NRSendMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+NRSendMessage.h"; sourceTree = "<group>"; };
+		D0223DC62023FA4800EA9998 /* NSObject+NRSendMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+NRSendMessage.m"; sourceTree = "<group>"; };
 		D02964E320229E340060409F /* NSDate+NRCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+NRCategory.h"; sourceTree = "<group>"; };
 		D02964E420229E340060409F /* NSDate+NRCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+NRCategory.m"; sourceTree = "<group>"; };
 		D02964E620229E700060409F /* NSDateFormatter+NRCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+NRCategory.h"; sourceTree = "<group>"; };
@@ -765,6 +768,8 @@
 				D02964E420229E340060409F /* NSDate+NRCategory.m */,
 				D02964E620229E700060409F /* NSDateFormatter+NRCategory.h */,
 				D02964E720229E700060409F /* NSDateFormatter+NRCategory.m */,
+				D0223DC52023FA4800EA9998 /* NSObject+NRSendMessage.h */,
+				D0223DC62023FA4800EA9998 /* NSObject+NRSendMessage.m */,
 			);
 			path = Catagory;
 			sourceTree = "<group>";
@@ -1584,6 +1589,7 @@
 				D02964E520229E340060409F /* NSDate+NRCategory.m in Sources */,
 				D02DD9A0202155F20035066D /* NRBaseTableViewCell.m in Sources */,
 				D01D08D7202040B300288240 /* NRBaseViewController.m in Sources */,
+				D0223DC72023FA4800EA9998 /* NSObject+NRSendMessage.m in Sources */,
 				D02DD99C202154B50035066D /* NRConversationListCell.m in Sources */,
 				D029663E2022CBAA0060409F /* WXDeviceManager+Remind.m in Sources */,
 				D029678F2022D2730060409F /* NSString+Emoji.m in Sources */,

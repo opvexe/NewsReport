@@ -72,6 +72,7 @@
 #import "ConfigEntity.h"
 #import "NRIMClientManager.h"
 #import "LocalUDPDataSender.h"
+#import "NSObject+NRSendMessage.h"
 
 /*!
  消息数据基类

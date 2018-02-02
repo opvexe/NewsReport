@@ -25,9 +25,9 @@ typedef NS_ENUM(NSUInteger, MessageSendState)
  */
 typedef NS_ENUM(NSUInteger, MessageType)
 {
-    MessageTypeUnknow = 0, /**< 未知的消息类型 */
+    MessageTypeUnknow , /**< 未知的消息类型 */
     MessageTypeDateTime ,  /**< 消息发生的日期时间Cell */
-    MessageTypeText,       /**< 文本消息 */
+    MessageTypeText = 11,       /**< 文本消息 */
     MessageTypeImage,      /**< 图片消息 */
     MessageTypeGifImage,   /**< Gif动画图片消息 */
     MessageTypeVideo,      /**< 视频消息 */

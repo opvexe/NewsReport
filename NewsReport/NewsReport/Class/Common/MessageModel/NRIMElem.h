@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "NRUserInfoModel.h"
+
 @interface NRIMElem : NSObject
 
 /*!
@@ -21,7 +22,12 @@
 @property (nonatomic, copy) NSString *from;
 
 /*!
- * 消息内容中携带的发送者的用户信息
+ *  接收方
+ */
+@property (nonatomic, copy) NSString *to;
+
+/*!
+ * 消息拥有者用户信息
  *
  */
 @property(nonatomic, strong) NRUserInfoModel *senderUserInfo;
@@ -42,10 +48,12 @@
 @property (nonatomic,assign) BOOL isMediaPlaying;
 //多媒体消息：是否播放过
 @property (nonatomic,assign) BOOL isMediaPlayed;
+
 /**
  *  当前消息的时间戳
  */
 @property(nonatomic,copy)NSString *timestamp;
+
 
 /**
  *  消息类型（文本，图片）

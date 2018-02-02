@@ -175,6 +175,14 @@
     return result;
     
 }
+
++(NSString *)getTimeTampWithDigit:(int)digit{
+    NSTimeInterval timeTamp = [[NSDate date] timeIntervalSince1970];
+    NSInteger timeInt = timeTamp*1000000;
+    NSString *time = [NSString stringWithFormat:@"%ld",timeInt];
+    return [time substringToIndex:digit];
+}
+
 + (NSString *)homePath{
     return NSHomeDirectory();
 }
@@ -275,4 +283,6 @@
     NSNumber *totalSpace = [fileSysAttributes objectForKey:NSFileSystemSize];
     return [totalSpace longLongValue];
 }
+
+
 @end

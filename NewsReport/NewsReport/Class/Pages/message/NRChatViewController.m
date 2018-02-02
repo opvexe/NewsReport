@@ -88,14 +88,6 @@
 }
 
 #pragma mark  < UITableViewDataSource >
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
-    if ([cell respondsToSelector:@selector(setSeparatorInset:)]) {
-        [cell setSeparatorInset:UIEdgeInsetsZero];
-    }
-    if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
-        [cell setLayoutMargins:UIEdgeInsetsZero];
-    }
-}
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.chats.count;
@@ -121,7 +113,19 @@
  *  文本消息
  */
 - (void)chatKeyBoardSendText:(NSString *)text{
-    
+    NRIMTextElem *message = [[NRIMTextElem alloc]init];
+    message.messageType = MessageTypeText;
+    message.from = [[NRUserTools defaultCenter]getUserID];
+    message.to  = convertToString(_targetId);
+    message.text = convertToString(text);
+    message.messageId = convertToString( [NSString stringWithFormat:@"%@+%@",[[NRUserTools defaultCenter]getUserID],[NRNewsReportTools getTimeTampWithDigit:13]]);
+    [self sendMessageWithText:message CompletecBlock:^(int code) {
+        if (code == COMMON_CODE_OK) {
+            NSLog(@"文本消息发送成功");
+        }else{
+            NSLog(@"文本消息发送失败");
+        }
+    }];
 }
 
 /*！
@@ -394,13 +398,13 @@
 
 -(UITableView *)chatTableView{
     if (!_chatTableView) {
-        _chatTableView                                = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
+        _chatTableView                                = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height-49) style:UITableViewStylePlain];
         _chatTableView.showsVerticalScrollIndicator   = NO;
         _chatTableView.showsHorizontalScrollIndicator = NO;
         _chatTableView.delegate                       = self;
         _chatTableView.dataSource                     = self;
         _chatTableView.tableFooterView                = [UIView new];
-        _chatTableView.separatorStyle                 = UITableViewCellSeparatorStyleSingleLine;
+        _chatTableView.separatorStyle                 = UITableViewCellSeparatorStyleNone;
         _chatTableView.backgroundColor               = UIColorFromRGB(0xffffff);
     }
     return _chatTableView;
@@ -439,12 +443,8 @@
  * 布局
  */
 -(void)updateViewConstraintsView{
-    
     [self.view addSubview:self.chatTableView];
     [self.view addSubview:self.chatKeyBoard];
-    [self.chatTableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(self.view);
-    }];
     
     [self.recordView mas_makeConstraints:^(MASConstraintMaker *make){
         make.width.mas_equalTo (@(140));

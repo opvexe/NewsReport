@@ -31,6 +31,7 @@
 + (NSString *)tmpPath;              // 临时缓存目录，APP退出后，系统可能会删除这里的内容
 + (NSString *)iTunesVideoImagePath;
 + (NSString *)AlbumVideoImagePath;
++(NSString *)getTimeTampWithDigit:(int)digit; //获取指定位数时间戳
 + (BOOL)hasLive:(NSString *)path;   // 判断目录是否存在，不存在则创建
 + (BOOL)fileExists:(NSString *)path;
 + (BOOL)deleteFile:(NSString *)path;
