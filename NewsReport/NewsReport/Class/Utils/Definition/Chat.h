@@ -70,5 +70,54 @@ typedef NS_ENUM(NSUInteger, MessageOwner)
 };
 
 
+
+/*!
+ 通话媒体类型
+ */
+typedef NS_ENUM(NSInteger, CallMediaType) {
+    /*!
+     音频
+     */
+    CallMediaAudio = 1,
+    /*!
+     视频
+     */
+    CallMediaVideo = 2,
+};
+
+
+
+
+/*!
+ 通话状态
+ */
+typedef NS_ENUM(NSInteger, CallStatus) {
+    /*!
+     初始状态
+     */
+    //    XLCallIdle   = 0,
+    /*!
+     正在呼出
+     */
+    CallDialing = 1,
+    /*!
+     正在呼入
+     */
+    CallIncoming = 2,
+    /*!
+     收到一个通话呼入后，正在振铃
+     */
+    CallRinging = 3,
+    /*!
+     正在通话
+     */
+    CallActive = 4,
+    /*!
+     已经挂断
+     */
+    CallHangup = 5,
+};
+
+
 #endif /* Chat_h */
 
