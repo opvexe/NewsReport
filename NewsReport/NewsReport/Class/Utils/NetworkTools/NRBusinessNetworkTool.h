@@ -21,4 +21,18 @@
 +(void)PostLoginWithUserPassword:(NSString *)password username:(NSString *)username CompleteSuccessfull:(void (^)(id responseObject))successfull  failure:(void (^)(id error))failure;
 
 
+
+
+
+/*!
+ *  上传图片消息
+
+ @param image 压缩后图片
+ @param imageName 图片名称
+ @param imageType 图片类型
+ @param successfull successfull description
+ @param failure failure description
+ */
++(void)PostUpMessageWithImage:(UIImage *)image withImageName:(NSString *)imageName withImageType:(NSString *)imageType CompleteSuccessfull:(void (^)(id responseObject))successfull  failure:(void (^)(id error))failure;
+
 @end

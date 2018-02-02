@@ -188,11 +188,7 @@
  */
 -(void)updateViewConstraintsView{
     [self.messageTableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        //        if (iOS11) {
-        //            make.edges.mas_equalTo(self.view.mas_safeAreaLayoutGuide);
-        //        }else{
         make.edges.mas_equalTo(self.view);
-        //        }
     }];
 }
 

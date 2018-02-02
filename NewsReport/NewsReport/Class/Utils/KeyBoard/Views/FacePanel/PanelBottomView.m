@@ -26,7 +26,6 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        self.backgroundColor = [UIColor whiteColor];
         [self initSubViews];
     }
     return self;
@@ -34,8 +33,8 @@
 
 - (void)initSubViews
 {
-    _addBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, kFacePanelBottomToolBarHeight, kFacePanelBottomToolBarHeight)];
-    [_addBtn setImage:[UIImage imageNamed:@"EmotionAdd"] forState:(UIControlStateNormal)];
+    _addBtn = [UIButton buttonWithType:UIButtonTypeContactAdd];
+    _addBtn.frame = CGRectMake(0, 0, kFacePanelBottomToolBarHeight, kFacePanelBottomToolBarHeight);
     [_addBtn addTarget:self action:@selector(addBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_addBtn];
     
@@ -64,14 +63,15 @@
 {
     for (int i = 0; i<pickerSource.count; i++) {
         FaceThemeModel *themeM = pickerSource[i];
-        UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(i*kFacePanelBottomToolBarHeight, 0, kFacePanelBottomToolBarHeight, kFacePanelBottomToolBarHeight)];
+        UIButton *btn = [UIButton buttonWithType:UIButtonTypeSystem];
         if (i == 0) {
             btn.selected = YES;
-            btn.backgroundColor = [UIColor colorWithWhite:0.8 alpha:0.8];
         }
         btn.tag = i+100;
-        [btn setImage:[UIImage imageNamed:themeM.themeIcon] forState:(UIControlStateNormal)];
+        [btn setTitle:themeM.themeDecribe forState:UIControlStateNormal];
+        [btn setTitleColor:[UIColor purpleColor] forState:UIControlStateSelected];
         [btn addTarget:self action:@selector(subjectPicBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+        btn.frame = CGRectMake(i*kFacePanelBottomToolBarHeight, 0, kFacePanelBottomToolBarHeight, kFacePanelBottomToolBarHeight);
         [_facePickerView addSubview:btn];
         
         if (i == pickerSource.count - 1) {

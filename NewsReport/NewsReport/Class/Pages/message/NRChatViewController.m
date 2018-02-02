@@ -12,14 +12,12 @@
 #import <ZLPhotoManager.h>
 #import <Photos/Photos.h>
 #import "ZLCustomCamera.h"
-#import "ChatKeyBoard.h"
 #import "FaceSourceManager.h"
 #import "NRImagePickModel.h"
 #import "WXRecordView.h"
 #import "WXDeviceManager.h"
 #import "WXError.h"
 #import "NRChatMessageCell.h"
-
 @interface NRChatViewController ()<UITableViewDelegate,UITableViewDataSource,ChatKeyBoardDelegate,ChatKeyBoardDataSource,WXDeviceManagerProximitySensorDelegate>
 @property(nonatomic,strong) UITableView *chatTableView;
 @property(nonatomic,strong) NSMutableArray *morePanelItems;
@@ -73,11 +71,11 @@
 
 #pragma mark < ios 11 适配>
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
-    
+
     return 0.001;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    
+
     return 0.01;
 }
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
@@ -133,7 +131,19 @@
  */
 -(void)sendMessageWithImages{
     [self.lastSelectProcessedDatas enumerateObjectsUsingBlock:^(NRImagePickModel *obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        
+        NRIMImageElem *message = [[NRIMImageElem alloc]init];
+        message.messageType = MessageTypeImage;
+        message.from = [[NRUserTools defaultCenter]getUserID];
+        message.to  = convertToString(_targetId);
+        message.image = obj.image;
+        message.messageId = convertToString( [NSString stringWithFormat:@"%@+%@",[[NRUserTools defaultCenter]getUserID],[NRNewsReportTools getTimeTampWithDigit:13]]);
+        [self sendMessageWithImage:message isOrignal:self.isOriginal CompletecBlock:^(int code) {
+            if (code == COMMON_CODE_OK) {
+                NSLog(@"文本消息发送成功");
+            }else{
+                NSLog(@"文本消息发送失败");
+            }
+        }];
     }];
 }
 
@@ -143,6 +153,8 @@
 - (void)chatKeyBoard:(ChatKeyBoard *)chatKeyBoard didSelectMorePanelItemIndex:(NSInteger)index{
     [self.chatKeyBoard keyboardDown];
     MoreItem *item = self.morePanelItems[index];
+    
+    WS(weakSelf)
     if ([item.itemName isEqualToString:@"图片"]) {
         [self.lastSelectProcessedDatas removeAllObjects];
         [self showPhotoLibray];
@@ -160,10 +172,10 @@
     
     if ([item.itemName isEqualToString:@"小视频"]) {
         ZLCustomCamera *camera = [[ZLCustomCamera alloc] init];
-        camera.circleProgressColor =[UIColor greenColor];
+        camera.circleProgressColor = MainTitle_Color;
         camera.maxRecordDuration = 60;
         camera.allowRecordVideo = YES;
-        WS(weakSelf)
+        
         camera.doneBlock = ^(UIImage *image, NSURL *videoUrl) {
             
             
@@ -375,7 +387,7 @@
 
 -(ChatKeyBoard *)chatKeyBoard{
     if (!_chatKeyBoard) {
-        _chatKeyBoard =  [ChatKeyBoard keyBoard];
+        _chatKeyBoard =  [ChatKeyBoard keyBoardWithNavgationBarTranslucent:NO];
         _chatKeyBoard.delegate = self;
         _chatKeyBoard.dataSource = self;
         _chatKeyBoard.keyBoardStyle = KeyBoardStyleChat;
@@ -445,7 +457,7 @@
 -(void)updateViewConstraintsView{
     [self.view addSubview:self.chatTableView];
     [self.view addSubview:self.chatKeyBoard];
-    
+
     [self.recordView mas_makeConstraints:^(MASConstraintMaker *make){
         make.width.mas_equalTo (@(140));
         make.height.mas_equalTo (@(140));

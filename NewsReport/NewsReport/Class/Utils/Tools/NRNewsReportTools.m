@@ -284,5 +284,29 @@
     return [totalSpace longLongValue];
 }
 
-
++ (NSString *)imageTypeWithData:(NSData *)data {
+    uint8_t type;
+    [data getBytes:&type length:1];
+    switch (type) {
+        case 0xFF:
+            return @"image/jpeg";
+        case 0x89:
+            return @"image/png";
+        case 0x47:
+            return @"image/gif";
+        case 0x49:
+        case 0x4D:
+            return @"image/tiff";
+        case 0x52:
+            if ([data length] < 12) {
+                return nil;
+            }
+            NSString *testString = [[NSString alloc] initWithData:[data subdataWithRange:NSMakeRange(0, 12)] encoding:NSASCIIStringEncoding];
+            if ([testString hasPrefix:@"RIFF"] && [testString hasSuffix:@"WEBP"]) {
+                return @"image/webp";
+            }
+            return nil;
+    }
+    return nil;
+}
 @end

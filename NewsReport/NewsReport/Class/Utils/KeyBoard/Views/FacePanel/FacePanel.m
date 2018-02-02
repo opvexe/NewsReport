@@ -102,12 +102,13 @@ extern NSString * const FacePageViewFaceThemeStyle;
 #pragma mark -- NSNotificationCenter
 - (void)facePageViewFaceSelected:(NSNotification *)noti
 {
-    NSDictionary *info = [noti object];
+    NSDictionary *info = [noti userInfo];
     NSString *faceName = [info objectForKey:FacePageViewFaceName];
     BOOL isDelete = [[info objectForKey:FacePageViewDeleteKey] boolValue];
     FaceThemeStyle themeStyle = [[info objectForKey:FacePageViewFaceThemeStyle] integerValue];
     
     if ([self.delegate respondsToSelector:@selector(facePanelFacePicked:faceStyle:faceName:isDeleteKey:)]) {
+        
         [self.delegate facePanelFacePicked:self faceStyle:themeStyle faceName:faceName isDeleteKey:isDelete];
     }
 }

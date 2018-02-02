@@ -11,14 +11,17 @@
 //
 
 #import <UIKit/UIKit.h>
+
+#import "ChatKeyBoardMacroDefine.h"
+
+#import "ChatToolBar.h"
+#import "FacePanel.h"
+#import "MorePanel.h"
+
 #import "MoreItem.h"
 #import "ChatToolBarItem.h"
 #import "FaceThemeModel.h"
-#import "ChatKeyBoardMacroDefine.h"
 
-@class ChatToolBar;
-@class FacePanel;
-@class MorePanel;
 
 typedef NS_ENUM(NSInteger, KeyBoardStyle)
 {
@@ -48,7 +51,6 @@ typedef NS_ENUM(NSInteger, KeyBoardStyle)
 /**
  * 表情
  */
-- (void)chatKeyBoardFacePicked:(ChatKeyBoard *)chatKeyBoard faceStyle:(NSInteger)faceStyle faceName:(NSString *)faceName delete:(BOOL)isDeleteKey;
 - (void)chatKeyBoardAddFaceSubject:(ChatKeyBoard *)chatKeyBoard;
 - (void)chatKeyBoardSetFaceSubject:(ChatKeyBoard *)chatKeyBoard;
 

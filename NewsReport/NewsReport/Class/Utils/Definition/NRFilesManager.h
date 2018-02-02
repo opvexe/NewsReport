@@ -52,6 +52,15 @@
 #import "NRBaseModel.h"
 
 /*!
+ 键盘类
+ */
+#import "ChatKeyBoard.h"
+#import "MoreItem.h"
+#import "ChatToolBarItem.h"
+#import "FaceSourceManager.h"
+#import "FaceThemeModel.h"
+
+/*!
  三方库
  */
 

@@ -19,7 +19,7 @@
 {
     NSMutableArray *subjectArray = [NSMutableArray array];
     
-    NSArray *sources = @[@"systemEmoji"];
+    NSArray *sources = @[@"face", @"systemEmoji",@"emotion",@"systemEmoji",@"face",@"systemEmoji",@"emotion",@"emotion",@"face",@"face",@"emotion",@"face", @"emotion",@"face", @"emotion"];
     
     for (int i = 0; i < sources.count; ++i)
     {
@@ -38,7 +38,7 @@
         }else if ([plistName isEqualToString:@"systemEmoji"]){
             themeM.themeStyle = FaceThemeStyleSystemEmoji;
             themeM.themeDecribe = @"sEmoji";
-            themeM.themeIcon = @"EmotionsEmojiHL";
+            themeM.themeIcon = @"";
         }
         else {
             themeM.themeStyle = FaceThemeStyleGif;

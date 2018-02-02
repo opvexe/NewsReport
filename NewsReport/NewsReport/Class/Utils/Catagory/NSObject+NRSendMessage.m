@@ -37,7 +37,32 @@
  @param origal 缩略图
  */
 -(void)sendMessageWithImage:(NRIMElem *)image isOrignal:(BOOL)origal CompletecBlock:(CompletecBlock)block{
-    
+    NRIMImageElem *message = (NRIMImageElem *)image;
+    [message.image jkr_compressToDataLength:20*1024 withBlock:^(NSData *data) {
+        UIImage *image = [UIImage imageWithData:data];
+        NSString *imageType = [NRNewsReportTools imageTypeWithData:data];
+        NSString *type = [imageType substringFromIndex:6];
+        NSString *imageName = [NSString stringWithFormat:@"%@.%@",[NRNewsReportTools getTimeTampWithDigit:10],type];
+        [NRBusinessNetworkTool PostUpMessageWithImage:image withImageName:imageName withImageType:imageType CompleteSuccessfull:^(id responseObject) {
+            NSString *imageUrl = responseObject[@"result"];
+            if (imageUrl) {
+                NSDictionary *dataDic = @{@"message":imageUrl};
+                NSData *theData = [NSJSONSerialization dataWithJSONObject:dataDic options:NSJSONWritingPrettyPrinted error:nil];
+                NSString *messageStr = [[NSString alloc] initWithData:theData encoding:NSUTF8StringEncoding];
+                int code = [[LocalUDPDataSender sharedInstance] sendCommonDataWithStr:messageStr toUserId:message.to qos:NO fp:message.messageId withTypeu:message.messageType];
+                if (code == COMMON_CODE_OK) {
+                    block(COMMON_CODE_OK);
+                }else{
+                    block(NRCOMMON_CODE_EROOR);
+                }
+            }else{
+                block(NRCOMMON_CODE_EROOR);
+            }
+            block(COMMON_CODE_OK);
+        } failure:^(id error) {
+            block(NRCOMMON_CODE_EROOR);
+        }];
+    }];
 }
 
 
@@ -73,3 +98,4 @@
 
 
 @end
+

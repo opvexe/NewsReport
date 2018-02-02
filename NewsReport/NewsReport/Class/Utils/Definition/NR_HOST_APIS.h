@@ -19,6 +19,11 @@
  */
 #define PostLoginAuthenticationURL      FormatString(@"%@/im/login/Loginvalidate",HOST_API_URL)
 
+/*!
+ * 发送图片消息接口
+ */
+#define PostUpImageMessageURL            FormatString(@"%@/im/message/uploadFile",HOST_API_URL)
+
 
 
 #endif /* NR_HOST_APIS_h */
