@@ -17,6 +17,10 @@
         
         self.selectionStyle  = UITableViewCellSelectionStyleNone;
         
+        _leftSeparatorSpace = 15.0f;
+        _topLineStyle = NRCellLineStyleNone;
+        _bottomLineStyle = NRCellLineStyleDefault;
+        
         [self RNinitConfingViews];
         
         [self RNSetupViewModel];
@@ -25,6 +29,8 @@
     }
     return  self ;
 }
+
+
 
 -(void)awakeFromNib{
     
@@ -76,6 +82,58 @@
 +(id)CellWithTableView:(UITableView *)tableview{
     
     return nil;
+}
+
+
+
+- (void)setTopLineStyle:(NRCellLineStyle)topLineStyle
+{
+    _topLineStyle = topLineStyle;
+    [self setNeedsDisplay];
+}
+
+- (void)setBottomLineStyle:(NRCellLineStyle)bottomLineStyle
+{
+    _bottomLineStyle = bottomLineStyle;
+    [self setNeedsDisplay];
+}
+
+- (void)setLeftSeparatorSpace:(CGFloat)leftSeparatorSpace
+{
+    _leftSeparatorSpace = leftSeparatorSpace;
+    [self setNeedsDisplay];
+}
+
+- (void)setRightSeparatorSpace:(CGFloat)rightSeparatorSpace
+{
+    _rightSeparatorSpace = rightSeparatorSpace;
+    [self setNeedsDisplay];
+}
+
+- (void)drawRect:(CGRect)rect
+{
+    [super drawRect:rect];
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetLineWidth(context, BORDER_WIDTH_1PX * 2);
+    CGContextSetStrokeColorWithColor(context, [UIColor redColor].CGColor);
+    if (self.topLineStyle != NRCellLineStyleNone) {
+        CGContextBeginPath(context);
+        CGFloat startX = (self.topLineStyle == NRCellLineStyleFill ? 0 : _leftSeparatorSpace);
+        CGFloat endX = self.width - self.rightSeparatorSpace;
+        CGFloat y = 0;
+        CGContextMoveToPoint(context, startX, y);
+        CGContextAddLineToPoint(context, endX, y);
+        CGContextStrokePath(context);
+    }
+    if (self.bottomLineStyle != NRCellLineStyleNone) {
+        CGContextBeginPath(context);
+        CGFloat startX = (self.bottomLineStyle == NRCellLineStyleFill ? 0 : _leftSeparatorSpace);
+        CGFloat endX = self.width - self.rightSeparatorSpace;
+        CGFloat y = self.height;
+        CGContextMoveToPoint(context, startX, y);
+        CGContextAddLineToPoint(context, endX, y);
+        CGContextStrokePath(context);
+    }
 }
 
 @end

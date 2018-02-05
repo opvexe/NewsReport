@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "NRUserInfoModel.h"
+#import "NRUser.h"
 
 @interface NRIMElem : NSObject
 
@@ -30,7 +30,7 @@
  * 消息拥有者用户信息
  *
  */
-@property(nonatomic, strong) NRUserInfoModel *senderUserInfo;
+@property(nonatomic, strong) NRUser *senderUserInfo;
 
 /**
  *  是否发送方

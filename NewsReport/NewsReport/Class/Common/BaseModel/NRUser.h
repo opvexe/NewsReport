@@ -11,7 +11,23 @@
 /*!
  * 当前用户信息
  */
-@interface NRUserInfoModel : NSObject
+@interface NRUser : NRBaseModel
+
+/// 用户ID
+@property (nonatomic, strong) NSString *userID;
+
+/// 用户名
+@property (nonatomic, strong) NSString *username;
+
+/// 昵称
+@property (nonatomic, strong) NSString *nikeName;
+
+/// 头像URL
+@property (nonatomic, strong) NSString *avatarURL;
+
+/// 头像Path
+@property (nonatomic, strong) NSString *avatarPath;
+
 
 /*!
  用户ID

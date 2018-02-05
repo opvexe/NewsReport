@@ -41,4 +41,7 @@
 + (long long)totalSpace; // 总内存
 + (long long)fileSizeForPath:(NSString *)path;
 
++(CGFloat)getHeightContain:(NSString *)string font:(UIFont *)font Width:(CGFloat) width;
++(CGFloat)getWidthContain:(NSString *)string font:(UIFont *)font Height:(CGFloat) height;
++ (UIImage *)getImageWithColor:(UIColor *)color andHeight:(CGFloat)height;
 @end

@@ -10,4 +10,10 @@
 
 @interface NRFriendViewController : NRBaseViewController
 
+@property (nonatomic, weak) NSMutableArray *data;
+
+@property (nonatomic, weak) NSMutableArray *sectionHeaders;
+
+@property(nonatomic,strong)UITableView *friendTableView;
+
 @end

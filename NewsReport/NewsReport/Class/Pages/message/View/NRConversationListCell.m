@@ -87,7 +87,7 @@
 }
 
 -(void)InitDataWithModel:(NRConversationListModel *)model{
-    [self.headPortraitImageView sd_setImageWithURL:[NSURL URLWithString:model.portraitUrl] placeholderImage:NRImageNamed(@"icon_avatar")];
+    [self.headPortraitImageView sd_setImageWithURL:[NSURL URLWithString:model.portraitUrl] placeholderImage:NRImageNamed(DEFAULT_AVATAR_PATH)];
     self.portraitLabel.text = model.name;
     self.messageLabel.text  = model.signature;
     self.timestampLabel.text= [[NSDate getNowTimestamp:model.time] formattedDateDescription];

@@ -9,6 +9,8 @@
 #ifndef NRCommonDefines_h
 #define NRCommonDefines_h
 
+// 默认头像
+#define     DEFAULT_AVATAR_PATH    @"icon_avatar"
 
 #define  NRImageNamed(imageName)   [UIImage imageNamed:imageName]
 
@@ -49,6 +51,7 @@ block();\
 
 #define SCREEN_MIN_LENGTH (MIN(SCREEN_WIDTH, SCREEN_HEIGHT))
 
+#define BORDER_WIDTH_1PX       ([[UIScreen mainScreen] scale] > 0.0 ? 1.0 / [[UIScreen mainScreen] scale] : 1.0)
 
 #define iOS11Later ([UIDevice currentDevice].systemVersion.floatValue >= 11.0f)
 

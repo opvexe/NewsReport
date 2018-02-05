@@ -30,7 +30,7 @@
         [[WXAudioRecorder recorder] updateMeters];
         //获取音量的平均值  [recorder averagePowerForChannel:0];
         //音量的最大值  [recorder peakPowerForChannel:0];
-        double lowPassResults = pow(10, (0.05 * [[WXAudioRecorder recorder] peakPowerForChannel:0]));
+        double lowPassResults = pow(10, ([[WXAudioRecorder recorder] peakPowerForChannel:0]));
         ret = lowPassResults;
     }
     return ret;

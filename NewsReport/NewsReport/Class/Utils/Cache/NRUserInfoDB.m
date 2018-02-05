@@ -8,7 +8,7 @@
 
 #import "NRUserInfoDB.h"
 #import "NRFMDataManger.h"
-#import "NRUserInfoModel.h"
+#import "NRUser.h"
 #define TableName  @"NRUserInfoDB"
 
 
@@ -78,7 +78,7 @@ static NRUserInfoDB *_db =nil;
  */
 -(BOOL)saveDataSocre:(NSArray*)dataSoucre{
     __block BOOL isSave ;
-    [dataSoucre enumerateObjectsUsingBlock:^(NRUserInfoModel * obj, NSUInteger idx, BOOL * _Nonnull stop) {
+    [dataSoucre enumerateObjectsUsingBlock:^(NRUser * obj, NSUInteger idx, BOOL * _Nonnull stop) {
         isSave = [self saveModel:obj];
     }];
     
@@ -88,7 +88,7 @@ static NRUserInfoDB *_db =nil;
 /*!
  *  存储数据
  */
--(BOOL)saveModel:(NRUserInfoModel *)model {
+-(BOOL)saveModel:(NRUser *)model {
     
     if ([self findWithGid:convertToString(FormatString(@"%zd",model.userId))]) {
         
@@ -165,7 +165,7 @@ static NRUserInfoDB *_db =nil;
 /*！
  *   更新数据
  */
--(BOOL)updateWithModel:(NRUserInfoModel *)model{
+-(BOOL)updateWithModel:(NRUser *)model{
     
     if (model==nil ||convertToString(FormatString(@"%zd",model.userId)) ==nil ) {
         return NO;
@@ -236,11 +236,11 @@ static NRUserInfoDB *_db =nil;
 /*!
  *  查找数据
  */
--(NRUserInfoModel *)findWithGid:(NSString * )gid{
+-(NRUser *)findWithGid:(NSString * )gid{
     NSString *query = [NSString stringWithFormat:@"SELECT * FROM  %@",TableName];
     
     query = [query stringByAppendingFormat:@" where userId = '%@'",gid];
-    __block NRUserInfoModel *model = nil;
+    __block NRUser *model = nil;
     
     [_dataManger creatDBMange:NO dbBlock:^(FMDatabase *_db) {
         
@@ -269,7 +269,7 @@ static NRUserInfoDB *_db =nil;
         
         while ([rs next]) {
             
-            NRUserInfoModel * model  = [self parseResultSet:rs];
+            NRUser * model  = [self parseResultSet:rs];
             
             [array addObject:model];
             
@@ -295,8 +295,8 @@ static NRUserInfoDB *_db =nil;
     return isOk;
 }
 
--(NRUserInfoModel *) parseResultSet:(FMResultSet *)rs{
-    NRUserInfoModel *model=[NRUserInfoModel new];
+-(NRUser *) parseResultSet:(FMResultSet *)rs{
+    NRUser *model=[NRUser new];
     @try {
         model.userId = [convertToString([rs stringForColumn:@"userId"]) longLongValue];
         model.nickName = convertToString([rs stringForColumn:@"nickName"]);

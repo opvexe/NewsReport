@@ -168,14 +168,14 @@
         if (completion) {
             if (recordPath) {
                 //录音格式转换，从wav转为amr
-//                NSString *amrFilePath = [[recordPath stringByDeletingPathExtension]
-//                                         stringByAppendingPathExtension:@"amr"];
-//                BOOL convertResult = [self convertWAV:recordPath toAMR:amrFilePath];
-//                if (convertResult) {
-//                    // 删除录的wav
-//                    NSFileManager *fm = [NSFileManager defaultManager];
-//                    [fm removeItemAtPath:recordPath error:nil];
-//                }
+                NSString *amrFilePath = [[recordPath stringByDeletingPathExtension]
+                                         stringByAppendingPathExtension:@"amr"];
+                BOOL convertResult = [self convertWAV:recordPath toAMR:amrFilePath];
+                if (convertResult) {
+                    // 删除录的wav
+                    NSFileManager *fm = [NSFileManager defaultManager];
+                    [fm removeItemAtPath:recordPath error:nil];
+                }
                 completion(recordPath,(int)[self->_recorderEndDate timeIntervalSinceDate:self->_recorderStartDate],nil);
             }
             [weakSelf setupAudioSessionCategory:EM_DEFAULT isActive:NO];

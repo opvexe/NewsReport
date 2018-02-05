@@ -7,7 +7,7 @@
 //
 
 #import "NSObject+NRSendMessage.h"
-#import "NRUserInfoModel.h"
+#import "NRUser.h"
 
 #define NRCOMMON_CODE_EROOR  99999999        ///消息发送失败
 @implementation NSObject (NRSendMessage)

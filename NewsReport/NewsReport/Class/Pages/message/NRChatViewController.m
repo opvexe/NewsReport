@@ -19,6 +19,7 @@
 #import "WXError.h"
 #import "NRChatMessageCell.h"
 #import "NRPhotoLibraryManager.h"
+#import "NRSoundRecorder.h"
 
 @interface NRChatViewController ()<UITableViewDelegate,UITableViewDataSource,ChatKeyBoardDelegate,ChatKeyBoardDataSource,WXDeviceManagerProximitySensorDelegate,NRChatMessageCellDelegate>
 @property(nonatomic,strong) UITableView *chatTableView;
@@ -296,6 +297,7 @@
  */
 - (void)chatKeyBoardDidStartRecording:(ChatKeyBoard *)chatKeyBoard{
     [self.recordView recordButtonTouchDown];
+//     [[NRSoundRecorder shareInstance] startSoundRecord:self.view];
     
     int x = arc4random() % 100000;
     NSTimeInterval time = [[NSDate date] timeIntervalSince1970];
@@ -314,6 +316,7 @@
  */
 - (void)chatKeyBoardDidCancelRecording:(ChatKeyBoard *)chatKeyBoard{
     [self.recordView recordButtonTouchUpOutside];
+//    [[NRSoundRecorder shareInstance]recordButtonTouchUpOutside];
 }
 
 /*！
@@ -321,6 +324,7 @@
  */
 - (void)chatKeyBoardDidFinishRecoding:(ChatKeyBoard *)chatKeyBoard{
     [self.recordView recordButtonTouchUpInside];
+//        [[NRSoundRecorder shareInstance]recordButtonTouchUpInside];
     
     [[WXDeviceManager sharedInstance] asyncStopRecordingWithCompletion:^(NSString *recordPath, NSInteger aDuration, NSError *error) {
         if (!error) {
@@ -336,6 +340,7 @@
  */
 - (void)chatKeyBoardWillCancelRecoding:(ChatKeyBoard *)chatKeyBoard{
     [self.recordView recordButtonDragOutside];
+//     [[NRSoundRecorder shareInstance]recordButtonDragOutside];
 }
 
 /*！
@@ -343,6 +348,7 @@
  */
 - (void)chatKeyBoardContineRecording:(ChatKeyBoard *)chatKeyBoard{
     [self.recordView recordButtonDragInside];
+//      [[NRSoundRecorder shareInstance]recordButtonDragInside];
 }
 
 #pragma mark  < WXDeviceManagerProximitySensorDelegate >

@@ -76,6 +76,7 @@
 #import <MJExtension.h>
 #import <YYCache.h>
 #import <FMDB.h>
+#import <MBProgressHUD.h>
 /*!
  Chat库
  */

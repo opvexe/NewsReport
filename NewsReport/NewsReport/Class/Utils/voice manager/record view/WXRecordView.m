@@ -99,7 +99,7 @@
 // 录音按钮按下
 -(void)recordButtonTouchDown
 {
-    self.hidden = NO;
+
     // 需要根据声音大小切换recordView动画
     _textLabel.text = _upCancelText;
     _textLabel.backgroundColor = [UIColor clearColor];

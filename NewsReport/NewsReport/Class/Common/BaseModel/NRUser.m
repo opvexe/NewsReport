@@ -6,8 +6,8 @@
 //  Copyright © 2018年 Facebook. All rights reserved.
 //
 
-#import "NRUserInfoModel.h"
+#import "NRUser.h"
 
-@implementation NRUserInfoModel
+@implementation NRUser
 
 @end

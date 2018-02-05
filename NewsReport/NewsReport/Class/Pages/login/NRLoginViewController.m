@@ -8,7 +8,7 @@
 
 #import "NRLoginViewController.h"
 #import "CPMessageEventButton.h"
-#import "NRUserInfoModel.h"
+#import "NRUser.h"
 
 @interface NRLoginViewController ()<UITextFieldDelegate,CPMessageEventButtonDelegate>
 @property(nonatomic,strong)UIScrollView *loginScrollView;
@@ -83,7 +83,7 @@
     WS(weakSelf)
     [NRBusinessNetworkTool PostLoginWithUserPassword:@"web" username:@"user45" CompleteSuccessfull:^(id responseObject) {
         WSSTRONG(strongSelf)
-        NRUserInfoModel *userModel = [NRUserInfoModel mj_objectWithKeyValues:responseObject];
+        NRUser *userModel = [NRUser mj_objectWithKeyValues:responseObject];
         [[NRUserInfoDB shareDB]saveModel:userModel];
 
         [[NRUserTools defaultCenter]updateUserID:convertToString(FormatString(@"%zd",userModel.userId))];

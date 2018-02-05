@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@class NRUserInfoModel;
+@class NRUser;
 
 @interface NRUserInfoDB : NSObject
 
@@ -19,7 +19,7 @@
 /*!
  *  存储数据
  */
--(BOOL)saveModel:(NRUserInfoModel *)model;
+-(BOOL)saveModel:(NRUser *)model;
 /*!
  *  删除数据
  */
@@ -28,7 +28,7 @@
 /*!
  *  查找数据
  */
--(NRUserInfoModel *)findWithGid:(NSString * )gid;
+-(NRUser *)findWithGid:(NSString * )gid;
 
 /*!
  *  保存数据(数组)
