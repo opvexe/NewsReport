@@ -10,7 +10,7 @@
 #import "WXError.h"
 #import "WXAudioRecorder.h"
 #import "WXAudioPlayer.h"
-#import "EMVoiceConverter.h"
+#import "AudioConverter.h"
 
 @implementation WXDeviceManager (Media)
 - (void)asyncPlayingWithPath:(NSString *)aFilePath
@@ -247,7 +247,7 @@
     BOOL ret = NO;
     BOOL isFileExists = [[NSFileManager defaultManager] fileExistsAtPath:amrFilePath];
     if (isFileExists) {
-        [EMVoiceConverter amrToWav:amrFilePath wavSavePath:wavFilePath];
+        [AudioConverter amrToWav:amrFilePath wavSavePath:wavFilePath];
         isFileExists = [[NSFileManager defaultManager] fileExistsAtPath:wavFilePath];
         if (isFileExists) {
             ret = YES;
@@ -262,7 +262,7 @@
     BOOL ret = NO;
     BOOL isFileExists = [[NSFileManager defaultManager] fileExistsAtPath:wavFilePath];
     if (isFileExists) {
-        [EMVoiceConverter wavToAmr:wavFilePath amrSavePath:amrFilePath];
+        [AudioConverter wavToAmr:wavFilePath amrSavePath:amrFilePath];
         isFileExists = [[NSFileManager defaultManager] fileExistsAtPath:amrFilePath];
         if (!isFileExists) {
             

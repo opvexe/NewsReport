@@ -79,6 +79,9 @@
 		D0223E922024339000EA9998 /* NRPhotoLibraryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D0223E912024339000EA9998 /* NRPhotoLibraryManager.m */; };
 		D0223E962024370C00EA9998 /* NRAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0223E952024370C00EA9998 /* NRAlertView.m */; };
 		D0223E9A202460FA00EA9998 /* NRCallBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0223E99202460FA00EA9998 /* NRCallBaseViewController.m */; };
+		D024F4712027E790003708DE /* wav.mm in Sources */ = {isa = PBXBuildFile; fileRef = D024F46D2027E78F003708DE /* wav.mm */; };
+		D024F4722027E790003708DE /* amrFileCodec.mm in Sources */ = {isa = PBXBuildFile; fileRef = D024F46F2027E790003708DE /* amrFileCodec.mm */; };
+		D024F4752027E7AD003708DE /* AudioConverter.mm in Sources */ = {isa = PBXBuildFile; fileRef = D024F4742027E7AD003708DE /* AudioConverter.mm */; };
 		D02964E520229E340060409F /* NSDate+NRCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = D02964E420229E340060409F /* NSDate+NRCategory.m */; };
 		D02964E820229E700060409F /* NSDateFormatter+NRCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = D02964E720229E700060409F /* NSDateFormatter+NRCategory.m */; };
 		D02964ED2022AD5E0060409F /* NRIMTextElem.m in Sources */ = {isa = PBXBuildFile; fileRef = D02964EC2022AD5E0060409F /* NRIMTextElem.m */; };
@@ -102,9 +105,6 @@
 		D029663E2022CBAA0060409F /* WXDeviceManager+Remind.m in Sources */ = {isa = PBXBuildFile; fileRef = D029660B2022CBAA0060409F /* WXDeviceManager+Remind.m */; };
 		D029663F2022CBAA0060409F /* WXDeviceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D029660D2022CBAA0060409F /* WXDeviceManager.m */; };
 		D02966402022CBAA0060409F /* WXRecordView.m in Sources */ = {isa = PBXBuildFile; fileRef = D02966122022CBAA0060409F /* WXRecordView.m */; };
-		D02966552022CBAA0060409F /* amrFileCodec.mm in Sources */ = {isa = PBXBuildFile; fileRef = D029662C2022CBAA0060409F /* amrFileCodec.mm */; };
-		D02966562022CBAA0060409F /* wav.mm in Sources */ = {isa = PBXBuildFile; fileRef = D029662E2022CBAA0060409F /* wav.mm */; };
-		D02966572022CBAA0060409F /* EMVoiceConverter.mm in Sources */ = {isa = PBXBuildFile; fileRef = D02966302022CBAA0060409F /* EMVoiceConverter.mm */; };
 		D02966582022CBAA0060409F /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D02966342022CBAA0060409F /* libopencore-amrnb.a */; };
 		D02966592022CBAA0060409F /* libopencore-amrwb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D02966382022CBAA0060409F /* libopencore-amrwb.a */; };
 		D029666F2022CD7E0060409F /* VoiceSearchFeedback001@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D029665B2022CD7E0060409F /* VoiceSearchFeedback001@2x.png */; };
@@ -343,6 +343,12 @@
 		D0223E952024370C00EA9998 /* NRAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRAlertView.m; sourceTree = "<group>"; };
 		D0223E98202460FA00EA9998 /* NRCallBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRCallBaseViewController.h; sourceTree = "<group>"; };
 		D0223E99202460FA00EA9998 /* NRCallBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRCallBaseViewController.m; sourceTree = "<group>"; };
+		D024F46D2027E78F003708DE /* wav.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = wav.mm; sourceTree = "<group>"; };
+		D024F46E2027E790003708DE /* amrFileCodec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = amrFileCodec.h; sourceTree = "<group>"; };
+		D024F46F2027E790003708DE /* amrFileCodec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = amrFileCodec.mm; sourceTree = "<group>"; };
+		D024F4702027E790003708DE /* wav.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wav.h; sourceTree = "<group>"; };
+		D024F4732027E7AD003708DE /* AudioConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioConverter.h; sourceTree = "<group>"; };
+		D024F4742027E7AD003708DE /* AudioConverter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AudioConverter.mm; sourceTree = "<group>"; };
 		D02964E320229E340060409F /* NSDate+NRCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+NRCategory.h"; sourceTree = "<group>"; };
 		D02964E420229E340060409F /* NSDate+NRCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+NRCategory.m"; sourceTree = "<group>"; };
 		D02964E620229E700060409F /* NSDateFormatter+NRCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+NRCategory.h"; sourceTree = "<group>"; };
@@ -391,12 +397,6 @@
 		D029660F2022CBAA0060409F /* WXError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXError.h; sourceTree = "<group>"; };
 		D02966112022CBAA0060409F /* WXRecordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXRecordView.h; sourceTree = "<group>"; };
 		D02966122022CBAA0060409F /* WXRecordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXRecordView.m; sourceTree = "<group>"; };
-		D029662B2022CBAA0060409F /* amrFileCodec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = amrFileCodec.h; sourceTree = "<group>"; };
-		D029662C2022CBAA0060409F /* amrFileCodec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = amrFileCodec.mm; sourceTree = "<group>"; };
-		D029662D2022CBAA0060409F /* wav.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wav.h; sourceTree = "<group>"; };
-		D029662E2022CBAA0060409F /* wav.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = wav.mm; sourceTree = "<group>"; };
-		D029662F2022CBAA0060409F /* EMVoiceConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMVoiceConverter.h; sourceTree = "<group>"; };
-		D02966302022CBAA0060409F /* EMVoiceConverter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = EMVoiceConverter.mm; sourceTree = "<group>"; };
 		D02966322022CBAA0060409F /* interf_dec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_dec.h; sourceTree = "<group>"; };
 		D02966332022CBAA0060409F /* interf_enc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_enc.h; sourceTree = "<group>"; };
 		D02966342022CBAA0060409F /* libopencore-amrnb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a"; sourceTree = "<group>"; };
@@ -1087,9 +1087,9 @@
 		D02966292022CBAA0060409F /* VoiceConvert */ = {
 			isa = PBXGroup;
 			children = (
+				D024F4732027E7AD003708DE /* AudioConverter.h */,
+				D024F4742027E7AD003708DE /* AudioConverter.mm */,
 				D029662A2022CBAA0060409F /* amrwapper */,
-				D029662F2022CBAA0060409F /* EMVoiceConverter.h */,
-				D02966302022CBAA0060409F /* EMVoiceConverter.mm */,
 				D02966312022CBAA0060409F /* opencore-amrnb */,
 				D02966352022CBAA0060409F /* opencore-amrwb */,
 			);
@@ -1099,10 +1099,10 @@
 		D029662A2022CBAA0060409F /* amrwapper */ = {
 			isa = PBXGroup;
 			children = (
-				D029662B2022CBAA0060409F /* amrFileCodec.h */,
-				D029662C2022CBAA0060409F /* amrFileCodec.mm */,
-				D029662D2022CBAA0060409F /* wav.h */,
-				D029662E2022CBAA0060409F /* wav.mm */,
+				D024F46E2027E790003708DE /* amrFileCodec.h */,
+				D024F46F2027E790003708DE /* amrFileCodec.mm */,
+				D024F4702027E790003708DE /* wav.h */,
+				D024F46D2027E78F003708DE /* wav.mm */,
 			);
 			path = amrwapper;
 			sourceTree = "<group>";
@@ -1651,7 +1651,6 @@
 				D0223E8720242EC700EA9998 /* PanelBottomView.m in Sources */,
 				D0223E7D20242EC700EA9998 /* ChatToolBarItem.m in Sources */,
 				D01D08E4202043AB00288240 /* NRChatViewController.m in Sources */,
-				D02966552022CBAA0060409F /* amrFileCodec.mm in Sources */,
 				D0223E8820242EC700EA9998 /* MorePanel.m in Sources */,
 				D01D08F220204A7600288240 /* NRBarButtonItem.m in Sources */,
 				D02964F62022ADC80060409F /* NRIMFileElem.m in Sources */,
@@ -1680,23 +1679,24 @@
 				D02DD9B52021B4FF0035066D /* NRChatMessageCell.m in Sources */,
 				D013607E2022FD9C003AFEEE /* NRFMDataManger.m in Sources */,
 				D0223E8A20242EC700EA9998 /* OfficialAccountToolbar.m in Sources */,
+				D024F4712027E790003708DE /* wav.mm in Sources */,
 				D02964FC2022B3440060409F /* NRFileMessageContentView.m in Sources */,
 				D01D089E201FFF1A00288240 /* NRIMClientManager.m in Sources */,
 				D01D08A42020067C00288240 /* NRChatBaseEventImpl.m in Sources */,
-				D02966572022CBAA0060409F /* EMVoiceConverter.mm in Sources */,
 				D01D08D32020226D00288240 /* NRUserInfoModel.m in Sources */,
 				D0223E8B20242EC700EA9998 /* RFRecordButton.m in Sources */,
 				D02965172022BCBA0060409F /* NRIMVideoElem.m in Sources */,
+				D024F4722027E790003708DE /* amrFileCodec.mm in Sources */,
 				D0223E8320242EC700EA9998 /* FaceButton.m in Sources */,
 				D01D08A12020050600288240 /* NRChatTransDataEventImpl.m in Sources */,
 				D029663D2022CBAA0060409F /* WXDeviceManager+ProximitySensor.m in Sources */,
-				D02966562022CBAA0060409F /* wav.mm in Sources */,
 				D01D08BB2020172900288240 /* UIView+NRExtension.m in Sources */,
 				D029663B2022CBAA0060409F /* WXDeviceManager+Media.m in Sources */,
 				D01D08AE202013C200288240 /* NRLoginViewController.m in Sources */,
 				D02965082022B3850060409F /* NRImageMessageContentView.m in Sources */,
 				D02964ED2022AD5E0060409F /* NRIMTextElem.m in Sources */,
 				D01D0833201FF8AD00288240 /* AppDelegate.mm in Sources */,
+				D024F4752027E7AD003708DE /* AudioConverter.mm in Sources */,
 				D029663C2022CBAA0060409F /* WXDeviceManager+Microphone.m in Sources */,
 				D0223E8C20242EC700EA9998 /* RFTextView.m in Sources */,
 				D01D08C820201BB000288240 /* NRNetworkCache.m in Sources */,
