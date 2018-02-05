@@ -119,6 +119,7 @@
 		D024F4C22028400A003708DE /* NRFriendTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D024F4C12028400A003708DE /* NRFriendTableViewCell.m */; };
 		D024F4C62028413A003708DE /* NRUserGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = D024F4C52028413A003708DE /* NRUserGroup.m */; };
 		D024F4C920284B6E003708DE /* NRFriendDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D024F4C820284B6E003708DE /* NRFriendDetailViewController.m */; };
+		D024F4CD2028599F003708DE /* NRConversation.m in Sources */ = {isa = PBXBuildFile; fileRef = D024F4CC2028599F003708DE /* NRConversation.m */; };
 		D02964E520229E340060409F /* NSDate+NRCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = D02964E420229E340060409F /* NSDate+NRCategory.m */; };
 		D02964E820229E700060409F /* NSDateFormatter+NRCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = D02964E720229E700060409F /* NSDateFormatter+NRCategory.m */; };
 		D02964ED2022AD5E0060409F /* NRIMTextElem.m in Sources */ = {isa = PBXBuildFile; fileRef = D02964EC2022AD5E0060409F /* NRIMTextElem.m */; };
@@ -410,6 +411,8 @@
 		D024F4C52028413A003708DE /* NRUserGroup.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRUserGroup.m; sourceTree = "<group>"; };
 		D024F4C720284B6E003708DE /* NRFriendDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRFriendDetailViewController.h; sourceTree = "<group>"; };
 		D024F4C820284B6E003708DE /* NRFriendDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRFriendDetailViewController.m; sourceTree = "<group>"; };
+		D024F4CB2028599F003708DE /* NRConversation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRConversation.h; sourceTree = "<group>"; };
+		D024F4CC2028599F003708DE /* NRConversation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRConversation.m; sourceTree = "<group>"; };
 		D02964E320229E340060409F /* NSDate+NRCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+NRCategory.h"; sourceTree = "<group>"; };
 		D02964E420229E340060409F /* NSDate+NRCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+NRCategory.m"; sourceTree = "<group>"; };
 		D02964E620229E700060409F /* NSDateFormatter+NRCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+NRCategory.h"; sourceTree = "<group>"; };
@@ -854,10 +857,10 @@
 		D01D08D02020225800288240 /* BaseModel */ = {
 			isa = PBXGroup;
 			children = (
-				D01D08D12020226D00288240 /* NRUser.h */,
-				D01D08D22020226D00288240 /* NRUser.m */,
 				D02DD9A2202156350035066D /* NRBaseModel.h */,
 				D02DD9A3202156350035066D /* NRBaseModel.m */,
+				D024F4CB2028599F003708DE /* NRConversation.h */,
+				D024F4CC2028599F003708DE /* NRConversation.m */,
 			);
 			path = BaseModel;
 			sourceTree = "<group>";
@@ -1079,6 +1082,19 @@
 				D024F4C52028413A003708DE /* NRUserGroup.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		D024F4CA202858C0003708DE /* User */ = {
+			isa = PBXGroup;
+			children = (
+				D013607C2022FD9C003AFEEE /* NRFMDataManger.h */,
+				D013607D2022FD9C003AFEEE /* NRFMDataManger.m */,
+				D013608220230107003AFEEE /* NRUserInfoDB.h */,
+				D013608320230107003AFEEE /* NRUserInfoDB.m */,
+				D01D08D12020226D00288240 /* NRUser.h */,
+				D01D08D22020226D00288240 /* NRUser.m */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 		D02964EA2022AD380060409F /* MessageModel */ = {
@@ -1326,10 +1342,7 @@
 		D02DD9B02021B20E0035066D /* Cache */ = {
 			isa = PBXGroup;
 			children = (
-				D013607C2022FD9C003AFEEE /* NRFMDataManger.h */,
-				D013607D2022FD9C003AFEEE /* NRFMDataManger.m */,
-				D013608220230107003AFEEE /* NRUserInfoDB.h */,
-				D013608320230107003AFEEE /* NRUserInfoDB.m */,
+				D024F4CA202858C0003708DE /* User */,
 			);
 			path = Cache;
 			sourceTree = "<group>";
@@ -1760,6 +1773,7 @@
 				D01D08DE202042FB00288240 /* NRTabBarControllerConfig.m in Sources */,
 				D024F4C62028413A003708DE /* NRUserGroup.m in Sources */,
 				D0223E7F20242EC700EA9998 /* MoreItem.m in Sources */,
+				D024F4CD2028599F003708DE /* NRConversation.m in Sources */,
 				D0223E9A202460FA00EA9998 /* NRCallBaseViewController.m in Sources */,
 				D02966402022CBAA0060409F /* WXRecordView.m in Sources */,
 				D02DD9AB20218B120035066D /* NRIMElem.m in Sources */,
