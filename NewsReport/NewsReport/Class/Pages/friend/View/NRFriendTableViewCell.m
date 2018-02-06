@@ -35,12 +35,12 @@
 
 - (void)setUser:(NRUser *)user{
     _user = user;
-    if (user.avatarPath) {
-        [self.avatarImageView setImage:[UIImage imageNamed:user.avatarPath]];
-    }
-    else {
-        [self.avatarImageView sd_setImageWithURL:URLFromString(user.avatarURL) placeholderImage:[UIImage imageNamed:DEFAULT_AVATAR_PATH]];
-    }
+//    if (user.avatarPath) {
+//        [self.avatarImageView setImage:[UIImage imageNamed:user.avatarPath]];
+//    }
+//    else {
+//        [self.avatarImageView sd_setImageWithURL:URLFromString(user.avatarURL) placeholderImage:[UIImage imageNamed:DEFAULT_AVATAR_PATH]];
+//    }
     
 //    [self.usernameLabel setText:user.showName];
 //    [self.subTitleLabel setText:user.detailInfo.remarkInfo];

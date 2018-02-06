@@ -14,12 +14,12 @@
 /*!
  * 点击消息
  */
-- (void)clickMessageContentViewWithMessageModel:(NRIMElem *)messageModel;
+- (void)clickMessageContentViewWithMessageModel:(NRMessage *)messageModel;
 
 /*!
  * 长按消息
  */
-- (void)longPressMessageContentViewWithMessageModel:(NRIMElem *)messageModel;
+- (void)longPressMessageContentViewWithMessageModel:(NRMessage *)messageModel;
 
 @end
 @interface NRChatMessageContentView : UIControl<NRChatMessageContentViewDelegate>
@@ -36,9 +36,9 @@
 /*!
  * 消息模型
  */
-@property (nonatomic, strong) NRIMElem *messageModel;
+@property (nonatomic, strong) NRMessage *messageModel;
 
 #pragma mark < 私有方法 >
-- (void)refreshData:(NRIMElem *)messageModel;
+- (void)refreshData:(NRMessage *)messageModel;
 @end
 

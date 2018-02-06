@@ -17,8 +17,8 @@
  
  @param text 文本内容
  */
--(void)sendMessageWithText:(NRIMElem *)text CompletecBlock:(CompletecBlock)block{
-    NRIMTextElem *message = (NRIMTextElem *)text;
+-(void)sendMessageWithText:(NRMessage *)text CompletecBlock:(CompletecBlock)block{
+    NRTextMessage *message = (NRTextMessage *)text;
     NSDictionary *dataDic = @{@"message":message.text};
     NSData *theData = [NSJSONSerialization dataWithJSONObject:dataDic options:NSJSONWritingPrettyPrinted error:nil];
     NSString *messageStr = [[NSString alloc] initWithData:theData encoding:NSUTF8StringEncoding];
@@ -36,8 +36,8 @@
  @param image 图片
  @param origal 缩略图
  */
--(void)sendMessageWithImage:(NRIMElem *)image isOrignal:(BOOL)origal CompletecBlock:(CompletecBlock)block{
-    NRIMImageElem *message = (NRIMImageElem *)image;
+-(void)sendMessageWithImage:(NRMessage *)image isOrignal:(BOOL)origal CompletecBlock:(CompletecBlock)block{
+    NRImageMessage *message = (NRImageMessage *)image;
     [message.image jkr_compressToDataLength:20*1024 withBlock:^(NSData *data) {
         UIImage *image = [UIImage imageWithData:data];
         NSString *imageType = [NRNewsReportTools imageTypeWithData:data];

@@ -53,14 +53,14 @@
  */
 -(void)reloadDataSoucre{
     
-    NRIMTextElem *message = [[NRIMTextElem alloc]init];
+    NRTextMessage *message = [[NRTextMessage alloc]init];
     message.text = @"我们需要在用户不允许访问的时候跳转，那么首先我们就要判断一些是否已经开启系统相机权限了";
     message.messageType = MessageTypeText;
     message.senderUserInfo.nickName = @"测试";
     message.isSender = YES;
     [self.chats addObject:message];
     
-    NRIMImageElem *imageElem = [[NRIMImageElem alloc]init];
+    NRImageMessage *imageElem = [[NRImageMessage alloc]init];
     imageElem.image = [UIImage imageNamed:@"icon_avatar"];
     imageElem.messageType = MessageTypeImage;
     imageElem.isSender = NO;
@@ -110,13 +110,13 @@
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    NRIMElem *messageModel = self.chats[indexPath.row];
+    NRMessage *messageModel = self.chats[indexPath.row];
     return  [NRChatMessageCell cellHeightWithModel:messageModel];
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     NRChatMessageCell *cell = [NRChatMessageCell CellWithChatTableView:tableView];
-    NRIMElem *messageModel = self.chats[indexPath.row];
+    NRMessage *messageModel = self.chats[indexPath.row];
     cell.delegate = self;
     [cell refreshData:messageModel];
     return cell;
@@ -131,25 +131,25 @@
 /*!
  * 点击消息
  */
-- (void)clickCellMessageContentViewWithMessageModel:(NRIMElem *)messageModel{
+- (void)clickCellMessageContentViewWithMessageModel:(NRMessage *)messageModel{
     
 }
 /*!
  * 点击头像
  */
-- (void)clickCellHeadImageWithMessageModel:(NRIMElem *)messageModel{
+- (void)clickCellHeadImageWithMessageModel:(NRMessage *)messageModel{
     
 }
 /*!
  * 长按消息
  */
-- (void)longPressCellMessageContentViewWithMessageModel:(NRIMElem *)messageModel{
+- (void)longPressCellMessageContentViewWithMessageModel:(NRMessage *)messageModel{
     
 }
 /*!
  * 撤回消息
  */
-- (void)reSendCellWithMessageModel:(NRIMElem *)messageModel{
+- (void)reSendCellWithMessageModel:(NRMessage *)messageModel{
     
 }
 
@@ -159,7 +159,7 @@
  *  文本消息
  */
 - (void)chatKeyBoardSendText:(NSString *)text{
-    NRIMTextElem *message = [[NRIMTextElem alloc]init];
+    NRTextMessage *message = [[NRTextMessage alloc]init];
     message.messageType = MessageTypeText;
     message.from = [[NRUserTools defaultCenter]getUserID];
     message.to  = convertToString(_targetId);
@@ -179,7 +179,7 @@
  */
 -(void)sendMessageWithImages{
     [self.lastSelectProcessedDatas enumerateObjectsUsingBlock:^(NRImagePickModel *obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        NRIMImageElem *message = [[NRIMImageElem alloc]init];
+        NRImageMessage *message = [[NRImageMessage alloc]init];
         message.messageType = MessageTypeImage;
         message.from = [[NRUserTools defaultCenter]getUserID];
         message.to  = convertToString(_targetId);

@@ -10,7 +10,7 @@
 #import "NRChatViewController.h"
 #import "NRConversationListCell.h"
 #import "NRConversationListModel.h"
-#import "NRIMElem.h"
+#import "NRMessage.h"
 
 @interface NRConversationListViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic, strong) UITableView    *messageTableView;
@@ -59,17 +59,17 @@
 -(void)receiveMessage:(NSNotification *)notification{
     
     __block NSString *signature = @"" ;
-    NRIMElem *message = (NRIMElem *)notification.object;
+    NRMessage *message = (NRMessage *)notification.object;
     Class MessageElem = [message class];
     
-    if (MessageElem == [NRIMTextElem class]) {
-        NRIMTextElem *text = (NRIMTextElem *)message;
+    if (MessageElem == [NRTextMessage class]) {
+        NRTextMessage *text = (NRTextMessage *)message;
         signature = text.text;
-    }else if (MessageElem == [NRIMImageElem class]){
+    }else if (MessageElem == [NRImageMessage class]){
         signature =@"[图片]";
-    }else if (MessageElem == [NRIMSoundElem class]){
+    }else if (MessageElem == [NRVioceMessage class]){
         signature =@"[语音]";
-    }else if (MessageElem == [NRIMFileElem class]){
+    }else if (MessageElem == [NRFileMessage class]){
         signature =@"[文件]";
     }else{
         signature =@"[未知消息]";

@@ -9,30 +9,14 @@
 #import <Foundation/Foundation.h>
 
 /*!
- * 当前用户信息
+ * 用户信息
  */
 @interface NRUser : NRBaseModel
-
-/// 用户ID
-@property (nonatomic, strong) NSString *userID;
-
-/// 用户名
-@property (nonatomic, strong) NSString *username;
-
-/// 昵称
-@property (nonatomic, strong) NSString *nikeName;
-
-/// 头像URL
-@property (nonatomic, strong) NSString *avatarURL;
-
-/// 头像Path
-@property (nonatomic, strong) NSString *avatarPath;
-
 
 /*!
  用户ID
  */
-@property(nonatomic, assign) NSInteger userId;
+@property(nonatomic, copy) NSString *userId;
 
 /*!
  用户名称
@@ -62,21 +46,35 @@
 /*!
  * 视频ID
  */
-@property (nonatomic,assign) NSInteger mediaId;
+@property (nonatomic,copy) NSString *mediaId;
 
 /*!
  * 部门
  */
-@property (nonatomic,assign) NSInteger depId;
-
+@property (nonatomic,copy) NSString *depId;
+/*!
+ * 备注
+ */
+@property (nonatomic, strong) NSString *remarkName;
 /*!
  * 精度
  */
-@property (nonatomic,assign) float latitude;
+@property (nonatomic,copy) NSString *latitude;
 
 /*!
  * 维度
  */
-@property (nonatomic,assign) float longitude;
+@property (nonatomic,copy) NSString *longitude;
+
+
+#pragma mark < 列表用 >
+/**
+ *  拼音
+ *
+ *  来源：备注 > 昵称 > 用户名
+ */
+@property (nonatomic, strong) NSString *pinyin;
+
+@property (nonatomic, strong) NSString *pinyinInitial;
 
 @end

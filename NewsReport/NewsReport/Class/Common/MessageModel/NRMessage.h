@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "NRUser.h"
 
-@interface NRIMElem : NSObject
+@interface NRMessage : NSObject
 
 /*!
  *  消息的唯一标识符
@@ -63,7 +63,7 @@
 /**
  *  消息聊天类型(单聊，群聊)
  */
-@property (nonatomic,assign) MessageChat messageChatType;
+@property (nonatomic,assign) ConversationType messageChatType;
 
 /*!
  *  消息状态

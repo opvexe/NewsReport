@@ -56,7 +56,7 @@
     }
 }
 
-- (void)refreshData:(NRIMFileElem *)messageModel{
+- (void)refreshData:(NRFileMessage *)messageModel{
     [super refreshData:messageModel];
 }
 @end

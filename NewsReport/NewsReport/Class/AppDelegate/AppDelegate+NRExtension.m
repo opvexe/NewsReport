@@ -18,9 +18,9 @@
  */
 -(void)switchRootController{
     
-        NRTabBarControllerConfig  *tabBarControllerConfig = [NRTabBarControllerConfig new];
-        self.window .rootViewController = tabBarControllerConfig.tabBarController;
-//    self.window.rootViewController   = [[NRLoginViewController alloc] init];
+//        NRTabBarControllerConfig  *tabBarControllerConfig = [NRTabBarControllerConfig new];
+//        self.window .rootViewController = tabBarControllerConfig.tabBarController;
+    self.window.rootViewController   = [[NRLoginViewController alloc] init];
 }
 
 /*!

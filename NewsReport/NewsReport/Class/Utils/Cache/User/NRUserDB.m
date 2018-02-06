@@ -6,26 +6,26 @@
 //  Copyright © 2018年 Facebook. All rights reserved.
 //
 
-#import "NRUserInfoDB.h"
+#import "NRUserDB.h"
 #import "NRFMDataManger.h"
 #import "NRUser.h"
 #define TableName  @"NRUserInfoDB"
 
 
-@interface NRUserInfoDB(){
+@interface NRUserDB(){
     
     NRFMDataManger *_dataManger;
 }
 @end
-static NRUserInfoDB *_db =nil;
+static NRUserDB *_db =nil;
 
-@implementation NRUserInfoDB
+@implementation NRUserDB
 
 +(instancetype)shareDB{
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         if (_db ==nil) {
-            _db = [[NRUserInfoDB alloc] init];
+            _db = [[NRUserDB alloc] init];
         }
     });
     return _db;
@@ -104,7 +104,7 @@ static NRUserInfoDB *_db =nil;
         NSMutableArray * arguments = [NSMutableArray arrayWithCapacity:30];
         [keys appendString:@"userId,"];
         [values appendString:@"?,"];
-        [arguments addObject:convertToString(FormatString(@"%zd",model.userId))];
+        [arguments addObject:convertToString(model.userId)];
         [keys appendString:@"nickName,"];
         [values appendString:@"?,"];
         [arguments addObject:convertToString(model.nickName)];
@@ -122,16 +122,16 @@ static NRUserInfoDB *_db =nil;
         [arguments addObject:convertToString(model.userName)];
         [keys appendString:@"mediaId,"];
         [values appendString:@"?,"];
-        [arguments addObject:convertToString(FormatString(@"%zd",model.mediaId))];
+        [arguments addObject:convertToString(model.mediaId)];
         [keys appendString:@"depId,"];
         [values appendString:@"?,"];
-        [arguments addObject:convertToString(FormatString(@"%zd",model.depId))];
+        [arguments addObject:convertToString(model.depId)];
         [keys appendString:@"latitude,"];
         [values appendString:@"?,"];
-        [arguments addObject:convertToString(FormatString(@"%lf",model.latitude))];
+        [arguments addObject:convertToString(model.latitude)];
         [keys appendString:@"longitude,"];
         [values appendString:@"?,"];
-        [arguments addObject:convertToString(FormatString(@"%lf",model.longitude))];
+        [arguments addObject:convertToString(model.longitude)];
         [keys appendString:@")"];
         [values appendString:@")"];
         [query appendFormat:@" %@ VALUES%@",
@@ -177,7 +177,7 @@ static NRUserInfoDB *_db =nil;
         
         NSMutableString * query = [NSMutableString stringWithFormat:@"UPDATE %@ SET ",TableName];
         NSMutableArray * arguments = [NSMutableArray arrayWithCapacity:5];
-    
+        
         [query appendString:@"userId=?,"];
         [arguments addObject:FormatString(@"%zd",model.userId)];
         
@@ -208,24 +208,24 @@ static NRUserInfoDB *_db =nil;
         }
         
         [query appendString:@"mediaId=?,"];
-        [arguments addObject:FormatString(@"%zd",model.mediaId)];
+        [arguments addObject:model.mediaId];
         
         [query appendString:@"depId=?,"];
-        [arguments addObject:FormatString(@"%zd",model.depId)];
+        [arguments addObject:model.depId];
         
         [query appendString:@"latitude=?,"];
-        [arguments addObject:FormatString(@"%lf",model.latitude)];
+        [arguments addObject:model.latitude];
         
         [query appendString:@"longitude=?,"];
-        [arguments addObject:FormatString(@"%lf",model.longitude)];
+        [arguments addObject:model.longitude];
         
         [query appendString:@")"];
-
+        
         if([query hasSuffix:@",)"]){
             [query replaceCharactersInRange:NSMakeRange(query.length-2, 2) withString:@" "];
             [query stringByReplacingOccurrencesOfString:@",)" withString:@""];
         }
-        [query appendFormat:@" where userId = '%@'",convertToString(FormatString(@"%zd",model.userId))];
+        [query appendFormat:@" where userId = '%@'",convertToString(model.userId)];
         isOk = [_db executeUpdate:query withArgumentsInArray:arguments];
         
     }];
@@ -296,18 +296,18 @@ static NRUserInfoDB *_db =nil;
 }
 
 -(NRUser *) parseResultSet:(FMResultSet *)rs{
-    NRUser *model=[NRUser new];
+    NRUser *model=[[NRUser alloc]init];
     @try {
-        model.userId = [convertToString([rs stringForColumn:@"userId"]) longLongValue];
+        model.userId = convertToString([rs stringForColumn:@"userId"]);
         model.nickName = convertToString([rs stringForColumn:@"nickName"]);
         model.tel = convertToString([rs stringForColumn:@"tel"]);
         model.userIcon = convertToString([rs stringForColumn:@"userIcon"]);
         model.token=convertToString([rs stringForColumn:@"token"]);
         model.userName=convertToString([rs stringForColumn:@"userName"]);
-        model.mediaId=[convertToString([rs stringForColumn:@"mediaId"]) longLongValue];
-        model.depId= [convertToString([rs stringForColumn:@"depId"]) longLongValue];
-        model.latitude = [convertToString([rs stringForColumn:@"latitude"]) floatValue];
-        model.longitude = [convertToString([rs stringForColumn:@"longitude"]) floatValue];
+        model.mediaId=convertToString([rs stringForColumn:@"mediaId"]);
+        model.depId= convertToString([rs stringForColumn:@"depId"]);
+        model.latitude = convertToString([rs stringForColumn:@"latitude"]);
+        model.longitude = convertToString([rs stringForColumn:@"longitude"]);
     }
     @catch (NSException *exception) {
         

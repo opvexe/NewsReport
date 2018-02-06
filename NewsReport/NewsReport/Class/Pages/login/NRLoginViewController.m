@@ -84,9 +84,9 @@
     [NRBusinessNetworkTool PostLoginWithUserPassword:@"web" username:@"user45" CompleteSuccessfull:^(id responseObject) {
         WSSTRONG(strongSelf)
         NRUser *userModel = [NRUser mj_objectWithKeyValues:responseObject];
-        [[NRUserInfoDB shareDB]saveModel:userModel];
+        [[NRUserDB shareDB]saveModel:userModel];
 
-        [[NRUserTools defaultCenter]updateUserID:convertToString(FormatString(@"%zd",userModel.userId))];
+//        [[NRUserTools defaultCenter]updateUserID:convertToString(FormatString(@"%zd",userModel.userId))];
         [strongSelf loginImpl:[[NRUserTools defaultCenter]getUserID] withToken:@"web"];
     } failure:^(id error) {
         NSLog(@"error:%@",error);

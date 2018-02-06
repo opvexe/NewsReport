@@ -6,8 +6,8 @@
 //  Copyright © 2018年 Facebook. All rights reserved.
 //
 
-#import "NRIMVideoElem.h"
+#import "NRVideoMessage.h"
 
-@implementation NRIMVideoElem
+@implementation NRVideoMessage
 
 @end

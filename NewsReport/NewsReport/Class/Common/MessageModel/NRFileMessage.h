@@ -12,7 +12,7 @@
  *  文件消息Elem
  */
 
-@interface NRIMFileElem : NRIMElem
+@interface NRFileMessage : NRMessage
 
 /**
  *  文件的路径（设置path时，优先上传文件）
@@ -20,5 +20,5 @@
 @property(nonatomic,strong) NSString * path;
 
 
-- (instancetype)initWithMessage:(NRIMElem *)message;
+- (instancetype)initWithMessage:(NRMessage *)message;
 @end

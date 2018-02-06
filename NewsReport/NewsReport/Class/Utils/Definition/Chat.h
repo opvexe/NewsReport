@@ -9,6 +9,26 @@
 #ifndef Chat_h
 #define Chat_h
 
+/**
+ *  会话提示类型
+ */
+typedef NS_ENUM(NSInteger, ClueType) {
+    ClueTypeNone,
+    ClueTypePoint,
+    ClueTypePointWithNumber,
+};
+
+/**
+ *  会话类型(1开头为单聊，2开头为群聊)
+ */
+typedef NS_ENUM(NSUInteger, ConversationType)
+{
+    ConversationTypeSingle = 0, /**< 单人聊天,不显示nickname */
+    ConversationTypeGroup,      /**< 群组聊天,显示nickname */
+    ConversationTypePublic,       // 公众号
+    ConversationTypeServerGroup,  // 服务组（订阅号、企业号）
+};
+
 
 /**
  *  消息发送状态,自己发送的消息时有
@@ -39,14 +59,6 @@ typedef NS_ENUM(NSUInteger, MessageType)
 };
 
 
-/**
- *  消息聊天类型(1开头为单聊，2开头为群聊)
- */
-typedef NS_ENUM(NSUInteger, MessageChat)
-{
-    MessageChatSingle = 0, /**< 单人聊天,不显示nickname */
-    MessageChatGroup,      /**< 群组聊天,显示nickname */
-};
 
 /**
  *  消息读取状态,接收的消息时有

@@ -47,7 +47,7 @@
     _progressView.frame = self.videoImageView.bounds;
 }
 
-- (void)refreshData:(NRIMVideoElem *)messageModel{
+- (void)refreshData:(NRVideoMessage *)messageModel{
     [super refreshData:messageModel];
     UIImage *image = messageModel.isSender ? messageModel.image : messageModel.thumbnailImage;
     if (!image) {

@@ -6,9 +6,9 @@
 //  Copyright © 2018年 Facebook. All rights reserved.
 //
 
-#import "NRIMElem.h"
+#import "NRMessage.h"
 
-@interface NRIMVideoElem : NRIMElem
+@interface NRVideoMessage : NRMessage
 
 
 /**
@@ -16,6 +16,6 @@
  */
 @property (strong, nonatomic) NSString *fileURLPath;
 
-- (instancetype)initWithMessage:(NRIMElem *)message;
+- (instancetype)initWithMessage:(NRMessage *)message;
 
 @end

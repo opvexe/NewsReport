@@ -22,19 +22,19 @@
 /*!
  * 点击消息
  */
-- (void)clickCellMessageContentViewWithMessageModel:(NRIMElem *)messageModel;
+- (void)clickCellMessageContentViewWithMessageModel:(NRMessage *)messageModel;
 /*!
  * 点击头像
  */
-- (void)clickCellHeadImageWithMessageModel:(NRIMElem *)messageModel;
+- (void)clickCellHeadImageWithMessageModel:(NRMessage *)messageModel;
 /*!
  * 长按消息
  */
-- (void)longPressCellMessageContentViewWithMessageModel:(NRIMElem *)messageModel;
+- (void)longPressCellMessageContentViewWithMessageModel:(NRMessage *)messageModel;
 /*!
  * 撤回消息
  */
-- (void)reSendCellWithMessageModel:(NRIMElem *)messageModel;
+- (void)reSendCellWithMessageModel:(NRMessage *)messageModel;
 @end
 
 @interface NRChatMessageCell : UITableViewCell <NRChatMessageCellDelegate,NRChatMessageContentViewDelegate>
@@ -70,14 +70,14 @@
 /*!
  * 消息模型
  */
-@property(nonatomic,strong)NRIMElem *messageModel;
+@property(nonatomic,strong)NRMessage *messageModel;
 
 #pragma mark < 私有方法 >
-+ (CGFloat)cellHeightWithModel:(NRIMElem *)messageModel;
++ (CGFloat)cellHeightWithModel:(NRMessage *)messageModel;
 
-+ (NSString *)cellIdentifierWithModel:(NRIMElem *)messageModel;
++ (NSString *)cellIdentifierWithModel:(NRMessage *)messageModel;
 
-- (void)refreshData:(NRIMElem *)messageModel;
+- (void)refreshData:(NRMessage *)messageModel;
 
 +(id)CellWithChatTableView:(UITableView *)tableview;
 

@@ -11,7 +11,7 @@
 /**
  *  文本消息Elem
  */
-@interface NRIMTextElem : NRIMElem
+@interface NRTextMessage : NRMessage
 
 /**
  *  消息文本
@@ -23,6 +23,6 @@
  */
 @property(nonatomic,copy) NSString *exta;
 
-- (instancetype)initWithMessage:(NRIMElem *)message;
+- (instancetype)initWithMessage:(NRMessage *)message;
 
 @end

@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "NRIMElem.h"
+#import "NRMessage.h"
 
 typedef void (^CompletecBlock)(int code);
 
@@ -17,7 +17,7 @@ typedef void (^CompletecBlock)(int code);
 
  @param text 文本内容
  */
--(void)sendMessageWithText:(NRIMElem *)text CompletecBlock:(CompletecBlock)block;
+-(void)sendMessageWithText:(NRMessage *)text CompletecBlock:(CompletecBlock)block;
 
 
 
@@ -27,7 +27,7 @@ typedef void (^CompletecBlock)(int code);
  @param image 图片
  @param origal 缩略图
  */
--(void)sendMessageWithImage:(NRIMElem *)image isOrignal:(BOOL)origal CompletecBlock:(CompletecBlock)block;
+-(void)sendMessageWithImage:(NRMessage *)image isOrignal:(BOOL)origal CompletecBlock:(CompletecBlock)block;
 
 
 /*!

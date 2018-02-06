@@ -6,11 +6,11 @@
 //  Copyright © 2018年 Facebook. All rights reserved.
 //
 
-#import "NRIMTextElem.h"
+#import "NRTextMessage.h"
 
-@implementation NRIMTextElem
+@implementation NRTextMessage
 
-- (instancetype)initWithMessage:(NRIMTextElem *)message{
+- (instancetype)initWithMessage:(NRTextMessage *)message{
     self = [super init];
     if (self) {
    

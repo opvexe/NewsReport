@@ -43,7 +43,7 @@
     _titleLabel.frame = CGRectMake(5, _imageView.bounds.size.height - 45, _imageView.bounds.size.width - 10, 40);
 }
 
-- (void)refreshData:(NRIMLocationElem *)messageModel{
+- (void)refreshData:(NRLocationMessage *)messageModel{
     [super refreshData:messageModel];
     _titleLabel.text = messageModel.address;
 }

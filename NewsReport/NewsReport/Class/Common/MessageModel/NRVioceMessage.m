@@ -6,8 +6,8 @@
 //  Copyright © 2018年 Facebook. All rights reserved.
 //
 
-#import "NRIMSoundElem.h"
+#import "NRVioceMessage.h"
 
-@implementation NRIMSoundElem
+@implementation NRVioceMessage
 
 @end

@@ -6,9 +6,9 @@
 //  Copyright © 2018年 Facebook. All rights reserved.
 //
 
-#import "NRIMElem.h"
+#import "NRMessage.h"
 
-@interface NRIMLocationElem : NRIMElem
+@interface NRLocationMessage : NRMessage
 
 /**
  *  定位地址
@@ -16,5 +16,5 @@
 @property (nonatomic,copy) NSString *address;
 
 
-- (instancetype)initWithMessage:(NRIMElem *)message;
+- (instancetype)initWithMessage:(NRMessage *)message;
 @end

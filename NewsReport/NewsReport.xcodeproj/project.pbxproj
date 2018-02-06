@@ -13,7 +13,7 @@
 		D013607B2022EA6A003AFEEE /* NRImagePickModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D013607A2022EA6A003AFEEE /* NRImagePickModel.m */; };
 		D013607E2022FD9C003AFEEE /* NRFMDataManger.m in Sources */ = {isa = PBXBuildFile; fileRef = D013607D2022FD9C003AFEEE /* NRFMDataManger.m */; };
 		D01360812022FEB5003AFEEE /* NRNewsReportTools.m in Sources */ = {isa = PBXBuildFile; fileRef = D01360802022FEB5003AFEEE /* NRNewsReportTools.m */; };
-		D013608420230107003AFEEE /* NRUserInfoDB.m in Sources */ = {isa = PBXBuildFile; fileRef = D013608320230107003AFEEE /* NRUserInfoDB.m */; };
+		D013608420230107003AFEEE /* NRUserDB.m in Sources */ = {isa = PBXBuildFile; fileRef = D013608320230107003AFEEE /* NRUserDB.m */; };
 		D0136087202318B6003AFEEE /* AgoraSignalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0136086202318B6003AFEEE /* AgoraSignalKit.framework */; };
 		D01D0833201FF8AD00288240 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = D01D0832201FF8AD00288240 /* AppDelegate.mm */; };
 		D01D083B201FF8AE00288240 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D01D083A201FF8AE00288240 /* Assets.xcassets */; };
@@ -122,18 +122,18 @@
 		D024F4CD2028599F003708DE /* NRConversation.m in Sources */ = {isa = PBXBuildFile; fileRef = D024F4CC2028599F003708DE /* NRConversation.m */; };
 		D02964E520229E340060409F /* NSDate+NRCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = D02964E420229E340060409F /* NSDate+NRCategory.m */; };
 		D02964E820229E700060409F /* NSDateFormatter+NRCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = D02964E720229E700060409F /* NSDateFormatter+NRCategory.m */; };
-		D02964ED2022AD5E0060409F /* NRIMTextElem.m in Sources */ = {isa = PBXBuildFile; fileRef = D02964EC2022AD5E0060409F /* NRIMTextElem.m */; };
-		D02964F02022AD910060409F /* NRIMImageElem.m in Sources */ = {isa = PBXBuildFile; fileRef = D02964EF2022AD910060409F /* NRIMImageElem.m */; };
-		D02964F32022ADBC0060409F /* NRIMSoundElem.m in Sources */ = {isa = PBXBuildFile; fileRef = D02964F22022ADBC0060409F /* NRIMSoundElem.m */; };
-		D02964F62022ADC80060409F /* NRIMFileElem.m in Sources */ = {isa = PBXBuildFile; fileRef = D02964F52022ADC80060409F /* NRIMFileElem.m */; };
+		D02964ED2022AD5E0060409F /* NRTextMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = D02964EC2022AD5E0060409F /* NRTextMessage.m */; };
+		D02964F02022AD910060409F /* NRImageMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = D02964EF2022AD910060409F /* NRImageMessage.m */; };
+		D02964F32022ADBC0060409F /* NRVioceMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = D02964F22022ADBC0060409F /* NRVioceMessage.m */; };
+		D02964F62022ADC80060409F /* NRFileMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = D02964F52022ADC80060409F /* NRFileMessage.m */; };
 		D02964F92022B31C0060409F /* NRTextMessageContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = D02964F82022B31C0060409F /* NRTextMessageContentView.m */; };
 		D02964FC2022B3440060409F /* NRFileMessageContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = D02964FB2022B3440060409F /* NRFileMessageContentView.m */; };
 		D02964FF2022B3550060409F /* NRLocationMessageContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = D02964FE2022B3550060409F /* NRLocationMessageContentView.m */; };
 		D02965022022B3630060409F /* NRVideoMessageContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = D02965012022B3630060409F /* NRVideoMessageContentView.m */; };
 		D02965052022B3740060409F /* NRVoiceMessageContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = D02965042022B3740060409F /* NRVoiceMessageContentView.m */; };
 		D02965082022B3850060409F /* NRImageMessageContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = D02965072022B3850060409F /* NRImageMessageContentView.m */; };
-		D02965142022BC220060409F /* NRIMLocationElem.m in Sources */ = {isa = PBXBuildFile; fileRef = D02965132022BC220060409F /* NRIMLocationElem.m */; };
-		D02965172022BCBA0060409F /* NRIMVideoElem.m in Sources */ = {isa = PBXBuildFile; fileRef = D02965162022BCBA0060409F /* NRIMVideoElem.m */; };
+		D02965142022BC220060409F /* NRLocationMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = D02965132022BC220060409F /* NRLocationMessage.m */; };
+		D02965172022BCBA0060409F /* NRVideoMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = D02965162022BCBA0060409F /* NRVideoMessage.m */; };
 		D029651B2022BD820060409F /* NRProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = D029651A2022BD820060409F /* NRProgressView.m */; };
 		D02966392022CBAA0060409F /* WXAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D02966012022CBAA0060409F /* WXAudioPlayer.m */; };
 		D029663A2022CBAA0060409F /* WXAudioRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = D02966032022CBAA0060409F /* WXAudioRecorder.m */; };
@@ -172,7 +172,7 @@
 		D02DD99C202154B50035066D /* NRConversationListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D02DD99B202154B50035066D /* NRConversationListCell.m */; };
 		D02DD9A0202155F20035066D /* NRBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D02DD99F202155F20035066D /* NRBaseTableViewCell.m */; };
 		D02DD9A4202156350035066D /* NRBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D02DD9A3202156350035066D /* NRBaseModel.m */; };
-		D02DD9AB20218B120035066D /* NRIMElem.m in Sources */ = {isa = PBXBuildFile; fileRef = D02DD9AA20218B120035066D /* NRIMElem.m */; };
+		D02DD9AB20218B120035066D /* NRMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = D02DD9AA20218B120035066D /* NRMessage.m */; };
 		D02DD9AF2021AAE90035066D /* NRConversationListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D02DD9AE2021AAE90035066D /* NRConversationListModel.m */; };
 		D02DD9B52021B4FF0035066D /* NRChatMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D02DD9B42021B4FF0035066D /* NRChatMessageCell.m */; };
 		D02DD9B82021B6320035066D /* NRChatMessageContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = D02DD9B72021B6320035066D /* NRChatMessageContentView.m */; };
@@ -208,8 +208,8 @@
 		D013607D2022FD9C003AFEEE /* NRFMDataManger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRFMDataManger.m; sourceTree = "<group>"; };
 		D013607F2022FEB5003AFEEE /* NRNewsReportTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRNewsReportTools.h; sourceTree = "<group>"; };
 		D01360802022FEB5003AFEEE /* NRNewsReportTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRNewsReportTools.m; sourceTree = "<group>"; };
-		D013608220230107003AFEEE /* NRUserInfoDB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRUserInfoDB.h; sourceTree = "<group>"; };
-		D013608320230107003AFEEE /* NRUserInfoDB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRUserInfoDB.m; sourceTree = "<group>"; };
+		D013608220230107003AFEEE /* NRUserDB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRUserDB.h; sourceTree = "<group>"; };
+		D013608320230107003AFEEE /* NRUserDB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRUserDB.m; sourceTree = "<group>"; };
 		D0136086202318B6003AFEEE /* AgoraSignalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AgoraSignalKit.framework; sourceTree = "<group>"; };
 		D01D082E201FF8AD00288240 /* NewsReport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsReport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D01D0831201FF8AD00288240 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -417,14 +417,14 @@
 		D02964E420229E340060409F /* NSDate+NRCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+NRCategory.m"; sourceTree = "<group>"; };
 		D02964E620229E700060409F /* NSDateFormatter+NRCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+NRCategory.h"; sourceTree = "<group>"; };
 		D02964E720229E700060409F /* NSDateFormatter+NRCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+NRCategory.m"; sourceTree = "<group>"; };
-		D02964EB2022AD5E0060409F /* NRIMTextElem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRIMTextElem.h; sourceTree = "<group>"; };
-		D02964EC2022AD5E0060409F /* NRIMTextElem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRIMTextElem.m; sourceTree = "<group>"; };
-		D02964EE2022AD910060409F /* NRIMImageElem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRIMImageElem.h; sourceTree = "<group>"; };
-		D02964EF2022AD910060409F /* NRIMImageElem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRIMImageElem.m; sourceTree = "<group>"; };
-		D02964F12022ADBC0060409F /* NRIMSoundElem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRIMSoundElem.h; sourceTree = "<group>"; };
-		D02964F22022ADBC0060409F /* NRIMSoundElem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRIMSoundElem.m; sourceTree = "<group>"; };
-		D02964F42022ADC80060409F /* NRIMFileElem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRIMFileElem.h; sourceTree = "<group>"; };
-		D02964F52022ADC80060409F /* NRIMFileElem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRIMFileElem.m; sourceTree = "<group>"; };
+		D02964EB2022AD5E0060409F /* NRTextMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRTextMessage.h; sourceTree = "<group>"; };
+		D02964EC2022AD5E0060409F /* NRTextMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRTextMessage.m; sourceTree = "<group>"; };
+		D02964EE2022AD910060409F /* NRImageMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRImageMessage.h; sourceTree = "<group>"; };
+		D02964EF2022AD910060409F /* NRImageMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRImageMessage.m; sourceTree = "<group>"; };
+		D02964F12022ADBC0060409F /* NRVioceMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRVioceMessage.h; sourceTree = "<group>"; };
+		D02964F22022ADBC0060409F /* NRVioceMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRVioceMessage.m; sourceTree = "<group>"; };
+		D02964F42022ADC80060409F /* NRFileMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRFileMessage.h; sourceTree = "<group>"; };
+		D02964F52022ADC80060409F /* NRFileMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRFileMessage.m; sourceTree = "<group>"; };
 		D02964F72022B31C0060409F /* NRTextMessageContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRTextMessageContentView.h; sourceTree = "<group>"; };
 		D02964F82022B31C0060409F /* NRTextMessageContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRTextMessageContentView.m; sourceTree = "<group>"; };
 		D02964FA2022B3440060409F /* NRFileMessageContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRFileMessageContentView.h; sourceTree = "<group>"; };
@@ -437,10 +437,10 @@
 		D02965042022B3740060409F /* NRVoiceMessageContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRVoiceMessageContentView.m; sourceTree = "<group>"; };
 		D02965062022B3850060409F /* NRImageMessageContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRImageMessageContentView.h; sourceTree = "<group>"; };
 		D02965072022B3850060409F /* NRImageMessageContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRImageMessageContentView.m; sourceTree = "<group>"; };
-		D02965122022BC220060409F /* NRIMLocationElem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRIMLocationElem.h; sourceTree = "<group>"; };
-		D02965132022BC220060409F /* NRIMLocationElem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRIMLocationElem.m; sourceTree = "<group>"; };
-		D02965152022BCBA0060409F /* NRIMVideoElem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRIMVideoElem.h; sourceTree = "<group>"; };
-		D02965162022BCBA0060409F /* NRIMVideoElem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRIMVideoElem.m; sourceTree = "<group>"; };
+		D02965122022BC220060409F /* NRLocationMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRLocationMessage.h; sourceTree = "<group>"; };
+		D02965132022BC220060409F /* NRLocationMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRLocationMessage.m; sourceTree = "<group>"; };
+		D02965152022BCBA0060409F /* NRVideoMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRVideoMessage.h; sourceTree = "<group>"; };
+		D02965162022BCBA0060409F /* NRVideoMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRVideoMessage.m; sourceTree = "<group>"; };
 		D02965192022BD820060409F /* NRProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRProgressView.h; sourceTree = "<group>"; };
 		D029651A2022BD820060409F /* NRProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRProgressView.m; sourceTree = "<group>"; };
 		D02966002022CBAA0060409F /* WXAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXAudioPlayer.h; sourceTree = "<group>"; };
@@ -501,8 +501,8 @@
 		D02DD9A2202156350035066D /* NRBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRBaseModel.h; sourceTree = "<group>"; };
 		D02DD9A3202156350035066D /* NRBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRBaseModel.m; sourceTree = "<group>"; };
 		D02DD9A820216C7A0035066D /* Chat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Chat.h; sourceTree = "<group>"; };
-		D02DD9A920218B120035066D /* NRIMElem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRIMElem.h; sourceTree = "<group>"; };
-		D02DD9AA20218B120035066D /* NRIMElem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRIMElem.m; sourceTree = "<group>"; };
+		D02DD9A920218B120035066D /* NRMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRMessage.h; sourceTree = "<group>"; };
+		D02DD9AA20218B120035066D /* NRMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRMessage.m; sourceTree = "<group>"; };
 		D02DD9AD2021AAE90035066D /* NRConversationListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRConversationListModel.h; sourceTree = "<group>"; };
 		D02DD9AE2021AAE90035066D /* NRConversationListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRConversationListModel.m; sourceTree = "<group>"; };
 		D02DD9B32021B4FF0035066D /* NRChatMessageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRChatMessageCell.h; sourceTree = "<group>"; };
@@ -1089,31 +1089,59 @@
 			children = (
 				D013607C2022FD9C003AFEEE /* NRFMDataManger.h */,
 				D013607D2022FD9C003AFEEE /* NRFMDataManger.m */,
-				D013608220230107003AFEEE /* NRUserInfoDB.h */,
-				D013608320230107003AFEEE /* NRUserInfoDB.m */,
+				D013608220230107003AFEEE /* NRUserDB.h */,
+				D013608320230107003AFEEE /* NRUserDB.m */,
 				D01D08D12020226D00288240 /* NRUser.h */,
 				D01D08D22020226D00288240 /* NRUser.m */,
 			);
 			path = User;
 			sourceTree = "<group>";
 		};
+		D024F4CE20285D65003708DE /* Converstaion */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Converstaion;
+			sourceTree = "<group>";
+		};
+		D024F4CF20285D76003708DE /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Friends;
+			sourceTree = "<group>";
+		};
+		D024F4D020285D86003708DE /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		D024F4D120285DA0003708DE /* Expression */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Expression;
+			sourceTree = "<group>";
+		};
 		D02964EA2022AD380060409F /* MessageModel */ = {
 			isa = PBXGroup;
 			children = (
-				D02DD9A920218B120035066D /* NRIMElem.h */,
-				D02DD9AA20218B120035066D /* NRIMElem.m */,
-				D02964EB2022AD5E0060409F /* NRIMTextElem.h */,
-				D02964EC2022AD5E0060409F /* NRIMTextElem.m */,
-				D02964EE2022AD910060409F /* NRIMImageElem.h */,
-				D02964EF2022AD910060409F /* NRIMImageElem.m */,
-				D02964F12022ADBC0060409F /* NRIMSoundElem.h */,
-				D02964F22022ADBC0060409F /* NRIMSoundElem.m */,
-				D02964F42022ADC80060409F /* NRIMFileElem.h */,
-				D02964F52022ADC80060409F /* NRIMFileElem.m */,
-				D02965152022BCBA0060409F /* NRIMVideoElem.h */,
-				D02965162022BCBA0060409F /* NRIMVideoElem.m */,
-				D02965122022BC220060409F /* NRIMLocationElem.h */,
-				D02965132022BC220060409F /* NRIMLocationElem.m */,
+				D02DD9A920218B120035066D /* NRMessage.h */,
+				D02DD9AA20218B120035066D /* NRMessage.m */,
+				D02964EB2022AD5E0060409F /* NRTextMessage.h */,
+				D02964EC2022AD5E0060409F /* NRTextMessage.m */,
+				D02964EE2022AD910060409F /* NRImageMessage.h */,
+				D02964EF2022AD910060409F /* NRImageMessage.m */,
+				D02964F12022ADBC0060409F /* NRVioceMessage.h */,
+				D02964F22022ADBC0060409F /* NRVioceMessage.m */,
+				D02964F42022ADC80060409F /* NRFileMessage.h */,
+				D02964F52022ADC80060409F /* NRFileMessage.m */,
+				D02965152022BCBA0060409F /* NRVideoMessage.h */,
+				D02965162022BCBA0060409F /* NRVideoMessage.m */,
+				D02965122022BC220060409F /* NRLocationMessage.h */,
+				D02965132022BC220060409F /* NRLocationMessage.m */,
 			);
 			path = MessageModel;
 			sourceTree = "<group>";
@@ -1342,6 +1370,10 @@
 		D02DD9B02021B20E0035066D /* Cache */ = {
 			isa = PBXGroup;
 			children = (
+				D024F4D120285DA0003708DE /* Expression */,
+				D024F4D020285D86003708DE /* Chat */,
+				D024F4CF20285D76003708DE /* Friends */,
+				D024F4CE20285D65003708DE /* Converstaion */,
 				D024F4CA202858C0003708DE /* User */,
 			);
 			path = Cache;
@@ -1736,7 +1768,7 @@
 				D01D08F520204B7B00288240 /* UIView+Toast.m in Sources */,
 				D029651B2022BD820060409F /* NRProgressView.m in Sources */,
 				D01D0841201FF8AE00288240 /* main.m in Sources */,
-				D02965142022BC220060409F /* NRIMLocationElem.m in Sources */,
+				D02965142022BC220060409F /* NRLocationMessage.m in Sources */,
 				D01D08E7202043BA00288240 /* NRFriendViewController.m in Sources */,
 				D02964E520229E340060409F /* NSDate+NRCategory.m in Sources */,
 				D02DD9A0202155F20035066D /* NRBaseTableViewCell.m in Sources */,
@@ -1751,7 +1783,7 @@
 				D0223E962024370C00EA9998 /* NRAlertView.m in Sources */,
 				D01D08A72020087800288240 /* NRMessageQoSEventImpl.m in Sources */,
 				D0223E7C20242EC700EA9998 /* ChatKeyBoard.m in Sources */,
-				D013608420230107003AFEEE /* NRUserInfoDB.m in Sources */,
+				D013608420230107003AFEEE /* NRUserDB.m in Sources */,
 				D024F4BC20283E9E003708DE /* NRFriendViewController+Delegate.m in Sources */,
 				D02DD997202148210035066D /* NRConversationListViewController.m in Sources */,
 				D0223E8720242EC700EA9998 /* PanelBottomView.m in Sources */,
@@ -1759,7 +1791,7 @@
 				D01D08E4202043AB00288240 /* NRChatViewController.m in Sources */,
 				D0223E8820242EC700EA9998 /* MorePanel.m in Sources */,
 				D01D08F220204A7600288240 /* NRBarButtonItem.m in Sources */,
-				D02964F62022ADC80060409F /* NRIMFileElem.m in Sources */,
+				D02964F62022ADC80060409F /* NRFileMessage.m in Sources */,
 				D01D08DB2020427800288240 /* NRRootViewController.m in Sources */,
 				D0223E922024339000EA9998 /* NRPhotoLibraryManager.m in Sources */,
 				D01D086C201FFA5500288240 /* AppDelegate+NRExtension.m in Sources */,
@@ -1776,7 +1808,7 @@
 				D024F4CD2028599F003708DE /* NRConversation.m in Sources */,
 				D0223E9A202460FA00EA9998 /* NRCallBaseViewController.m in Sources */,
 				D02966402022CBAA0060409F /* WXRecordView.m in Sources */,
-				D02DD9AB20218B120035066D /* NRIMElem.m in Sources */,
+				D02DD9AB20218B120035066D /* NRMessage.m in Sources */,
 				D01D08C620201BB000288240 /* NRNetworkHelper.m in Sources */,
 				D013607B2022EA6A003AFEEE /* NRImagePickModel.m in Sources */,
 				D029663F2022CBAA0060409F /* WXDeviceManager.m in Sources */,
@@ -1784,7 +1816,7 @@
 				D01D08ED2020451200288240 /* NRBaseNavigationViewController.m in Sources */,
 				D01D08CE20201CC500288240 /* NRBusinessNetworkTool.m in Sources */,
 				D02DD9A4202156350035066D /* NRBaseModel.m in Sources */,
-				D02964F32022ADBC0060409F /* NRIMSoundElem.m in Sources */,
+				D02964F32022ADBC0060409F /* NRVioceMessage.m in Sources */,
 				D024F4C920284B6E003708DE /* NRFriendDetailViewController.m in Sources */,
 				D01D08BE2020178000288240 /* NSString+LSWMEXtension.m in Sources */,
 				D02DD9B52021B4FF0035066D /* NRChatMessageCell.m in Sources */,
@@ -1796,7 +1828,7 @@
 				D01D08A42020067C00288240 /* NRChatBaseEventImpl.m in Sources */,
 				D01D08D32020226D00288240 /* NRUser.m in Sources */,
 				D0223E8B20242EC700EA9998 /* RFRecordButton.m in Sources */,
-				D02965172022BCBA0060409F /* NRIMVideoElem.m in Sources */,
+				D02965172022BCBA0060409F /* NRVideoMessage.m in Sources */,
 				D024F4722027E790003708DE /* amrFileCodec.mm in Sources */,
 				D0223E8320242EC700EA9998 /* FaceButton.m in Sources */,
 				D01D08A12020050600288240 /* NRChatTransDataEventImpl.m in Sources */,
@@ -1806,7 +1838,7 @@
 				D01D08AE202013C200288240 /* NRLoginViewController.m in Sources */,
 				D024F4B820280072003708DE /* NRSearchBar.m in Sources */,
 				D02965082022B3850060409F /* NRImageMessageContentView.m in Sources */,
-				D02964ED2022AD5E0060409F /* NRIMTextElem.m in Sources */,
+				D02964ED2022AD5E0060409F /* NRTextMessage.m in Sources */,
 				D01D0833201FF8AD00288240 /* AppDelegate.mm in Sources */,
 				D024F4752027E7AD003708DE /* AudioConverter.mm in Sources */,
 				D029663C2022CBAA0060409F /* WXDeviceManager+Microphone.m in Sources */,
@@ -1819,7 +1851,7 @@
 				D02967622022D1C30060409F /* NRUserTools.m in Sources */,
 				D0223E7E20242EC700EA9998 /* FaceThemeModel.m in Sources */,
 				D02965052022B3740060409F /* NRVoiceMessageContentView.m in Sources */,
-				D02964F02022AD910060409F /* NRIMImageElem.m in Sources */,
+				D02964F02022AD910060409F /* NRImageMessage.m in Sources */,
 				D0223E8620242EC700EA9998 /* FaceThemeView.m in Sources */,
 				D02964F92022B31C0060409F /* NRTextMessageContentView.m in Sources */,
 				D029663A2022CBAA0060409F /* WXAudioRecorder.m in Sources */,

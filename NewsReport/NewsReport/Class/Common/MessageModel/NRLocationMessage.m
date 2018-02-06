@@ -1,13 +1,13 @@
 //
-//  NRIMImageElem.m
+//  NRIMLocationElem.m
 //  NewsReport
 //
 //  Created by Facebook on 2018/2/1.
 //  Copyright © 2018年 Facebook. All rights reserved.
 //
 
-#import "NRIMImageElem.h"
+#import "NRLocationMessage.h"
 
-@implementation NRIMImageElem
+@implementation NRLocationMessage
 
 @end

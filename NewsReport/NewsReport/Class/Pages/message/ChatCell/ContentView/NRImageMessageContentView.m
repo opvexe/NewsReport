@@ -43,7 +43,7 @@
     _progressView.frame = _imageView.bounds;
 }
 
-- (void)refreshData:(NRIMImageElem *)messageModel{
+- (void)refreshData:(NRImageMessage *)messageModel{
     [super refreshData:messageModel];
     
     self.bgImgView.hidden = YES;

@@ -10,7 +10,7 @@
 
 @class NRUser;
 
-@interface NRUserInfoDB : NSObject
+@interface NRUserDB : NSObject
 
 /*!
  *  初始化单利

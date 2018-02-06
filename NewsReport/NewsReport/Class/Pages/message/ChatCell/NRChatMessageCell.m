@@ -81,7 +81,7 @@
         //正在发送
         self.activity.frame = CGRectMake(_bubbleView.frame.origin.x - 20, (_bubbleView.bounds.size.height - 20)/2, 20, 20);
         
-        if (self.messageModel.messageChatType != MessageChatSingle) {
+        if (self.messageModel.messageChatType != ConversationTypeSingle) {
             self.hasReadLabel.hidden = YES;
         }
     } else {//是好友，在左边
@@ -91,7 +91,7 @@
         self.reSendBtn.hidden = YES;
         self.activity.hidden = YES;
         
-        if (self.messageModel.messageChatType == MessageChatSingle) {
+        if (self.messageModel.messageChatType == ConversationTypeSingle) {
             self.nameLabel.hidden = YES;
             _bubbleView.frame = CGRectMake(10 + HeadImageWidth + 5, 5, self.messageModel.contentWidth, self.messageModel.contentHeight);
         } else {
@@ -104,7 +104,7 @@
     }
 }
 
-- (void)refreshData:(NRIMElem *)messageModel{
+- (void)refreshData:(NRMessage *)messageModel{
     _messageModel = messageModel;
     if (_bubbleView == nil) {
         if (messageModel.messageType == MessageTypeText) {
@@ -188,20 +188,20 @@
 
 #pragma mark  < MessageContentViewDelegate >
 
-- (void)clickMessageContentViewWithMessageModel:(NRIMElem *)messageModel{
+- (void)clickMessageContentViewWithMessageModel:(NRMessage *)messageModel{
     if (self.delegate && [self.delegate respondsToSelector:@selector(clickCellMessageContentViewWithMessageModel:)]) {
         [self.delegate clickCellMessageContentViewWithMessageModel:messageModel];
     }
 }
 
-- (void)longPressMessageContentViewWithMessageModel:(NRIMElem *)messageModel{
+- (void)longPressMessageContentViewWithMessageModel:(NRMessage *)messageModel{
     if (self.delegate && [self.delegate respondsToSelector:@selector(longPressCellMessageContentViewWithMessageModel:)]) {
         [self.delegate longPressCellMessageContentViewWithMessageModel:self.messageModel];
     }
 }
 
 
-+ (CGFloat)cellHeightWithModel:(NRIMElem *)messageModel{
++ (CGFloat)cellHeightWithModel:(NRMessage *)messageModel{
     if (messageModel.cellHeight > 0) {
         return messageModel.cellHeight;
     }
@@ -212,7 +212,7 @@
     switch (messageModel.messageType) {
         case MessageTypeText:
         {
-            NRIMTextElem *message = (NRIMTextElem *)messageModel;
+            NRTextMessage *message = (NRTextMessage *)messageModel;
             CGSize textSize = [message.text boundingRectWithSize:CGSizeMake(TextContentViewMaxWidth, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15]} context:nil].size;
             contentWidth += 20 + textSize.width + 15;
             contentHeight += 10 + textSize.height + 20;
@@ -220,7 +220,7 @@
             break;
         case MessageTypeImage:
         {
-             NRIMImageElem *message = (NRIMImageElem *)messageModel;
+             NRImageMessage *message = (NRImageMessage *)messageModel;
             if (message.thumbnailImageSize.width == 0) {
                 contentWidth += ImageContentViewFailWidth;
                 contentHeight += ImageContentViewFailHeight;
@@ -280,7 +280,7 @@
         contentWidth = 60;
     }
     
-    if (messageModel.messageChatType != MessageChatSingle) {
+    if (messageModel.messageChatType != ConversationTypeSingle) {
         if (!messageModel.isSender) {
             height += (NameLabelHeight + 5);
         }
@@ -293,7 +293,7 @@
     return height;
 }
 
-+ (NSString *)cellIdentifierWithModel:(NRIMElem *)messageModel{
++ (NSString *)cellIdentifierWithModel:(NRMessage *)messageModel{
     NSString *cellIdentifier = nil;
     if (messageModel.isSender) {//发送者
         switch (messageModel.messageType) {

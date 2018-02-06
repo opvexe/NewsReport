@@ -41,7 +41,7 @@
 #import "NRBusinessNetworkTool.h"
 #import "NRBarButtonItem.h"
 #import "NRNewsReportTools.h"
-#import "NRUserInfoDB.h"
+#import "NRUserDB.h"
 #import "UIView+Toast.h"
 #import "NRUserTools.h"
 #import "NRAlertView.h"
@@ -89,12 +89,12 @@
 /*!
  消息数据基类
  */
-#import "NRIMElem.h"
-#import "NRIMTextElem.h"
-#import "NRIMImageElem.h"
-#import "NRIMSoundElem.h"
-#import "NRIMFileElem.h"
-#import "NRIMVideoElem.h"
-#import "NRIMLocationElem.h"
+#import "NRMessage.h"
+#import "NRTextMessage.h"
+#import "NRImageMessage.h"
+#import "NRVioceMessage.h"
+#import "NRFileMessage.h"
+#import "NRVideoMessage.h"
+#import "NRLocationMessage.h"
 
 #endif /* NRFilesManager_h */

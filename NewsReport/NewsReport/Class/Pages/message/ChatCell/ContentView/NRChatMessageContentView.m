@@ -26,7 +26,7 @@
     return self;
 }
 
-- (void)refreshData:(NRIMElem *)messageModel{
+- (void)refreshData:(NRMessage *)messageModel{
     _messageModel = messageModel;
     
     if (_messageModel.isSender) {

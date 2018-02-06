@@ -11,12 +11,12 @@
 /**
  *  语音消息Elem
  */
-@interface NRIMSoundElem : NRIMElem
+@interface NRVioceMessage : NRMessage
 
 /**
  *  语音文件的路径，接收时使用getSound获得数据
  */
 @property(nonatomic,strong) NSString * path;
 
-- (instancetype)initWithMessage:(NRIMElem *)message;
+- (instancetype)initWithMessage:(NRMessage *)message;
 @end

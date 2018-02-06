@@ -61,7 +61,7 @@
     }
 }
 
-- (void)refreshData:(NRIMSoundElem *)messageModel{
+- (void)refreshData:(NRVioceMessage *)messageModel{
     [super refreshData:messageModel];
     _durationLabel.text = [NSString stringWithFormat:@"%d''",(int)messageModel.second];
     if (messageModel.isMediaPlaying) {

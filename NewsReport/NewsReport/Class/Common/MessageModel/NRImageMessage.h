@@ -11,12 +11,12 @@
 /**
  *  图片消息Elem
  */
-@interface NRIMImageElem : NRIMElem
+@interface NRImageMessage : NRMessage
 
 /**
  *  接收图片地址
  */
 @property (nonatomic,copy) NSString *imageUrl;
 
-- (instancetype)initWithMessage:(NRIMElem *)message;
+- (instancetype)initWithMessage:(NRMessage *)message;
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "NRChatTransDataEventImpl.h"
-#import "NRIMElem.h"
+#import "NRMessage.h"
 #import "ErrorCode.h"
 
 @implementation NRChatTransDataEventImpl
@@ -17,7 +17,7 @@
  */
 - (void) onTransBuffer:(NSString *)fingerPrintOfProtocal withUserId:(NSString *)dwUserid andContent:(NSString *)dataContent andTypeu:(int)typeu{
     NSLog(@"消息类型:[%d]|发送方:%@||消息体:%@||uid+时间戳:%@", typeu, dwUserid, dataContent,fingerPrintOfProtocal);
-    NRIMElem *message = [self NRIMMessageBobyType:typeu messageContent:dataContent messageSender:dwUserid messageTime:fingerPrintOfProtocal];
+    NRMessage *message = [self NRIMMessageBobyType:typeu messageContent:dataContent messageSender:dwUserid messageTime:fingerPrintOfProtocal];
     [NRNotificationCenter postNotificationName:NRIMMessageReceiveConfigurationNotificationCenterKey object:message userInfo:nil];
 }
 
@@ -40,17 +40,17 @@
  * 包装消息体
  */
 
--(NRIMElem *)NRIMMessageBobyType:(int)elem messageContent:(NSString *)content messageSender:(NSString *)sender messageTime:(NSString *)fingerPrintOfProtocal{
+-(NRMessage *)NRIMMessageBobyType:(int)elem messageContent:(NSString *)content messageSender:(NSString *)sender messageTime:(NSString *)fingerPrintOfProtocal{
     
     NSString *type    = convertToString([NSString stringWithFormat:@"%d",elem]);
-    NRIMElem *message ;
+    NRMessage *message ;
     
     if ([type hasPrefix:@"1"]) {    ///单聊
-        message.messageChatType = MessageChatSingle;
+        message.messageChatType = ConversationTypeSingle;
         switch (elem) {
             case 11:
             {
-                NRIMTextElem *textElem = [[NRIMTextElem alloc]init];
+                NRTextMessage *textElem = [[NRTextMessage alloc]init];
                 textElem.messageType  = MessageTypeText;
                 textElem.text = convertToString(content);
                 message = textElem;
@@ -79,11 +79,11 @@
                 break;
         }
     }else if ([type hasPrefix:@"2"]){           ///群聊
-        message.messageChatType = MessageChatGroup;
+        message.messageChatType = ConversationTypeGroup;
         switch (elem) {
             case 11:
             {
-                NRIMTextElem *textElem = [[NRIMTextElem alloc]init];
+                NRTextMessage *textElem = [[NRTextMessage alloc]init];
                 textElem.messageType  = MessageTypeText;
                 textElem.text = convertToString(content);
                 message = textElem;

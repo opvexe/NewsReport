@@ -36,7 +36,7 @@
     }
 }
 
-- (void)refreshData:(NRIMTextElem *)messageModel{
+- (void)refreshData:(NRTextMessage *)messageModel{
     [super refreshData:messageModel];
     _textLabel.text = messageModel.text;
 }
