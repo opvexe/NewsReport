@@ -91,7 +91,6 @@ typedef NS_ENUM(NSUInteger, MessageReadState)
 @property (nonatomic,assign) CGFloat contentHeight;
 @property (nonatomic,assign) CGFloat contentWidth;
 
-
 @end
 
 

@@ -116,14 +116,15 @@
         NSLog(@"未知消息");
     }
     
-//    message.from    = convertToString(sender);
-//    message.messageId = convertToString(fingerPrintOfProtocal);             ///uid + 时间戳 （消息标识）
-//    message.timestamp = [convertToString(fingerPrintOfProtocal) componentsSeparatedByString:@"+"].lastObject;
-//    if ([message.from isEqualToString:[[NRUserHelper defaultCenter]getUserID]]) {
-//        message.direction = MessageOwnerSelf;
-//    }else{
-//        message.direction = MessageOwnerOther;
-//    }
+    message.userID    = convertToString(sender);
+    message.friendID  = convertToString([[NRUserHelper defaultCenter]getUserID]);
+    message.messageID = convertToString(fingerPrintOfProtocal);             ///uid + 时间戳 （消息标识）
+    message.date = [NSDate getNowTimestamp:[convertToString(fingerPrintOfProtocal) componentsSeparatedByString:@"+"].lastObject];
+    if ([message.userID isEqualToString:[[NRUserHelper defaultCenter]getUserID]]) {
+        message.ownerTyper = MessageOwnerSelf;
+    }else{
+        message.ownerTyper = MessageOwnerOther;
+    }
     
     return message;
 }

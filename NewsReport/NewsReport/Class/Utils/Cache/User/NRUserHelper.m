@@ -46,8 +46,6 @@ static NRUserHelper *defaultUserCenter = nil;
 
 
 
-
-
 - (NSString *)getUserName{
     return [NRUserDefaults valueForKey:NR_UserName];
 }
@@ -59,6 +57,8 @@ static NRUserHelper *defaultUserCenter = nil;
 - (NSString *)getUserID{
     return [NRUserDefaults valueForKey:NR_UserID];
 }
+
+
 
 @end
 

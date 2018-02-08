@@ -49,4 +49,7 @@
  * 获取用户登录密码
  */
 - (NSString *)getUserPassword;
+
+
+
 @end

@@ -7,14 +7,18 @@
 //
 
 #import "NRConversationListCell.h"
-#import "NRConversationListModel.h"
+
+#define     REDPOINT_WIDTH          10.0f
 
 @interface NRConversationListCell ()
+
 @property(nonatomic,strong)FLAnimatedImageView *headPortraitImageView;
 @property(nonatomic,strong)UILabel *portraitLabel;
 @property(nonatomic,strong)UILabel *timestampLabel;
 @property(nonatomic,strong)TTTAttributedLabel *messageLabel;
 @property(nonatomic,strong)UILabel *messageCountLabel;
+@property(nonatomic,strong)UIView *redPointView;
+
 @end
 
 @implementation NRConversationListCell
@@ -56,6 +60,13 @@
         self.messageCountLabel.textColor = UIColorFromRGB(0x323232);
         [self.contentView addSubview:self.messageCountLabel];
         
+        self.redPointView =  [[UIView alloc] init];
+        [self.redPointView setBackgroundColor:[UIColor redColor]];
+        [self.redPointView.layer setMasksToBounds:YES];
+        [self.redPointView.layer setCornerRadius:REDPOINT_WIDTH / 2.0];
+        [self.redPointView setHidden:YES];
+        [self.contentView addSubview:self.redPointView];
+        
         [self updateConstraintsView];
     }
     return self;
@@ -84,15 +95,78 @@
         make.top.mas_equalTo(self.portraitLabel.mas_top);
         make.right.mas_equalTo(self.contentView).offset(-Number(10.0));
     }];
+    
+    [self.redPointView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.mas_equalTo(self.headPortraitImageView.mas_right).mas_offset(-2);
+        make.centerY.mas_equalTo(self.headPortraitImageView.mas_top).mas_offset(2);
+        make.width.and.height.mas_equalTo(REDPOINT_WIDTH);
+    }];
 }
 
--(void)InitDataWithModel:(NRConversationListModel *)model{
-    [self.headPortraitImageView sd_setImageWithURL:[NSURL URLWithString:model.portraitUrl] placeholderImage:NRImageNamed(DEFAULT_AVATAR_PATH)];
-    self.portraitLabel.text = model.name;
-    self.messageLabel.text  = model.signature;
-    self.timestampLabel.text= [[NSDate getNowTimestamp:model.time] formattedDateDescription];
+-(void)InitDataWithModel:(NRConversation *)model{
+    _conversation = model;
+
+    if (model.avatarPath.length > 0) {
+        NSString *path = [NSFileManager pathUserAvatar:model.avatarPath];
+        [self.headPortraitImageView setImage:[UIImage imageNamed:path]];
+    }
+    else if (model.avatarURL.length > 0){
+        [self.headPortraitImageView sd_setImageWithURL:URLFromString(model.avatarURL) placeholderImage:[UIImage imageNamed:DEFAULT_AVATAR_PATH]];
+    }
+    else {
+        [self.headPortraitImageView setImage:nil];
+    }
+    [self.portraitLabel setText:model.partnerName];
+    [self.messageLabel setText:model.content];
+    [self.timestampLabel setText:model.date.formattedDateDescription];
+    
+    self.conversation.isRead ? [self markAsRead] : [self markAsUnread];
 }
 
+
+/**
+ *  标记为未读
+ */
+- (void) markAsUnread
+{
+    if (_conversation) {
+        switch (_conversation.clueType) {
+            case ClueTypePointWithNumber:
+                
+                break;
+            case ClueTypePoint:
+                [self.redPointView setHidden:NO];
+                break;
+            case ClueTypeNone:
+                
+                break;
+            default:
+                break;
+        }
+    }
+}
+
+/**
+ *  标记为已读
+ */
+- (void) markAsRead
+{
+    if (_conversation) {
+        switch (_conversation.clueType) {
+            case ClueTypePointWithNumber:
+                
+                break;
+            case ClueTypePoint:
+                [self.redPointView setHidden:YES];
+                break;
+            case ClueTypeNone:
+                
+                break;
+            default:
+                break;
+        }
+    }
+}
 
 @end
 

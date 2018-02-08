@@ -11,7 +11,7 @@
  *  消息会话类
  */
 
-@interface NRConversation : NSObject
+@interface NRConversation : NRBaseModel
 
 /**
  *  会话类型（个人，讨论组，企业号）

@@ -25,9 +25,9 @@ typedef NS_ENUM(NSInteger, EmojiType) {
  *  会话提示类型
  */
 typedef NS_ENUM(NSInteger, ClueType) {
-    ClueTypeNone,
-    ClueTypePoint,
-    ClueTypePointWithNumber,
+    ClueTypeNone,               // 无
+    ClueTypePoint,              // 小圆点
+    ClueTypePointWithNumber,    // 数字圆点
 };
 
 /**
