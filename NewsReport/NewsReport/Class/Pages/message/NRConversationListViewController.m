@@ -77,8 +77,8 @@
     
     NRConversationListModel *model = [[NRConversationListModel alloc]init];
     model.signature = convertToString(signature);
-    model.time = message.timestamp;
-    model.name = message.from;
+//    model.time = message.timestamp;
+//    model.name = message.from;
     [self.messageDataSocure addObject:model];
     [self.messageTableView reloadData];
     

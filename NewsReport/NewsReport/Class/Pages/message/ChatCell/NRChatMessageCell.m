@@ -25,7 +25,7 @@
  
         //头像
         self.headImageView = [[UIImageView alloc] init];
-        self.headImageView.image = NRImageNamed(@"icon_avatar");
+        self.headImageView.image = NRImageNamed(DEFAULT_AVATAR_PATH);
         self.headImageView.layer.masksToBounds = YES;
         self.headImageView.layer.cornerRadius = 5;
         self.headImageView.userInteractionEnabled = YES;
@@ -67,7 +67,7 @@
 
 - (void)layoutSubviews{
     [super layoutSubviews];
-    if (self.messageModel.isSender) {//是主人，在右边
+    if (self.messageModel.ownerTyper == MessageOwnerSelf) {//是主人，在右边
         //头像
         self.headImageView.frame = CGRectMake(SCREEN_WIDTH - 10 - HeadImageWidth, 5, HeadImageWidth, HeadImageHeight);
         //昵称
@@ -81,7 +81,7 @@
         //正在发送
         self.activity.frame = CGRectMake(_bubbleView.frame.origin.x - 20, (_bubbleView.bounds.size.height - 20)/2, 20, 20);
         
-        if (self.messageModel.messageChatType != ConversationTypeSingle) {
+        if (self.messageModel.partnerType != PartnerTypeUser) {
             self.hasReadLabel.hidden = YES;
         }
     } else {//是好友，在左边
@@ -91,7 +91,7 @@
         self.reSendBtn.hidden = YES;
         self.activity.hidden = YES;
         
-        if (self.messageModel.messageChatType == ConversationTypeSingle) {
+        if (self.messageModel.partnerType == PartnerTypeUser) {
             self.nameLabel.hidden = YES;
             _bubbleView.frame = CGRectMake(10 + HeadImageWidth + 5, 5, self.messageModel.contentWidth, self.messageModel.contentHeight);
         } else {
@@ -134,7 +134,7 @@
         [self.contentView addSubview:_bubbleView];
     }
     
-    _nameLabel.text = messageModel.senderUserInfo.nickName;
+//    _nameLabel.text = messageModel.senderUserInfo.nickName;
     [_bubbleView refreshData:messageModel];
     
     switch (self.messageModel.messageStatus) {
@@ -149,7 +149,7 @@
         {
             _reSendBtn.hidden = YES;
             [_activity stopAnimating];
-            if (self.messageModel.isMessageRead) {
+            if (self.messageModel.readStatus) {
                 _hasReadLabel.hidden = NO;
             } else {
                 _hasReadLabel.hidden = YES;
@@ -221,11 +221,11 @@
         case MessageTypeImage:
         {
              NRImageMessage *message = (NRImageMessage *)messageModel;
-            if (message.thumbnailImageSize.width == 0) {
+            if (message.imageSize.width == 0) {
                 contentWidth += ImageContentViewFailWidth;
                 contentHeight += ImageContentViewFailHeight;
             } else {
-                if (message.thumbnailImageSize.width > message.thumbnailImageSize.height) {
+                if (message.imageSize.width > message.imageSize.height) {
                     contentWidth += ImageContentViewMaxWidth;
                     contentHeight += ImageContentViewMinHeight;
                 } else {
@@ -280,8 +280,8 @@
         contentWidth = 60;
     }
     
-    if (messageModel.messageChatType != ConversationTypeSingle) {
-        if (!messageModel.isSender) {
+    if (messageModel.partnerType != PartnerTypeUser) {
+        if (messageModel.ownerTyper != MessageOwnerSelf) {
             height += (NameLabelHeight + 5);
         }
     }
@@ -295,7 +295,7 @@
 
 + (NSString *)cellIdentifierWithModel:(NRMessage *)messageModel{
     NSString *cellIdentifier = nil;
-    if (messageModel.isSender) {//发送者
+    if (messageModel.ownerTyper == MessageOwnerSelf) {//发送者
         switch (messageModel.messageType) {
             case MessageTypeText:
                 cellIdentifier = NRMessageCellIdentifierSendText;

@@ -63,6 +63,9 @@ extern NSString * const NRIMMessageLoginStatusConfigurationNotificationCenterKey
 /* 连接状态通知 */
 extern NSString * const NRIMMessageLinkStatusConfigurationNotificationCenterKey;
 
+/*  删除聊天本地存储消息  */
+extern NSString * const NRIMMessageChatResetConfigurationNotificationCenterKey;
+
 /*  接收方 */
 extern NSString *const NRMessageCellIdentifierRecvText;
 extern NSString *const NRMessageCellIdentifierRecvLocation;

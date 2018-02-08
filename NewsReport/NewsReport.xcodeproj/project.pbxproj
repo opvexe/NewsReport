@@ -120,6 +120,24 @@
 		D024F4C62028413A003708DE /* NRUserGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = D024F4C52028413A003708DE /* NRUserGroup.m */; };
 		D024F4C920284B6E003708DE /* NRFriendDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D024F4C820284B6E003708DE /* NRFriendDetailViewController.m */; };
 		D024F4CD2028599F003708DE /* NRConversation.m in Sources */ = {isa = PBXBuildFile; fileRef = D024F4CC2028599F003708DE /* NRConversation.m */; };
+		D024F51F202A8E24003708DE /* NSString+PinYin.m in Sources */ = {isa = PBXBuildFile; fileRef = D024F51E202A8E24003708DE /* NSString+PinYin.m */; };
+		D024F523202A94A8003708DE /* NSFileManager+Paths.m in Sources */ = {isa = PBXBuildFile; fileRef = D024F522202A94A8003708DE /* NSFileManager+Paths.m */; };
+		D024F526202A9511003708DE /* NSFileManager+Chat.m in Sources */ = {isa = PBXBuildFile; fileRef = D024F525202A9511003708DE /* NSFileManager+Chat.m */; };
+		D024F52A202A9A0D003708DE /* NRDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D024F529202A9A0D003708DE /* NRDBManager.m */; };
+		D024F52D202A9A74003708DE /* NRDBBaseStore.m in Sources */ = {isa = PBXBuildFile; fileRef = D024F52C202A9A74003708DE /* NRDBBaseStore.m */; };
+		D024F533202A9B41003708DE /* NRDBConversationStore.m in Sources */ = {isa = PBXBuildFile; fileRef = D024F532202A9B41003708DE /* NRDBConversationStore.m */; };
+		D024F537202A9CD6003708DE /* NRDBMessageStore.m in Sources */ = {isa = PBXBuildFile; fileRef = D024F536202A9CD6003708DE /* NRDBMessageStore.m */; };
+		D024F540202AD001003708DE /* NRDBFriendStore.m in Sources */ = {isa = PBXBuildFile; fileRef = D024F53F202AD001003708DE /* NRDBFriendStore.m */; };
+		D024F544202AD118003708DE /* NRDBGroupStore.m in Sources */ = {isa = PBXBuildFile; fileRef = D024F543202AD118003708DE /* NRDBGroupStore.m */; };
+		D024F547202AD189003708DE /* NRGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = D024F546202AD189003708DE /* NRGroup.m */; };
+		D024F54B202AD3E8003708DE /* NRDBExpressionStore.m in Sources */ = {isa = PBXBuildFile; fileRef = D024F54A202AD3E8003708DE /* NRDBExpressionStore.m */; };
+		D024F54E202AD40C003708DE /* NREmojiGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = D024F54D202AD40C003708DE /* NREmojiGroup.m */; };
+		D024F551202AD546003708DE /* NREmoji.m in Sources */ = {isa = PBXBuildFile; fileRef = D024F550202AD546003708DE /* NREmoji.m */; };
+		D024F554202ADB40003708DE /* NSString+URLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = D024F553202ADB40003708DE /* NSString+URLEncode.m */; };
+		D024F562202AEAB4003708DE /* NRMessageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D024F561202AEAB4003708DE /* NRMessageManager.m */; };
+		D024F565202AECEA003708DE /* NRMessageManager+MessageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D024F564202AECEA003708DE /* NRMessageManager+MessageCache.m */; };
+		D024F568202AED06003708DE /* NRMessageManager+ConversationCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D024F567202AED06003708DE /* NRMessageManager+ConversationCache.m */; };
+		D024F56C202AF1FE003708DE /* NRChatViewController+Proxy.m in Sources */ = {isa = PBXBuildFile; fileRef = D024F56B202AF1FE003708DE /* NRChatViewController+Proxy.m */; };
 		D02964E520229E340060409F /* NSDate+NRCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = D02964E420229E340060409F /* NSDate+NRCategory.m */; };
 		D02964E820229E700060409F /* NSDateFormatter+NRCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = D02964E720229E700060409F /* NSDateFormatter+NRCategory.m */; };
 		D02964ED2022AD5E0060409F /* NRTextMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = D02964EC2022AD5E0060409F /* NRTextMessage.m */; };
@@ -145,7 +163,7 @@
 		D02966402022CBAA0060409F /* WXRecordView.m in Sources */ = {isa = PBXBuildFile; fileRef = D02966122022CBAA0060409F /* WXRecordView.m */; };
 		D02966582022CBAA0060409F /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D02966342022CBAA0060409F /* libopencore-amrnb.a */; };
 		D02966592022CBAA0060409F /* libopencore-amrwb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D02966382022CBAA0060409F /* libopencore-amrwb.a */; };
-		D02967622022D1C30060409F /* NRUserTools.m in Sources */ = {isa = PBXBuildFile; fileRef = D02967612022D1C30060409F /* NRUserTools.m */; };
+		D02967622022D1C30060409F /* NRUserHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D02967612022D1C30060409F /* NRUserHelper.m */; };
 		D02967BB2022D28A0060409F /* chatBar_colorMore_audioCall@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D02967A42022D28A0060409F /* chatBar_colorMore_audioCall@2x.png */; };
 		D02967BC2022D28A0060409F /* chatBar_colorMore_camera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D02967A52022D28A0060409F /* chatBar_colorMore_camera@2x.png */; };
 		D02967BD2022D28A0060409F /* chatBar_colorMore_location@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D02967A62022D28A0060409F /* chatBar_colorMore_location@2x.png */; };
@@ -413,6 +431,49 @@
 		D024F4C820284B6E003708DE /* NRFriendDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRFriendDetailViewController.m; sourceTree = "<group>"; };
 		D024F4CB2028599F003708DE /* NRConversation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRConversation.h; sourceTree = "<group>"; };
 		D024F4CC2028599F003708DE /* NRConversation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRConversation.m; sourceTree = "<group>"; };
+		D024F51D202A8E24003708DE /* NSString+PinYin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+PinYin.h"; sourceTree = "<group>"; };
+		D024F51E202A8E24003708DE /* NSString+PinYin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+PinYin.m"; sourceTree = "<group>"; };
+		D024F520202A8FA3003708DE /* NRTessageProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRTessageProtocol.h; sourceTree = "<group>"; };
+		D024F521202A94A8003708DE /* NSFileManager+Paths.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+Paths.h"; sourceTree = "<group>"; };
+		D024F522202A94A8003708DE /* NSFileManager+Paths.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+Paths.m"; sourceTree = "<group>"; };
+		D024F524202A9511003708DE /* NSFileManager+Chat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+Chat.h"; sourceTree = "<group>"; };
+		D024F525202A9511003708DE /* NSFileManager+Chat.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+Chat.m"; sourceTree = "<group>"; };
+		D024F528202A9A0D003708DE /* NRDBManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRDBManager.h; sourceTree = "<group>"; };
+		D024F529202A9A0D003708DE /* NRDBManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRDBManager.m; sourceTree = "<group>"; };
+		D024F52B202A9A74003708DE /* NRDBBaseStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRDBBaseStore.h; sourceTree = "<group>"; };
+		D024F52C202A9A74003708DE /* NRDBBaseStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRDBBaseStore.m; sourceTree = "<group>"; };
+		D024F531202A9B41003708DE /* NRDBConversationStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRDBConversationStore.h; sourceTree = "<group>"; };
+		D024F532202A9B41003708DE /* NRDBConversationStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRDBConversationStore.m; sourceTree = "<group>"; };
+		D024F534202A9B95003708DE /* NRDBConversationSQL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRDBConversationSQL.h; sourceTree = "<group>"; };
+		D024F535202A9CD6003708DE /* NRDBMessageStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRDBMessageStore.h; sourceTree = "<group>"; };
+		D024F536202A9CD6003708DE /* NRDBMessageStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRDBMessageStore.m; sourceTree = "<group>"; };
+		D024F538202A9D8B003708DE /* NRDBMessageStoreSQL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRDBMessageStoreSQL.h; sourceTree = "<group>"; };
+		D024F53D202ACFE6003708DE /* NRDBFriendSQL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRDBFriendSQL.h; sourceTree = "<group>"; };
+		D024F53E202AD001003708DE /* NRDBFriendStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRDBFriendStore.h; sourceTree = "<group>"; };
+		D024F53F202AD001003708DE /* NRDBFriendStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRDBFriendStore.m; sourceTree = "<group>"; };
+		D024F541202AD0F6003708DE /* NRDBGroupSQL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRDBGroupSQL.h; sourceTree = "<group>"; };
+		D024F542202AD118003708DE /* NRDBGroupStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRDBGroupStore.h; sourceTree = "<group>"; };
+		D024F543202AD118003708DE /* NRDBGroupStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRDBGroupStore.m; sourceTree = "<group>"; };
+		D024F545202AD189003708DE /* NRGroup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRGroup.h; sourceTree = "<group>"; };
+		D024F546202AD189003708DE /* NRGroup.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRGroup.m; sourceTree = "<group>"; };
+		D024F548202AD3B6003708DE /* NRDBExpressionSQL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRDBExpressionSQL.h; sourceTree = "<group>"; };
+		D024F549202AD3E8003708DE /* NRDBExpressionStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRDBExpressionStore.h; sourceTree = "<group>"; };
+		D024F54A202AD3E8003708DE /* NRDBExpressionStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRDBExpressionStore.m; sourceTree = "<group>"; };
+		D024F54C202AD40C003708DE /* NREmojiGroup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NREmojiGroup.h; sourceTree = "<group>"; };
+		D024F54D202AD40C003708DE /* NREmojiGroup.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NREmojiGroup.m; sourceTree = "<group>"; };
+		D024F54F202AD546003708DE /* NREmoji.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NREmoji.h; sourceTree = "<group>"; };
+		D024F550202AD546003708DE /* NREmoji.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NREmoji.m; sourceTree = "<group>"; };
+		D024F552202ADB40003708DE /* NSString+URLEncode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEncode.h"; sourceTree = "<group>"; };
+		D024F553202ADB40003708DE /* NSString+URLEncode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLEncode.m"; sourceTree = "<group>"; };
+		D024F558202AE754003708DE /* NRChatUserProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRChatUserProtocol.h; sourceTree = "<group>"; };
+		D024F560202AEAB4003708DE /* NRMessageManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRMessageManager.h; sourceTree = "<group>"; };
+		D024F561202AEAB4003708DE /* NRMessageManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRMessageManager.m; sourceTree = "<group>"; };
+		D024F563202AECEA003708DE /* NRMessageManager+MessageCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NRMessageManager+MessageCache.h"; sourceTree = "<group>"; };
+		D024F564202AECEA003708DE /* NRMessageManager+MessageCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NRMessageManager+MessageCache.m"; sourceTree = "<group>"; };
+		D024F566202AED06003708DE /* NRMessageManager+ConversationCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NRMessageManager+ConversationCache.h"; sourceTree = "<group>"; };
+		D024F567202AED06003708DE /* NRMessageManager+ConversationCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NRMessageManager+ConversationCache.m"; sourceTree = "<group>"; };
+		D024F56A202AF1FE003708DE /* NRChatViewController+Proxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NRChatViewController+Proxy.h"; sourceTree = "<group>"; };
+		D024F56B202AF1FE003708DE /* NRChatViewController+Proxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NRChatViewController+Proxy.m"; sourceTree = "<group>"; };
 		D02964E320229E340060409F /* NSDate+NRCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+NRCategory.h"; sourceTree = "<group>"; };
 		D02964E420229E340060409F /* NSDate+NRCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+NRCategory.m"; sourceTree = "<group>"; };
 		D02964E620229E700060409F /* NSDateFormatter+NRCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+NRCategory.h"; sourceTree = "<group>"; };
@@ -467,8 +528,8 @@
 		D02966362022CBAA0060409F /* dec_if.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dec_if.h; sourceTree = "<group>"; };
 		D02966372022CBAA0060409F /* if_rom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = if_rom.h; sourceTree = "<group>"; };
 		D02966382022CBAA0060409F /* libopencore-amrwb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrwb.a"; sourceTree = "<group>"; };
-		D02967602022D1C30060409F /* NRUserTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NRUserTools.h; sourceTree = "<group>"; };
-		D02967612022D1C30060409F /* NRUserTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NRUserTools.m; sourceTree = "<group>"; };
+		D02967602022D1C30060409F /* NRUserHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NRUserHelper.h; sourceTree = "<group>"; };
+		D02967612022D1C30060409F /* NRUserHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NRUserHelper.m; sourceTree = "<group>"; };
 		D02967A42022D28A0060409F /* chatBar_colorMore_audioCall@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chatBar_colorMore_audioCall@2x.png"; sourceTree = "<group>"; };
 		D02967A52022D28A0060409F /* chatBar_colorMore_camera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chatBar_colorMore_camera@2x.png"; sourceTree = "<group>"; };
 		D02967A62022D28A0060409F /* chatBar_colorMore_location@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chatBar_colorMore_location@2x.png"; sourceTree = "<group>"; };
@@ -659,6 +720,7 @@
 		D01D0866201FF95400288240 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				D024F55F202AEAA9003708DE /* MessageManager */,
 				D02964EA2022AD380060409F /* MessageModel */,
 				D02DD99D202155E60035066D /* BaseTableView */,
 				D01D08D82020424900288240 /* RootViewController */,
@@ -835,6 +897,14 @@
 				D02964E720229E700060409F /* NSDateFormatter+NRCategory.m */,
 				D0223DC52023FA4800EA9998 /* NSObject+NRSendMessage.h */,
 				D0223DC62023FA4800EA9998 /* NSObject+NRSendMessage.m */,
+				D024F51D202A8E24003708DE /* NSString+PinYin.h */,
+				D024F51E202A8E24003708DE /* NSString+PinYin.m */,
+				D024F521202A94A8003708DE /* NSFileManager+Paths.h */,
+				D024F522202A94A8003708DE /* NSFileManager+Paths.m */,
+				D024F524202A9511003708DE /* NSFileManager+Chat.h */,
+				D024F525202A9511003708DE /* NSFileManager+Chat.m */,
+				D024F552202ADB40003708DE /* NSString+URLEncode.h */,
+				D024F553202ADB40003708DE /* NSString+URLEncode.m */,
 			);
 			path = Catagory;
 			sourceTree = "<group>";
@@ -898,6 +968,8 @@
 				D02DD996202148210035066D /* NRConversationListViewController.m */,
 				D01D08E2202043AB00288240 /* NRChatViewController.h */,
 				D01D08E3202043AB00288240 /* NRChatViewController.m */,
+				D024F56A202AF1FE003708DE /* NRChatViewController+Proxy.h */,
+				D024F56B202AF1FE003708DE /* NRChatViewController+Proxy.m */,
 			);
 			path = message;
 			sourceTree = "<group>";
@@ -1100,6 +1172,9 @@
 		D024F4CE20285D65003708DE /* Converstaion */ = {
 			isa = PBXGroup;
 			children = (
+				D024F534202A9B95003708DE /* NRDBConversationSQL.h */,
+				D024F531202A9B41003708DE /* NRDBConversationStore.h */,
+				D024F532202A9B41003708DE /* NRDBConversationStore.m */,
 			);
 			path = Converstaion;
 			sourceTree = "<group>";
@@ -1107,6 +1182,14 @@
 		D024F4CF20285D76003708DE /* Friends */ = {
 			isa = PBXGroup;
 			children = (
+				D024F53D202ACFE6003708DE /* NRDBFriendSQL.h */,
+				D024F53E202AD001003708DE /* NRDBFriendStore.h */,
+				D024F53F202AD001003708DE /* NRDBFriendStore.m */,
+				D024F541202AD0F6003708DE /* NRDBGroupSQL.h */,
+				D024F542202AD118003708DE /* NRDBGroupStore.h */,
+				D024F543202AD118003708DE /* NRDBGroupStore.m */,
+				D024F545202AD189003708DE /* NRGroup.h */,
+				D024F546202AD189003708DE /* NRGroup.m */,
 			);
 			path = Friends;
 			sourceTree = "<group>";
@@ -1114,6 +1197,9 @@
 		D024F4D020285D86003708DE /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				D024F538202A9D8B003708DE /* NRDBMessageStoreSQL.h */,
+				D024F535202A9CD6003708DE /* NRDBMessageStore.h */,
+				D024F536202A9CD6003708DE /* NRDBMessageStore.m */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -1121,13 +1207,46 @@
 		D024F4D120285DA0003708DE /* Expression */ = {
 			isa = PBXGroup;
 			children = (
+				D024F548202AD3B6003708DE /* NRDBExpressionSQL.h */,
+				D024F549202AD3E8003708DE /* NRDBExpressionStore.h */,
+				D024F54A202AD3E8003708DE /* NRDBExpressionStore.m */,
+				D024F54C202AD40C003708DE /* NREmojiGroup.h */,
+				D024F54D202AD40C003708DE /* NREmojiGroup.m */,
+				D024F54F202AD546003708DE /* NREmoji.h */,
+				D024F550202AD546003708DE /* NREmoji.m */,
 			);
 			path = Expression;
+			sourceTree = "<group>";
+		};
+		D024F527202A99F8003708DE /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				D024F528202A9A0D003708DE /* NRDBManager.h */,
+				D024F529202A9A0D003708DE /* NRDBManager.m */,
+				D024F52B202A9A74003708DE /* NRDBBaseStore.h */,
+				D024F52C202A9A74003708DE /* NRDBBaseStore.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		D024F55F202AEAA9003708DE /* MessageManager */ = {
+			isa = PBXGroup;
+			children = (
+				D024F560202AEAB4003708DE /* NRMessageManager.h */,
+				D024F561202AEAB4003708DE /* NRMessageManager.m */,
+				D024F563202AECEA003708DE /* NRMessageManager+MessageCache.h */,
+				D024F564202AECEA003708DE /* NRMessageManager+MessageCache.m */,
+				D024F566202AED06003708DE /* NRMessageManager+ConversationCache.h */,
+				D024F567202AED06003708DE /* NRMessageManager+ConversationCache.m */,
+			);
+			path = MessageManager;
 			sourceTree = "<group>";
 		};
 		D02964EA2022AD380060409F /* MessageModel */ = {
 			isa = PBXGroup;
 			children = (
+				D024F558202AE754003708DE /* NRChatUserProtocol.h */,
+				D024F520202A8FA3003708DE /* NRTessageProtocol.h */,
 				D02DD9A920218B120035066D /* NRMessage.h */,
 				D02DD9AA20218B120035066D /* NRMessage.m */,
 				D02964EB2022AD5E0060409F /* NRTextMessage.h */,
@@ -1282,8 +1401,8 @@
 		D029675F2022D1C30060409F /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				D02967602022D1C30060409F /* NRUserTools.h */,
-				D02967612022D1C30060409F /* NRUserTools.m */,
+				D02967602022D1C30060409F /* NRUserHelper.h */,
+				D02967612022D1C30060409F /* NRUserHelper.m */,
 				D013607F2022FEB5003AFEEE /* NRNewsReportTools.h */,
 				D01360802022FEB5003AFEEE /* NRNewsReportTools.m */,
 				D0223E902024339000EA9998 /* NRPhotoLibraryManager.h */,
@@ -1370,6 +1489,7 @@
 		D02DD9B02021B20E0035066D /* Cache */ = {
 			isa = PBXGroup;
 			children = (
+				D024F527202A99F8003708DE /* Base */,
 				D024F4D120285DA0003708DE /* Expression */,
 				D024F4D020285D86003708DE /* Chat */,
 				D024F4CF20285D76003708DE /* Friends */,
@@ -1765,6 +1885,7 @@
 			files = (
 				D0223E8F20242EFB00EA9998 /* FaceSourceManager.m in Sources */,
 				D024F4BF20283FD4003708DE /* NRFriendHeaderView.m in Sources */,
+				D024F54B202AD3E8003708DE /* NRDBExpressionStore.m in Sources */,
 				D01D08F520204B7B00288240 /* UIView+Toast.m in Sources */,
 				D029651B2022BD820060409F /* NRProgressView.m in Sources */,
 				D01D0841201FF8AE00288240 /* main.m in Sources */,
@@ -1775,6 +1896,7 @@
 				D01D08D7202040B300288240 /* NRBaseViewController.m in Sources */,
 				D0223DC72023FA4800EA9998 /* NSObject+NRSendMessage.m in Sources */,
 				D02DD99C202154B50035066D /* NRConversationListCell.m in Sources */,
+				D024F562202AEAB4003708DE /* NRMessageManager.m in Sources */,
 				D0223E7B20242EC700EA9998 /* NSString+Emoji.m in Sources */,
 				D029663E2022CBAA0060409F /* WXDeviceManager+Remind.m in Sources */,
 				D01D08B22020148400288240 /* CPMessageEventButton.m in Sources */,
@@ -1786,11 +1908,14 @@
 				D013608420230107003AFEEE /* NRUserDB.m in Sources */,
 				D024F4BC20283E9E003708DE /* NRFriendViewController+Delegate.m in Sources */,
 				D02DD997202148210035066D /* NRConversationListViewController.m in Sources */,
+				D024F523202A94A8003708DE /* NSFileManager+Paths.m in Sources */,
+				D024F533202A9B41003708DE /* NRDBConversationStore.m in Sources */,
 				D0223E8720242EC700EA9998 /* PanelBottomView.m in Sources */,
 				D0223E7D20242EC700EA9998 /* ChatToolBarItem.m in Sources */,
 				D01D08E4202043AB00288240 /* NRChatViewController.m in Sources */,
 				D0223E8820242EC700EA9998 /* MorePanel.m in Sources */,
 				D01D08F220204A7600288240 /* NRBarButtonItem.m in Sources */,
+				D024F554202ADB40003708DE /* NSString+URLEncode.m in Sources */,
 				D02964F62022ADC80060409F /* NRFileMessage.m in Sources */,
 				D01D08DB2020427800288240 /* NRRootViewController.m in Sources */,
 				D0223E922024339000EA9998 /* NRPhotoLibraryManager.m in Sources */,
@@ -1802,6 +1927,8 @@
 				D024F4C22028400A003708DE /* NRFriendTableViewCell.m in Sources */,
 				D01D08EA202043CC00288240 /* NRPortraitViewController.m in Sources */,
 				D01360812022FEB5003AFEEE /* NRNewsReportTools.m in Sources */,
+				D024F526202A9511003708DE /* NSFileManager+Chat.m in Sources */,
+				D024F51F202A8E24003708DE /* NSString+PinYin.m in Sources */,
 				D01D08DE202042FB00288240 /* NRTabBarControllerConfig.m in Sources */,
 				D024F4C62028413A003708DE /* NRUserGroup.m in Sources */,
 				D0223E7F20242EC700EA9998 /* MoreItem.m in Sources */,
@@ -1816,6 +1943,7 @@
 				D01D08ED2020451200288240 /* NRBaseNavigationViewController.m in Sources */,
 				D01D08CE20201CC500288240 /* NRBusinessNetworkTool.m in Sources */,
 				D02DD9A4202156350035066D /* NRBaseModel.m in Sources */,
+				D024F551202AD546003708DE /* NREmoji.m in Sources */,
 				D02964F32022ADBC0060409F /* NRVioceMessage.m in Sources */,
 				D024F4C920284B6E003708DE /* NRFriendDetailViewController.m in Sources */,
 				D01D08BE2020178000288240 /* NSString+LSWMEXtension.m in Sources */,
@@ -1824,9 +1952,13 @@
 				D0223E8A20242EC700EA9998 /* OfficialAccountToolbar.m in Sources */,
 				D024F4712027E790003708DE /* wav.mm in Sources */,
 				D02964FC2022B3440060409F /* NRFileMessageContentView.m in Sources */,
+				D024F547202AD189003708DE /* NRGroup.m in Sources */,
 				D01D089E201FFF1A00288240 /* NRIMClientManager.m in Sources */,
 				D01D08A42020067C00288240 /* NRChatBaseEventImpl.m in Sources */,
+				D024F540202AD001003708DE /* NRDBFriendStore.m in Sources */,
+				D024F537202A9CD6003708DE /* NRDBMessageStore.m in Sources */,
 				D01D08D32020226D00288240 /* NRUser.m in Sources */,
+				D024F54E202AD40C003708DE /* NREmojiGroup.m in Sources */,
 				D0223E8B20242EC700EA9998 /* RFRecordButton.m in Sources */,
 				D02965172022BCBA0060409F /* NRVideoMessage.m in Sources */,
 				D024F4722027E790003708DE /* amrFileCodec.mm in Sources */,
@@ -1834,11 +1966,13 @@
 				D01D08A12020050600288240 /* NRChatTransDataEventImpl.m in Sources */,
 				D029663D2022CBAA0060409F /* WXDeviceManager+ProximitySensor.m in Sources */,
 				D01D08BB2020172900288240 /* UIView+NRExtension.m in Sources */,
+				D024F544202AD118003708DE /* NRDBGroupStore.m in Sources */,
 				D029663B2022CBAA0060409F /* WXDeviceManager+Media.m in Sources */,
 				D01D08AE202013C200288240 /* NRLoginViewController.m in Sources */,
 				D024F4B820280072003708DE /* NRSearchBar.m in Sources */,
 				D02965082022B3850060409F /* NRImageMessageContentView.m in Sources */,
 				D02964ED2022AD5E0060409F /* NRTextMessage.m in Sources */,
+				D024F52A202A9A0D003708DE /* NRDBManager.m in Sources */,
 				D01D0833201FF8AD00288240 /* AppDelegate.mm in Sources */,
 				D024F4752027E7AD003708DE /* AudioConverter.mm in Sources */,
 				D029663C2022CBAA0060409F /* WXDeviceManager+Microphone.m in Sources */,
@@ -1848,15 +1982,19 @@
 				D02DD9B82021B6320035066D /* NRChatMessageContentView.m in Sources */,
 				D01D08B72020152900288240 /* UIImage+NRExtension.m in Sources */,
 				D02DD9AF2021AAE90035066D /* NRConversationListModel.m in Sources */,
-				D02967622022D1C30060409F /* NRUserTools.m in Sources */,
+				D02967622022D1C30060409F /* NRUserHelper.m in Sources */,
 				D0223E7E20242EC700EA9998 /* FaceThemeModel.m in Sources */,
+				D024F52D202A9A74003708DE /* NRDBBaseStore.m in Sources */,
 				D02965052022B3740060409F /* NRVoiceMessageContentView.m in Sources */,
 				D02964F02022AD910060409F /* NRImageMessage.m in Sources */,
 				D0223E8620242EC700EA9998 /* FaceThemeView.m in Sources */,
+				D024F56C202AF1FE003708DE /* NRChatViewController+Proxy.m in Sources */,
 				D02964F92022B31C0060409F /* NRTextMessageContentView.m in Sources */,
 				D029663A2022CBAA0060409F /* WXAudioRecorder.m in Sources */,
 				D02965022022B3630060409F /* NRVideoMessageContentView.m in Sources */,
+				D024F565202AECEA003708DE /* NRMessageManager+MessageCache.m in Sources */,
 				D01D08CB20201CAA00288240 /* WMLSSessionManger.m in Sources */,
+				D024F568202AED06003708DE /* NRMessageManager+ConversationCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

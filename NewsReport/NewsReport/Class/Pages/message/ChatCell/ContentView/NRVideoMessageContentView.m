@@ -37,7 +37,7 @@
 - (void)layoutSubviews{
     [super layoutSubviews];
     
-    if (self.messageModel.isSender) {//右边
+    if (self.messageModel.ownerTyper == MessageOwnerSelf) {//右边
         _videoImageView.frame = CGRectMake(8, 4, self.messageModel.contentWidth - 8 - 13, self.messageModel.contentHeight - 4 - 13);
     } else {//左边
         _videoImageView.frame = CGRectMake(13, 4, self.messageModel.contentWidth - 13 - 8, self.messageModel.contentHeight - 4 - 13);
@@ -49,17 +49,17 @@
 
 - (void)refreshData:(NRVideoMessage *)messageModel{
     [super refreshData:messageModel];
-    UIImage *image = messageModel.isSender ? messageModel.image : messageModel.thumbnailImage;
-    if (!image) {
-        image = messageModel.image;
-        if (!image) {
-            [_videoImageView sd_setImageWithURL:[NSURL URLWithString:messageModel.fileURLPath] placeholderImage:[UIImage imageNamed:@"friend_head_default"]];
-        } else {
-            _videoImageView.image = image;
-        }
-    } else {
-        _videoImageView.image = image;
-    }
+//    UIImage *image = messageModel.isSender ? messageModel.image : messageModel.thumbnailImage;
+//    if (!image) {
+//        image = messageModel.image;
+//        if (!image) {
+//            [_videoImageView sd_setImageWithURL:[NSURL URLWithString:messageModel.fileURLPath] placeholderImage:[UIImage imageNamed:@"friend_head_default"]];
+//        } else {
+//            _videoImageView.image = image;
+//        }
+//    } else {
+//        _videoImageView.image = image;
+//    }
 }
 
 @end

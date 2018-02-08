@@ -46,7 +46,7 @@
     NRMessage *message ;
     
     if ([type hasPrefix:@"1"]) {    ///单聊
-        message.messageChatType = ConversationTypeSingle;
+        message.partnerType = PartnerTypeUser;
         switch (elem) {
             case 11:
             {
@@ -79,7 +79,7 @@
                 break;
         }
     }else if ([type hasPrefix:@"2"]){           ///群聊
-        message.messageChatType = ConversationTypeGroup;
+        message.partnerType = PartnerTypeGroup;
         switch (elem) {
             case 11:
             {
@@ -116,14 +116,14 @@
         NSLog(@"未知消息");
     }
     
-    message.from    = convertToString(sender);
-    message.messageId = convertToString(fingerPrintOfProtocal);             ///uid + 时间戳 （消息标识）
-    message.timestamp = [convertToString(fingerPrintOfProtocal) componentsSeparatedByString:@"+"].lastObject;
-    if ([message.from isEqualToString:[[NRUserTools defaultCenter]getUserID]]) {
-        message.direction = MessageOwnerSelf;
-    }else{
-        message.direction = MessageOwnerOther;
-    }
+//    message.from    = convertToString(sender);
+//    message.messageId = convertToString(fingerPrintOfProtocal);             ///uid + 时间戳 （消息标识）
+//    message.timestamp = [convertToString(fingerPrintOfProtocal) componentsSeparatedByString:@"+"].lastObject;
+//    if ([message.from isEqualToString:[[NRUserHelper defaultCenter]getUserID]]) {
+//        message.direction = MessageOwnerSelf;
+//    }else{
+//        message.direction = MessageOwnerOther;
+//    }
     
     return message;
 }

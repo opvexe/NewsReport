@@ -10,4 +10,14 @@
 
 @implementation NRFileMessage
 
+- (instancetype)init
+{
+    if (self = [super init]) {
+        [self setMessageType:MessageTypeFile];
+    }
+    return self;
+}
+
+
+
 @end

@@ -7,125 +7,82 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NRChatUserProtocol.h"
+#import "NRTessageProtocol.h"
 #import "NRUser.h"
 
-@interface NRMessage : NSObject
-
-/*!
- *  消息的唯一标识符
- */
-@property (nonatomic, copy) NSString *messageId;
-
-/*!
- *  发送方
- */
-@property (nonatomic, copy) NSString *from;
-
-/*!
- *  接收方
- */
-@property (nonatomic, copy) NSString *to;
-
-/*!
- * 消息拥有者用户信息
- *
- */
-@property(nonatomic, strong) NRUser *senderUserInfo;
 
 /**
- *  是否发送方
- *
- *  @return TRUE 表示是发送消息    FALSE 表示是接收消息
+ *  录音视频状态
  */
-@property (nonatomic,assign) BOOL isSender;
-
-/*!
- *  是否已读
- */
-@property (nonatomic,assign) BOOL isMessageRead;
-
-//多媒体消息：是否正在播放
-@property (nonatomic,assign) BOOL isMediaPlaying;
-//多媒体消息：是否播放过
-@property (nonatomic,assign) BOOL isMediaPlayed;
+typedef NS_ENUM(NSInteger, VoiceMessageStatus) {
+    VoiceMessageStatusNormal,
+    VoiceMessageStatusRecording,
+    VoiceMessageStatusPlaying,
+};
 
 /**
- *  当前消息的时间戳
+ *  消息拥有者类型
  */
-@property(nonatomic,copy)NSString *timestamp;
-
+typedef NS_ENUM(NSUInteger, MessageOwner)
+{
+    MessageOwnerUnknown = 0, /**< 未知的消息拥有者 */
+    MessageOwnerSystem,      /**< 系统消息 */
+    MessageOwnerSelf,        /**< 自己发送的消息 */
+    MessageOwnerOther,       /**< 接收到的他人消息 */
+};
 
 /**
- *  消息类型（文本，图片）
+ *  消息所有者类型
  */
-@property (nonatomic,assign) MessageType messageType;
+typedef NS_ENUM(NSInteger, PartnerType){
+    PartnerTypeUser,          // 用户
+    PartnerTypeGroup,         // 群聊
+};
 
 /**
- *  消息聊天类型(单聊，群聊)
+ *  消息发送状态,自己发送的消息时有
  */
-@property (nonatomic,assign) ConversationType messageChatType;
-
-/*!
- *  消息状态
- */
-@property (nonatomic,assign) MessageSendState  messageStatus;
-/**
- *  消息拥有者
- */
-@property (nonatomic,assign) MessageOwner direction;
-
-
-
-
+typedef NS_ENUM(NSUInteger, MessageSendState)
+{
+    MessageSendSuccess = 0,  /**< 消息发送成功 */
+    MessageSendStateSending, /**< 消息发送中 */
+    MessageSendFail,         /**< 消息发送失败 */
+};
 
 /**
- *  原图(图片，视频封面)
+ *   消息读取状态
  */
-@property (strong, nonatomic) UIImage *image;
-
-/**
- *  缩略图
- */
-@property (strong, nonatomic) UIImage *thumbnailImage;
-
-/**
- *  缩略图尺寸
- */
-@property (nonatomic,assign) CGSize thumbnailImageSize;
+typedef NS_ENUM(NSUInteger, MessageReadState)
+{
+    MessageUnRead = 0, /**< 消息未读 */
+    MessageReading,   /**< 正在接收 */
+    MessageReaded,     /**< 消息已读 */
+};
 
 
+@interface NRMessage : NSObject<NRTessageProtocol>
 
+@property (nonatomic, strong) NSString *messageID;                  // 消息ID
+@property (nonatomic, strong) NSString *userID;                     // 发送者ID
+@property (nonatomic, strong) NSString *friendID;                   // 接收者ID
+@property (nonatomic, strong) NSString *groupID;                    // 讨论组ID（无则为nil）
+@property (nonatomic, strong) NSDate *date;                         // 发送时间
 
+@property (nonatomic, assign) BOOL showTime;
+@property (nonatomic, assign) BOOL showName;
 
+@property (nonatomic, strong) id<NRChatUserProtocol> fromUser;      // 发送者
 
-/**
- *  语音长度（秒），发送消息时设置
- */
-@property(nonatomic,assign) int second;
+@property (nonatomic, assign) PartnerType partnerType;            // 对方类型(用户，群聊)
+@property (nonatomic, assign) MessageType messageType;            // 消息类型(文本，图片)
+@property (nonatomic,assign)  MessageSendState  messageStatus;    // 发送状态
+@property (nonatomic, assign) MessageReadState readStatus;        // 读取状态
+@property (nonatomic, assign) MessageOwner ownerTyper;            // 发送者类型(自己，他人)
 
-/**
- *  语音数据大小
- */
-@property(nonatomic,assign) int dataSize;
+@property (nonatomic, strong) NSMutableDictionary *content;
 
-
-
-
-
-
-/**
- *  文件大小
- */
-@property(nonatomic,assign) float fileSize;
-
-/**
- *  文件显示名，发消息时设置
- */
-@property(nonatomic,strong) NSString * filename;
-
-
-
-
++ (NRMessage *)createMessageByType:(MessageType)type;
 
 
 /** 缓存数据模型对应的cell的高度，只需要计算一次并赋值，以后就无需计算了 **/

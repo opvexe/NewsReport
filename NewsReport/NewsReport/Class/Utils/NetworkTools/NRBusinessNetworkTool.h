@@ -35,4 +35,69 @@
  */
 +(void)PostUpMessageWithImage:(UIImage *)image withImageName:(NSString *)imageName withImageType:(NSString *)imageType CompleteSuccessfull:(void (^)(id responseObject))successfull  failure:(void (^)(id error))failure;
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#pragma mark  #表情组
+/**
+ *  精选表情
+ */
++(void)requestExpressionChosenListByPageIndex:(NSInteger)page  CompleteSuccessfull:(void (^)(id responseObject))successfull  failure:(void (^)(id error))failure;
+
+
+/**
+ *   精选表情Banner
+ */
++(void)requestExpressionChosenBannerCompleteSuccessfull:(void (^)(id responseObject))successfull  failure:(void (^)(id error))failure;
+
+/**
+ *  网络表情
+ */
++(void)requestExpressionPublicListByPageIndex:(NSInteger)page  CompleteSuccessfull:(void (^)(id responseObject))successfull  failure:(void (^)(id error))failure;
+
+/**
+ *  表情搜索
+ */
++(void)requestExpressionSearchByKeyword:(NSString *)keyword  CompleteSuccessfull:(void (^)(id responseObject))successfull  failure:(void (^)(id error))failure;
+
+/**
+ *  表情详情
+ */
++(void)requestExpressionGroupDetailByGroupID:(NSString *)groupID
+                                    pageIndex:(NSInteger)pageIndex  CompleteSuccessfull:(void (^)(id responseObject))successfull  failure:(void (^)(id error))failure;
+
 @end

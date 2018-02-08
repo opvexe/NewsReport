@@ -27,7 +27,7 @@
     [super layoutSubviews];
     [_textLabel sizeToFit];
     
-    if (self.messageModel.isSender) {//右边
+    if (self.messageModel.ownerTyper == MessageOwnerSelf) {//右边
         _textLabel.frame = CGRectMake(15, 10, self.messageModel.contentWidth - 20 - 15, self.messageModel.contentHeight - 10 - 20);
         _textLabel.textColor = [UIColor whiteColor];
     } else {//左边

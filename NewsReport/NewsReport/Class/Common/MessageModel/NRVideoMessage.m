@@ -10,4 +10,12 @@
 
 @implementation NRVideoMessage
 
+- (instancetype)init
+{
+    if (self = [super init]) {
+        [self setMessageType:MessageTypeVideo];
+    }
+    return self;
+}
+
 @end

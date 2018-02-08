@@ -10,6 +10,18 @@
 #define Chat_h
 
 /**
+ *  表情
+ */
+typedef NS_ENUM(NSInteger, EmojiType) {
+    EmojiTypeEmoji,
+    EmojiTypeFavorite,
+    EmojiTypeFace,
+    EmojiTypeImage,
+    EmojiTypeImageWithTitle,
+    EmojiTypeOther,
+};
+
+/**
  *  会话提示类型
  */
 typedef NS_ENUM(NSInteger, ClueType) {
@@ -30,15 +42,6 @@ typedef NS_ENUM(NSUInteger, ConversationType)
 };
 
 
-/**
- *  消息发送状态,自己发送的消息时有
- */
-typedef NS_ENUM(NSUInteger, MessageSendState)
-{
-    MessageSendSuccess = 0,  /**< 消息发送成功 */
-    MessageSendStateSending, /**< 消息发送中 */
-    MessageSendFail,         /**< 消息发送失败 */
-};
 
 /**
  *  消息类型
@@ -59,27 +62,6 @@ typedef NS_ENUM(NSUInteger, MessageType)
 };
 
 
-
-/**
- *  消息读取状态,接收的消息时有
- */
-typedef NS_ENUM(NSUInteger, MessageReadState)
-{
-    MessageUnRead = 0, /**< 消息未读 */
-    MessageReading,   /**< 正在接收 */
-    MessageReaded,     /**< 消息已读 */
-};
-
-/**
- *  消息拥有者类型
- */
-typedef NS_ENUM(NSUInteger, MessageOwner)
-{
-    MessageOwnerUnknown = 0, /**< 未知的消息拥有者 */
-    MessageOwnerSystem,      /**< 系统消息 */
-    MessageOwnerSelf,        /**< 自己发送的消息 */
-    MessageOwnerOther,       /**< 接收到的他人消息 */
-};
 
 
 

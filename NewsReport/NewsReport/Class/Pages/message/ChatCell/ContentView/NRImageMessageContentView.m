@@ -34,7 +34,7 @@
 - (void)layoutSubviews{
     [super layoutSubviews];
     
-    if (self.messageModel.isSender) {//右边
+    if (self.messageModel.ownerTyper == MessageOwnerSelf) {//右边
         _imageView.frame = CGRectMake(8, 4, self.messageModel.contentWidth - 8 - 13, self.messageModel.contentHeight - 4 - 13);
     } else {//左边
         _imageView.frame = CGRectMake(13, 4, self.messageModel.contentWidth - 13 - 8, self.messageModel.contentHeight - 4 - 13);
@@ -47,6 +47,6 @@
     [super refreshData:messageModel];
     
     self.bgImgView.hidden = YES;
-    [self.imageView sd_setImageWithURL:[NSURL URLWithString:messageModel.imageUrl] placeholderImage:NRImageNamed(@"icon_avatar")];
+    [self.imageView sd_setImageWithURL:[NSURL URLWithString:messageModel.imageURL] placeholderImage:NRImageNamed(@"icon_avatar")];
 }
 @end

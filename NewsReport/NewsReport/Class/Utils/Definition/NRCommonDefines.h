@@ -12,6 +12,9 @@
 // 默认头像
 #define     DEFAULT_AVATAR_PATH    @"icon_avatar"
 
+// 时间戳
+#define     NRTimeStamp(date)   ([NSString stringWithFormat:@"%lf", [date timeIntervalSince1970]])
+
 #define  NRImageNamed(imageName)   [UIImage imageNamed:imageName]
 
 #define  NRUserDefaults            [NSUserDefaults standardUserDefaults]

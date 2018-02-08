@@ -43,9 +43,9 @@
 #import "NRNewsReportTools.h"
 #import "NRUserDB.h"
 #import "UIView+Toast.h"
-#import "NRUserTools.h"
+#import "NRUserHelper.h"
 #import "NRAlertView.h"
-
+#import "NSFileManager+Chat.h"
 /*!
  Base类
  */
@@ -71,12 +71,12 @@
 #import <CYLTabBarController/CYLTabBarController.h>
 #import <TTTAttributedLabel.h>
 #import <AFNetworking.h>
+#import <MBProgressHUD.h>
 #import <Masonry.h>
 #import <MJRefresh.h>
 #import <MJExtension.h>
 #import <YYCache.h>
 #import <FMDB.h>
-#import <MBProgressHUD.h>
 /*!
  Chat库
  */

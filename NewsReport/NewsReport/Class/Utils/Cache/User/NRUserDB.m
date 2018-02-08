@@ -90,7 +90,7 @@ static NRUserDB *_db =nil;
  */
 -(BOOL)saveModel:(NRUser *)model {
     
-    if ([self findWithGid:convertToString(FormatString(@"%zd",model.userId))]) {
+    if ([self findWithGid:convertToString(model.userId)]) {
         
         return  [self updateWithModel:model];
     }
@@ -167,7 +167,7 @@ static NRUserDB *_db =nil;
  */
 -(BOOL)updateWithModel:(NRUser *)model{
     
-    if (model==nil ||convertToString(FormatString(@"%zd",model.userId)) ==nil ) {
+    if (model==nil ||convertToString(model.userId) ==nil ) {
         return NO;
     }
     

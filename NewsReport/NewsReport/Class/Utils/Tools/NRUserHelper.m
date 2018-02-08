@@ -6,15 +6,15 @@
 //  Copyright © 2018年 Facebook. All rights reserved.
 //
 
-#import "NRUserTools.h"
+#import "NRUserHelper.h"
 
-static NRUserTools *defaultUserCenter = nil;
-@implementation NRUserTools
+static NRUserHelper *defaultUserCenter = nil;
+@implementation NRUserHelper
 
-+ (NRUserTools *)defaultCenter{
++ (NRUserHelper *)defaultCenter{
     @synchronized(self){
         if (defaultUserCenter == nil) {
-            defaultUserCenter = [[NRUserTools alloc] init];
+            defaultUserCenter = [[NRUserHelper alloc] init];
         }
     }
     return defaultUserCenter;

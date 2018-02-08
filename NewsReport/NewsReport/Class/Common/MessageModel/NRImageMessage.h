@@ -13,10 +13,8 @@
  */
 @interface NRImageMessage : NRMessage
 
-/**
- *  接收图片地址
- */
-@property (nonatomic,copy) NSString *imageUrl;
+@property (nonatomic, strong) NSString *imagePath;                  // 本地图片Path
+@property (nonatomic, strong) NSString *imageURL;                   // 网络图片URL
+@property (nonatomic, assign) CGSize imageSize;                     //图片大小
 
-- (instancetype)initWithMessage:(NRMessage *)message;
 @end

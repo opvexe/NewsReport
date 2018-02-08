@@ -8,6 +8,8 @@
 
 #import "NRBusinessNetworkTool.h"
 #import "NRNetworkHelper.h"
+#import "NREmojiGroup.h"
+#import "NSString+URLEncode.h"
 
 @implementation NRBusinessNetworkTool
 
@@ -43,6 +45,164 @@
             successfull?successfull(responseObject[@"result"]):nil;
         }else{
             failure?failure(responseObject[@"result"]):nil;
+        }
+        
+    } failure:^(NSError *error) {
+        failure?failure(error):nil;
+    }];
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#pragma mark  #表情组
+/**
+ *  精选表情
+ */
++(void)requestExpressionChosenListByPageIndex:(NSInteger)page  CompleteSuccessfull:(void (^)(id responseObject))successfull  failure:(void (^)(id error))failure{
+    
+    NSString *urlString = [NSString stringWithFormat:IEXPRESSION_NEW_URL, (long)page];
+    [NRNetworkHelper POST:urlString parameters:nil success:^(id responseObject) {
+        NSArray *respArray = [responseObject mj_JSONObject];
+        NSString *status = respArray[0];
+        if ([status isEqualToString:@"OK"]) {
+            NSArray *infoArray = respArray[2];
+            NSMutableArray *data = [NREmojiGroup mj_objectArrayWithKeyValuesArray:infoArray];
+            successfull?successfull(data):nil;
+        }else {
+            failure?failure(status):nil;
+        }
+    } failure:^(NSError *error) {
+        failure?failure(error):nil;
+    }];
+}
+
+
+/**
+ *  精选表情Banner
+ */
++(void)requestExpressionChosenBannerCompleteSuccessfull:(void (^)(id responseObject))successfull  failure:(void (^)(id error))failure{
+    
+    NSString *urlString = IEXPRESSION_BANNER_URL;
+    [NRNetworkHelper POST:urlString parameters:nil success:^(id responseObject) {
+        
+        NSArray *respArray = [responseObject mj_JSONObject];
+        NSString *status = respArray[0];
+        if ([status isEqualToString:@"OK"]) {
+            NSArray *infoArray = respArray[2];
+            NSMutableArray *data = [NREmojiGroup mj_objectArrayWithKeyValuesArray:infoArray];
+            successfull?successfull(data):nil;
+        }else{
+            failure?failure(status):nil;
+        }
+        
+    } failure:^(NSError *error) {
+        failure?failure(error):nil;
+    }];
+}
+
+/**
+ *  网络表情
+ */
++(void)requestExpressionPublicListByPageIndex:(NSInteger)page  CompleteSuccessfull:(void (^)(id responseObject))successfull  failure:(void (^)(id error))failure{
+    
+    NSString *urlString = [NSString stringWithFormat:IEXPRESSION_PUBLIC_URL, (long)page];
+    [NRNetworkHelper POST:urlString parameters:nil success:^(id responseObject) {
+        
+        NSArray *respArray = [responseObject mj_JSONObject];
+        NSString *status = respArray[0];
+        if ([status isEqualToString:@"OK"]) {
+            NSArray *infoArray = respArray[2];
+            NSMutableArray *data = [NREmojiGroup mj_objectArrayWithKeyValuesArray:infoArray];
+            successfull?successfull(data):nil;
+        }else{
+            failure?failure(status):nil;
+        }
+        
+    } failure:^(NSError *error) {
+        failure?failure(error):nil;
+    }];
+}
+
+/**
+ *  表情搜索
+ */
++(void)requestExpressionSearchByKeyword:(NSString *)keyword  CompleteSuccessfull:(void (^)(id responseObject))successfull  failure:(void (^)(id error))failure{
+    
+    NSString *urlString = [NSString stringWithFormat:IEXPRESSION_SEARCH_URL, [[keyword urlEncode] urlEncode]];
+    [NRNetworkHelper POST:urlString parameters:nil success:^(id responseObject) {
+        
+        NSArray *respArray = [responseObject mj_JSONObject];
+        NSString *status = respArray[0];
+        if ([status isEqualToString:@"OK"]) {
+            NSArray *infoArray = respArray[2];
+            NSMutableArray *data = [NREmojiGroup mj_objectArrayWithKeyValuesArray:infoArray];
+            successfull?successfull(data):nil;
+        }else{
+            failure?failure(status):nil;
+        }
+        
+    } failure:^(NSError *error) {
+        failure?failure(error):nil;
+    }];
+}
+
+/**
+ *  表情详情
+ */
++(void)requestExpressionGroupDetailByGroupID:(NSString *)groupID
+                                   pageIndex:(NSInteger)pageIndex  CompleteSuccessfull:(void (^)(id responseObject))successfull  failure:(void (^)(id error))failure{
+    
+    NSString *urlString = [NSString stringWithFormat:IEXPRESSION_DETAIL_URL, (long)pageIndex, groupID];
+    [NRNetworkHelper POST:urlString parameters:nil success:^(id responseObject) {
+        
+        NSArray *respArray = [responseObject mj_JSONObject];
+        NSString *status = respArray[0];
+        if ([status isEqualToString:@"OK"]) {
+            NSArray *infoArray = respArray[2];
+            NSMutableArray *data = [NREmojiGroup mj_objectArrayWithKeyValuesArray:infoArray];
+            successfull?successfull(data):nil;
+        }else{
+            failure?failure(status):nil;
         }
         
     } failure:^(NSError *error) {

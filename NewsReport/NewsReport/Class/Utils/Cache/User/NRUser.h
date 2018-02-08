@@ -39,7 +39,7 @@
 @property (nonatomic,copy) NSString *token;
 
 /*!
- 登录用户名
+ 登录用户名(账号)
  */
 @property (nonatomic,copy) NSString *userName;
 
@@ -66,6 +66,8 @@
  */
 @property (nonatomic,copy) NSString *longitude;
 
+/// 界面显示名称
+@property (nonatomic, strong, readonly) NSString *showName;
 
 #pragma mark < 列表用 >
 /**

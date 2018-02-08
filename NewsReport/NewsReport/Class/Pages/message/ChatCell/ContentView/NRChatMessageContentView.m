@@ -29,7 +29,7 @@
 - (void)refreshData:(NRMessage *)messageModel{
     _messageModel = messageModel;
     
-    if (_messageModel.isSender) {
+    if (_messageModel.ownerTyper == MessageOwnerSelf) {
         [self.bgImgView setImage:[[UIImage imageNamed:@"chat_to_bg_normal_sender"]
                                                           resizableImageWithCapInsets:UIEdgeInsetsMake(30, 16, 16, 24)
                                                           resizingMode:UIImageResizingModeStretch]];

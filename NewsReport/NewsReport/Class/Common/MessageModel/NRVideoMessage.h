@@ -10,12 +10,19 @@
 
 @interface NRVideoMessage : NRMessage
 
+@property (nonatomic, strong, readonly) NSString *videoPath;
 
-/**
- *  视频的路径（设置path时，优先上传文件）
- */
-@property (strong, nonatomic) NSString *fileURLPath;
+@property (nonatomic, strong) NSString *videoURL;
 
-- (instancetype)initWithMessage:(NRMessage *)message;
+@property (nonatomic, strong, readonly) NSString *imagePath;                  // 本地图片Path
+
+@property (nonatomic, strong) NSString *imageURL;                   // 网络图片URL
+
+@property (nonatomic, assign) CGSize imageSize;
+
+//多媒体消息：是否正在播放
+@property (nonatomic) BOOL isMediaPlaying;
+//多媒体消息：是否播放过
+@property (nonatomic) BOOL isMediaPlayed;
 
 @end

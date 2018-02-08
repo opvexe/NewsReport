@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NRChatUserProtocol.h"
 
 /*!
  * 会话类
@@ -20,5 +21,12 @@
  目标会话名字
  */
 @property (nonatomic,copy) NSString *userName;
+
+
+/// 用户信息
+@property (nonatomic, strong) id<NRChatUserProtocol> user;
+
+/// 聊天对象
+@property (nonatomic, strong) id<NRChatUserProtocol> partner;
 
 @end

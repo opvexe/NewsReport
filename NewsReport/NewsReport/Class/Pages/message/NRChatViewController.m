@@ -53,19 +53,19 @@
  */
 -(void)reloadDataSoucre{
     
-    NRTextMessage *message = [[NRTextMessage alloc]init];
-    message.text = @"我们需要在用户不允许访问的时候跳转，那么首先我们就要判断一些是否已经开启系统相机权限了";
-    message.messageType = MessageTypeText;
-    message.senderUserInfo.nickName = @"测试";
-    message.isSender = YES;
-    [self.chats addObject:message];
+//    NRTextMessage *message = [[NRTextMessage alloc]init];
+//    message.text = @"我们需要在用户不允许访问的时候跳转，那么首先我们就要判断一些是否已经开启系统相机权限了";
+//    message.messageType = MessageTypeText;
+//    message.senderUserInfo.nickName = @"测试";
+//    message.isSender = YES;
+//    [self.chats addObject:message];
+//
+//    NRImageMessage *imageElem = [[NRImageMessage alloc]init];
+//    imageElem.image = [UIImage imageNamed:@"icon_avatar"];
+//    imageElem.messageType = MessageTypeImage;
+//    imageElem.isSender = NO;
     
-    NRImageMessage *imageElem = [[NRImageMessage alloc]init];
-    imageElem.image = [UIImage imageNamed:@"icon_avatar"];
-    imageElem.messageType = MessageTypeImage;
-    imageElem.isSender = NO;
-    
-    [self.chats addObject:imageElem];
+//    [self.chats addObject:imageElem];
     
     [self reloadAfterReceiveMessage];
 }
@@ -161,10 +161,10 @@
 - (void)chatKeyBoardSendText:(NSString *)text{
     NRTextMessage *message = [[NRTextMessage alloc]init];
     message.messageType = MessageTypeText;
-    message.from = [[NRUserTools defaultCenter]getUserID];
-    message.to  = convertToString(_targetId);
+    message.userID = [[NRUserHelper defaultCenter]getUserID];
+    message.friendID  = convertToString(_targetId);
     message.text = convertToString(text);
-    message.messageId = convertToString( [NSString stringWithFormat:@"%@+%@",[[NRUserTools defaultCenter]getUserID],[NRNewsReportTools getTimeTampWithDigit:13]]);
+    message.messageID = convertToString( [NSString stringWithFormat:@"%@+%@",[[NRUserHelper defaultCenter]getUserID],[NRNewsReportTools getTimeTampWithDigit:13]]);
     [self sendMessageWithText:message CompletecBlock:^(int code) {
         if (code == COMMON_CODE_OK) {
             NSLog(@"文本消息发送成功");
@@ -181,10 +181,10 @@
     [self.lastSelectProcessedDatas enumerateObjectsUsingBlock:^(NRImagePickModel *obj, NSUInteger idx, BOOL * _Nonnull stop) {
         NRImageMessage *message = [[NRImageMessage alloc]init];
         message.messageType = MessageTypeImage;
-        message.from = [[NRUserTools defaultCenter]getUserID];
-        message.to  = convertToString(_targetId);
-        message.image = obj.image;
-        message.messageId = convertToString( [NSString stringWithFormat:@"%@+%@",[[NRUserTools defaultCenter]getUserID],[NRNewsReportTools getTimeTampWithDigit:13]]);
+        message.userID = [[NRUserHelper defaultCenter]getUserID];
+        message.friendID  = convertToString(_targetId);
+//        message.imagePath = obj.image;
+        message.messageID = convertToString( [NSString stringWithFormat:@"%@+%@",[[NRUserHelper defaultCenter]getUserID],[NRNewsReportTools getTimeTampWithDigit:13]]);
         [self sendMessageWithImage:message isOrignal:self.isOriginal CompletecBlock:^(int code) {
             if (code == COMMON_CODE_OK) {
                 NSLog(@"文本消息发送成功");

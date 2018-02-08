@@ -8,21 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-/**
- *  文本消息Elem
- */
 @interface NRTextMessage : NRMessage
 
-/**
- *  消息文本
- */
-@property(nonatomic,copy) NSString *text;
+@property (nonatomic, strong) NSString *text;                       // 文字信息
 
-/**
- *  额外消息
- */
-@property(nonatomic,copy) NSString *exta;
-
-- (instancetype)initWithMessage:(NRMessage *)message;
+@property (nonatomic, strong) NSAttributedString *attrText;         // 格式化的文字信息（仅展示用）
 
 @end

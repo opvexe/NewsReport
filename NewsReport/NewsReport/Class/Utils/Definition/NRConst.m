@@ -17,6 +17,9 @@ NSString * const NRIMMessageLoginStatusConfigurationNotificationCenterKey =@"com
 /* 连接状态通知（登录成功后）*/
 NSString * const NRIMMessageLinkStatusConfigurationNotificationCenterKey = @"com.newsReport.NRIMMessageLinkStatusConfigurationNotificationCenterKey";
 
+/* 删除本地存储消息 */
+NSString * const NRIMMessageChatResetConfigurationNotificationCenterKey = @"com.newsReport.NRIMMessageChatResetConfigurationNotificationCenterKey";
+
 /*  接收方 */
 NSString *const NRMessageCellIdentifierRecvText     = @"NRMessageCellRecvText";
 NSString *const NRMessageCellIdentifierRecvLocation = @"NRMessageCellRecvLocation";

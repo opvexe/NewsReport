@@ -12,12 +12,12 @@
 #define NR_Password @"com.password"
 #define NR_UserID   @"com.userID"
 
-@interface NRUserTools : NSObject
+@interface NRUserHelper : NSObject
 
 /*!
  初始化单利
  */
-+ (NRUserTools *)defaultCenter;
++ (NRUserHelper *)defaultCenter;
 
 /*!
  保存登录用户名

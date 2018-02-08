@@ -49,7 +49,7 @@
 
 - (void)layoutSubviews{
     [super layoutSubviews];
-    if (self.messageModel.isSender) {//右边
+    if (self.messageModel.ownerTyper == MessageOwnerSelf) {//右边
         _bgView.frame = CGRectMake(8, 3, self.messageModel.contentWidth - 8 - 13, self.messageModel.contentHeight - 3 - 7);
     } else {//左边
         _bgView.frame = CGRectMake(13, 3, self.messageModel.contentWidth - 13 - 8, self.messageModel.contentHeight - 3 - 7);

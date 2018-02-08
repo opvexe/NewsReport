@@ -46,7 +46,7 @@
 {
     [super layoutSubviews];
     
-    if (self.messageModel.isSender) {//右边
+    if (self.messageModel.ownerTyper == MessageOwnerSelf) {//右边
         _durationLabel.frame = CGRectMake(15, 10, 40, 20);
         _durationLabel.textAlignment = NSTextAlignmentLeft;
         _durationLabel.textColor = [UIColor whiteColor];
@@ -63,7 +63,7 @@
 
 - (void)refreshData:(NRVioceMessage *)messageModel{
     [super refreshData:messageModel];
-    _durationLabel.text = [NSString stringWithFormat:@"%d''",(int)messageModel.second];
+    _durationLabel.text = [NSString stringWithFormat:@"%1.0f''",messageModel.time];
     if (messageModel.isMediaPlaying) {
         [_voiceImageView startAnimating];
     } else {

@@ -8,15 +8,21 @@
 
 #import <Foundation/Foundation.h>
 
-/**
- *  语音消息Elem
- */
 @interface NRVioceMessage : NRMessage
 
-/**
- *  语音文件的路径，接收时使用getSound获得数据
- */
-@property(nonatomic,strong) NSString * path;
+@property (nonatomic, strong) NSString *recFileName;
 
-- (instancetype)initWithMessage:(NRMessage *)message;
+@property (nonatomic, strong, readonly) NSString *path;
+
+@property (nonatomic, strong) NSString *url;
+
+@property (nonatomic, assign) CGFloat time;
+
+@property (nonatomic, assign) VoiceMessageStatus msgStatus;
+
+//多媒体消息：是否正在播放
+@property (nonatomic) BOOL isMediaPlaying;
+//多媒体消息：是否播放过
+@property (nonatomic) BOOL isMediaPlayed;
+
 @end
