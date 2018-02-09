@@ -12,8 +12,7 @@
 
 - (void)updateUserInfo:(NRUser *)user{
     
-    self.partnerName = user.showName;
-    self.avatarPath = user.userIcon;
+    self.partnerName = user.nickName;
     self.avatarURL = user.userIcon;
 }
 

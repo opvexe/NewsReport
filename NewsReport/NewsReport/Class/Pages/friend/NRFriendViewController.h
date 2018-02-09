@@ -10,10 +10,19 @@
 
 @interface NRFriendViewController : NRBaseViewController
 
+/*!
+ * 好友列表数据
+ */
 @property (nonatomic, weak) NSMutableArray *data;
 
+/*!
+ * 区头数据
+ */
 @property (nonatomic, weak) NSMutableArray *sectionHeaders;
 
+/*!
+ * 好友视图
+ */
 @property(nonatomic,strong)UITableView *friendTableView;
 
 @end

@@ -30,7 +30,8 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationItem.title = @"消息";
-    [NRNotificationCenter addObserver:self selector:@selector(receiveMessage:) name:NRIMMessageReceiveConfigurationNotificationCenterKey object:nil];
+    [self updateViewConstraintsView];
+    [NRNotificationCenter addObserver:self selector:@selector(reloadDataSoucre) name:NRIMMessageReceiveConfigurationNotificationCenterKey object:nil];
     [NRNotificationCenter addObserver:self selector:@selector(networkStatusChange:) name:AFNetworkingReachabilityDidChangeNotification object:nil];
 }
 
@@ -59,9 +60,10 @@
 }
 
 /*!
- * 获取本地数据
+ * 获取聊天数据
  */
 -(void)reloadDataSoucre{
+    
     [[NRMessageManager sharedInstance]conversationRecord:^(NSArray *data) {
         
         for (NRConversation *conversation in data) {
@@ -69,23 +71,13 @@
                 NRUser *user = [[NRFriendHelper sharedFriendHelper] getFriendInfoByUserID:conversation.partnerID];
                 [conversation updateUserInfo:user];
             }else if (conversation.convType == ConversationTypeGroup){
-                NRGroup *group = [[NRFriendHelper sharedFriendHelper] getGroupInfoByGroupID:conversation.partnerID];
-                [conversation updateGroupInfo:group];
+//                NRGroup *group = [[NRFriendHelper sharedFriendHelper] getGroupInfoByGroupID:conversation.partnerID];
+//                [conversation updateGroupInfo:group];
             }
         }
         self.conversationDataSocure = [[NSMutableArray alloc]initWithArray:data];
         [self.conversationTableView reloadData];
     }];
-}
-
-
-/*!
- * 获取新消息
- */
-
--(void)receiveMessage:(NSNotification *)notification{
-    
-    [self reloadDataSoucre];
 }
 
 #pragma mark < ios 11 适配>
@@ -119,27 +111,26 @@
     NRConversationListCell *cell = [NRConversationListCell CellWithTableView:tableView];
     NRConversation *model = self.conversationDataSocure[indexPath.row];
     [cell InitDataWithModel:model];
-    [cell setBottomLineStyle:indexPath.row == self.conversationDataSocure.count - 1 ? NRCellLineStyleFill : NRCellLineStyleDefault];
     return cell;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    NRChatViewController *chat = [[ NRChatViewController alloc]init];
-    
+    NRChatViewController *chat = [[NRChatViewController alloc]init];
+
     NRConversation *conversation = self.conversationDataSocure[indexPath.row];
     if (conversation.convType == ConversationTypeSingle) {
-        
+
      NRUser *user = [[NRFriendHelper sharedFriendHelper] getFriendInfoByUserID:conversation.partnerID];
-      
+
         if (user == nil) {
             NSLog(@"好友不存在");
             return;
         }
-        
+
 //          [chat setPartner:user];
     }else if (conversation.convType == ConversationTypeGroup){
-        
+
         NRGroup *group = [[NRFriendHelper sharedFriendHelper] getGroupInfoByGroupID:conversation.partnerID];
 
         if (group == nil) {
@@ -149,12 +140,12 @@
 //           [chat setPartner:group];
     }
      [self.navigationController pushViewController:chat animated:YES];
-    
+
     [(NRConversationListCell *)[self.conversationTableView cellForRowAtIndexPath:indexPath] markAsRead];
 }
 
 - (NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+
     WS(weakSelf)
     NRConversation *conversation = self.conversationDataSocure[indexPath.row];
     UITableViewRowAction *delAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault
@@ -197,16 +188,8 @@
         _conversationTableView.delegate                       = self;
         _conversationTableView.dataSource                     = self;
         _conversationTableView.tableFooterView                = [UIView new];
-        _conversationTableView.separatorStyle                 = UITableViewCellSeparatorStyleSingleLine;
+        _conversationTableView.separatorStyle                 = UITableViewCellSeparatorStyleNone;
         _conversationTableView.backgroundColor               = UIColorFromRGB(0xffffff);
-        UIEdgeInsets inset = UIEdgeInsetsMake(0, 0, 0, 0);
-        if ([_conversationTableView respondsToSelector:@selector(setSeparatorInset:)]) {
-            [_conversationTableView setSeparatorInset:inset];
-        }
-
-        if ([_conversationTableView respondsToSelector:@selector(setLayoutMargins:)]) {
-            [_conversationTableView setLayoutMargins:inset];
-        }
         [self.view addSubview:_conversationTableView];
     }
     return _conversationTableView;
@@ -218,7 +201,6 @@
     }
     return _conversationDataSocure;
 }
-
 
 /*!
  * 布局

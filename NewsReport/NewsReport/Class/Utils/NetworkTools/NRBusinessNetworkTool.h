@@ -38,7 +38,14 @@
 
 
 
+/*!
+ * 获取用户通讯录好友列表信息
 
+ @param userID 用户标识
+ @param successfull successfull description
+ @param failure failure description
+ */
++(void)PostContactWithUserID:(NSString *)userID CompleteSuccessfull:(void (^)(id responseObject))successfull  failure:(void (^)(id error))failure;
 
 
 

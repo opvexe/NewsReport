@@ -65,7 +65,7 @@
  */
 - (NSArray *)conversationsByUid:(NSString *)uid
 {
-    __block NSMutableArray *data = [[NSMutableArray alloc] init];
+    NSMutableArray *data = [[NSMutableArray alloc] init];
     NSString *sqlString = [NSString stringWithFormat: SQL_SELECT_CONVS, CONV_TABLE_NAME, uid];
     
     [self excuteQuerySQL:sqlString resultBlock:^(FMResultSet *retSet) {

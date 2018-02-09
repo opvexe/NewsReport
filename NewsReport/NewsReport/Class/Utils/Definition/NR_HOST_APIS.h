@@ -25,6 +25,10 @@
 #define PostUpImageMessageURL            FormatString(@"%@/im/message/uploadFile",HOST_API_URL)
 
 
+/*!
+ * 获取用户通讯录好友列表接口
+ */
+#define PostContactURL                   FormatString(@"%@/im/member/getAllUserInfoNoSelf",HOST_API_URL)
 
 
 

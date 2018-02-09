@@ -9,6 +9,7 @@
 #import "AppDelegate+NRExtension.h"
 #import "NRLoginViewController.h"
 #import "NRTabBarControllerConfig.h"
+#import "NRFriendHelper.h"
 
 @implementation AppDelegate (NRExtension)
 
@@ -28,6 +29,12 @@
  */
 -(void)registrationThirdLib{
      [[NRIMClientManager sharedInstance] initMobileIMSDK];
+    
 }
+
+
+
+
+
 
 @end

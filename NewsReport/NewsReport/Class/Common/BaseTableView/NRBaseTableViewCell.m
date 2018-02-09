@@ -114,8 +114,8 @@
 {
     [super drawRect:rect];
     CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextSetLineWidth(context, BORDER_WIDTH_1PX * 2);
-    CGContextSetStrokeColorWithColor(context, [UIColor redColor].CGColor);
+    CGContextSetLineWidth(context, BORDER_WIDTH_1PX * 1);
+    CGContextSetStrokeColorWithColor(context, [UIColor lightGrayColor].CGColor);
     if (self.topLineStyle != NRCellLineStyleNone) {
         CGContextBeginPath(context);
         CGFloat startX = (self.topLineStyle == NRCellLineStyleFill ? 0 : _leftSeparatorSpace);

@@ -79,7 +79,7 @@
                 break;
         }
         message.partnerType = PartnerTypeUser;
-        message.userID    = convertToString(sender);
+        message.friendID  = convertToString(sender);
     }else if ([type hasPrefix:@"2"]){           ///群聊
         switch (elem) {
             case 11:
@@ -113,33 +113,34 @@
                 break;
         }
         message.partnerType = PartnerTypeGroup;
-        message.groupID    = convertToString(sender);
+        message.friendID  = convertToString(sender);
     }else{
         
         NSLog(@"未知消息");
     }
     
-    
+    message.userID    = convertToString([[NRUserHelper defaultCenter]getUserID]);
     message.readStatus = MessageSendSuccess;
-    message.friendID  = convertToString([[NRUserHelper defaultCenter]getUserID]);
     message.messageID = convertToString(fingerPrintOfProtocal);             ///uid + 时间戳 （消息标识）
     message.date = [NSDate getNowTimestamp:[convertToString(fingerPrintOfProtocal) componentsSeparatedByString:@"+"].lastObject];
+    
     if ([message.userID isEqualToString:[[NRUserHelper defaultCenter]getUserID]]) {
+        
         message.ownerTyper = MessageOwnerSelf;
+        
     }else{
+        
         message.ownerTyper = MessageOwnerOther;
     }
 
-
-    
     [[NRMessageManager sharedInstance] sendMessage:message progress:^(NRMessage * message, CGFloat pregress) {
         
     } success:^(NRMessage * message) {
         
-        NSLog(@"send success");
+        NSLog(@"success");
     } failure:^(NRMessage * message) {
         
-        NSLog(@"send failure");
+        NSLog(@"failure");
     }];
     
     return message;

@@ -35,26 +35,11 @@
 
 - (void)setUser:(NRUser *)user{
     _user = user;
-//    if (user.avatarPath) {
-//        [self.avatarImageView setImage:[UIImage imageNamed:user.avatarPath]];
-//    }
-//    else {
-//        [self.avatarImageView sd_setImageWithURL:URLFromString(user.avatarURL) placeholderImage:[UIImage imageNamed:DEFAULT_AVATAR_PATH]];
-//    }
     
-//    [self.usernameLabel setText:user.showName];
-//    [self.subTitleLabel setText:user.detailInfo.remarkInfo];
-//    if (user.detailInfo.remarkInfo.length > 0 && self.subTitleLabel.isHidden) {
-//        [self.subTitleLabel setHidden:NO];
-//        [self.usernameLabel mas_updateConstraints:^(MASConstraintMaker *make) {
-//            make.centerY.mas_equalTo(self.avatarImageView).mas_offset(-9.5);
-//        }];
-//    }
-//    else if (user.detailInfo.remarkInfo.length == 0 && !self.subTitleLabel.isHidden){
-//        [self.usernameLabel mas_updateConstraints:^(MASConstraintMaker *make) {
-//            make.centerY.mas_equalTo(self.avatarImageView);
-//        }];
-//    }
+    [self.self.avatarImageView sd_setImageWithURL:URLFromString(user.userIcon) placeholderImage:NRImageNamed(DEFAULT_AVATAR_PATH)];
+    [self.usernameLabel setText:convertToString(user.nickName)];
+    [self.subTitleLabel setText:convertToString(user.remarkName)];
+    
 }
 
 - (void)updateViewConstraintsView{

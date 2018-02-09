@@ -53,7 +53,23 @@
 }
 
 
-
++(void)PostContactWithUserID:(NSString *)userID CompleteSuccessfull:(void (^)(id responseObject))successfull  failure:(void (^)(id error))failure{
+    
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionaryWithCapacity:0];
+    [parameters setValue:convertToString(userID) forKey:@"userId"];
+    
+    [NRNetworkHelper POST:PostContactURL parameters:parameters success:^(id responseObject) {
+        if (responseObject) {
+            
+            successfull?successfull(responseObject[@"data"]):nil;
+        }else{
+            failure?failure(responseObject[@"data"]):nil;
+        }
+    } failure:^(NSError *error) {
+        
+        failure?failure(error):nil;
+    }];
+}
 
 
 

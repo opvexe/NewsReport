@@ -37,7 +37,7 @@
         
         self.headPortraitImageView = [[FLAnimatedImageView alloc]init];
         self.headPortraitImageView.contentMode =UIViewContentModeScaleAspectFill;
-        self.headPortraitImageView.cornerRadius = Number(3.0);
+        self.headPortraitImageView.cornerRadius = Number(5.0);
         [self.contentView addSubview:self.headPortraitImageView];
         
         self.portraitLabel = [[UILabel alloc]init];
@@ -107,19 +107,10 @@
     
     _conversation = model;
 
-    if (model.avatarPath.length > 0) {
-        NSString *path = [NSFileManager pathUserAvatar:model.avatarPath];
-        [self.headPortraitImageView setImage:[UIImage imageNamed:path]];
-    }
-    else if (model.avatarURL.length > 0){
-        [self.headPortraitImageView sd_setImageWithURL:URLFromString(model.avatarURL) placeholderImage:[UIImage imageNamed:DEFAULT_AVATAR_PATH]];
-    }
-    else {
-        [self.headPortraitImageView setImage:nil];
-    }
-    [self.portraitLabel setText:model.partnerName];
-    [self.messageLabel setText:model.content];
-    [self.timestampLabel setText:model.date.formattedDateDescription];
+    [self.headPortraitImageView sd_setImageWithURL:URLFromString(model.avatarURL) placeholderImage:NRImageNamed(DEFAULT_AVATAR_PATH)];
+    [self.portraitLabel setText:convertToString(model.partnerName)];
+    [self.messageLabel setText:convertToString(model.content)];
+    [self.timestampLabel setText:convertToString(model.date.formattedDateDescription)];
     
     self.conversation.isRead ? [self markAsRead] : [self markAsUnread];
 }
@@ -133,13 +124,11 @@
     if (_conversation) {
         switch (_conversation.clueType) {
             case ClueTypePointWithNumber:
-                
                 break;
             case ClueTypePoint:
                 [self.redPointView setHidden:NO];
                 break;
             case ClueTypeNone:
-                
                 break;
             default:
                 break;
@@ -155,13 +144,11 @@
     if (_conversation) {
         switch (_conversation.clueType) {
             case ClueTypePointWithNumber:
-                
                 break;
             case ClueTypePoint:
                 [self.redPointView setHidden:YES];
                 break;
             case ClueTypeNone:
-                
                 break;
             default:
                 break;

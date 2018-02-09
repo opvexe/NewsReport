@@ -179,8 +179,9 @@
     if (message.partnerType == PartnerTypeGroup) {
         message.groupID = [retSet stringForColumn:@"fid"];
         message.friendID = [retSet stringForColumn:@"subfid"];
-    }
-    else {
+        
+    }else {
+        
         message.friendID = [retSet stringForColumn:@"fid"];
         message.groupID = [retSet stringForColumn:@"subfid"];
     }
