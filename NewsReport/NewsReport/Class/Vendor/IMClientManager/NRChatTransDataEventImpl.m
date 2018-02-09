@@ -7,6 +7,7 @@
 //
 
 #import "NRChatTransDataEventImpl.h"
+#import "NRMessageManager.h"
 #import "NRMessage.h"
 #import "ErrorCode.h"
 
@@ -46,40 +47,40 @@
     NRMessage *message ;
     
     if ([type hasPrefix:@"1"]) {    ///单聊
+        switch (elem) {
+            case 11:
+            {
+                NRTextMessage *textElem = [[NRTextMessage alloc]init];
+                textElem.messageType  = MessageTypeText;
+                textElem.text = convertToString(content);
+                message = textElem;
+            }
+                break;
+            case 12:
+            {
+                message.messageType  = MessageTypeImage;
+            }
+                break;
+            case 13:
+            {
+                message.messageType  = MessageTypeVoice;
+            }
+                break;
+            case 14:
+            {
+                message.messageType  = MessageTypeVideo;
+            }
+                break;
+                
+            default:
+            {
+                message.messageType  = MessageTypeUnknow;
+            }
+                break;
+        }
         message.partnerType = PartnerTypeUser;
-        switch (elem) {
-            case 11:
-            {
-                NRTextMessage *textElem = [[NRTextMessage alloc]init];
-                textElem.messageType  = MessageTypeText;
-                textElem.text = convertToString(content);
-                message = textElem;
-            }
-                break;
-            case 12:
-            {
-                message.messageType  = MessageTypeImage;
-            }
-                break;
-            case 13:
-            {
-                message.messageType  = MessageTypeVoice;
-            }
-                break;
-            case 14:
-            {
-                message.messageType  = MessageTypeVideo;
-            }
-                break;
-                
-            default:
-            {
-                message.messageType  = MessageTypeUnknow;
-            }
-                break;
-        }
+        message.userID    = convertToString(sender);
     }else if ([type hasPrefix:@"2"]){           ///群聊
-        message.partnerType = PartnerTypeGroup;
         switch (elem) {
             case 11:
             {
@@ -111,12 +112,15 @@
             }
                 break;
         }
+        message.partnerType = PartnerTypeGroup;
+        message.groupID    = convertToString(sender);
     }else{
         
         NSLog(@"未知消息");
     }
     
-    message.userID    = convertToString(sender);
+    
+    message.readStatus = MessageSendSuccess;
     message.friendID  = convertToString([[NRUserHelper defaultCenter]getUserID]);
     message.messageID = convertToString(fingerPrintOfProtocal);             ///uid + 时间戳 （消息标识）
     message.date = [NSDate getNowTimestamp:[convertToString(fingerPrintOfProtocal) componentsSeparatedByString:@"+"].lastObject];
@@ -125,6 +129,18 @@
     }else{
         message.ownerTyper = MessageOwnerOther;
     }
+
+
+    
+    [[NRMessageManager sharedInstance] sendMessage:message progress:^(NRMessage * message, CGFloat pregress) {
+        
+    } success:^(NRMessage * message) {
+        
+        NSLog(@"send success");
+    } failure:^(NRMessage * message) {
+        
+        NSLog(@"send failure");
+    }];
     
     return message;
 }

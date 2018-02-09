@@ -53,7 +53,9 @@
  */
 @property (nonatomic, assign, readonly) ClueType clueType;
 
-
+/**
+ *  未读已读
+ */
 @property (nonatomic, assign, readonly) BOOL isRead;
 
 /**

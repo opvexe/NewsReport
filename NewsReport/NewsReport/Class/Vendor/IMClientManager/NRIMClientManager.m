@@ -54,7 +54,7 @@ static NRIMClientManager *instance = nil;
         [ConfigEntity registerWithAppKey:@"5418023dfd98c579b6001741"];         // 设置AppKey
         [ConfigEntity setServerIp:@"124.205.145.238"];                         // 设置服务器ip和服务器端口
         [ConfigEntity setServerPort:7901];
-        [ClientCoreSDK setENABLED_DEBUG:YES];                                  // 开启DEBUG信息输出
+        [ClientCoreSDK setENABLED_DEBUG:NO];                                  // 开启DEBUG信息输出
         
         ///MARK:事件回调
         self.baseEventListener = [[NRChatBaseEventImpl alloc] init];

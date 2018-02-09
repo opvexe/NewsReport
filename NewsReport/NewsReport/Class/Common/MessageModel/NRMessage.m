@@ -38,7 +38,7 @@
 
 - (id)init{         ///消息标识 uid +时间戳
     if (self = [super init]) {
-        self.messageID = [NSString stringWithFormat:@"%@+%lld", convertToString(self.userID),(long long)([[NSDate date] timeIntervalSince1970] * 10000)];
+//        self.messageID = [NSString stringWithFormat:@"%@+%lld", convertToString(self.userID),(long long)([[NSDate date] timeIntervalSince1970] * 10000)];
     }
     return self;
 }

@@ -104,6 +104,7 @@
 }
 
 -(void)InitDataWithModel:(NRConversation *)model{
+    
     _conversation = model;
 
     if (model.avatarPath.length > 0) {

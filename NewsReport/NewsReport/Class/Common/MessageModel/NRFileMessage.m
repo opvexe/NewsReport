@@ -20,4 +20,16 @@
 
 
 
+
+
+- (NSString *)conversationContent
+{
+    return @"[文件消息]";
+}
+
+- (NSString *)messageCopy
+{
+    return [self.content mj_JSONString];
+}
+
 @end

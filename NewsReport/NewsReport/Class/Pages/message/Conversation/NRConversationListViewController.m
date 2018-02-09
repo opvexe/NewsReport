@@ -85,8 +85,7 @@
 
 -(void)receiveMessage:(NSNotification *)notification{
     
-    NRMessage *message = (NRMessage *)notification.object;
-    
+    [self reloadDataSoucre];
 }
 
 #pragma mark < ios 11 适配>

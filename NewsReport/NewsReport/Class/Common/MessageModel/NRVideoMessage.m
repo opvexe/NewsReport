@@ -18,4 +18,20 @@
     return self;
 }
 
+
+
+
+
+
+- (NSString *)conversationContent
+{
+    return @"[视频消息]";
+}
+
+- (NSString *)messageCopy
+{
+    return [self.content mj_JSONString];
+}
+
+
 @end

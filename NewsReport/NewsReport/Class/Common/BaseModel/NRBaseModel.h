@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 /*!
- * 基础Model
+ * 基础类
  */
 @interface NRBaseModel : NSObject
 

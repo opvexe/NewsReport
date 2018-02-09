@@ -40,8 +40,7 @@
     NSString *subfid;
     if (message.partnerType == PartnerTypeUser) {
         fid = message.friendID;
-    }
-    else {
+    }else {
         fid = message.groupID;
         subfid = message.friendID;
     }
@@ -50,7 +49,7 @@
     NSArray *arrPara = [NSArray arrayWithObjects:
                         message.messageID,
                         message.userID,
-                        fid,
+                        convertToString(fid),
                         convertToString(subfid),
                         NRTimeStamp(message.date),
                         [NSNumber numberWithInteger:message.partnerType],

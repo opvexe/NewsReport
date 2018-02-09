@@ -10,4 +10,20 @@
 
 @implementation NRLocationMessage
 
+
+
+
+
+
+
+- (NSString *)conversationContent
+{
+    return @"[定位消息]";
+}
+
+- (NSString *)messageCopy
+{
+    return [self.content mj_JSONString];
+}
+
 @end
