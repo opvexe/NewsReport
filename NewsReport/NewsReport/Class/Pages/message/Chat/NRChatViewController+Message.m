@@ -1,15 +1,15 @@
 //
-//  NRChatViewController+Proxy.m
+//  NRChatViewController+Message.m
 //  NewsReport
 //
-//  Created by Facebook on 2018/2/7.
+//  Created by Facebook on 2018/2/13.
 //  Copyright © 2018年 Facebook. All rights reserved.
 //
 
-#import "NRChatViewController+Proxy.h"
+#import "NRChatViewController+Message.h"
 #import "NRMessageManager.h"
 
-@implementation NRChatViewController (Proxy)
+@implementation NRChatViewController (Message)
 
 /**
  *  发送消息
@@ -42,6 +42,4 @@
         NSLog(@"send failure");
     }];
 }
-
-
 @end

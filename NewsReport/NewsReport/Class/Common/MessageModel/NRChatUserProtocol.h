@@ -8,14 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-/*!
- * 用户协议
- */
 typedef NS_ENUM(NSInteger, ChatUserType) {
     ChatUserTypeUser = 0,
     ChatUserTypeGroup,
 };
 
+/*!
+ * 用户信息转换
+ */
 @protocol NRChatUserProtocol <NSObject>
 
 @property (nonatomic, strong, readonly) NSString *chat_userID;

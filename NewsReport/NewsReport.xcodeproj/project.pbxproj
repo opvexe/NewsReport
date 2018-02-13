@@ -133,6 +133,10 @@
 		D024F565202AECEA003708DE /* NRMessageManager+MessageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D024F564202AECEA003708DE /* NRMessageManager+MessageCache.m */; };
 		D024F568202AED06003708DE /* NRMessageManager+ConversationCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D024F567202AED06003708DE /* NRMessageManager+ConversationCache.m */; };
 		D025B13120326CE000C75E1C /* libresolv.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D025B13020326CE000C75E1C /* libresolv.9.tbd */; };
+		D025B1342032883F00C75E1C /* NRChatViewController+ChatBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D025B1332032883F00C75E1C /* NRChatViewController+ChatBar.m */; };
+		D025B13A20328D3000C75E1C /* NRChatViewController+Message.m in Sources */ = {isa = PBXBuildFile; fileRef = D025B13920328D3000C75E1C /* NRChatViewController+Message.m */; };
+		D025B13D2032914500C75E1C /* NRUser+ChatModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D025B13C2032914500C75E1C /* NRUser+ChatModel.m */; };
+		D025B140203291BE00C75E1C /* NRGroup+ChatModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D025B13F203291BE00C75E1C /* NRGroup+ChatModel.m */; };
 		D02964E520229E340060409F /* NSDate+NRCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = D02964E420229E340060409F /* NSDate+NRCategory.m */; };
 		D02964E820229E700060409F /* NSDateFormatter+NRCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = D02964E720229E700060409F /* NSDateFormatter+NRCategory.m */; };
 		D02964ED2022AD5E0060409F /* NRTextMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = D02964EC2022AD5E0060409F /* NRTextMessage.m */; };
@@ -181,7 +185,6 @@
 		D02DD9AB20218B120035066D /* NRMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = D02DD9AA20218B120035066D /* NRMessage.m */; };
 		D0F9A8B8202C1F35006D1DD2 /* NRFriendHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F9A8B7202C1F35006D1DD2 /* NRFriendHelper.m */; };
 		D0F9A8BB202C2340006D1DD2 /* NRConversation+NRUser.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F9A8BA202C2340006D1DD2 /* NRConversation+NRUser.m */; };
-		D0F9A8C1202C304A006D1DD2 /* NRChatViewController+Proxy.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F9A8C0202C304A006D1DD2 /* NRChatViewController+Proxy.m */; };
 		D0F9A8D6202C4145006D1DD2 /* NRChatMessageContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F9A8C7202C4144006D1DD2 /* NRChatMessageContentView.m */; };
 		D0F9A8D7202C4145006D1DD2 /* NRFileMessageContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F9A8C9202C4144006D1DD2 /* NRFileMessageContentView.m */; };
 		D0F9A8D8202C4145006D1DD2 /* NRImageMessageContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F9A8CB202C4144006D1DD2 /* NRImageMessageContentView.m */; };
@@ -465,6 +468,14 @@
 		D024F566202AED06003708DE /* NRMessageManager+ConversationCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NRMessageManager+ConversationCache.h"; sourceTree = "<group>"; };
 		D024F567202AED06003708DE /* NRMessageManager+ConversationCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NRMessageManager+ConversationCache.m"; sourceTree = "<group>"; };
 		D025B13020326CE000C75E1C /* libresolv.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.9.tbd; path = usr/lib/libresolv.9.tbd; sourceTree = SDKROOT; };
+		D025B1322032883F00C75E1C /* NRChatViewController+ChatBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NRChatViewController+ChatBar.h"; sourceTree = "<group>"; };
+		D025B1332032883F00C75E1C /* NRChatViewController+ChatBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NRChatViewController+ChatBar.m"; sourceTree = "<group>"; };
+		D025B13820328D3000C75E1C /* NRChatViewController+Message.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NRChatViewController+Message.h"; sourceTree = "<group>"; };
+		D025B13920328D3000C75E1C /* NRChatViewController+Message.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NRChatViewController+Message.m"; sourceTree = "<group>"; };
+		D025B13B2032914500C75E1C /* NRUser+ChatModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NRUser+ChatModel.h"; sourceTree = "<group>"; };
+		D025B13C2032914500C75E1C /* NRUser+ChatModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NRUser+ChatModel.m"; sourceTree = "<group>"; };
+		D025B13E203291BE00C75E1C /* NRGroup+ChatModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NRGroup+ChatModel.h"; sourceTree = "<group>"; };
+		D025B13F203291BE00C75E1C /* NRGroup+ChatModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NRGroup+ChatModel.m"; sourceTree = "<group>"; };
 		D02964E320229E340060409F /* NSDate+NRCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+NRCategory.h"; sourceTree = "<group>"; };
 		D02964E420229E340060409F /* NSDate+NRCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+NRCategory.m"; sourceTree = "<group>"; };
 		D02964E620229E700060409F /* NSDateFormatter+NRCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+NRCategory.h"; sourceTree = "<group>"; };
@@ -545,8 +556,6 @@
 		D0F9A8B7202C1F35006D1DD2 /* NRFriendHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRFriendHelper.m; sourceTree = "<group>"; };
 		D0F9A8B9202C2340006D1DD2 /* NRConversation+NRUser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NRConversation+NRUser.h"; sourceTree = "<group>"; };
 		D0F9A8BA202C2340006D1DD2 /* NRConversation+NRUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NRConversation+NRUser.m"; sourceTree = "<group>"; };
-		D0F9A8BF202C3049006D1DD2 /* NRChatViewController+Proxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NRChatViewController+Proxy.h"; sourceTree = "<group>"; };
-		D0F9A8C0202C304A006D1DD2 /* NRChatViewController+Proxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NRChatViewController+Proxy.m"; sourceTree = "<group>"; };
 		D0F9A8C6202C4144006D1DD2 /* NRChatMessageContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NRChatMessageContentView.h; sourceTree = "<group>"; };
 		D0F9A8C7202C4144006D1DD2 /* NRChatMessageContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NRChatMessageContentView.m; sourceTree = "<group>"; };
 		D0F9A8C8202C4144006D1DD2 /* NRFileMessageContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NRFileMessageContentView.h; sourceTree = "<group>"; };
@@ -1150,6 +1159,8 @@
 				D01D08D22020226D00288240 /* NRUser.m */,
 				D02967602022D1C30060409F /* NRUserHelper.h */,
 				D02967612022D1C30060409F /* NRUserHelper.m */,
+				D025B13B2032914500C75E1C /* NRUser+ChatModel.h */,
+				D025B13C2032914500C75E1C /* NRUser+ChatModel.m */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -1177,6 +1188,8 @@
 				D024F546202AD189003708DE /* NRGroup.m */,
 				D0F9A8B6202C1F35006D1DD2 /* NRFriendHelper.h */,
 				D0F9A8B7202C1F35006D1DD2 /* NRFriendHelper.m */,
+				D025B13E203291BE00C75E1C /* NRGroup+ChatModel.h */,
+				D025B13F203291BE00C75E1C /* NRGroup+ChatModel.m */,
 			);
 			path = Friends;
 			sourceTree = "<group>";
@@ -1483,8 +1496,10 @@
 				D0F9A8C4202C4144006D1DD2 /* Cell */,
 				D01D08E2202043AB00288240 /* NRChatViewController.h */,
 				D01D08E3202043AB00288240 /* NRChatViewController.m */,
-				D0F9A8BF202C3049006D1DD2 /* NRChatViewController+Proxy.h */,
-				D0F9A8C0202C304A006D1DD2 /* NRChatViewController+Proxy.m */,
+				D025B1322032883F00C75E1C /* NRChatViewController+ChatBar.h */,
+				D025B1332032883F00C75E1C /* NRChatViewController+ChatBar.m */,
+				D025B13820328D3000C75E1C /* NRChatViewController+Message.h */,
+				D025B13920328D3000C75E1C /* NRChatViewController+Message.m */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -1924,6 +1939,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D025B1342032883F00C75E1C /* NRChatViewController+ChatBar.m in Sources */,
 				D0223E8F20242EFB00EA9998 /* FaceSourceManager.m in Sources */,
 				D024F4BF20283FD4003708DE /* NRFriendHeaderView.m in Sources */,
 				D024F54B202AD3E8003708DE /* NRDBExpressionStore.m in Sources */,
@@ -1956,7 +1972,7 @@
 				D0223E7D20242EC700EA9998 /* ChatToolBarItem.m in Sources */,
 				D01D08E4202043AB00288240 /* NRChatViewController.m in Sources */,
 				D0223E8820242EC700EA9998 /* MorePanel.m in Sources */,
-				D0F9A8C1202C304A006D1DD2 /* NRChatViewController+Proxy.m in Sources */,
+				D025B13D2032914500C75E1C /* NRUser+ChatModel.m in Sources */,
 				D01D08F220204A7600288240 /* NRBarButtonItem.m in Sources */,
 				D024F554202ADB40003708DE /* NSString+URLEncode.m in Sources */,
 				D02964F62022ADC80060409F /* NRFileMessage.m in Sources */,
@@ -1994,6 +2010,7 @@
 				D02964F32022ADBC0060409F /* NRVioceMessage.m in Sources */,
 				D024F4C920284B6E003708DE /* NRFriendDetailViewController.m in Sources */,
 				D01D08BE2020178000288240 /* NSString+LSWMEXtension.m in Sources */,
+				D025B140203291BE00C75E1C /* NRGroup+ChatModel.m in Sources */,
 				D0F9A8D6202C4145006D1DD2 /* NRChatMessageContentView.m in Sources */,
 				D013607E2022FD9C003AFEEE /* NRFMDataManger.m in Sources */,
 				D0223E8A20242EC700EA9998 /* OfficialAccountToolbar.m in Sources */,
@@ -2037,6 +2054,7 @@
 				D0F9A8BB202C2340006D1DD2 /* NRConversation+NRUser.m in Sources */,
 				D01D08CB20201CAA00288240 /* WMLSSessionManger.m in Sources */,
 				D024F568202AED06003708DE /* NRMessageManager+ConversationCache.m in Sources */,
+				D025B13A20328D3000C75E1C /* NRChatViewController+Message.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
