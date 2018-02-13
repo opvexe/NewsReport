@@ -38,54 +38,71 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+//     Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
-    self.navigationItem.title =  [NSString stringWithFormat:@"与%@聊天",_userName];
+
     [self addPopBackBarButtonItem];
     [self updateViewConstraintsView];
-    [self receiveMessageNotification];
+    [self configView];
     [self reloadDataSoucre];
     [WXDeviceManager sharedInstance].delegate = self;
 }
 
+/*！
+ *  设置会话对象
+ */
 - (void)setPartner:(id<NRChatUserProtocol>)partner{
     if (_partner && [[_partner chat_userID] isEqualToString:[partner chat_userID]]) {
         dispatch_async(dispatch_get_main_queue(), ^{
           
+            [self reloadAfterReceiveMessage];
         });
         return;
     }
     _partner = partner;
-    [self.navigationItem setTitle:[_partner chat_username]];
-   
+    [self.navigationItem setTitle:[NSString stringWithFormat:@"与%@聊天",[_partner chat_username]]];
 }
 
-/*!
- * 获取本地数据
+-(void)configView{
+    WS(weakSelf)
+    self.chatTableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
+        [weakSelf tableViewDidTriggerFooterRefresh];
+        [weakSelf.chatTableView.mj_footer beginRefreshing];
+    }];
+    self.chatTableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        [weakSelf tableViewDidTriggerHeaderRefresh];
+        [weakSelf.chatTableView.mj_header beginRefreshing];
+    }];
+}
+
+/*！
+ *  下拉刷新
  */
+- (void)tableViewDidTriggerHeaderRefresh{
+
+    [self.chats removeAllObjects];
+     [self loadDataSoucre];
+}
+
+/*！
+ *  上拉刷新
+ */
+- (void)tableViewDidTriggerFooterRefresh{
+
+     [self loadDataSoucre];
+}
+
 -(void)reloadDataSoucre{
-    
-//    NRTextMessage *message = [[NRTextMessage alloc]init];
-//    message.text = @"我们需要在用户不允许访问的时候跳转，那么首先我们就要判断一些是否已经开启系统相机权限了";
-//    message.messageType = MessageTypeText;
-//    message.senderUserInfo.nickName = @"测试";
-//    message.isSender = YES;
-//    [self.chats addObject:message];
-//
-//    NRImageMessage *imageElem = [[NRImageMessage alloc]init];
-//    imageElem.image = [UIImage imageNamed:@"icon_avatar"];
-//    imageElem.messageType = MessageTypeImage;
-//    imageElem.isSender = NO;
-    
-//    [self.chats addObject:imageElem];
-    
-    [self reloadAfterReceiveMessage];
+    self.chatTableView.mj_header.hidden  =NO;
+    self.chatTableView.mj_footer.hidden  =NO;
+    [self loadDataSoucre];
 }
 
-/*!
- * 消息通知
+/*！
+ * 获取聊天消息
  */
--(void)receiveMessageNotification{
+- (void)loadDataSoucre{
+    
     
     
 }
@@ -171,40 +188,40 @@
  *  文本消息
  */
 - (void)chatKeyBoardSendText:(NSString *)text{
-    NRTextMessage *message = [[NRTextMessage alloc]init];
-    message.messageType = MessageTypeText;
-    message.userID = [[NRUserHelper defaultCenter]getUserID];
-    message.friendID  = convertToString(_targetId);
-    message.text = convertToString(text);
-    message.messageID = convertToString( [NSString stringWithFormat:@"%@+%@",[[NRUserHelper defaultCenter]getUserID],[NRNewsReportTools getTimeTampWithDigit:13]]);
-    [self sendMessageWithText:message CompletecBlock:^(int code) {
-        if (code == COMMON_CODE_OK) {
-            NSLog(@"文本消息发送成功");
-        }else{
-            NSLog(@"文本消息发送失败");
-        }
-    }];
+//    NRTextMessage *message = [[NRTextMessage alloc]init];
+//    message.messageType = MessageTypeText;
+//    message.userID = [[NRUserHelper defaultCenter]getUserID];
+//    message.friendID  = convertToString(_targetId);
+//    message.text = convertToString(text);
+//    message.messageID = convertToString( [NSString stringWithFormat:@"%@+%@",[[NRUserHelper defaultCenter]getUserID],[NRNewsReportTools getTimeTampWithDigit:13]]);
+//    [self sendMessageWithText:message CompletecBlock:^(int code) {
+//        if (code == COMMON_CODE_OK) {
+//            NSLog(@"文本消息发送成功");
+//        }else{
+//            NSLog(@"文本消息发送失败");
+//        }
+//    }];
 }
 
 /*！
  *  图片消息
  */
 -(void)sendMessageWithImages{
-    [self.lastSelectProcessedDatas enumerateObjectsUsingBlock:^(NRImagePickModel *obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        NRImageMessage *message = [[NRImageMessage alloc]init];
-        message.messageType = MessageTypeImage;
-        message.userID = [[NRUserHelper defaultCenter]getUserID];
-        message.friendID  = convertToString(_targetId);
-//        message.imagePath = obj.image;
-        message.messageID = convertToString( [NSString stringWithFormat:@"%@+%@",[[NRUserHelper defaultCenter]getUserID],[NRNewsReportTools getTimeTampWithDigit:13]]);
-        [self sendMessageWithImage:message isOrignal:self.isOriginal CompletecBlock:^(int code) {
-            if (code == COMMON_CODE_OK) {
-                NSLog(@"文本消息发送成功");
-            }else{
-                NSLog(@"文本消息发送失败");
-            }
-        }];
-    }];
+//    [self.lastSelectProcessedDatas enumerateObjectsUsingBlock:^(NRImagePickModel *obj, NSUInteger idx, BOOL * _Nonnull stop) {
+//        NRImageMessage *message = [[NRImageMessage alloc]init];
+//        message.messageType = MessageTypeImage;
+//        message.userID = [[NRUserHelper defaultCenter]getUserID];
+//        message.friendID  = convertToString(_targetId);
+////        message.imagePath = obj.image;
+//        message.messageID = convertToString( [NSString stringWithFormat:@"%@+%@",[[NRUserHelper defaultCenter]getUserID],[NRNewsReportTools getTimeTampWithDigit:13]]);
+//        [self sendMessageWithImage:message isOrignal:self.isOriginal CompletecBlock:^(int code) {
+//            if (code == COMMON_CODE_OK) {
+//                NSLog(@"文本消息发送成功");
+//            }else{
+//                NSLog(@"文本消息发送失败");
+//            }
+//        }];
+//    }];
 }
 
 /*！

@@ -14,19 +14,13 @@
  */
 @interface NRChatViewController : NRBaseViewController
 /*!
- 目标会话ID
+ 用户信息
  */
-@property(nonatomic, strong) NSString *targetId;
-/*!
- 目标会话名字
- */
-@property (nonatomic,copy) NSString *userName;
-
-
-/// 用户信息
 @property (nonatomic, strong) id<NRChatUserProtocol> user;
 
-/// 聊天对象
+/*!
+ 聊天对象
+ */
 @property (nonatomic, strong) id<NRChatUserProtocol> partner;
 
 @end

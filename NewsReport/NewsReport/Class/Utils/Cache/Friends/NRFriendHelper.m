@@ -169,10 +169,8 @@ static NRFriendHelper *friendHelper = nil;
  */
 - (void)intWithContacts{
     
-    @synchronized(self) {
         [NRBusinessNetworkTool PostContactWithUserID:[[NRUserHelper defaultCenter]getUserID] CompleteSuccessfull:^(id responseObject) {
             
-            NSLog(@"获取通讯录好友列表:%@",responseObject);
             NSArray *arr = [NRUser mj_objectArrayWithKeyValuesArray:responseObject];
             [self.friendsData removeAllObjects];
             [self.friendsData addObjectsFromArray:arr];
@@ -183,37 +181,13 @@ static NRFriendHelper *friendHelper = nil;
             dispatch_async(dispatch_get_global_queue(0, 0), ^{
                 [self p_resetFriendData];
             });
-            
+
         } failure:^(id error) {
-            
+
             NSLog(@"获取好友列表数据失败");
         }];
-        
-    }
     
-    
-    
-    //    // 好友数据
-    ////    NSString *path = [[NSBundle mainBundle] pathForResource:@"FriendList" ofType:@"json"];
-    ////    NSData *jsonData = [NSData dataWithContentsOfFile:path];
-    ////    NSArray *jsonArray = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:nil];
-    //
-    //
-    //    // 群数据
-    //    path = [[NSBundle mainBundle] pathForResource:@"FriendGroupList" ofType:@"json"];
-    //    jsonData = [NSData dataWithContentsOfFile:path];
-    //    jsonArray = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:nil];
-    //    arr = [NRGroup mj_objectArrayWithKeyValuesArray:jsonArray];
-    //    [self.groupsData removeAllObjects];
-    //    [self.groupsData addObjectsFromArray:arr];
-    //    ok = [self.groupStore updateGroupsData:self.groupsData forUid:[[NRUserHelper defaultCenter]getUserID]];
-    //    if (!ok) {
-    //        NSLog(@"保存群数据到数据库失败!");
-    //    }
-    ////    // 生成Group Icon
-    ////    for (NRGroup *group in self.groupsData) {
-    ////        [TLUIUtility createGroupAvatar:group finished:nil];
-    ////    }
+
 }
 
 

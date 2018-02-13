@@ -37,7 +37,8 @@
         
         self.headPortraitImageView = [[FLAnimatedImageView alloc]init];
         self.headPortraitImageView.contentMode =UIViewContentModeScaleAspectFill;
-        self.headPortraitImageView.cornerRadius = Number(5.0);
+        self.headPortraitImageView.layer.cornerRadius = Number(5.0);
+        self.headPortraitImageView.layer.masksToBounds = YES;
         [self.contentView addSubview:self.headPortraitImageView];
         
         self.portraitLabel = [[UILabel alloc]init];

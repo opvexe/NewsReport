@@ -7,9 +7,10 @@
 //
 
 #import "NRRootViewController.h"
+#import "NRDBFriendStore.h"
 
 @interface NRRootViewController ()<UITabBarControllerDelegate, CYLTabBarControllerDelegate>
-
+@property(nonatomic,strong) NRDBFriendStore *friendStore;
 @end
 
 @implementation NRRootViewController
@@ -17,7 +18,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
 }
+
 
 
 - (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController {

@@ -17,7 +17,6 @@
 #import "NRFriendHelper.h"
 #import "NRConversation+NRUser.h"
 #import "NRConversation.h"
-#import "NRChatUserProtocol.h"
 
 @interface NRConversationListViewController ()<UITableViewDataSource,UITableViewDelegate,NRChatUserProtocol>
 @property (nonatomic, strong) UITableView    *conversationTableView;

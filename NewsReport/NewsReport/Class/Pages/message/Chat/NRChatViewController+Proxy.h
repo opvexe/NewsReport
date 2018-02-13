@@ -15,9 +15,4 @@
  */
 - (void)sendMessage:(NRMessage *)message;
 
-/**
- *  接收消息
- */
-- (void)receivedMessage:(NRMessage *)message;
-
 @end
