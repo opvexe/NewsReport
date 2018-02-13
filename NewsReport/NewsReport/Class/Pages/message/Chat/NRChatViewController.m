@@ -48,6 +48,18 @@
     [WXDeviceManager sharedInstance].delegate = self;
 }
 
+- (void)setPartner:(id<NRChatUserProtocol>)partner{
+    if (_partner && [[_partner chat_userID] isEqualToString:[partner chat_userID]]) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+          
+        });
+        return;
+    }
+    _partner = partner;
+    [self.navigationItem setTitle:[_partner chat_username]];
+   
+}
+
 /*!
  * 获取本地数据
  */

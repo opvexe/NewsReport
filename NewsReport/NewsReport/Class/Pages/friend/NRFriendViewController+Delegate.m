@@ -78,6 +78,7 @@
     return index;
 }
 
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return Number(54.0f);
 }

@@ -132,6 +132,7 @@
 		D024F562202AEAB4003708DE /* NRMessageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D024F561202AEAB4003708DE /* NRMessageManager.m */; };
 		D024F565202AECEA003708DE /* NRMessageManager+MessageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D024F564202AECEA003708DE /* NRMessageManager+MessageCache.m */; };
 		D024F568202AED06003708DE /* NRMessageManager+ConversationCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D024F567202AED06003708DE /* NRMessageManager+ConversationCache.m */; };
+		D025B13120326CE000C75E1C /* libresolv.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D025B13020326CE000C75E1C /* libresolv.9.tbd */; };
 		D02964E520229E340060409F /* NSDate+NRCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = D02964E420229E340060409F /* NSDate+NRCategory.m */; };
 		D02964E820229E700060409F /* NSDateFormatter+NRCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = D02964E720229E700060409F /* NSDateFormatter+NRCategory.m */; };
 		D02964ED2022AD5E0060409F /* NRTextMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = D02964EC2022AD5E0060409F /* NRTextMessage.m */; };
@@ -463,6 +464,7 @@
 		D024F564202AECEA003708DE /* NRMessageManager+MessageCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NRMessageManager+MessageCache.m"; sourceTree = "<group>"; };
 		D024F566202AED06003708DE /* NRMessageManager+ConversationCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NRMessageManager+ConversationCache.h"; sourceTree = "<group>"; };
 		D024F567202AED06003708DE /* NRMessageManager+ConversationCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NRMessageManager+ConversationCache.m"; sourceTree = "<group>"; };
+		D025B13020326CE000C75E1C /* libresolv.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.9.tbd; path = usr/lib/libresolv.9.tbd; sourceTree = SDKROOT; };
 		D02964E320229E340060409F /* NSDate+NRCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+NRCategory.h"; sourceTree = "<group>"; };
 		D02964E420229E340060409F /* NSDate+NRCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+NRCategory.m"; sourceTree = "<group>"; };
 		D02964E620229E700060409F /* NSDateFormatter+NRCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+NRCategory.h"; sourceTree = "<group>"; };
@@ -583,6 +585,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D025B13120326CE000C75E1C /* libresolv.9.tbd in Frameworks */,
 				D0223DC9202411C600EA9998 /* CoreFoundation.framework in Frameworks */,
 				D01D0894201FFB1700288240 /* CoreGraphics.framework in Frameworks */,
 				D02966582022CBAA0060409F /* libopencore-amrnb.a in Frameworks */,
@@ -811,6 +814,7 @@
 		D01D088A201FFAF700288240 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D025B13020326CE000C75E1C /* libresolv.9.tbd */,
 				D0223DC8202411C600EA9998 /* CoreFoundation.framework */,
 				D01D0893201FFB1700288240 /* CoreGraphics.framework */,
 				D01D0891201FFB0D00288240 /* UIKit.framework */,
@@ -1644,7 +1648,7 @@
 				TargetAttributes = {
 					D01D082D201FF8AD00288240 = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					D01D0845201FF8AE00288240 = {
 						CreatedOnToolsVersion = 9.2;
@@ -2188,7 +2192,10 @@
 			baseConfigurationReference = D34BE6E7BA5DCC2482DC2652 /* Pods-NewsReport.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = E4VJ432V3P;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/NewsReport/Class/Vendor/Signa",
@@ -2202,9 +2209,12 @@
 					"$(PROJECT_DIR)/NewsReport/Class/Vendor/MobileIMSDK4iLib",
 					"$(PROJECT_DIR)/NewsReport/Class/Utils/voice\\ manager/VoiceConvert/opencore-amrnb",
 					"$(PROJECT_DIR)/NewsReport/Class/Utils/voice\\ manager/VoiceConvert/opencore-amrwb",
+					"${PROJECT_DIR}/agora/libs",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Facebook.NewsReport;
+				PRODUCT_BUNDLE_IDENTIFIER = Com.Facebook.NewsReport;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "abe78751-f877-4fd7-b7c1-5789d5cf9d75";
+				PROVISIONING_PROFILE_SPECIFIER = NewsReport.Dev;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -2214,7 +2224,10 @@
 			baseConfigurationReference = 53F880629E9FFEBD10EA4877 /* Pods-NewsReport.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = E4VJ432V3P;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/NewsReport/Class/Vendor/Signa",
@@ -2228,9 +2241,12 @@
 					"$(PROJECT_DIR)/NewsReport/Class/Vendor/MobileIMSDK4iLib",
 					"$(PROJECT_DIR)/NewsReport/Class/Utils/voice\\ manager/VoiceConvert/opencore-amrnb",
 					"$(PROJECT_DIR)/NewsReport/Class/Utils/voice\\ manager/VoiceConvert/opencore-amrwb",
+					"${PROJECT_DIR}/agora/libs",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Facebook.NewsReport;
+				PRODUCT_BUNDLE_IDENTIFIER = Com.Facebook.NewsReport;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "a392e5d0-c3d5-4445-b5b2-468362ee48a1";
+				PROVISIONING_PROFILE_SPECIFIER = NewsReport.Dev;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

@@ -17,8 +17,9 @@
 #import "NRFriendHelper.h"
 #import "NRConversation+NRUser.h"
 #import "NRConversation.h"
+#import "NRChatUserProtocol.h"
 
-@interface NRConversationListViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface NRConversationListViewController ()<UITableViewDataSource,UITableViewDelegate,NRChatUserProtocol>
 @property (nonatomic, strong) UITableView    *conversationTableView;
 @property (nonatomic,strong ) NSMutableArray *conversationDataSocure;
 @end
@@ -71,8 +72,8 @@
                 NRUser *user = [[NRFriendHelper sharedFriendHelper] getFriendInfoByUserID:conversation.partnerID];
                 [conversation updateUserInfo:user];
             }else if (conversation.convType == ConversationTypeGroup){
-//                NRGroup *group = [[NRFriendHelper sharedFriendHelper] getGroupInfoByGroupID:conversation.partnerID];
-//                [conversation updateGroupInfo:group];
+                NRGroup *group = [[NRFriendHelper sharedFriendHelper] getGroupInfoByGroupID:conversation.partnerID];
+                [conversation updateGroupInfo:group];
             }
         }
         self.conversationDataSocure = [[NSMutableArray alloc]initWithArray:data];
@@ -128,7 +129,7 @@
             return;
         }
 
-//          [chat setPartner:user];
+          [chat setPartner:user];
     }else if (conversation.convType == ConversationTypeGroup){
 
         NRGroup *group = [[NRFriendHelper sharedFriendHelper] getGroupInfoByGroupID:conversation.partnerID];
@@ -137,7 +138,7 @@
             NSLog(@"群组不存在");
             return;
         }
-//           [chat setPartner:group];
+           [chat setPartner:group];
     }
      [self.navigationController pushViewController:chat animated:YES];
 

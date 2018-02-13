@@ -78,6 +78,9 @@
         _friendTableView.tableFooterView                = [UIView new];
         _friendTableView.separatorStyle                 = UITableViewCellSeparatorStyleNone;
         _friendTableView.backgroundColor               = UIColorFromRGB(0xffffff);
+        _friendTableView.sectionIndexBackgroundColor = [UIColor clearColor];//修改右边索引的背景色
+        _friendTableView.sectionIndexColor = Maser_Color;//修改右边索引字体的颜色
+        
         [self.view addSubview:_friendTableView];
     }
     return _friendTableView;

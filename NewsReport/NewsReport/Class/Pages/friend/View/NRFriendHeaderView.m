@@ -19,7 +19,7 @@
 {
     if (self = [super initWithReuseIdentifier:reuseIdentifier]) {
         UIView *bgView = [UIView new];
-        [bgView setBackgroundColor:[UIColor clearColor]];
+        [bgView setBackgroundColor:UIColorFromRGB(0xfafafa)];
         [self setBackgroundView:bgView];
         [self addSubview:self.titleLabel];
     }
