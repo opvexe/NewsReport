@@ -32,15 +32,7 @@
  *  设置会话对象
  */
 - (void)setPartner:(id<NRChatUserProtocol>)partner{
-    
-//    if ([partner chat_userType] == ChatUserTypeUser) {
-//        
-//        
-//    }else if ([partner chat_userType]== ChatUserTypeGroup){
-//        
-//        
-//    }
-    
+
     if (_partner && [[_partner chat_userID] isEqualToString:[partner chat_userID]]) {
         dispatch_async(dispatch_get_main_queue(), ^{
             

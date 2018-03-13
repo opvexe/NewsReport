@@ -137,6 +137,7 @@
 		D025B13A20328D3000C75E1C /* NRChatViewController+Message.m in Sources */ = {isa = PBXBuildFile; fileRef = D025B13920328D3000C75E1C /* NRChatViewController+Message.m */; };
 		D025B13D2032914500C75E1C /* NRUser+ChatModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D025B13C2032914500C75E1C /* NRUser+ChatModel.m */; };
 		D025B140203291BE00C75E1C /* NRGroup+ChatModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D025B13F203291BE00C75E1C /* NRGroup+ChatModel.m */; };
+		D026064B205755CF00AEACA7 /* NRCoreToolCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = D026064A205755CF00AEACA7 /* NRCoreToolCenter.m */; };
 		D02964E520229E340060409F /* NSDate+NRCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = D02964E420229E340060409F /* NSDate+NRCategory.m */; };
 		D02964E820229E700060409F /* NSDateFormatter+NRCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = D02964E720229E700060409F /* NSDateFormatter+NRCategory.m */; };
 		D02964ED2022AD5E0060409F /* NRTextMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = D02964EC2022AD5E0060409F /* NRTextMessage.m */; };
@@ -476,6 +477,8 @@
 		D025B13C2032914500C75E1C /* NRUser+ChatModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NRUser+ChatModel.m"; sourceTree = "<group>"; };
 		D025B13E203291BE00C75E1C /* NRGroup+ChatModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NRGroup+ChatModel.h"; sourceTree = "<group>"; };
 		D025B13F203291BE00C75E1C /* NRGroup+ChatModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NRGroup+ChatModel.m"; sourceTree = "<group>"; };
+		D0260649205755CF00AEACA7 /* NRCoreToolCenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRCoreToolCenter.h; sourceTree = "<group>"; };
+		D026064A205755CF00AEACA7 /* NRCoreToolCenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRCoreToolCenter.m; sourceTree = "<group>"; };
 		D02964E320229E340060409F /* NSDate+NRCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+NRCategory.h"; sourceTree = "<group>"; };
 		D02964E420229E340060409F /* NSDate+NRCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+NRCategory.m"; sourceTree = "<group>"; };
 		D02964E620229E700060409F /* NSDateFormatter+NRCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+NRCategory.h"; sourceTree = "<group>"; };
@@ -1405,6 +1408,8 @@
 				D01360802022FEB5003AFEEE /* NRNewsReportTools.m */,
 				D0223E902024339000EA9998 /* NRPhotoLibraryManager.h */,
 				D0223E912024339000EA9998 /* NRPhotoLibraryManager.m */,
+				D0260649205755CF00AEACA7 /* NRCoreToolCenter.h */,
+				D026064A205755CF00AEACA7 /* NRCoreToolCenter.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -1886,6 +1891,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-NewsReport/Pods-NewsReport-resources.sh",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 				"${PODS_ROOT}/ZLPhotoBrowser/PhotoBrowser/resource/ZLPhotoActionSheet.xib",
 				"${PODS_ROOT}/ZLPhotoBrowser/PhotoBrowser/resource/ZLPhotoBrowserCell.xib",
 				"${PODS_ROOT}/ZLPhotoBrowser/PhotoBrowser/resource/ZLPhotoBrowser.bundle",
@@ -2039,6 +2045,7 @@
 				D029663C2022CBAA0060409F /* WXDeviceManager+Microphone.m in Sources */,
 				D0F9A8DA202C4145006D1DD2 /* NRTextMessageContentView.m in Sources */,
 				D0223E8C20242EC700EA9998 /* RFTextView.m in Sources */,
+				D026064B205755CF00AEACA7 /* NRCoreToolCenter.m in Sources */,
 				D01D08C820201BB000288240 /* NRNetworkCache.m in Sources */,
 				D0223E8420242EC700EA9998 /* FacePageView.m in Sources */,
 				D0F9A8B8202C1F35006D1DD2 /* NRFriendHelper.m in Sources */,

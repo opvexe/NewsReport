@@ -29,4 +29,5 @@ pod 'MJRefresh'
 pod 'Masonry'
 pod 'YYCache'
 pod 'FMDB'
+pod 'SVProgressHUD'
 end
